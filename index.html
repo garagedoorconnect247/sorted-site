@@ -160,15 +160,55 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
   .f-row{flex-direction:column;align-items:flex-start}
   .fu,.svc-card{opacity:1!important;transform:none!important;transition:none!important}
 }
+
+/* MENU */
+.brand{flex-shrink:0}
+.menu{display:flex;align-items:center;gap:2px}
+.m-link{font-size:.9rem;font-weight:500;color:var(--ink-2);padding:8px 12px;border-radius:8px;display:inline-flex;align-items:center;gap:4px;transition:all var(--e);white-space:nowrap}
+.m-link:hover,.m-link.on{color:var(--blue);background:var(--blue-l)}
+.m-drop{position:relative}
+.m-drop-btn svg{width:14px;height:14px;transition:transform var(--e)}
+.m-drop:hover .m-drop-btn svg,.m-drop.open .m-drop-btn svg{transform:rotate(180deg)}
+.m-drop-panel{position:absolute;top:calc(100% + 8px);inset-inline-start:0;min-width:250px;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 14px 34px rgba(11,18,32,.1);padding:6px;display:none;flex-direction:column;z-index:10}
+.m-drop-panel::before{content:"";position:absolute;top:-10px;left:0;right:0;height:10px}
+.m-drop:hover .m-drop-panel,.m-drop.open .m-drop-panel{display:flex}
+.m-drop-panel a{padding:10px 12px;border-radius:8px;font-size:.88rem;color:var(--ink-2);display:flex;align-items:center;gap:10px;transition:all var(--e)}
+.m-drop-panel a b{font-size:.72rem;font-weight:800;color:var(--blue);background:var(--blue-l);padding:2px 7px;border-radius:6px}
+.m-drop-panel a:hover,.m-drop-panel a.on{background:var(--paper);color:var(--blue)}
+.burger{display:none;width:40px;height:40px;border-radius:8px;align-items:center;justify-content:center;color:var(--navy);border:1px solid var(--border);background:var(--paper)}
+.burger svg{width:20px;height:20px}
+.svc-link svg.arr,.o-more svg.arr{width:15px;height:15px}
+[dir=rtl] svg.arr{transform:scaleX(-1)}
+@media(max-width:1099px){.nav-tel{display:none!important}}
+@media(max-width:920px){
+  .burger{display:inline-flex}
+  .menu{display:none;position:absolute;top:62px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 14px 26px rgba(11,18,32,.08);flex-direction:column;align-items:stretch;padding:10px 16px 18px;gap:2px;max-height:calc(100vh - 62px);overflow:auto}
+  nav.open .menu{display:flex}
+  .m-link{padding:12px;font-size:1rem;width:100%}
+  .m-drop-btn svg{display:none}
+  .m-drop-panel{position:static;display:flex;box-shadow:none;border:none;padding:0 8px 6px;min-width:0}
+  .m-drop-panel::before{display:none}
+}
+@media(max-width:480px){.nav-wa span{display:none}.nav-wa{padding:9px 11px}.lang-btn{padding:7px 9px}.nav-actions{gap:6px}}
+.f-links a{display:inline-flex}
 </style>
 </head>
 <body>
 
 <nav id="nav">
   <div class="wrap nav-inner">
-    <div class="brand">
+    <a class="brand" href="index.html">
       <div class="brand-mark">S</div>
       <span class="brand-name">Sort<span>ed</span></span>
+    </a>
+    <div class="menu" id="menu">
+      <a href="index.html" class="m-link on" data-i18n="m_home">ראשי</a>
+      <div class="m-drop" id="m-drop">
+        <button type="button" class="m-link m-drop-btn" aria-haspopup="true" aria-expanded="false"><span data-i18n="m_services">שירותים</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="m-drop-panel"><a href="service-formation.html" class=""><b>01</b><span data-i18n="sv1">הקמת עסק</span></a><a href="service-financial.html" class=""><b>02</b><span data-i18n="sv2">ניהול פיננסי ותפעולי</span></a><a href="service-team.html" class=""><b>03</b><span data-i18n="sv3">ניהול צוות ופרודוקטיביות</span></a><a href="service-google.html" class=""><b>04</b><span data-i18n="sv4">Google Guarantee</span></a><a href="service-website.html" class=""><b>05</b><span data-i18n="sv5">עיצוב ופיתוח אתרים</span></a></div>
+      </div>
+      <a href="about.html" class="m-link" data-i18n="m_about">אודות</a>
+      <a href="faq.html" class="m-link" data-i18n="m_faq">שאלות נפוצות</a>
     </div>
     <div class="nav-actions">
       <a class="nav-tel" href="tel:+972538036607">053-803-6607</a>
@@ -177,6 +217,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
         <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         <span data-i18n="nav_wa">וואטסאפ</span>
       </a>
+      <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
 </nav>
@@ -226,7 +267,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l6">רישום DBA</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l7">חבילת מסמכים עסקית מאורגנת</span></li>
       </ul>
-      <a class="svc-link" href="#" data-i18n="s1_link">גלו עוד על הקמת עסק<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="svc-link" href="service-formation.html"><span data-i18n="s1_link">גלו עוד על הקמת עסק</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
     <div class="svc-card">
@@ -246,7 +287,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l4">ניהול תשלומים לקבלני משנה (1099)</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l5">הנהלת חשבונות חודשית ודוחות פיננסיים</span></li>
       </ul>
-      <a class="svc-link" href="#" data-i18n="s2_link">גלו עוד על שירותים פיננסיים<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="svc-link" href="service-financial.html"><span data-i18n="s2_link">גלו עוד על שירותים פיננסיים</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
     <div class="svc-card">
@@ -270,7 +311,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l5">דוחות פרודוקטיביות וביצועים</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l6">מערכות לניהול צוות מרוחק</span></li>
       </ul>
-      <a class="svc-link" href="#" data-i18n="s3_link">גלו עוד על ניהול צוות<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="svc-link" href="service-team.html"><span data-i18n="s3_link">גלו עוד על ניהול צוות</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
     <div class="svc-card">
@@ -292,7 +333,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l6">הגשת בקשת Google Verified</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l7">מעקב חידוש שנתי ותאימות</span></li>
       </ul>
-      <a class="svc-link" href="#" data-i18n="s4_link">גלו עוד על Google Guarantee<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="svc-link" href="service-google.html"><span data-i18n="s4_link">גלו עוד על Google Guarantee</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
     <div class="svc-card">
@@ -314,7 +355,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l6">טופסי יצירת קשר והקמת חיוג ישיר</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l7">עדכונים ותחזוקה שוטפת (אופציונלי)</span></li>
       </ul>
-      <a class="svc-link" href="#" data-i18n="s5_link">גלו עוד על עיצוב אתרים<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="svc-link" href="service-website.html"><span data-i18n="s5_link">גלו עוד על עיצוב אתרים</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
   </div>
@@ -376,6 +417,8 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
     <div class="f-row">
       <span class="f-copy" data-i18n="f_copy">© 2024 Sorted · נעמי ניזרי · עוזרים לעסקים לצמוח מאז 2018</span>
       <div class="f-links">
+        <a href="about.html" data-i18n="f_about">אודות</a>
+        <a href="faq.html" data-i18n="f_faq">שאלות נפוצות</a>
         <a href="tel:+972538036607">053-803-6607</a>
         <a href="https://wa.me/972538036607" target="_blank" rel="noopener">WhatsApp</a>
       </div>
@@ -530,22 +573,35 @@ const t = {
   }
 };
 
+const C = {"he": {"m_home": "ראשי", "m_services": "שירותים", "m_about": "אודות", "m_faq": "שאלות נפוצות", "sv1": "הקמת עסק", "sv2": "ניהול פיננסי ותפעולי", "sv3": "ניהול צוות ופרודוקטיביות", "sv4": "Google Guarantee", "sv5": "עיצוב ופיתוח אתרים", "f_about": "אודות", "f_faq": "שאלות נפוצות", "m_menu": "תפריט", "doc_title": "הבירוקרטיה של העסק שלכם באמריקה, מסודרת | Sorted"}, "en": {"m_home": "Home", "m_services": "Services", "m_about": "About", "m_faq": "FAQ", "sv1": "Business Formation", "sv2": "Financial & Back-Office", "sv3": "Team Management", "sv4": "Google Guarantee", "sv5": "Website Design", "f_about": "About", "f_faq": "FAQ", "m_menu": "Menu", "doc_title": "Your Business Paperwork in America, Sorted | Sorted"}};
+Object.assign(t.he, C.he); Object.assign(t.en, C.en);
+
 let lang = 'he';
-function switchLang(){
-  lang = lang === 'he' ? 'en' : 'he';
-  const root = document.getElementById('root');
+function applyLang(l){
+  lang = l;
+  const root = document.documentElement;
   const flag = document.getElementById('lang-flag');
   const label = document.getElementById('lang-label');
-  if (lang === 'en'){ root.setAttribute('lang','en'); root.setAttribute('dir','ltr'); flag.textContent='🇮🇱'; label.textContent='עברית'; }
+  if (l === 'en'){ root.setAttribute('lang','en'); root.setAttribute('dir','ltr'); flag.textContent='🇮🇱'; label.textContent='עברית'; }
   else { root.setAttribute('lang','he'); root.setAttribute('dir','rtl'); flag.textContent='🇺🇸'; label.textContent='English'; }
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const key = el.getAttribute('data-i18n');
-    if (t[lang][key] !== undefined) el.innerHTML = t[lang][key];
+    if (t[l][key] !== undefined) el.innerHTML = t[l][key];
   });
+  if (t[l].doc_title) document.title = t[l].doc_title;
+  try { localStorage.setItem('sorted_lang', l); } catch(e){}
 }
+function switchLang(){ applyLang(lang === 'he' ? 'en' : 'he'); }
+(function(){ let s = null; try { s = localStorage.getItem('sorted_lang'); } catch(e){} if (s === 'en') applyLang('en'); })();
 
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 10), {passive:true});
+const burger = document.getElementById('burger');
+burger.addEventListener('click', () => { const o = nav.classList.toggle('open'); burger.setAttribute('aria-expanded', o); });
+const drop = document.getElementById('m-drop');
+drop.querySelector('.m-drop-btn').addEventListener('click', e => { e.stopPropagation(); const o = drop.classList.toggle('open'); e.currentTarget.setAttribute('aria-expanded', o); });
+document.addEventListener('click', e => { if (!drop.contains(e.target)) drop.classList.remove('open'); });
+document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
 
 const io = new IntersectionObserver(entries=>{
   entries.forEach(e=>{ if (e.isIntersecting){ e.target.classList.add('v'); io.unobserve(e.target); } });
