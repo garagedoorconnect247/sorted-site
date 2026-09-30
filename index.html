@@ -303,11 +303,69 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
 }
 @media(max-width:480px){.nav-wa span{display:none}.nav-wa{padding:9px 11px}.lang-btn{padding:7px 9px}.nav-actions{gap:6px}}
 .f-links a{display:inline-flex}
+
+/* ===== ACCESSIBILITY ===== */
+:root{--muted:#5E6878;--wa:#0B7A5E;--wa-d:#0A6E55}
+.skip{position:absolute;top:-80px;inset-inline-start:12px;z-index:1000;background:var(--navy);color:#fff;padding:12px 18px;border-radius:10px;font-weight:600;transition:top .2s}
+.skip:focus{top:12px}
+main:focus{outline:none}
+a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.a11y-fab{position:fixed;bottom:20px;inset-inline-start:20px;z-index:300;width:54px;height:54px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(22,86,224,.4);transition:transform var(--e)}
+.a11y-fab:hover{transform:scale(1.06)}
+.a11y-fab svg{width:30px;height:30px}
+.wa-fl{inset-inline-start:auto;inset-inline-end:20px}
+.a11y-panel{position:fixed;bottom:86px;inset-inline-start:20px;z-index:310;width:320px;max-width:calc(100vw - 40px);max-height:calc(100vh - 120px);overflow:auto;background:#fff;color:var(--ink);border:1px solid var(--border);border-radius:18px;box-shadow:0 24px 60px rgba(11,18,32,.22);padding:18px}
+.a11y-panel[hidden]{display:none}
+.a11y-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.a11y-head b{font-size:1.05rem;color:var(--navy)}
+.a11y-x{width:34px;height:34px;border-radius:8px;background:var(--paper);border:1px solid var(--border);font-size:1.2rem;line-height:1;color:var(--ink)}
+.a11y-size{display:flex;align-items:center;gap:8px;background:var(--paper);border:1px solid var(--border);border-radius:12px;padding:8px 10px;margin-bottom:10px}
+.a11y-size span{flex-grow:1;font-size:.9rem;font-weight:600}
+.a11y-size button{width:40px;height:36px;border-radius:8px;background:#fff;border:1px solid var(--border-2);font-weight:700;color:var(--navy)}
+.a11y-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.a11y-grid button{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 6px;border-radius:12px;background:#fff;border:1px solid var(--border-2);font-size:.82rem;font-weight:600;color:var(--ink);text-align:center}
+.a11y-grid button svg{width:22px;height:22px;color:var(--blue)}
+.a11y-grid button[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:#fff}
+.a11y-grid button[aria-pressed=true] svg{color:#fff}
+.a11y-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.a11y-reset{font-size:.85rem;font-weight:600;color:var(--ink);background:var(--paper);border:1px solid var(--border);padding:8px 12px;border-radius:8px}
+.a11y-foot a{font-size:.85rem;font-weight:600;color:var(--blue);text-decoration:underline}
+.a11y-hint{display:block;margin-top:10px;font-size:.76rem;color:var(--muted)}
+/* modes */
+html[data-ax-size="1"]{font-size:112.5%}
+html[data-ax-size="2"]{font-size:125%}
+html[data-ax-size="3"]{font-size:140%}
+html.ax-links a{text-decoration:underline!important;text-underline-offset:3px}
+html.ax-font body,html.ax-font body *{font-family:Arial,Helvetica,sans-serif!important}
+html.ax-spacing body *{line-height:1.9!important;letter-spacing:.04em!important;word-spacing:.14em!important}
+html.ax-motion *,html.ax-motion *::before,html.ax-motion *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+html.ax-motion .fu,html.ax-motion .svc-card{opacity:1!important;transform:none!important}
+html.ax-gray body>*:not(.a11y-panel):not(.a11y-fab){filter:grayscale(1)}
+html.ax-cursor,html.ax-cursor *{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 24 24'%3E%3Cpath d='M4 2l16 10-7 1.5L9.5 21z' fill='%23000' stroke='%23fff' stroke-width='1.5'/%3E%3C/svg%3E") 4 2,auto!important}
+html.ax-contrast body *:not(svg):not(path):not(circle):not(rect){background-color:#000!important;background-image:none!important;color:#fff!important;border-color:#fff!important;box-shadow:none!important;text-shadow:none!important}
+html.ax-contrast body{background:#000!important}
+html.ax-contrast a,html.ax-contrast a *,html.ax-contrast summary,html.ax-contrast summary *{color:#FFE500!important}
+html.ax-contrast .hero::before,html.ax-contrast .hero::after,html.ax-contrast .support-grid::before,html.ax-contrast .support-grid::after,html.ax-contrast .why-svc::before{display:none}
+html.ax-contrast .a11y-grid button[aria-pressed=true]{outline:3px solid #FFE500}
+html.ax-contrast :focus-visible{outline-color:#FFE500!important}
+html.ax-contrast svg{color:#fff!important}
+html.ax-contrast a svg{color:#FFE500!important}
+/* cookie notice */
+.ck{position:fixed;left:16px;right:16px;bottom:16px;z-index:400;max-width:860px;margin:0 auto;background:var(--navy);color:#fff;border-radius:16px;box-shadow:0 18px 48px rgba(11,18,32,.35);padding:18px 20px;display:flex;align-items:center;gap:18px}
+.ck[hidden]{display:none}
+.ck-txt{flex-grow:1;font-size:.9rem;line-height:1.55;color:#DCE4F2}
+.ck-txt a{color:#9FC1FF;font-weight:600;text-decoration:underline;margin-inline-start:4px}
+.ck .ck-ok{flex-shrink:0;padding:11px 26px;background:var(--wa);color:#fff}
+.ck .ck-ok:hover{background:var(--wa-d)}
+@media(max-width:640px){.ck{flex-direction:column;align-items:stretch;gap:12px;padding:16px}.ck .ck-ok{justify-content:center}.a11y-fab,.wa-fl{width:50px;height:50px;bottom:16px}.a11y-fab{inset-inline-start:16px}.wa-fl{inset-inline-end:16px}}
+@media print{.a11y-fab,.a11y-panel,.ck,.wa-fl{display:none!important}}
 </style>
+<script>(function(){try{var s=JSON.parse(localStorage.getItem('sorted_a11y')||'{}'),h=document.documentElement;Object.keys(s).forEach(function(k){if(k==='size'){if(s.size)h.setAttribute('data-ax-size',s.size)}else if(s[k])h.classList.add('ax-'+k)})}catch(e){}})();</script>
 </head>
 <body>
+<a class="skip" href="#main" data-i18n="skip">דלג לתוכן הראשי</a>
 
-<nav id="nav">
+<nav id="nav" aria-label="ניווט ראשי" data-i18n-aria="nav_label">
   <div class="wrap nav-inner">
     <a class="brand" href="index.html">
       <div class="brand-mark">S</div>
@@ -316,7 +374,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
     <div class="menu" id="menu">
       <a href="index.html" class="m-link on" data-i18n="m_home">ראשי</a>
       <div class="m-drop" id="m-drop">
-        <button type="button" class="m-link m-drop-btn" aria-haspopup="true" aria-expanded="false"><span data-i18n="m_services">שירותים</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <button type="button" class="m-link m-drop-btn" aria-haspopup="true" aria-expanded="false"><span data-i18n="m_services">שירותים</span><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="m-drop-panel"><a href="service-formation.html" class=""><b>01</b><span data-i18n="sv1">הקמת עסק</span></a><a href="service-financial.html" class=""><b>02</b><span data-i18n="sv2">ניהול פיננסי ותפעולי</span></a><a href="service-team.html" class=""><b>03</b><span data-i18n="sv3">ניהול צוות ופרודוקטיביות</span></a><a href="service-google.html" class=""><b>04</b><span data-i18n="sv4">Google Guarantee</span></a><a href="service-website.html" class=""><b>05</b><span data-i18n="sv5">עיצוב ופיתוח אתרים</span></a></div>
       </div>
       <a href="about.html" class="m-link" data-i18n="m_about">אודות</a>
@@ -326,13 +384,15 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
       <a class="nav-tel" href="tel:+972538036607">053-803-6607</a>
       <button class="lang-btn" onclick="switchLang()"><span id="lang-flag">🇺🇸</span><span id="lang-label">English</span></button>
       <a class="nav-wa" href="https://wa.me/972538036607" target="_blank" rel="noopener">
-        <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <svg aria-hidden="true" focusable="false" class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         <span data-i18n="nav_wa">וואטסאפ</span>
       </a>
-      <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
 </nav>
+
+<main id="main" tabindex="-1">
 
 <section class="hero hero-split"><div class="wrap hero-grid">
   <div class="hero-copy">
@@ -341,12 +401,12 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
     <p class="hero-sub" data-i18n="hero_sub">בין אם אתם רק מתחילים עסק באמריקה או כבר מנהלים אחד, אנחנו דואגים להקמה, לכספים ולניהול המנהלי השוטף — כדי שתוכלו להתמקד בלהצמיח אותו.</p>
     <div class="hero-actions">
     <a class="btn btn-primary" href="https://wa.me/972538036607" target="_blank" rel="noopener">
-      <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <svg aria-hidden="true" focusable="false" class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       <span data-i18n="hero_btn1">בואו נתחיל</span>
     </a>
     <a class="btn btn-ghost" href="#services" data-i18n="hero_btn2">גלו את השירותים</a>
   </div>
-    <ul class="trust"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="trust1"><bdi dir="ltr">20+</bdi> שנות ניסיון</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="trust2">עברית ואנגלית</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="trust3">עוזרים לעסקים מאז 2018</span></li></ul>
+    <ul class="trust"><li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="trust1"><bdi dir="ltr">20+</bdi> שנות ניסיון</span></li><li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="trust2">עברית ואנגלית</span></li><li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="trust3">עוזרים לעסקים מאז 2018</span></li></ul>
   </div>
   <div class="hero-visual" aria-hidden="true">
     <div class="hv-card">
@@ -357,9 +417,9 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
       </div>
       <div class="hv-bar"><span></span></div>
       <div class="hv-pct" data-i18n="hv_pct">3 מתוך 5 הושלמו</div>
-      <div class="hv-rows"><div class="hv-row done" style="--d:0.53s"><span class="hv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="hv-lbl" data-i18n="hv_r1">הקמת LLC</span><span class="hv-st" data-i18n="hv_done">הושלם</span></div><div class="hv-row done" style="--d:0.71s"><span class="hv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="hv-lbl" data-i18n="hv_r2">מספר EIN</span><span class="hv-st" data-i18n="hv_done">הושלם</span></div><div class="hv-row done" style="--d:0.89s"><span class="hv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="hv-lbl" data-i18n="hv_r3">הסכם הפעלה</span><span class="hv-st" data-i18n="hv_done">הושלם</span></div><div class="hv-row prog" style="--d:1.07s"><span class="hv-ic"><span class="spin"></span></span><span class="hv-lbl" data-i18n="hv_r4">חשבון בנק עסקי</span><span class="hv-st" data-i18n="hv_prog">בתהליך</span></div><div class="hv-row next" style="--d:1.25s"><span class="hv-ic"></span><span class="hv-lbl" data-i18n="hv_r5">הקמת QuickBooks</span><span class="hv-st" data-i18n="hv_next">הבא בתור</span></div></div>
+      <div class="hv-rows"><div class="hv-row done" style="--d:0.53s"><span class="hv-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="hv-lbl" data-i18n="hv_r1">הקמת LLC</span><span class="hv-st" data-i18n="hv_done">הושלם</span></div><div class="hv-row done" style="--d:0.71s"><span class="hv-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="hv-lbl" data-i18n="hv_r2">מספר EIN</span><span class="hv-st" data-i18n="hv_done">הושלם</span></div><div class="hv-row done" style="--d:0.89s"><span class="hv-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="hv-lbl" data-i18n="hv_r3">הסכם הפעלה</span><span class="hv-st" data-i18n="hv_done">הושלם</span></div><div class="hv-row prog" style="--d:1.07s"><span class="hv-ic"><span class="spin"></span></span><span class="hv-lbl" data-i18n="hv_r4">חשבון בנק עסקי</span><span class="hv-st" data-i18n="hv_prog">בתהליך</span></div><div class="hv-row next" style="--d:1.25s"><span class="hv-ic"></span><span class="hv-lbl" data-i18n="hv_r5">הקמת QuickBooks</span><span class="hv-st" data-i18n="hv_next">הבא בתור</span></div></div>
     </div>
-    <div class="hv-chip"><span class="hv-chip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="hv_chip">כל המסמכים מסודרים ומוסברים</span></div>
+    <div class="hv-chip"><span class="hv-chip-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="hv_chip">כל המסמכים מסודרים ומוסברים</span></div>
   </div>
 </div></section>
 
@@ -368,7 +428,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
     <span class="label" data-i18n="sup_label">איך אנחנו עוזרים</span>
     <h2 data-i18n="sup_h">התמיכה שאתם צריכים. בלי כאב הראש.</h2>
     <p data-i18n="sup_p1">לנהל עסק באמריקה זה הרבה דברים במקביל — מההקמה הנכונה ועד ניהול הכספים, השכר, והצוות.</p><p data-i18n="sup_p2">אנחנו נותנים לבעלי עסקים מבנה, תמיכה, ושקט נפשי — ליווי צמוד שישמור על הצד המנהלי של העסק שלכם מסודר ורץ חלק.</p>
-    <a class="svc-link" href="about.html"><span data-i18n="sup_more">הכירו אותנו</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="svc-link" href="about.html"><span data-i18n="sup_more">הכירו אותנו</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
   <div class="stats"><div class="stat hl"><b data-i18n="st1_n">20+</b><span data-i18n="st1_l">שנות ניסיון בתפעול, מנהלה ופיננסים</span></div><div class="stat"><b data-i18n="st2_n">5</b><span data-i18n="st2_l">תחומי שירות במקום אחד</span></div><div class="stat"><b data-i18n="st3_n">2018</b><span data-i18n="st3_l">עוזרים לעסקים לצמוח מאז</span></div><div class="stat"><b data-i18n="st4_n">1:1</b><span data-i18n="st4_l">ליווי אישי, בעברית או באנגלית</span></div></div>
 </div></section>
@@ -390,16 +450,16 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
           <div class="svc-price" data-i18n="s1_price">החל מ-<span class="amt">$99</span></div>
         </div>
       </div>
-      <details class="svc-more"><summary><span data-i18n="inc_toggle">מה כלול</span><span class="cnt">7</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l1">הקמת עסק (LLC, S Corp, או C Corp)</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l2">מספר EIN (תעודת זהות פדרלית)</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l3">הסכם הפעלה (Operating Agreement)</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l4">הכוונה לרישיון עסק</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l5">סוכן רשום וכתובת מקומית</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l6">רישום DBA</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l7">חבילת מסמכים עסקית מאורגנת</span></li>
+      <details class="svc-more"><summary><span data-i18n="inc_toggle">מה כלול</span><span class="cnt">7</span><svg aria-hidden="true" focusable="false" class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l1">הקמת עסק (LLC, S Corp, או C Corp)</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l2">מספר EIN (תעודת זהות פדרלית)</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l3">הסכם הפעלה (Operating Agreement)</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l4">הכוונה לרישיון עסק</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l5">סוכן רשום וכתובת מקומית</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l6">רישום DBA</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l7">חבילת מסמכים עסקית מאורגנת</span></li>
       </ul></details>
-      <a class="svc-link" href="service-formation.html"><span data-i18n="s1_link">גלו עוד על הקמת עסק</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="svc-link" href="service-formation.html"><span data-i18n="s1_link">גלו עוד על הקמת עסק</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
     <div class="svc-card">
@@ -412,14 +472,14 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
           <div class="svc-price" data-i18n="s2_price">החל מ-<span class="amt">$150</span></div>
         </div>
       </div>
-      <details class="svc-more"><summary><span data-i18n="inc_toggle">מה כלול</span><span class="cnt">5</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l1">הנהלת חשבונות ספקים ולקוחות (AP/AR)</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l2">הקמה וניהול QuickBooks</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l3">שירותי שכר</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l4">ניהול תשלומים לקבלני משנה (1099)</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l5">הנהלת חשבונות חודשית ודוחות פיננסיים</span></li>
+      <details class="svc-more"><summary><span data-i18n="inc_toggle">מה כלול</span><span class="cnt">5</span><svg aria-hidden="true" focusable="false" class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l1">הנהלת חשבונות ספקים ולקוחות (AP/AR)</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l2">הקמה וניהול QuickBooks</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l3">שירותי שכר</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l4">ניהול תשלומים לקבלני משנה (1099)</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l5">הנהלת חשבונות חודשית ודוחות פיננסיים</span></li>
       </ul></details>
-      <a class="svc-link" href="service-financial.html"><span data-i18n="s2_link">גלו עוד על שירותים פיננסיים</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="svc-link" href="service-financial.html"><span data-i18n="s2_link">גלו עוד על שירותים פיננסיים</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
     <div class="svc-card">
@@ -432,18 +492,18 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
           <div class="svc-price" data-i18n="s3_price">החל מ-<span class="amt">$300</span></div>
         </div>
       </div>
-      <details class="svc-more"><summary><span data-i18n="inc_toggle">מה כלול</span><span class="cnt">9</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l1">הקמת מערכת ניהול ומעקב צוות</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l7">הדרכת עובדים ומוקדים טלפוניים</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l8">אימון בתקשורת מקצועית ושפה</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l9">מדריכי עובד רשמיים</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l10">חומרי הדרכה וקליטת עובדים חדשים</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l3">מעקב שעות כניסה/יציאה ונוכחות</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l4">מעקב אחר פעילות עובדים</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l5">דוחות פרודוקטיביות וביצועים</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l6">מערכות לניהול צוות מרוחק</span></li>
+      <details class="svc-more"><summary><span data-i18n="inc_toggle">מה כלול</span><span class="cnt">9</span><svg aria-hidden="true" focusable="false" class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l1">הקמת מערכת ניהול ומעקב צוות</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l7">הדרכת עובדים ומוקדים טלפוניים</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l8">אימון בתקשורת מקצועית ושפה</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l9">מדריכי עובד רשמיים</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l10">חומרי הדרכה וקליטת עובדים חדשים</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l3">מעקב שעות כניסה/יציאה ונוכחות</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l4">מעקב אחר פעילות עובדים</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l5">דוחות פרודוקטיביות וביצועים</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l6">מערכות לניהול צוות מרוחק</span></li>
       </ul></details>
-      <a class="svc-link" href="service-team.html"><span data-i18n="s3_link">גלו עוד על ניהול צוות</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="svc-link" href="service-team.html"><span data-i18n="s3_link">גלו עוד על ניהול צוות</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
     <div class="svc-card">
@@ -456,16 +516,16 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
           <div class="svc-price" data-i18n="s4_price">החל מ-<span class="amt">$150</span></div>
         </div>
       </div>
-      <details class="svc-more"><summary><span data-i18n="inc_toggle">מה כלול</span><span class="cnt">7</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l1">בדיקת זכאות (מודל העסק וסטטוס פרופיל עסקי בגוגל)</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l2">דרישות רישיון עסק והכוונה בהגשה</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l3">אימות ביטוח ואישור כיסוי מינימלי</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l4">הכנה לבדיקת רקע (בעלים ועובדי שטח)</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l5">התאמת מסמכים בין כל ההגשות</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l6">הגשת בקשת Google Verified</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l7">מעקב חידוש שנתי ותאימות</span></li>
+      <details class="svc-more"><summary><span data-i18n="inc_toggle">מה כלול</span><span class="cnt">7</span><svg aria-hidden="true" focusable="false" class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l1">בדיקת זכאות (מודל העסק וסטטוס פרופיל עסקי בגוגל)</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l2">דרישות רישיון עסק והכוונה בהגשה</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l3">אימות ביטוח ואישור כיסוי מינימלי</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l4">הכנה לבדיקת רקע (בעלים ועובדי שטח)</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l5">התאמת מסמכים בין כל ההגשות</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l6">הגשת בקשת Google Verified</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l7">מעקב חידוש שנתי ותאימות</span></li>
       </ul></details>
-      <a class="svc-link" href="service-google.html"><span data-i18n="s4_link">גלו עוד על Google Guarantee</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="svc-link" href="service-google.html"><span data-i18n="s4_link">גלו עוד על Google Guarantee</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
     <div class="svc-card">
@@ -478,24 +538,24 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
           <div class="svc-price" data-i18n="s5_price">החל מ-<span class="amt">$500</span></div>
         </div>
       </div>
-      <details class="svc-more"><summary><span data-i18n="inc_toggle">מה כלול</span><span class="cnt">7</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l1">עיצוב ובניית אתר עסקי</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l2">אופטימיזציה למנועי חיפוש (SEO)</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l3">אתר ידידותי למובייל ומהיר בטעינה</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l4">הכוונה בהקמת דומיין ואחסון</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l5">חיבור לפרופיל עסקי בגוגל</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l6">טופסי יצירת קשר והקמת חיוג ישיר</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l7">עדכונים ותחזוקה שוטפת (אופציונלי)</span></li>
+      <details class="svc-more"><summary><span data-i18n="inc_toggle">מה כלול</span><span class="cnt">7</span><svg aria-hidden="true" focusable="false" class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l1">עיצוב ובניית אתר עסקי</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l2">אופטימיזציה למנועי חיפוש (SEO)</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l3">אתר ידידותי למובייל ומהיר בטעינה</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l4">הכוונה בהקמת דומיין ואחסון</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l5">חיבור לפרופיל עסקי בגוגל</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l6">טופסי יצירת קשר והקמת חיוג ישיר</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l7">עדכונים ותחזוקה שוטפת (אופציונלי)</span></li>
       </ul></details>
-      <a class="svc-link" href="service-website.html"><span data-i18n="s5_link">גלו עוד על עיצוב אתרים</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="svc-link" href="service-website.html"><span data-i18n="s5_link">גלו עוד על עיצוב אתרים</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
     <div class="svc-card why-svc">
       <span class="wy-label" data-i18n="wy_label">למה Sorted</span>
       <div class="svc-h" data-i18n="wy_h">לא בטוחים מה מתאים לכם?</div>
-      <ul class="wy-list"><li><span class="wy-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="wy1">ליווי אישי, ישירות איתנו</span></li><li><span class="wy-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="wy2">עברית ואנגלית</span></li><li><span class="wy-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="wy3">מחירים ברורים מראש</span></li><li><span class="wy-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="wy4">כנות לגבי מה צריך — ומה לא</span></li><li><span class="wy-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="wy5"><bdi dir="ltr">20+</bdi> שנות ניסיון</span></li><li><span class="wy-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="wy6">שירות בכל רחבי ארה״ב</span></li></ul>
+      <ul class="wy-list"><li><span class="wy-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="wy1">ליווי אישי, ישירות איתנו</span></li><li><span class="wy-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="wy2">עברית ואנגלית</span></li><li><span class="wy-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="wy3">מחירים ברורים מראש</span></li><li><span class="wy-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="wy4">כנות לגבי מה צריך — ומה לא</span></li><li><span class="wy-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="wy5"><bdi dir="ltr">20+</bdi> שנות ניסיון</span></li><li><span class="wy-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="wy6">שירות בכל רחבי ארה״ב</span></li></ul>
       <p class="wy-p" data-i18n="wy_p">ספרו לנו מה אתם מנסים לעשות, ונגיד לכם בדיוק מאיפה להתחיל.</p>
-      <a class="btn btn-primary wy-btn" href="https://wa.me/972538036607" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="wy_btn">דברו איתנו בוואטסאפ</span></a>
+      <a class="btn btn-primary wy-btn" href="https://wa.me/972538036607" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="wy_btn">דברו איתנו בוואטסאפ</span></a>
     </div>
 
   </div>
@@ -508,17 +568,17 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
   </div>
   <div class="why-grid sg fu">
     <div class="why-card">
-      <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
+      <div class="why-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
       <h3 data-i18n="w1_t">+20 שנות ניסיון</h3>
       <p data-i18n="w1_d">תפעול עסקי, מנהלה, פיננסים, כוח אדם, שכר, וניהול צוות.</p>
     </div>
     <div class="why-card">
-      <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+      <div class="why-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
       <h3 data-i18n="w2_t">תמיכה מעשית</h3>
       <p data-i18n="w2_d">עובדים איתכם כדי להטמיע מערכות ותהליכים שבאמת מתאימים לעסק שלכם.</p>
     </div>
     <div class="why-card">
-      <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v3"/></svg></div>
+      <div class="why-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v3"/></svg></div>
       <h3 data-i18n="w3_t">מקום אחד לכמה צרכים</h3>
       <p data-i18n="w3_d">מהקמה ועד ניהול יומיומי, אנחנו עוזרים לשמור את העסק שלכם מסודר, תקין, ומתקדם.</p>
     </div>
@@ -537,7 +597,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
   </div>
   <div class="how-cta fu">
     <a class="btn btn-primary" href="https://wa.me/972538036607" target="_blank" rel="noopener">
-      <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <svg aria-hidden="true" focusable="false" class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       <span data-i18n="how_cta">בואו נתחיל</span>
     </a>
   </div>
@@ -547,10 +607,12 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
   <h2 data-i18n="ns_h">לא בטוחים מאיפה להתחיל?</h2>
   <p data-i18n="ns_p">אתם לא צריכים להבין הכל לבד. ספרו לנו מה אתם מנסים להשיג, ואנחנו נעזור לכם למצוא מאיפה להתחיל.</p>
   <a class="btn btn-primary" href="https://wa.me/972538036607" target="_blank" rel="noopener">
-    <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <svg aria-hidden="true" focusable="false" class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     <span data-i18n="ns_btn">בואו נתחיל</span>
   </a>
 </div></section>
+
+</main>
 
 <footer>
   <div class="wrap">
@@ -561,6 +623,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
         <a href="faq.html" data-i18n="f_faq">שאלות נפוצות</a>
         <a href="privacy.html" data-i18n="f_privacy">מדיניות פרטיות</a>
         <a href="terms.html" data-i18n="f_terms">תנאי שימוש</a>
+        <a href="accessibility.html" data-i18n="f_access">הצהרת נגישות</a>
         <a href="tel:+972538036607">053-803-6607</a>
         <a href="https://wa.me/972538036607" target="_blank" rel="noopener">WhatsApp</a>
       </div>
@@ -569,7 +632,20 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
   </div>
 </footer>
 
-<a class="wa-fl" href="https://wa.me/972538036607" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<a class="wa-fl" href="https://wa.me/972538036607" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<button type="button" class="a11y-fab" id="a11y-fab" aria-expanded="false" aria-controls="a11y-panel" aria-label="פתיחת תפריט נגישות (Alt+A)" data-i18n-aria="ax_open"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="4.2" r="2.2"/><path d="M4 7.6c2.6.7 5.3 1 8 1s5.4-.3 8-1l.5 1.9c-2 .6-4.1.9-6.2 1.1V14l2.3 7.2-1.9.6L12.4 15h-.8l-2.3 6.8-1.9-.6L9.7 14v-3.4c-2.1-.2-4.2-.5-6.2-1.1z"/></svg></button>
+<div class="a11y-panel" id="a11y-panel" role="dialog" aria-labelledby="a11y-title" hidden>
+  <div class="a11y-head"><b id="a11y-title" data-i18n="ax_title">תפריט נגישות</b><button type="button" class="a11y-x" id="a11y-x" aria-label="סגירת תפריט נגישות" data-i18n-aria="ax_close">&times;</button></div>
+  <div class="a11y-size"><span data-i18n="ax_text">גודל טקסט</span><button type="button" data-ax="dec" aria-label="הקטנת טקסט" data-i18n-aria="ax_dec">A-</button><button type="button" data-ax="inc" aria-label="הגדלת טקסט" data-i18n-aria="ax_inc">A+</button></div>
+  <div class="a11y-grid"><button type="button" data-ax="contrast" aria-pressed="false"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18" /><path d="M12 3a9 9 0 010 18z" fill="currentColor"/></svg><span data-i18n="ax_contrast">ניגודיות גבוהה</span></button><button type="button" data-ax="gray" aria-pressed="false"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg><span data-i18n="ax_gray">גווני אפור</span></button><button type="button" data-ax="links" aria-pressed="false"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></svg><span data-i18n="ax_links">הדגשת קישורים</span></button><button type="button" data-ax="font" aria-pressed="false"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l6-16 6 16M6.5 14h7"/><path d="M17 20h4"/></svg><span data-i18n="ax_font">גופן קריא</span></button><button type="button" data-ax="spacing" aria-pressed="false"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 5v14M1.5 7L3 5l1.5 2M1.5 17L3 19l1.5-2"/></svg><span data-i18n="ax_spacing">ריווח טקסט</span></button><button type="button" data-ax="motion" aria-pressed="false"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 9v6M14 9v6"/></svg><span data-i18n="ax_motion">עצירת אנימציות</span></button><button type="button" data-ax="cursor" aria-pressed="false"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 8-6 1.5L10 19z"/></svg><span data-i18n="ax_cursor">סמן גדול</span></button></div>
+  <div class="a11y-foot"><button type="button" class="a11y-reset" data-ax="reset" data-i18n="ax_reset">איפוס הגדרות</button><a href="accessibility.html" data-i18n="ax_stmt">הצהרת נגישות</a></div>
+  <small class="a11y-hint" data-i18n="ax_hint">קיצור מקלדת: Alt+A</small>
+</div>
+<div class="ck" id="ck" role="region" aria-label="הודעה על שימוש בעוגיות" data-i18n-aria="ck_label" hidden>
+  <p class="ck-txt"><span data-i18n="ck_p">אנחנו משתמשים באחסון מקומי בדפדפן (בדומה לעוגיות) כדי לזכור את העדפות השפה והנגישות שלכם, והאתר טוען גופנים מ-Google Fonts. בלחיצה על ״אישור״ אתם מסכימים לכך.</span><a href="privacy.html" data-i18n="ck_more">מדיניות פרטיות</a></p>
+  <button type="button" class="btn btn-primary ck-ok" id="ck-ok" data-i18n="ck_ok">אישור</button>
+</div>
 
 <script>
 const t = {
@@ -725,6 +801,8 @@ const X3 = {"he": {"s1_desc": "אנחנו עוזרים לכם לפתוח עסק 
 Object.assign(t.he, X3.he); Object.assign(t.en, X3.en);
 const X4 = {"he": {"f_privacy": "מדיניות פרטיות", "f_terms": "תנאי שימוש"}, "en": {"f_privacy": "Privacy Policy", "f_terms": "Terms & Conditions"}};
 Object.assign(t.he, X4.he); Object.assign(t.en, X4.en);
+const X5 = {"he": {"skip": "דלג לתוכן הראשי", "nav_label": "ניווט ראשי", "ax_open": "פתיחת תפריט נגישות (Alt+A)", "ax_title": "תפריט נגישות", "ax_close": "סגירת תפריט נגישות", "ax_text": "גודל טקסט", "ax_dec": "הקטנת טקסט", "ax_inc": "הגדלת טקסט", "ax_contrast": "ניגודיות גבוהה", "ax_gray": "גווני אפור", "ax_links": "הדגשת קישורים", "ax_font": "גופן קריא", "ax_spacing": "ריווח טקסט", "ax_motion": "עצירת אנימציות", "ax_cursor": "סמן גדול", "ax_reset": "איפוס הגדרות", "ax_stmt": "הצהרת נגישות", "ax_hint": "קיצור מקלדת: Alt+A", "f_access": "הצהרת נגישות", "ck_label": "הודעה על שימוש בעוגיות", "ck_p": "אנחנו משתמשים באחסון מקומי בדפדפן (בדומה לעוגיות) כדי לזכור את העדפות השפה והנגישות שלכם, והאתר טוען גופנים מ-Google Fonts. בלחיצה על ״אישור״ אתם מסכימים לכך.", "ck_more": "מדיניות פרטיות", "ck_ok": "אישור", "wa_label": "שליחת הודעה בוואטסאפ"}, "en": {"skip": "Skip to main content", "nav_label": "Main navigation", "ax_open": "Open accessibility menu (Alt+A)", "ax_title": "Accessibility", "ax_close": "Close accessibility menu", "ax_text": "Text size", "ax_dec": "Smaller text", "ax_inc": "Larger text", "ax_contrast": "High contrast", "ax_gray": "Grayscale", "ax_links": "Highlight links", "ax_font": "Readable font", "ax_spacing": "Text spacing", "ax_motion": "Stop animations", "ax_cursor": "Large cursor", "ax_reset": "Reset settings", "ax_stmt": "Accessibility statement", "ax_hint": "Keyboard shortcut: Alt+A", "f_access": "Accessibility", "ck_label": "Cookie notice", "ck_p": "We use local browser storage (similar to cookies) to remember your language and accessibility preferences, and the site loads fonts from Google Fonts. By clicking “Accept” you agree to this.", "ck_more": "Privacy Policy", "ck_ok": "Accept", "wa_label": "Message us on WhatsApp"}};
+Object.assign(t.he, X5.he); Object.assign(t.en, X5.en);
 
 let lang = 'he';
 function applyLang(l){
@@ -757,6 +835,43 @@ const io = new IntersectionObserver(entries=>{
   entries.forEach(e=>{ if (e.isIntersecting){ e.target.classList.add('v'); io.unobserve(e.target); } });
 }, {threshold:.1, rootMargin:'0px 0px -28px 0px'});
 document.querySelectorAll('.fu, .sg').forEach(el=>io.observe(el));
+
+/* accessibility menu + cookie notice */
+(function(){
+  const h = document.documentElement, fab = document.getElementById('a11y-fab'), panel = document.getElementById('a11y-panel');
+  const KEYS = ['contrast','gray','links','font','spacing','motion','cursor'];
+  let st = {}; try { st = JSON.parse(localStorage.getItem('sorted_a11y') || '{}'); } catch(e){}
+  function save(){ try { localStorage.setItem('sorted_a11y', JSON.stringify(st)); } catch(e){} }
+  function render(){
+    KEYS.forEach(k => { h.classList.toggle('ax-' + k, !!st[k]); const b = panel.querySelector('[data-ax="'+k+'"]'); if (b) b.setAttribute('aria-pressed', !!st[k]); });
+    if (st.size) h.setAttribute('data-ax-size', st.size); else h.removeAttribute('data-ax-size');
+  }
+  function open(o){ panel.hidden = !o; fab.setAttribute('aria-expanded', o); if (o) panel.querySelector('button').focus(); else fab.focus(); }
+  fab.addEventListener('click', () => open(panel.hidden));
+  document.getElementById('a11y-x').addEventListener('click', () => open(false));
+  panel.addEventListener('click', e => {
+    const b = e.target.closest('[data-ax]'); if (!b) return;
+    const a = b.dataset.ax;
+    if (a === 'inc') st.size = Math.min((st.size || 0) + 1, 3);
+    else if (a === 'dec') st.size = Math.max((st.size || 0) - 1, 0);
+    else if (a === 'reset') st = {};
+    else st[a] = !st[a];
+    save(); render();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.altKey && e.code === 'KeyA') { e.preventDefault(); open(panel.hidden); }
+    else if (e.key === 'Escape' && !panel.hidden) open(false);
+  });
+  render();
+  // translated aria-labels
+  function aria(){ document.querySelectorAll('[data-i18n-aria]').forEach(el => { const v = t[lang][el.dataset.i18nAria]; if (v) el.setAttribute('aria-label', v); }); }
+  const _apply = applyLang; applyLang = function(l){ _apply(l); aria(); }; aria();
+  // cookie notice
+  const ck = document.getElementById('ck'); let ok = null;
+  try { ok = localStorage.getItem('sorted_consent'); } catch(e){}
+  if (!ok) ck.hidden = false;
+  document.getElementById('ck-ok').addEventListener('click', () => { try { localStorage.setItem('sorted_consent', new Date().toISOString()); } catch(e){} ck.hidden = true; });
+})();
 </script>
 </body>
 </html>
