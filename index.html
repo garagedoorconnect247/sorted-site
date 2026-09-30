@@ -229,6 +229,20 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
   .stat{padding:20px 16px}.stat b{font-size:1.9rem}
 }
 
+
+/* SERVICE CARD TOGGLE */
+.svc-more{border-top:1px solid var(--border);margin-bottom:18px}
+.svc-more summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;padding:14px 0;font-size:.92rem;font-weight:600;color:var(--navy);user-select:none}
+.svc-more summary::-webkit-details-marker{display:none}
+.svc-more summary:hover{color:var(--blue)}
+.svc-more .cnt{font-size:.74rem;font-weight:700;color:var(--blue);background:var(--blue-l);padding:2px 8px;border-radius:99px}
+.svc-more .chev{width:16px;height:16px;margin-inline-start:auto;color:var(--blue);transition:transform var(--e)}
+.svc-more[open] .chev{transform:rotate(180deg)}
+.svc-more .svc-list{margin:2px 0 6px;animation:hvRow .3s ease both}
+.svc-card .svc-top{margin-bottom:6px}
+.svc-more{margin-top:auto}
+.svc-card .svc-more~.svc-link{margin-top:0}
+
 /* MENU */
 .brand{flex-shrink:0}
 .menu{display:flex;align-items:center;gap:2px}
@@ -346,7 +360,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
           <div class="svc-price" data-i18n="s1_price">החל מ-<span class="amt">$99</span></div>
         </div>
       </div>
-      <ul class="svc-list">
+      <details class="svc-more"><summary><span data-i18n="inc_toggle">מה כלול</span><span class="cnt">7</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l1">הקמת עסק (LLC, S Corp, או C Corp)</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l2">מספר EIN (תעודת זהות פדרלית)</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l3">הסכם הפעלה (Operating Agreement)</span></li>
@@ -354,7 +368,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l5">סוכן רשום וכתובת מקומית</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l6">רישום DBA</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l7">חבילת מסמכים עסקית מאורגנת</span></li>
-      </ul>
+      </ul></details>
       <a class="svc-link" href="service-formation.html"><span data-i18n="s1_link">גלו עוד על הקמת עסק</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
@@ -368,13 +382,13 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
           <div class="svc-price" data-i18n="s2_price">החל מ-<span class="amt">$150</span></div>
         </div>
       </div>
-      <ul class="svc-list">
+      <details class="svc-more"><summary><span data-i18n="inc_toggle">מה כלול</span><span class="cnt">5</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l1">הנהלת חשבונות ספקים ולקוחות (AP/AR)</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l2">הקמה וניהול QuickBooks</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l3">שירותי שכר</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l4">ניהול תשלומים לקבלני משנה (1099)</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l5">הנהלת חשבונות חודשית ודוחות פיננסיים</span></li>
-      </ul>
+      </ul></details>
       <a class="svc-link" href="service-financial.html"><span data-i18n="s2_link">גלו עוד על שירותים פיננסיים</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
@@ -388,7 +402,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
           <div class="svc-price" data-i18n="s3_price">החל מ-<span class="amt">$300</span></div>
         </div>
       </div>
-      <ul class="svc-list">
+      <details class="svc-more"><summary><span data-i18n="inc_toggle">מה כלול</span><span class="cnt">9</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l1">הקמת מערכת ניהול ומעקב צוות</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l7">הדרכת עובדים ומוקדים טלפוניים</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l8">אימון בתקשורת מקצועית ושפה</span></li>
@@ -398,7 +412,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l4">מעקב אחר פעילות עובדים</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l5">דוחות פרודוקטיביות וביצועים</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_l6">מערכות לניהול צוות מרוחק</span></li>
-      </ul>
+      </ul></details>
       <a class="svc-link" href="service-team.html"><span data-i18n="s3_link">גלו עוד על ניהול צוות</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
@@ -412,7 +426,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
           <div class="svc-price" data-i18n="s4_price">החל מ-<span class="amt">$150</span></div>
         </div>
       </div>
-      <ul class="svc-list">
+      <details class="svc-more"><summary><span data-i18n="inc_toggle">מה כלול</span><span class="cnt">7</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l1">בדיקת זכאות (מודל העסק וסטטוס פרופיל עסקי בגוגל)</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l2">דרישות רישיון עסק והכוונה בהגשה</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l3">אימות ביטוח ואישור כיסוי מינימלי</span></li>
@@ -420,7 +434,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l5">התאמת מסמכים בין כל ההגשות</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l6">הגשת בקשת Google Verified</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l7">מעקב חידוש שנתי ותאימות</span></li>
-      </ul>
+      </ul></details>
       <a class="svc-link" href="service-google.html"><span data-i18n="s4_link">גלו עוד על Google Guarantee</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
@@ -434,7 +448,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
           <div class="svc-price" data-i18n="s5_price">החל מ-<span class="amt">$500</span></div>
         </div>
       </div>
-      <ul class="svc-list">
+      <details class="svc-more"><summary><span data-i18n="inc_toggle">מה כלול</span><span class="cnt">7</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l1">עיצוב ובניית אתר עסקי</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l2">אופטימיזציה למנועי חיפוש (SEO)</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l3">אתר ידידותי למובייל ומהיר בטעינה</span></li>
@@ -442,7 +456,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l5">חיבור לפרופיל עסקי בגוגל</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l6">טופסי יצירת קשר והקמת חיוג ישיר</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l7">עדכונים ותחזוקה שוטפת (אופציונלי)</span></li>
-      </ul>
+      </ul></details>
       <a class="svc-link" href="service-website.html"><span data-i18n="s5_link">גלו עוד על עיצוב אתרים</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
@@ -665,6 +679,8 @@ const C = {"he": {"m_home": "ראשי", "m_services": "שירותים", "m_about
 Object.assign(t.he, C.he); Object.assign(t.en, C.en);
 const X = {"he": {"trust1": "<bdi dir=\"ltr\">20+</bdi> שנות ניסיון", "trust2": "עברית ואנגלית", "trust3": "עוזרים לעסקים מאז 2018", "hv_title": "העסק שלכם", "hv_sub": "צ׳קליסט הקמה", "hv_badge": "בתהליך", "hv_pct": "3 מתוך 5 הושלמו", "hv_r1": "הקמת LLC", "hv_r2": "מספר EIN", "hv_r3": "הסכם הפעלה", "hv_r4": "חשבון בנק עסקי", "hv_r5": "הקמת QuickBooks", "hv_done": "הושלם", "hv_prog": "בתהליך", "hv_next": "הבא בתור", "hv_chip": "כל המסמכים מסודרים ומוסברים", "sup_label": "איך אנחנו עוזרים", "sup_more": "הכירו אותנו", "st1_n": "20+", "st1_l": "שנות ניסיון בתפעול, מנהלה ופיננסים", "st2_n": "5", "st2_l": "תחומי שירות במקום אחד", "st3_n": "2018", "st3_l": "עוזרים לעסקים לצמוח מאז", "st4_n": "1:1", "st4_l": "ליווי אישי, בעברית או באנגלית"}, "en": {"trust1": "20+ years of experience", "trust2": "Hebrew & English", "trust3": "Helping businesses since 2018", "hv_title": "Your Business", "hv_sub": "Setup checklist", "hv_badge": "In progress", "hv_pct": "3 of 5 complete", "hv_r1": "LLC Formation", "hv_r2": "EIN Number", "hv_r3": "Operating Agreement", "hv_r4": "Business Bank Account", "hv_r5": "QuickBooks Setup", "hv_done": "Done", "hv_prog": "In progress", "hv_next": "Up next", "hv_chip": "Every document organized & explained", "sup_label": "How We Help", "sup_more": "Meet us", "st1_n": "20+", "st1_l": "Years in operations, admin & finance", "st2_n": "5", "st2_l": "Service areas in one place", "st3_n": "2018", "st3_l": "Helping businesses grow since", "st4_n": "1:1", "st4_l": "Personal support, in Hebrew or English"}};
 Object.assign(t.he, X.he); Object.assign(t.en, X.en);
+const X2 = {"he": {"inc_toggle": "מה כלול"}, "en": {"inc_toggle": "What's included"}};
+Object.assign(t.he, X2.he); Object.assign(t.en, X2.en);
 
 let lang = 'he';
 function applyLang(l){
