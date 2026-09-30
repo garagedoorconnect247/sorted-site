@@ -244,6 +244,21 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
 .svc-stack:has(.svc-more[open]){align-items:flex-start}
 .svc-card .svc-more~.svc-link{margin-top:0}
 
+
+/* WHY CARD IN SERVICES */
+.svc-card.why-svc{background:var(--navy);border-color:var(--navy);color:#fff;position:relative;overflow:hidden}
+.why-svc::before{content:"";position:absolute;top:-80px;inset-inline-end:-80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(79,134,247,.35) 0%,transparent 70%)}
+.why-svc>*{position:relative}
+.why-svc:hover{border-color:var(--blue)}
+.wy-label{display:inline-block;align-self:flex-start;font-size:.74rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#9FC1FF;background:rgba(255,255,255,.08);padding:5px 12px;border-radius:99px;margin-bottom:14px}
+.why-svc .svc-h{color:#fff;margin-bottom:18px}
+.wy-list{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:20px}
+.wy-list li{display:flex;align-items:flex-start;gap:10px;font-size:.92rem;color:#DCE4F2}
+.wy-ic{width:20px;height:20px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.wy-ic svg{width:11px;height:11px;color:#fff}
+.wy-p{font-size:.9rem;color:#B0BBCE;margin-top:auto;margin-bottom:16px}
+.wy-btn{justify-content:center;width:100%}
+
 /* MENU */
 .brand{flex-shrink:0}
 .menu{display:flex;align-items:center;gap:2px}
@@ -357,7 +372,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
         <div class="svc-titles">
           <div class="svc-eyebrow" data-i18n="s1_eyebrow">הקמת עסק</div>
           <div class="svc-h" data-i18n="s1_h">מתחילים את העסק נכון.</div>
-          <p class="svc-desc" data-i18n="s1_desc">אנחנו עוזרים לכם להתחיל את העסק שלכם בארצות הברית, תוך שמירה על תקינות מהיום הראשון — בין אם זה העסק הראשון שלכם או הבא בתור. אנחנו מטפלים בניירת ובונים את הבסיס שמתאים לכם, כדי שתוכלו להתמקד בלהצמיח אותו.</p>
+          <p class="svc-desc" data-i18n="s1_desc">אנחנו עוזרים לכם לפתוח עסק בארה״ב נכון מהיום הראשון — מטפלים בניירת ובונים את הבסיס שמתאים לכם.</p>
           <div class="svc-price" data-i18n="s1_price">החל מ-<span class="amt">$99</span></div>
         </div>
       </div>
@@ -423,7 +438,7 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
         <div class="svc-titles">
           <div class="svc-eyebrow" data-i18n="s4_eyebrow">ייעוץ וניהול Google Guarantee</div>
           <div class="svc-h" data-i18n="s4_h">זכאים. מורשים. מאומתים.</div>
-          <p class="svc-desc" data-i18n="s4_desc">צריכים פרופיל עסקי בגוגל או את תג Google Verified ל-Local Services Ads? אנחנו מסבירים בדיוק מה נדרש, מטפלים בניירת העסקית, ושומרים שתישארו תקינים — בין אם אתם מתחילים מאפס או שכבר נדחיתם בעבר.</p>
+          <p class="svc-desc" data-i18n="s4_desc">צריכים את תג Google Verified ל-Local Services Ads? אנחנו מסבירים מה נדרש, מטפלים בניירת ושומרים שתישארו תקינים.</p>
           <div class="svc-price" data-i18n="s4_price">החל מ-<span class="amt">$150</span></div>
         </div>
       </div>
@@ -459,6 +474,14 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s5_l7">עדכונים ותחזוקה שוטפת (אופציונלי)</span></li>
       </ul></details>
       <a class="svc-link" href="service-website.html"><span data-i18n="s5_link">גלו עוד על עיצוב אתרים</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+
+    <div class="svc-card why-svc">
+      <span class="wy-label" data-i18n="wy_label">למה Sorted</span>
+      <div class="svc-h" data-i18n="wy_h">לא בטוחים מה מתאים לכם?</div>
+      <ul class="wy-list"><li><span class="wy-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="wy1">ליווי אישי, ישירות איתנו</span></li><li><span class="wy-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="wy2">עברית ואנגלית</span></li><li><span class="wy-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="wy3">מחירים ברורים מראש</span></li><li><span class="wy-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="wy4">כנות לגבי מה צריך — ומה לא</span></li><li><span class="wy-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="wy5"><bdi dir="ltr">20+</bdi> שנות ניסיון</span></li><li><span class="wy-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="wy6">שירות בכל רחבי ארה״ב</span></li></ul>
+      <p class="wy-p" data-i18n="wy_p">ספרו לנו מה אתם מנסים לעשות, ונגיד לכם בדיוק מאיפה להתחיל.</p>
+      <a class="btn btn-primary wy-btn" href="https://wa.me/972538036607" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="wy_btn">דברו איתנו בוואטסאפ</span></a>
     </div>
 
   </div>
@@ -682,6 +705,8 @@ const X = {"he": {"trust1": "<bdi dir=\"ltr\">20+</bdi> שנות ניסיון", 
 Object.assign(t.he, X.he); Object.assign(t.en, X.en);
 const X2 = {"he": {"inc_toggle": "מה כלול", "s3_desc": "אין לכם שקיפות לגבי נוכחות, פעילות או תפוקה של הצוות? אנחנו מקימים מערכת ניהול אמיתית ומכשירים את הצוות שלכם — מקומי או מרוחק."}, "en": {"inc_toggle": "What's included", "s3_desc": "Lack visibility into your team's attendance, activity, or productivity? We set up a real management system and train your team — local or remote."}};
 Object.assign(t.he, X2.he); Object.assign(t.en, X2.en);
+const X3 = {"he": {"s1_desc": "אנחנו עוזרים לכם לפתוח עסק בארה״ב נכון מהיום הראשון — מטפלים בניירת ובונים את הבסיס שמתאים לכם.", "s4_desc": "צריכים את תג Google Verified ל-Local Services Ads? אנחנו מסבירים מה נדרש, מטפלים בניירת ושומרים שתישארו תקינים.", "wy_label": "למה Sorted", "wy_h": "לא בטוחים מה מתאים לכם?", "wy1": "ליווי אישי, ישירות איתנו", "wy2": "עברית ואנגלית", "wy3": "מחירים ברורים מראש", "wy4": "כנות לגבי מה צריך — ומה לא", "wy5": "<bdi dir=\"ltr\">20+</bdi> שנות ניסיון", "wy6": "שירות בכל רחבי ארה״ב", "wy_p": "ספרו לנו מה אתם מנסים לעשות, ונגיד לכם בדיוק מאיפה להתחיל.", "wy_btn": "דברו איתנו בוואטסאפ"}, "en": {"s1_desc": "We help you start your US business the right way from day one — handling the paperwork and building the foundation that fits you.", "s4_desc": "Need the Google Verified badge for Local Services Ads? We explain what's required, handle the paperwork, and keep you compliant.", "wy_label": "Why Sorted", "wy_h": "Not Sure Which Service Fits?", "wy1": "Personal support, directly with us", "wy2": "Hebrew & English", "wy3": "Clear pricing upfront", "wy4": "Honest about what you need — and what you don't", "wy5": "20+ years of experience", "wy6": "Clients across the US", "wy_p": "Tell us what you're trying to do, and we'll tell you exactly where to start.", "wy_btn": "Chat with us on WhatsApp"}};
+Object.assign(t.he, X3.he); Object.assign(t.en, X3.en);
 
 let lang = 'he';
 function applyLang(l){
