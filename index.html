@@ -370,17 +370,21 @@ html.ax-contrast a svg{color:#FFE500!important}
 @media(max-width:640px){.ck{flex-direction:column;align-items:stretch;gap:12px;padding:16px}.ck .ck-ok{justify-content:center}.a11y-fab,.wa-fl{width:50px;height:50px;bottom:16px}.a11y-fab{inset-inline-start:16px}.wa-fl{inset-inline-end:16px}}
 @media print{.a11y-fab,.a11y-panel,.ck,.wa-fl{display:none!important}}
 .reviews{background:var(--paper)}
-.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.rv-card{margin:0;background:var(--white);border:1px solid var(--border);border-radius:var(--rl);padding:28px;display:flex;flex-direction:column;gap:16px;opacity:0;transform:translateY(16px);transition:opacity .55s var(--e),transform .55s var(--e),border-color var(--e),box-shadow var(--e)}
-.rv-card:hover{border-color:var(--blue);box-shadow:0 12px 32px rgba(22,86,224,.08)}
-.rv-mark{width:30px;height:30px;color:var(--blue);opacity:.9}
-.rv-card blockquote{margin:0;font-size:1rem;line-height:1.65;color:var(--ink-2);flex-grow:1}
-.rv-card figcaption{display:flex;flex-direction:column;gap:3px;padding-top:16px;border-top:1px solid var(--border)}
-.rv-name{font-weight:800;color:var(--navy)}
-.rv-svc{font-size:.8rem;font-weight:700;color:var(--blue-d);text-transform:uppercase;letter-spacing:.03em}
-@media(max-width:1000px){.rv-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:640px){.rv-grid{grid-template-columns:1fr}}
-html.ax-contrast .rv-card{opacity:1}
+.rv-viewport{overflow:hidden;position:relative;direction:ltr;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);padding:6px 0}
+.rv-track{display:flex;gap:18px;width:max-content;direction:ltr;animation:rv-scroll 60s linear infinite}
+.rv-viewport:hover .rv-track,.rv-viewport:focus-within .rv-track{animation-play-state:paused}
+@keyframes rv-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 9px))}}
+.rv-card{margin:0;width:300px;flex-shrink:0;background:var(--white);border:1px solid var(--border);border-radius:var(--rl);padding:22px;display:flex;flex-direction:column;gap:12px;transition:border-color var(--e),box-shadow var(--e)}
+html[dir="rtl"] .rv-card{direction:rtl}
+.rv-card:hover{border-color:var(--blue);box-shadow:0 10px 26px rgba(22,86,224,.08)}
+.rv-mark{width:22px;height:22px;color:var(--blue)}
+.rv-card blockquote{margin:0;font-size:.9rem;line-height:1.6;color:var(--ink-2);flex-grow:1}
+.rv-card figcaption{display:flex;flex-direction:column;gap:2px;padding-top:12px;border-top:1px solid var(--border)}
+.rv-name{font-weight:800;color:var(--navy);font-size:.92rem}
+.rv-svc{font-size:.72rem;font-weight:700;color:var(--blue-d);text-transform:uppercase;letter-spacing:.03em}
+@media(max-width:640px){.rv-card{width:260px}.rv-track{animation-duration:50s}}
+@media(prefers-reduced-motion:reduce){.rv-track{animation:none}.rv-viewport{overflow-x:auto;-webkit-mask-image:none;mask-image:none}}
+html.ax-motion .rv-track{animation:none}html.ax-motion .rv-viewport{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
 </style>
 <script>(function(){try{var s=JSON.parse(localStorage.getItem('sorted_a11y')||'{}'),h=document.documentElement;Object.keys(s).forEach(function(k){if(k==='size'){if(s.size)h.setAttribute('data-ax-size',s.size)}else if(s[k])h.classList.add('ax-'+k)})}catch(e){}})();</script>
 </head>
@@ -654,7 +658,7 @@ html.ax-contrast .rv-card{opacity:1}
     <span class="label" data-i18n="rv_label">מה הלקוחות שלנו אומרים</span>
     <h2 data-i18n="rv_h">עסקים אמיתיים. תוצאות אמיתיות.</h2>
   </div>
-  <div class="rv-grid sg fu">
+  <div class="rv-viewport fu" tabindex="0" aria-label="Client reviews" data-i18n-aria="rv_label"><div class="rv-track">
     <figure class="rv-card">
       <svg class="rv-mark" aria-hidden="true" focusable="false" viewBox="0 0 32 32" fill="currentColor"><path d="M12.5 7C7.8 8.6 5 12.4 5 17.4V25h9v-9H9.4c.3-3.1 2-5.2 4.6-6.4zm14 0c-4.7 1.6-7.5 5.4-7.5 10.4V25h9v-9h-4.6c.3-3.1 2-5.2 4.6-6.4z"/></svg>
       <blockquote data-i18n="rv1_q">להקים עסק בארה״ב הרגיש לי מציף. Sorted הפכו את כל התהליך לפשוט ומסודר, הסבירו הכול בבהירות, וחסכו לי המון זמן ולחץ.</blockquote>
@@ -685,7 +689,37 @@ html.ax-contrast .rv-card{opacity:1}
       <blockquote data-i18n="rv6_q">לעמוד בקצב של הספרים והכספים היה כאב ראש אמיתי. Sorted סידרו הכול, והיום יש לי תמונה ברורה יותר של מצב העסק.</blockquote>
       <figcaption><span class="rv-name" data-i18n="rv6_n">ליאור ט.</span><span class="rv-svc" data-i18n="rv6_s">הנהלת חשבונות וכספים</span></figcaption>
     </figure>
-  </div>
+    <figure class="rv-card" aria-hidden="true">
+      <svg class="rv-mark" aria-hidden="true" focusable="false" viewBox="0 0 32 32" fill="currentColor"><path d="M12.5 7C7.8 8.6 5 12.4 5 17.4V25h9v-9H9.4c.3-3.1 2-5.2 4.6-6.4zm14 0c-4.7 1.6-7.5 5.4-7.5 10.4V25h9v-9h-4.6c.3-3.1 2-5.2 4.6-6.4z"/></svg>
+      <blockquote data-i18n="rv1_q">להקים עסק בארה״ב הרגיש לי מציף. Sorted הפכו את כל התהליך לפשוט ומסודר, הסבירו הכול בבהירות, וחסכו לי המון זמן ולחץ.</blockquote>
+      <figcaption><span class="rv-name" data-i18n="rv1_n">דניאל ר.</span><span class="rv-svc" data-i18n="rv1_s">הקמת עסק</span></figcaption>
+    </figure>
+    <figure class="rv-card" aria-hidden="true">
+      <svg class="rv-mark" aria-hidden="true" focusable="false" viewBox="0 0 32 32" fill="currentColor"><path d="M12.5 7C7.8 8.6 5 12.4 5 17.4V25h9v-9H9.4c.3-3.1 2-5.2 4.6-6.4zm14 0c-4.7 1.6-7.5 5.4-7.5 10.4V25h9v-9h-4.6c.3-3.1 2-5.2 4.6-6.4z"/></svg>
+      <blockquote data-i18n="rv2_q">Sorted עזרו לי לסדר הכול ולהקים את QuickBooks כמו שצריך. היום אני באמת מבין מה קורה בכספים של העסק שלי.</blockquote>
+      <figcaption><span class="rv-name" data-i18n="rv2_n">מיכאל ל.</span><span class="rv-svc" data-i18n="rv2_s">הנהלת חשבונות וכספים</span></figcaption>
+    </figure>
+    <figure class="rv-card" aria-hidden="true">
+      <svg class="rv-mark" aria-hidden="true" focusable="false" viewBox="0 0 32 32" fill="currentColor"><path d="M12.5 7C7.8 8.6 5 12.4 5 17.4V25h9v-9H9.4c.3-3.1 2-5.2 4.6-6.4zm14 0c-4.7 1.6-7.5 5.4-7.5 10.4V25h9v-9h-4.6c.3-3.1 2-5.2 4.6-6.4z"/></svg>
+      <blockquote data-i18n="rv3_q">אף פעם לא הרגשתי סתם עוד לקוח. בכל פעם שהייתה לי שאלה, מישהו לקח את הזמן להסביר, והתמיכה בעברית ובאנגלית הקלה על הכול.</blockquote>
+      <figcaption><span class="rv-name" data-i18n="rv3_n">עמית ש.</span><span class="rv-svc" data-i18n="rv3_s">ליווי אישי</span></figcaption>
+    </figure>
+    <figure class="rv-card" aria-hidden="true">
+      <svg class="rv-mark" aria-hidden="true" focusable="false" viewBox="0 0 32 32" fill="currentColor"><path d="M12.5 7C7.8 8.6 5 12.4 5 17.4V25h9v-9H9.4c.3-3.1 2-5.2 4.6-6.4zm14 0c-4.7 1.6-7.5 5.4-7.5 10.4V25h9v-9h-4.6c.3-3.1 2-5.2 4.6-6.4z"/></svg>
+      <blockquote data-i18n="rv4_q">Sorted עזרו לנו להטמיע מערכות מסודרות למעקב אחרי שעות, פעילות, הדרכה ופרודוקטיביות. ניהול הצוות הרבה יותר קל היום.</blockquote>
+      <figcaption><span class="rv-name" data-i18n="rv4_n">רונן ק.</span><span class="rv-svc" data-i18n="rv4_s">ניהול צוות</span></figcaption>
+    </figure>
+    <figure class="rv-card" aria-hidden="true">
+      <svg class="rv-mark" aria-hidden="true" focusable="false" viewBox="0 0 32 32" fill="currentColor"><path d="M12.5 7C7.8 8.6 5 12.4 5 17.4V25h9v-9H9.4c.3-3.1 2-5.2 4.6-6.4zm14 0c-4.7 1.6-7.5 5.4-7.5 10.4V25h9v-9h-4.6c.3-3.1 2-5.2 4.6-6.4z"/></svg>
+      <blockquote data-i18n="rv5_q">הם טיפלו בהנהלת החשבונות, בחשבוניות, בתשלומים ובכל הפרטים הקטנים שכל הזמן הצטברו. סוף סוף יש לי על מי לסמוך מאחורי הקלעים.</blockquote>
+      <figcaption><span class="rv-name" data-i18n="rv5_n">דוד מ.</span><span class="rv-svc" data-i18n="rv5_s">ניהול בק אופיס</span></figcaption>
+    </figure>
+    <figure class="rv-card" aria-hidden="true">
+      <svg class="rv-mark" aria-hidden="true" focusable="false" viewBox="0 0 32 32" fill="currentColor"><path d="M12.5 7C7.8 8.6 5 12.4 5 17.4V25h9v-9H9.4c.3-3.1 2-5.2 4.6-6.4zm14 0c-4.7 1.6-7.5 5.4-7.5 10.4V25h9v-9h-4.6c.3-3.1 2-5.2 4.6-6.4z"/></svg>
+      <blockquote data-i18n="rv6_q">לעמוד בקצב של הספרים והכספים היה כאב ראש אמיתי. Sorted סידרו הכול, והיום יש לי תמונה ברורה יותר של מצב העסק.</blockquote>
+      <figcaption><span class="rv-name" data-i18n="rv6_n">ליאור ט.</span><span class="rv-svc" data-i18n="rv6_s">הנהלת חשבונות וכספים</span></figcaption>
+    </figure>
+  </div></div>
 </div></section>
 
 <section class="notsure"><div class="wrap fu">
