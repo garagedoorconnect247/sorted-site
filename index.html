@@ -258,6 +258,16 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
 .wy-ic svg{width:11px;height:11px;color:#fff}
 .wy-p{font-size:.9rem;color:#B0BBCE;margin-top:auto;margin-bottom:16px}
 .wy-btn{justify-content:center;width:100%}
+@media(min-width:720px){
+  .svc-stack>.svc-card.why-svc{flex-basis:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);grid-template-areas:"label list" "h list" "p list" "btn list";column-gap:48px;align-items:start;padding:36px 40px}
+  .why-svc .wy-label{grid-area:label;justify-self:start}
+  .why-svc .svc-h{grid-area:h;font-size:1.45rem;margin-bottom:12px}
+  .why-svc .wy-p{grid-area:p;margin-top:0}
+  .why-svc .wy-btn{grid-area:btn;width:auto;justify-self:start}
+  .why-svc .wy-list{grid-area:list;display:grid;grid-template-columns:1fr 1fr;gap:16px 28px;margin:0;align-self:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px 26px}
+  .why-svc .wy-list li{font-size:.98rem}
+}
+@media(min-width:720px) and (max-width:900px){.svc-stack>.svc-card.why-svc{grid-template-columns:1fr;grid-template-areas:"label" "h" "list" "p" "btn";row-gap:0}.why-svc .wy-list{margin-bottom:20px}}
 
 
 /* SUPPORT PANEL */
