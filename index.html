@@ -406,6 +406,7 @@ footer .f-disclaimer b{color:#C9D3E3}
 @media(max-width:520px){.f-grid{grid-template-columns:1fr;gap:30px}}
 .svc-price .fee{font-size:.92em;font-weight:600;margin-inline-start:4px;opacity:.85}
 .price-note{font-size:.86rem;color:var(--muted);max-width:520px;margin:-16px 0 26px}
+.desc-lead{display:block;font-weight:700;color:var(--navy);margin-bottom:6px}
 </style>
 <script>(function(){try{var s=JSON.parse(localStorage.getItem('sorted_a11y')||'{}'),h=document.documentElement;Object.keys(s).forEach(function(k){if(k==='size'){if(s.size)h.setAttribute('data-ax-size',s.size)}else if(s[k])h.classList.add('ax-'+k)})}catch(e){}})();</script>
 </head>
@@ -535,7 +536,7 @@ footer .f-disclaimer b{color:#C9D3E3}
         <div class="svc-titles">
           <div class="svc-eyebrow" data-i18n="s3_eyebrow">פרודוקטיביות עובדים ובקרת איכות</div>
           <div class="svc-h" data-i18n="s3_h">נוכחות, פעילות ותפוקה, במעקב</div>
-          <p class="svc-desc" data-i18n="s3_desc">אין לכם שקיפות לגבי נוכחות, פעילות או תפוקה של הצוות? אנחנו מקימים מערכת ניהול אמיתית ומכשירים את הצוות שלכם, בין אם מקומי ובין אם מרוחק.</p>
+          <p class="svc-desc" data-i18n="s3_desc"><span class="desc-lead">מי עובד. מה הוא עושה. כמה טוב זה נעשה.</span>לנהל צוות מרוחק זה קשה. אנחנו מקימים את המערכות ומכשירים את הצוות שלכם, מכל מקום שהם עובדים.</p>
           <div class="svc-price" data-i18n="s3_price">החל מ-<span class="amt">$300</span></div>
         </div>
       </div>
@@ -828,7 +829,7 @@ const t = {
     s2_link:"גלו עוד על הנהלת חשבונות, שכר ומנהלה",
     s2_price:'החל מ-<span class="amt">$150</span>',
     s3_eyebrow:"פרודוקטיביות עובדים ובקרת איכות", s3_h:"נוכחות, פעילות ותפוקה, במעקב",
-    s3_desc:"אין לכם שקיפות לגבי נוכחות, פעילות, או תפוקה של הצוות? בין אם הצוות מקומי או מרוחק (בפיליפינים, במקסיקו ועוד), אנחנו מקימים מערכת ניהול אמיתית ומכשירים את הצוות שלכם לייצג את העסק בצורה מקצועית בכל שיחה. תדעו בדיוק מי עובד, איך, ומה הם אומרים, בלי לעמוד מעליהם עם שעון עצר.",
+    s3_desc:"<span class=\"desc-lead\">מי עובד. מה הוא עושה. כמה טוב זה נעשה.</span>לנהל צוות מרוחק זה קשה. אנחנו מקימים את המערכות ומכשירים את הצוות שלכם, מכל מקום שהם עובדים.",
     s3_l1:"הקמת מערכת ניהול ומעקב צוות", s3_l3:"מעקב שעות כניסה/יציאה ונוכחות", s3_l4:"מעקב אחר פעילות עובדים", s3_l5:"דוחות פרודוקטיביות וביצועים", s3_l6:"מערכות לניהול צוות מרוחק",
     s3_l7:"הדרכת עובדים ומוקדים טלפוניים", s3_l8:"אימון בתקשורת מקצועית ושפה", s3_l9:"מדריכי עובד רשמיים", s3_l10:"חומרי הדרכה וקליטת עובדים חדשים",
     s3_d1:"אנחנו מטמיעים מערכת אמיתית למעקב אחר עבודת הצוות שלכם, כדי שיהיו לכם נתונים אמיתיים במקום רק לקוות שדברים מתבצעים.",
@@ -898,7 +899,7 @@ const t = {
     s2_link:"Explore Bookkeeping, Payroll & Admin",
     s2_price:'Starting at <span class="amt">$150</span>',
     s3_eyebrow:"Employee Productivity & Quality Control", s3_h:"Attendance, Activity, and Productivity, Tracked",
-    s3_desc:"Lack visibility into your team's attendance, activity, or productivity? Whether your team is local or remote (in the Philippines, Mexico, or beyond), we set up a real management system and train your team to represent your business professionally on every call. You'll know who's working, how, and what they're saying, without watching over their shoulder.",
+    s3_desc:"<span class=\"desc-lead\">Who's working. What they're doing. How well it's done.</span>Managing a remote team is hard. We set up the systems and train your team, wherever they work.",
     s3_l1:"Team Management & Monitoring System Setup", s3_l3:"Clock In/Clock Out & Attendance Tracking", s3_l4:"Employee Activity Monitoring", s3_l5:"Productivity & Performance Reporting", s3_l6:"Remote Team Management Systems",
     s3_l7:"Employee & Call Center Training", s3_l8:"Professional Communication & Language Coaching", s3_l9:"Employee Handbooks", s3_l10:"New Employee Onboarding & Training Materials",
     s3_d1:"We implement a real system for tracking your team's work, so you have actual data instead of just hoping things are getting done.",
@@ -941,7 +942,7 @@ const C = {"he": {"m_home": "ראשי", "m_services": "שירותים", "m_about
 Object.assign(t.he, C.he); Object.assign(t.en, C.en);
 const X = {"he": {"trust1": "<bdi dir=\"ltr\">20+</bdi> שנות ניסיון", "trust2": "עברית ואנגלית", "trust3": "עוזרים לעסקים מאז 2008", "hv_title": "העסק שלכם", "hv_sub": "צ׳קליסט הקמה", "hv_badge": "בתהליך", "hv_pct": "3 מתוך 5 הושלמו", "hv_r1": "הקמת LLC", "hv_r2": "מספר EIN", "hv_r3": "הסכם הפעלה", "hv_r4": "חשבון בנק עסקי", "hv_r5": "הקמת QuickBooks", "hv_done": "הושלם", "hv_prog": "בתהליך", "hv_next": "הבא בתור", "hv_chip": "כל המסמכים מסודרים ומוסברים", "sup_label": "איך אנחנו עוזרים", "sup_more": "הכירו אותנו", "st1_n": "20+", "st1_l": "שנות ניסיון בתפעול, מנהלה ופיננסים", "st2_n": "6", "st2_l": "תחומי שירות במקום אחד", "st3_n": "2008", "st3_l": "עוזרים לעסקים לצמוח מאז", "st4_n": "1:1", "st4_l": "ליווי אישי, בעברית או באנגלית"}, "en": {"trust1": "20+ years of experience", "trust2": "Hebrew & English", "trust3": "Helping businesses since 2008", "hv_title": "Your Business", "hv_sub": "Setup checklist", "hv_badge": "In progress", "hv_pct": "3 of 5 complete", "hv_r1": "LLC Formation", "hv_r2": "EIN Number", "hv_r3": "Operating Agreement", "hv_r4": "Business Bank Account", "hv_r5": "QuickBooks Setup", "hv_done": "Done", "hv_prog": "In progress", "hv_next": "Up next", "hv_chip": "Every document organized & explained", "sup_label": "How We Help", "sup_more": "Meet us", "st1_n": "20+", "st1_l": "Years in operations, admin & finance", "st2_n": "6", "st2_l": "Service areas in one place", "st3_n": "2008", "st3_l": "Helping businesses grow since", "st4_n": "1:1", "st4_l": "Personal support, in Hebrew or English"}};
 Object.assign(t.he, X.he); Object.assign(t.en, X.en);
-const X2 = {"he": {"inc_toggle": "מה כלול", "s3_desc": "אין לכם שקיפות לגבי נוכחות, פעילות או תפוקה של הצוות? אנחנו מקימים מערכת ניהול אמיתית ומכשירים את הצוות שלכם, בין אם מקומי ובין אם מרוחק."}, "en": {"inc_toggle": "What's included", "s3_desc": "Lack visibility into your team's attendance, activity, or productivity? We set up a real management system and train your team, whether local or remote."}};
+const X2 = {"he": {"inc_toggle": "מה כלול", "s3_desc": "<span class=\"desc-lead\">מי עובד. מה הוא עושה. כמה טוב זה נעשה.</span>לנהל צוות מרוחק זה קשה. אנחנו מקימים את המערכות ומכשירים את הצוות שלכם, מכל מקום שהם עובדים."}, "en": {"inc_toggle": "What's included", "s3_desc": "<span class=\"desc-lead\">Who's working. What they're doing. How well it's done.</span>Managing a remote team is hard. We set up the systems and train your team, wherever they work."}};
 Object.assign(t.he, X2.he); Object.assign(t.en, X2.en);
 const X3 = {"he": {"s1_desc": "אנחנו עוזרים לכם לפתוח עסק בארה״ב נכון מהיום הראשון. אנחנו מטפלים בניירת ובונים את הבסיס שמתאים לכם.", "s4_desc": "צריכים את תג Google Verified ל-Local Services Ads? אנחנו מסבירים מה נדרש, מטפלים בניירת ושומרים שתישארו תקינים.", "wy_label": "למה Sorted", "wy_h": "לא בטוחים מה מתאים לכם?", "wy1": "ליווי אישי, ישירות איתנו", "wy2": "עברית ואנגלית", "wy3": "מחירים ברורים מראש", "wy4": "כנות לגבי מה צריך, ומה לא", "wy5": "<bdi dir=\"ltr\">20+</bdi> שנות ניסיון", "wy6": "שירות בכל רחבי ארה״ב", "wy_p": "ספרו לנו מה אתם מנסים לעשות, ונגיד לכם בדיוק מאיפה להתחיל.", "wy_btn": "דברו איתנו בוואטסאפ"}, "en": {"s1_desc": "We help you start your US business the right way from day one, handling the paperwork and building the foundation that fits you.", "s4_desc": "Need the Google Verified badge for Local Services Ads? We explain what's required, handle the paperwork, and keep you compliant.", "wy_label": "Why Sorted", "wy_h": "Not Sure Which Service Fits?", "wy1": "Personal support, directly with us", "wy2": "Hebrew & English", "wy3": "Clear pricing upfront", "wy4": "Honest about what you need, and what you don't", "wy5": "20+ years of experience", "wy6": "Clients across the US", "wy_p": "Tell us what you're trying to do, and we'll tell you exactly where to start.", "wy_btn": "Chat with us on WhatsApp"}};
 Object.assign(t.he, X3.he); Object.assign(t.en, X3.en);
