@@ -345,6 +345,12 @@ footer .f-disclaimer b{color:#C9D3E3}
 .tm-card h3{font-size:1.15rem;font-weight:800;color:var(--navy);margin-bottom:8px}
 .tm-card p{font-size:.95rem;line-height:1.65;color:var(--ink-2)}
 @media(max-width:720px){.tm-grid{grid-template-columns:1fr}}
+/* heading scale */
+.hero h1{font-size:clamp(1.9rem,4.2vw,2.6rem)}
+.hero.sm .hero-in{max-width:760px}
+.sec-head h2,.story h2{font-size:clamp(1.35rem,2.8vw,1.75rem)}
+.exp-in h2{font-size:clamp(1.3rem,2.6vw,1.65rem)}
+.notsure h2,.support-copy h2{font-size:clamp(1.35rem,2.8vw,1.75rem)}
 </style>
 <script>(function(){try{var s=JSON.parse(localStorage.getItem('sorted_a11y')||'{}'),h=document.documentElement;Object.keys(s).forEach(function(k){if(k==='size'){if(s.size)h.setAttribute('data-ax-size',s.size)}else if(s[k])h.classList.add('ax-'+k)})}catch(e){}})();</script>
 </head>
