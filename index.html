@@ -97,6 +97,7 @@ section{padding:64px 0}
 .svc-h{font-size:1.15rem;font-weight:800;color:var(--navy);letter-spacing:-.01em;margin-bottom:8px}
 .svc-desc{font-size:.96rem;color:var(--ink-2)}
 .svc-price{display:inline-flex;align-items:baseline;gap:5px;background:var(--blue-l);color:var(--blue-d);font-weight:700;font-size:.86rem;padding:6px 14px;border-radius:99px;margin-top:12px}
+.price-fn{font-size:.78rem;color:var(--muted);margin:8px 0 0}
 .svc-price .amt{font-size:1rem;font-weight:800}
 .svc-list{list-style:none;display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:24px}
 .svc-list li{display:flex;align-items:flex-start;gap:8px;font-size:.88rem;color:var(--ink-2)}
@@ -532,6 +533,7 @@ html[dir="rtl"] .imm-btn .arr{transform:scaleX(-1)}
           <div class="svc-h" data-i18n="s2_h">חשבונות, שכר וניירת, מכוסים</div>
           <p class="svc-desc" data-i18n="s2_desc">בחרו את התמיכה הפיננסית והמנהלית שאתם צריכים, מ-QuickBooks ועד שכר ודוחות, כדי שתמיד תדעו איפה העסק שלכם עומד.</p>
           <div class="svc-price" data-i18n="s2_price">החל מ-<span class="amt">$99</span> לחודש*</div>
+          <p class="price-fn" data-i18n="s2_note">*התמחור החודשי משתנה בהתאם לשירותים הנבחרים ולצורכי העסק שלכם.</p>
         </div>
       </div>
       <details class="svc-more"><summary><span data-i18n="inc_toggle">מה כלול</span><span class="cnt">5</span><svg aria-hidden="true" focusable="false" class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
@@ -973,6 +975,7 @@ Object.assign(t.he, {"sup_p1": "ניהול עסק בארה״ב כרוך במשי
 Object.assign(t.he, {"sup_p1": "ניהול עסק בארה״ב דורש התמודדות עם משימות רבות במקביל, מההקמה הנכונה ועד ניהול הכספים, השכר והצוות."});
 Object.assign(t.he, {"sup_p2": "אנחנו מעניקים לבעלי עסקים תכנית מובנית אישית, תמיכה ושקט נפשי, עם ליווי צמוד שדואג שהצד המנהלי של העסק יתנהל ביעילות."});
 Object.assign(t.he, {"sup_p2": "אנחנו נותנים לבעלי עסקים תכנית מובנית אישית, תמיכה, ושקט נפשי, עם ליווי צמוד שישמור על הצד המנהלי של העסק שלכם מסודר ורץ חלק."});
+Object.assign(t.he, {"s2_note": "*התמחור החודשי משתנה בהתאם לשירותים הנבחרים ולצורכי העסק שלכם."}); Object.assign(t.en, {"s2_note": "*Monthly pricing varies based on the services selected and your business needs."});
 let lang = 'he';
 function applyLang(l){
   lang = l;
