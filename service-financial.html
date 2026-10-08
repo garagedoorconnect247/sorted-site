@@ -395,7 +395,7 @@ footer .f-disclaimer b{color:#C9D3E3}
 
 <section class="inc"><div class="wrap">
   <div class="sec-head fu">
-    <span class="label" data-i18n="sp_inc_label">איך נוכל לעזור</span>
+    <span class="label" data-i18n="sp_inc_label">השירותים שלנו</span>
     <h2 data-i18n="sp_inc_h">בחרו את השירותים המתאימים לכם</h2>
   </div>
   <div class="detail-grid">
@@ -596,6 +596,7 @@ document.querySelectorAll('.fu, .sg').forEach(el=>io.observe(el));
   document.getElementById('ck-ok').addEventListener('click', () => { try { localStorage.setItem('sorted_consent', new Date().toISOString()); } catch(e){} ck.hidden = true; });
 })();
 
+Object.assign(t.en, {"sp_inc_label": "Our Services"}); Object.assign(t.he, {"sp_inc_label": "השירותים שלנו"}); applyLang(lang);
 </script>
 </body>
 </html>
