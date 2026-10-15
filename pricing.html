@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" id="root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מחירים | מסודר</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2224%22%20fill%3D%22%231656E0%22/%3E%3Cpath%20d%3D%22M24%2033L33%2042L50%2024%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%229%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Cline%20x1%3D%2260%22%20y1%3D%2233%22%20x2%3D%2277%22%20y2%3D%2233%22%20stroke%3D%22%23fff%22%20stroke-width%3D%229%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.55%22/%3E%3Cline%20x1%3D%2224%22%20y1%3D%2255%22%20x2%3D%2277%22%20y2%3D%2255%22%20stroke%3D%22%23fff%22%20stroke-width%3D%229%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%2224%22%20y1%3D%2275%22%20x2%3D%2258%22%20y2%3D%2275%22%20stroke%3D%22%23fff%22%20stroke-width%3D%229%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E">
+<meta name="description" content="תדעו מה לצפות עוד לפני שמתחילים. אגרות מדינה או ממשלה מאושרות מולכם לפני התשלום.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0B1220; --ink-2:#3B4658; --muted:#7C8798;
+  --white:#FFFFFF; --paper:#F6F9FD;
+  --blue:#1656E0; --blue-d:#0F3FAE; --blue-l:#EAF1FF; --blue-l2:#DCEAFF;
+  --navy:#0E2340;
+  --border:#E3EAF4; --border-2:#D3DFF0;
+  --wa:#25D366; --wa-d:#128C7E;
+  --r:12px; --rl:18px;
+  --e:.25s cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Rubik',sans-serif;background:var(--white);color:var(--ink);line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Rubik',sans-serif;line-height:1.15}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:box-shadow var(--e)}
+nav.sc{box-shadow:0 2px 20px rgba(11,18,32,.06)}
+.nav-inner{height:62px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-mark{width:34px;height:34px;padding:3px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;color:#fff}
+.brand-name{font-size:1.1rem;font-weight:800;letter-spacing:-.02em;color:var(--navy)}
+.brand-name span{color:var(--blue)}
+.nav-actions{display:flex;align-items:center;gap:8px}
+.nav-tel{display:none;font-size:.82rem;font-weight:500;color:var(--muted);padding:7px 12px;border-radius:8px}
+@media(min-width:640px){.nav-tel{display:inline-block}}
+.nav-tel:hover{background:var(--paper);color:var(--ink)}
+.lang-btn{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:600;color:var(--ink-2);padding:7px 12px;border-radius:8px;background:var(--paper);border:1px solid var(--border);transition:all var(--e)}
+.lang-btn:hover{background:var(--blue-l)}
+.nav-wa{display:inline-flex;align-items:center;gap:7px;background:var(--wa);color:#fff;padding:9px 16px;border-radius:8px;font-weight:600;font-size:.84rem;transition:all var(--e)}
+.nav-wa:hover{background:var(--wa-d);transform:translateY(-1px)}
+.nav-wa svg{width:15px;height:15px}
+.wa-icon{width:17px;height:17px}
+
+/* HERO: minimal, breathing room */
+.hero{position:relative;background:linear-gradient(180deg,var(--blue-l) 0%,var(--white) 100%);padding:100px 0 88px;overflow:hidden;text-align:center}
+.hero::before{content:"";position:absolute;top:-140px;inset-inline-end:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,var(--blue-l2) 0%,transparent 70%);z-index:0}
+.hero::after{content:"";position:absolute;bottom:-160px;inset-inline-start:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,var(--blue-l2) 0%,transparent 70%);z-index:0;opacity:.6}
+.hero-in{position:relative;z-index:1;max-width:680px;margin:0 auto}
+.hero h1{font-size:clamp(2.3rem,6vw,3.4rem);font-weight:800;letter-spacing:-.025em;color:var(--navy);margin-bottom:16px}
+.hero-sub-label{font-size:1.02rem;font-weight:600;color:var(--blue-d);margin-bottom:18px}
+.hero-sub{font-size:1.06rem;color:var(--ink-2);max-width:560px;margin:0 auto 34px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:10px;font-weight:600;font-size:.95rem;transition:all var(--e)}
+.btn-primary{background:var(--wa);color:#fff}
+.btn-primary:hover{background:var(--wa-d);transform:translateY(-1px)}
+.btn-ghost{background:var(--white);color:var(--navy);border:1px solid var(--border-2)}
+.btn-ghost:hover{background:var(--blue-l)}
+
+/* SUPPORT STATEMENT */
+.support{background:var(--white);text-align:center;padding:64px 0}
+.support-in{max-width:640px;margin:0 auto}
+.support h2{font-size:clamp(1.3rem,2.8vw,1.7rem);font-weight:800;color:var(--navy);letter-spacing:-.01em;margin-bottom:16px}
+.support p{font-size:1rem;color:var(--ink-2);margin-bottom:12px}
+
+/* SECTION SHARED */
+section{padding:64px 0}
+.sec-head{max-width:640px;margin:0 auto 40px;text-align:center}
+.label{display:inline-block;font-size:.76rem;font-weight:700;color:var(--blue);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em;color:var(--navy)}
+.fu{opacity:0;transform:translateY(16px);transition:opacity .55s var(--e),transform .55s var(--e)}
+.fu.v{opacity:1;transform:none}
+
+/* SERVICE CARDS: large */
+.services{background:var(--paper)}
+.svc-stack{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.svc-stack>.svc-card{flex:0 1 100%;display:flex;flex-direction:column}
+@media(min-width:720px){.svc-stack>.svc-card{flex-basis:calc((100% - 20px)/2)}}
+@media(min-width:1024px){.svc-stack>.svc-card{flex-basis:calc((100% - 40px)/3)}}
+.svc-card .svc-link{margin-top:auto;align-self:flex-start}
+.svc-card{background:var(--white);border:1px solid var(--border);border-radius:var(--rl);padding:28px;opacity:0;transform:translateY(16px);transition:opacity .55s var(--e),transform .55s var(--e),border-color var(--e),box-shadow var(--e)}
+.svc-card:hover{border-color:var(--blue);box-shadow:0 12px 32px rgba(22,86,224,.08)}
+.sg.v>*{opacity:1;transform:none}
+.sg.v>*:nth-child(1){transition-delay:.04s}
+.sg.v>*:nth-child(2){transition-delay:.13s}
+.sg.v>*:nth-child(3){transition-delay:.22s}
+.sg.v>*:nth-child(4){transition-delay:.31s}
+.sg.v>*:nth-child(5){transition-delay:.40s}
+.svc-top{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:20px}
+.svc-num{font-size:.78rem;font-weight:800;color:var(--blue);background:var(--blue-l);padding:5px 12px;border-radius:8px;flex-shrink:0}
+.svc-titles{flex-grow:1}
+.svc-eyebrow{font-size:.78rem;font-weight:700;color:var(--blue-d);letter-spacing:.03em;text-transform:uppercase;margin-bottom:6px}
+.svc-h{font-size:1.15rem;font-weight:800;color:var(--navy);letter-spacing:-.01em;margin-bottom:8px}
+.svc-desc{font-size:.96rem;color:var(--ink-2)}
+.svc-price{display:inline-flex;align-items:baseline;gap:5px;background:var(--blue-l);color:var(--blue-d);font-weight:700;font-size:.86rem;padding:6px 14px;border-radius:99px;margin-top:12px}
+.svc-price .amt{font-size:1rem;font-weight:800}
+.svc-list{list-style:none;display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:24px}
+.svc-list li{display:flex;align-items:flex-start;gap:8px;font-size:.88rem;color:var(--ink-2)}
+.svc-list svg{width:16px;height:16px;color:var(--blue);flex-shrink:0;margin-top:2px}
+.svc-note{background:var(--paper);border-radius:10px;padding:14px 16px;font-size:.86rem;color:var(--ink-2);margin-bottom:20px}
+.svc-link{display:inline-flex;align-items:center;gap:6px;font-size:.9rem;font-weight:600;color:var(--blue);transition:gap var(--e)}
+.svc-link:hover{gap:10px}
+.svc-link svg{width:15px;height:15px}
+
+/* WHY */
+.why{background:var(--white)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.why-card{text-align:center;padding:8px}
+.why-ic{width:52px;height:52px;border-radius:14px;background:var(--blue-l);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.why-ic svg{width:24px;height:24px;color:var(--blue)}
+.why-card h3{font-size:1.02rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.why-card p{font-size:.88rem;color:var(--muted)}
+
+/* HOW IT WORKS */
+.how{background:var(--navy);color:#fff}
+.how .label{color:#9FC1FF}
+.how .sec-head h2{color:#fff}
+.step-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--rl);padding:26px}
+.step-num{font-size:1.8rem;font-weight:900;color:var(--blue-l2);margin-bottom:10px}
+.step-card h3{font-size:1rem;font-weight:700;margin-bottom:8px}
+.step-card p{font-size:.86rem;color:#B0BBCE}
+.how-cta{text-align:center;margin-top:40px}
+
+/* NOT SURE */
+.notsure{background:var(--blue);color:#fff;text-align:center}
+.notsure h2{font-size:clamp(1.4rem,3.2vw,1.9rem);font-weight:800;margin-bottom:10px}
+.notsure p{font-size:.98rem;color:rgba(255,255,255,.92);margin-bottom:24px;max-width:520px;margin-inline:auto}
+.notsure .btn-primary{background:#fff;color:var(--wa-d)}
+.notsure .btn-primary:hover{background:#f2f2f2}
+
+/* FOOTER */
+footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0}
+.f-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;padding-bottom:20px}
+.f-copy{font-size:.8rem;color:var(--muted)}
+.f-links{display:flex;gap:16px;font-size:.84rem;color:var(--ink-2);flex-wrap:wrap}
+.f-links a:hover{color:var(--blue)}
+.f-disclaimer{border-top:1px solid var(--border);padding-top:18px;font-size:.78rem;color:var(--muted);line-height:1.6}
+.f-disclaimer b{color:var(--ink-2)}
+
+.wa-fl{position:fixed;bottom:20px;inset-inline-end:20px;z-index:300;width:54px;height:54px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(37,211,102,.45);transition:transform var(--e)}
+.wa-fl:hover{transform:scale(1.08)}
+.wa-fl svg{width:26px;height:26px;color:#fff}
+
+@media(max-width:820px){
+  .why-grid{grid-template-columns:1fr}
+  .step-row{grid-template-columns:1fr}
+  .svc-list{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .hero{padding:64px 0 56px}
+  section{padding:48px 0}
+  .support{padding:48px 0}
+  .svc-card{padding:24px}
+  .svc-top{flex-direction:column;gap:10px}
+  .f-row{flex-direction:column;align-items:flex-start}
+  .fu,.svc-card{opacity:1!important;transform:none!important;transition:none!important}
+}
+
+/* MENU */
+.brand{flex-shrink:0}
+.menu{display:flex;align-items:center;gap:2px}
+.m-link{font-size:.9rem;font-weight:500;color:var(--ink-2);padding:8px 12px;border-radius:8px;display:inline-flex;align-items:center;gap:4px;transition:all var(--e);white-space:nowrap}
+.m-link:hover,.m-link.on{color:var(--blue);background:var(--blue-l)}
+.m-drop{position:relative}
+.m-drop-btn svg{width:14px;height:14px;transition:transform var(--e)}
+.m-drop:hover .m-drop-btn svg,.m-drop.open .m-drop-btn svg{transform:rotate(180deg)}
+.m-drop-panel{position:absolute;top:calc(100% + 8px);inset-inline-start:0;min-width:250px;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 14px 34px rgba(11,18,32,.1);padding:6px;display:none;flex-direction:column;z-index:10}
+.m-drop-panel::before{content:"";position:absolute;top:-10px;left:0;right:0;height:10px}
+.m-drop:hover .m-drop-panel,.m-drop.open .m-drop-panel{display:flex}
+.m-drop-panel a{padding:10px 12px;border-radius:8px;font-size:.88rem;color:var(--ink-2);display:flex;align-items:center;gap:10px;transition:all var(--e)}
+.m-drop-panel a b{font-size:.72rem;font-weight:800;color:var(--blue);background:var(--blue-l);padding:2px 7px;border-radius:6px}
+.m-drop-panel a:hover,.m-drop-panel a.on{background:var(--paper);color:var(--blue)}
+.burger{display:none;width:40px;height:40px;border-radius:8px;align-items:center;justify-content:center;color:var(--navy);border:1px solid var(--border);background:var(--paper)}
+.burger svg{width:20px;height:20px}
+.svc-link svg.arr,.o-more svg.arr{width:15px;height:15px}
+[dir=rtl] svg.arr{transform:scaleX(-1)}
+@media(max-width:1099px){.nav-tel{display:none!important}}
+@media(max-width:920px){
+  .burger{display:inline-flex}
+  .menu{display:none;position:absolute;top:62px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 14px 26px rgba(11,18,32,.08);flex-direction:column;align-items:stretch;padding:10px 16px 18px;gap:2px;max-height:calc(100vh - 62px);overflow:auto}
+  nav.open .menu{display:flex}
+  .m-link{padding:12px;font-size:1rem;width:100%}
+  .m-drop-btn svg{display:none}
+  .m-drop-panel{position:static;display:flex;box-shadow:none;border:none;padding:0 8px 6px;min-width:0}
+  .m-drop-panel::before{display:none}
+}
+@media(max-width:480px){.nav-wa span{display:none}.nav-wa{padding:9px 11px}.lang-btn{padding:7px 9px}.nav-actions{gap:6px}}
+.f-links a{display:inline-flex}
+
+/* SUB-PAGES */
+.hero.sm{padding:72px 0 64px}
+.crumbs{font-size:.82rem;color:var(--muted);margin-bottom:16px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
+.crumbs a:hover{color:var(--blue)}
+.hero .svc-price{margin:0 0 28px}
+.inc{background:var(--paper)}
+.detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.detail{background:#fff;border:1px solid var(--border);border-radius:var(--rl);padding:26px;display:flex;gap:16px;align-items:flex-start;transition:border-color var(--e),box-shadow var(--e)}
+.detail:hover{border-color:var(--blue);box-shadow:0 12px 32px rgba(22,86,224,.07)}
+.detail-ic{width:36px;height:36px;border-radius:10px;background:var(--blue-l);color:var(--blue);flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.detail-ic svg{width:18px;height:18px}
+.detail h3{font-size:1.02rem;font-weight:700;color:var(--navy);margin-bottom:6px;line-height:1.35}
+.detail p{font-size:.92rem;color:var(--ink-2)}
+.other-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.other{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--border);border-radius:14px;padding:20px;transition:all var(--e)}
+.other:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0 10px 24px rgba(22,86,224,.07)}
+.o-e{font-size:.74rem;font-weight:700;color:var(--blue-d);letter-spacing:.03em;text-transform:uppercase}
+.o-h{font-weight:700;color:var(--navy);font-size:.95rem;line-height:1.35}
+.o-more{margin-top:auto;padding-top:8px;font-size:.85rem;font-weight:600;color:var(--blue);display:inline-flex;align-items:center;gap:6px}
+/* ABOUT */
+.story{display:grid;grid-template-columns:1.35fr 1fr;gap:44px;align-items:start}
+.story .label{margin-bottom:8px}
+.story h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;color:var(--navy);letter-spacing:-.02em;margin-bottom:18px}
+.story p{font-size:1.02rem;color:var(--ink-2);margin-bottom:16px}
+.facts{background:var(--navy);color:#fff;border-radius:var(--rl);padding:28px}
+.founder{display:flex;align-items:center;gap:14px;padding-bottom:18px;margin-bottom:6px;border-bottom:1px solid rgba(255,255,255,.12)}
+.avatar{width:54px;height:54px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;flex-shrink:0}
+.founder b{display:block;font-size:1.08rem}
+.founder span{font-size:.85rem;color:#B0BBCE}
+.fact{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:.9rem}
+.fact:last-child{border-bottom:none}
+.fact span:first-child{color:#B0BBCE}
+.fact span:last-child{font-weight:600;text-align:end}
+.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.val{background:#fff;border:1px solid var(--border);border-radius:var(--rl);padding:24px}
+.val .why-ic{margin:0 0 14px}
+.val h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:6px}
+.val p{font-size:.88rem;color:var(--ink-2)}
+.exp{background:var(--paper)}
+.exp-in{max-width:720px;margin:0 auto;text-align:center}
+.exp-in h2{font-size:clamp(1.4rem,3.2vw,1.9rem);font-weight:800;color:var(--navy);letter-spacing:-.02em;margin-bottom:14px}
+.exp-in p{color:var(--ink-2);font-size:1rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:22px}
+.tag{background:#fff;border:1px solid var(--border-2);border-radius:99px;padding:7px 14px;font-size:.85rem;color:var(--ink-2)}
+/* LEGAL */
+.legal{max-width:760px;margin:0 auto}
+.lg-upd{display:inline-block;font-size:.82rem;color:var(--muted);background:var(--paper);border:1px solid var(--border);padding:5px 12px;border-radius:99px;margin-bottom:28px}
+.lg-sec{padding:22px 0;border-top:1px solid var(--border)}
+.lg-sec h2{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:10px;display:flex;gap:10px;align-items:baseline}
+.lg-sec h2 .n{font-size:.78rem;font-weight:800;color:var(--blue);background:var(--blue-l);padding:2px 8px;border-radius:6px}
+.lg-sec p,.lg-sec li{font-size:.97rem;color:var(--ink-2)}
+.lg-sec p+p,.lg-sec ul+p{margin-top:10px}
+.lg-sec ul{margin:8px 0 0;padding-inline-start:22px;display:flex;flex-direction:column;gap:6px}
+.lg-sec a{color:var(--blue);font-weight:600}
+/* FAQ */
+.faq-sec{background:var(--paper)}
+.faq-list{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:#fff;border:1px solid var(--border);border-radius:14px;transition:border-color var(--e)}
+.faq-item[open]{border-color:var(--blue-l2);box-shadow:0 8px 24px rgba(22,86,224,.06)}
+.faq-item summary{cursor:pointer;list-style:none;padding:20px 22px;font-weight:600;color:var(--navy);display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:1rem;line-height:1.45}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:hover{color:var(--blue)}
+.pm{width:20px;height:20px;color:var(--blue);flex-shrink:0;transition:transform var(--e)}
+.faq-item[open] .pm{transform:rotate(45deg)}
+.faq-a{padding:0 22px 22px;color:var(--ink-2);font-size:.96rem}
+@media(max-width:900px){.other-grid{grid-template-columns:repeat(2,1fr)}.values-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:820px){.story{grid-template-columns:1fr;gap:28px}}
+@media(max-width:720px){.detail-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.hero.sm{padding:52px 0 44px}.detail{padding:20px}.faq-item summary{padding:18px}.faq-a{padding:0 18px 18px}}
+@media(max-width:480px){.other-grid,.values-grid{grid-template-columns:1fr}}
+
+/* ===== ACCESSIBILITY ===== */
+:root{--muted:#5E6878;--wa:#0B7A5E;--wa-d:#0A6E55}
+.skip{position:absolute;top:-80px;inset-inline-start:12px;z-index:1000;background:var(--navy);color:#fff;padding:12px 18px;border-radius:10px;font-weight:600;transition:top .2s}
+.skip:focus{top:12px}
+main:focus{outline:none}
+a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.a11y-fab{position:fixed;bottom:20px;inset-inline-start:20px;z-index:300;width:54px;height:54px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(22,86,224,.4);transition:transform var(--e)}
+.a11y-fab:hover{transform:scale(1.06)}
+.a11y-fab svg{width:30px;height:30px}
+.wa-fl{inset-inline-start:auto;inset-inline-end:20px}
+.a11y-panel{position:fixed;bottom:86px;inset-inline-start:20px;z-index:310;width:320px;max-width:calc(100vw - 40px);max-height:calc(100vh - 120px);overflow:auto;background:#fff;color:var(--ink);border:1px solid var(--border);border-radius:18px;box-shadow:0 24px 60px rgba(11,18,32,.22);padding:18px}
+.a11y-panel[hidden]{display:none}
+.a11y-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.a11y-head b{font-size:1.05rem;color:var(--navy)}
+.a11y-x{width:34px;height:34px;border-radius:8px;background:var(--paper);border:1px solid var(--border);font-size:1.2rem;line-height:1;color:var(--ink)}
+.a11y-size{display:flex;align-items:center;gap:8px;background:var(--paper);border:1px solid var(--border);border-radius:12px;padding:8px 10px;margin-bottom:10px}
+.a11y-size span{flex-grow:1;font-size:.9rem;font-weight:600}
+.a11y-size button{width:40px;height:36px;border-radius:8px;background:#fff;border:1px solid var(--border-2);font-weight:700;color:var(--navy)}
+.a11y-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.a11y-grid button{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 6px;border-radius:12px;background:#fff;border:1px solid var(--border-2);font-size:.82rem;font-weight:600;color:var(--ink);text-align:center}
+.a11y-grid button svg{width:22px;height:22px;color:var(--blue)}
+.a11y-grid button[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:#fff}
+.a11y-grid button[aria-pressed=true] svg{color:#fff}
+.a11y-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.a11y-reset{font-size:.85rem;font-weight:600;color:var(--ink);background:var(--paper);border:1px solid var(--border);padding:8px 12px;border-radius:8px}
+.a11y-foot a{font-size:.85rem;font-weight:600;color:var(--blue);text-decoration:underline}
+.a11y-hint{display:block;margin-top:10px;font-size:.76rem;color:var(--muted)}
+/* modes */
+html[data-ax-size="1"]{font-size:112.5%}
+html[data-ax-size="2"]{font-size:125%}
+html[data-ax-size="3"]{font-size:140%}
+html.ax-links a{text-decoration:underline!important;text-underline-offset:3px}
+html.ax-font body,html.ax-font body *{font-family:Arial,Helvetica,sans-serif!important}
+html.ax-spacing body *{line-height:1.9!important;letter-spacing:.04em!important;word-spacing:.14em!important}
+html.ax-motion *,html.ax-motion *::before,html.ax-motion *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+html.ax-motion .fu,html.ax-motion .svc-card{opacity:1!important;transform:none!important}
+html.ax-gray body>*:not(.a11y-panel):not(.a11y-fab){filter:grayscale(1)}
+html.ax-cursor,html.ax-cursor *{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 24 24'%3E%3Cpath d='M4 2l16 10-7 1.5L9.5 21z' fill='%23000' stroke='%23fff' stroke-width='1.5'/%3E%3C/svg%3E") 4 2,auto!important}
+html.ax-contrast body *:not(svg):not(path):not(circle):not(rect){background-color:#000!important;background-image:none!important;color:#fff!important;border-color:#fff!important;box-shadow:none!important;text-shadow:none!important}
+html.ax-contrast body{background:#000!important}
+html.ax-contrast a,html.ax-contrast a *,html.ax-contrast summary,html.ax-contrast summary *{color:#FFE500!important}
+html.ax-contrast .hero::before,html.ax-contrast .hero::after,html.ax-contrast .support-grid::before,html.ax-contrast .support-grid::after,html.ax-contrast .why-svc::before{display:none}
+html.ax-contrast .a11y-grid button[aria-pressed=true]{outline:3px solid #FFE500}
+html.ax-contrast :focus-visible{outline-color:#FFE500!important}
+html.ax-contrast svg{color:#fff!important}
+html.ax-contrast a svg{color:#FFE500!important}
+/* cookie notice */
+.ck{position:fixed;left:16px;right:16px;bottom:16px;z-index:400;max-width:860px;margin:0 auto;background:var(--navy);color:#fff;border-radius:16px;box-shadow:0 18px 48px rgba(11,18,32,.35);padding:18px 20px;display:flex;align-items:center;gap:18px}
+.ck[hidden]{display:none}
+.ck-txt{flex-grow:1;font-size:.9rem;line-height:1.55;color:#DCE4F2}
+.ck-txt a{color:#9FC1FF;font-weight:600;text-decoration:underline;margin-inline-start:4px}
+.ck .ck-ok{flex-shrink:0;padding:11px 26px;background:var(--wa);color:#fff}
+.ck .ck-ok:hover{background:var(--wa-d)}
+@media(max-width:640px){.ck{flex-direction:column;align-items:stretch;gap:12px;padding:16px}.ck .ck-ok{justify-content:center}.a11y-fab,.wa-fl{width:50px;height:50px;bottom:16px}.a11y-fab{inset-inline-start:16px}.wa-fl{inset-inline-end:16px}}
+@media print{.a11y-fab,.a11y-panel,.ck,.wa-fl{display:none!important}}
+footer{background:var(--navy);color:#C9D3E3;padding:56px 0 28px;border-top:0}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:36px}
+footer .brand-name{color:#fff}.brand-ed{color:var(--blue)}html[lang="es-MX"] .ct-radio:has(input[value="he"]){display:none}footer .brand-ed{color:#8FB0FF}footer .brand-name span{color:#7FA6F5}
+.f-tag{font-size:.9rem;line-height:1.65;color:#AEBBD0;margin:14px 0 18px;max-width:320px}
+.f-wa{display:inline-flex;align-items:center;gap:8px;background:var(--wa);color:#fff;font-weight:700;font-size:.88rem;padding:10px 16px;border-radius:10px}
+.f-wa svg{width:18px;height:18px}
+.f-wa:hover{background:var(--wa-d)}
+.f-col h3{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin:0 0 16px}
+.f-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:.9rem}
+.f-col a{color:#C9D3E3}
+.f-col a:hover{color:#fff;text-decoration:underline}
+.f-contact li{display:flex;align-items:center;gap:10px}
+.f-contact svg{width:17px;height:17px;flex-shrink:0;color:#7FA6F5}
+.f-bottom{border-top:1px solid rgba(255,255,255,.1);padding:20px 0}
+footer .f-copy{font-size:.82rem;color:#93A2BA}
+footer .f-disclaimer{border-top:0;padding-top:0;font-size:.76rem;color:#8796AE;line-height:1.6}
+footer .f-disclaimer b{color:#C9D3E3}
+@media(max-width:900px){.f-grid{grid-template-columns:1fr 1fr}.f-brand{grid-column:1/-1}}
+@media(max-width:520px){.f-grid{grid-template-columns:1fr;gap:30px}}
+/* heading scale */
+.hero h1{font-size:clamp(1.9rem,4.2vw,2.6rem)}
+.hero.sm .hero-in{max-width:760px}
+.sec-head h2,.story h2{font-size:clamp(1.35rem,2.8vw,1.75rem)}
+.exp-in h2{font-size:clamp(1.3rem,2.6vw,1.65rem)}
+.notsure h2,.support-copy h2{font-size:clamp(1.35rem,2.8vw,1.75rem)}
+.brand-txt{display:flex;flex-direction:column;line-height:1.1}.brand-tag{font-size:.68rem;font-weight:500;color:var(--blue);letter-spacing:.01em;margin-top:2px}footer .brand-tag{color:#8FB0FF}@media(max-width:420px){.brand-tag{font-size:.6rem}}.lang-wrap{position:relative}.lang-chev{opacity:.6}.lang-menu{position:absolute;top:calc(100% + 6px);inset-inline-end:0;min-width:150px;background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 10px 30px rgba(14,35,64,.12);padding:6px;z-index:200;display:flex;flex-direction:column;gap:2px}.lang-menu[hidden]{display:none}.lang-menu button{display:flex;align-items:center;gap:8px;width:100%;text-align:start;padding:8px 10px;border-radius:7px;font-size:.85rem;font-weight:600;color:var(--ink-2);background:none;border:0;cursor:pointer;font-family:inherit}.lang-menu button:hover,.lang-menu button:focus-visible{background:var(--blue-l)}.lang-menu button[aria-current="true"]{color:var(--blue)}@media(max-width:480px){#lang-label{display:none}.lang-btn{gap:4px}}@media(max-width:380px){.brand-tag{font-size:.54rem;letter-spacing:0}}@media(max-width:340px){.brand-tag{display:none}}.nav-tel{white-space:nowrap}@media(max-width:1199px){html[lang="es-MX"] .nav-tel{display:none!important}}h1,h2,h3{text-wrap:balance}.pr-sec{background:var(--paper);padding:56px 0 24px}.pr-h2{font-size:1.3rem;font-weight:800;color:var(--navy);margin:0 0 18px}.pr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px;margin-bottom:44px}.pr-card{background:#fff;border:1px solid var(--border);border-radius:var(--rl);padding:22px 22px 18px;display:flex;flex-direction:column;gap:8px;transition:border-color .2s,box-shadow .2s}.pr-card:hover{border-color:var(--blue);box-shadow:0 10px 26px rgba(22,86,224,.08)}.pr-name{font-weight:700;color:var(--navy);font-size:1rem;line-height:1.35}.pr-price{font-size:.92rem;color:var(--ink-2);font-weight:600}.pr-price .amt{font-size:1.45rem;font-weight:800;color:var(--blue)}.pr-price .fee{font-size:.85rem;color:var(--muted);font-weight:500}.pr-fn{font-size:.78rem;color:var(--muted);line-height:1.5;margin:0}.pr-link{margin-top:auto;padding-top:8px;font-size:.88rem;font-weight:700;color:var(--blue);display:inline-flex;gap:6px;align-items:center}html[dir="rtl"] .pr-link .arr{transform:scaleX(-1)}</style>
+<script>(function(){try{var s=JSON.parse(localStorage.getItem('sorted_a11y')||'{}'),h=document.documentElement;Object.keys(s).forEach(function(k){if(k==='size'){if(s.size)h.setAttribute('data-ax-size',s.size)}else if(s[k])h.classList.add('ax-'+k)})}catch(e){}})();</script>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">דלג לתוכן הראשי</a>
+
+<nav id="nav" aria-label="ניווט ראשי" data-i18n-aria="nav_label">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <div class="brand-mark"><svg viewBox="0 0 100 100" width="100%" height="100%" aria-hidden="true" focusable="false"><path d="M24 33L33 42L50 24" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><line x1="60" y1="33" x2="77" y2="33" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".55"/><line x1="24" y1="55" x2="77" y2="55" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="24" y1="75" x2="58" y2="75" stroke="#fff" stroke-width="9" stroke-linecap="round"/></svg></div>
+      <span class="brand-txt"><span class="brand-name">Sort<span class="brand-ed">ed</span></span><span class="brand-tag" data-i18n="brand_tag">העסק שלכם בארה״ב, מסודר</span></span>
+    </a>
+    <div class="menu" id="menu">
+      <a href="index.html" class="m-link" data-i18n="m_home">ראשי</a>
+      <div class="m-drop" id="m-drop">
+        <button type="button" class="m-link m-drop-btn" aria-haspopup="true" aria-expanded="false"><span data-i18n="m_services">שירותים</span><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="m-drop-panel"><a href="service-formation.html" class=""><span data-i18n="sv1">הקמת עסק</span></a><a href="service-financial.html" class=""><span data-i18n="sv2">הנהלת חשבונות ושכר</span></a><a href="service-team.html" class=""><span data-i18n="sv3">פרודוקטיביות עובדים ובקרת איכות</span></a><a href="service-google.html" class=""><span data-i18n="sv4">Google Guarantee</span></a><a href="service-assistant.html" class=""><span data-i18n="sv6">עוזרת וירטואלית</span></a><a href="service-reviews.html" class=""><span data-i18n="sv8">ניהול ביקורות לקוחות</span></a><a href="service-immigration.html" class=""><span data-i18n="sv7">ניירת הגירה</span></a></div>
+      </div>
+      <a href="pricing.html" class="m-link on" data-i18n="m_pricing" aria-current="page">מחירים</a>
+      <a href="about.html" class="m-link" data-i18n="m_about">אודות</a>
+      <a href="faq.html" class="m-link" data-i18n="m_faq">שאלות נפוצות</a>
+      <a href="contact.html" class="m-link" data-i18n="m_contact">צרו קשר</a>
+    </div>
+    <div class="nav-actions">
+      <a class="nav-tel" href="tel:+13478065604">347-806-5604</a>
+      <div class="lang-wrap" id="lang-wrap"><button class="lang-btn" id="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="Language / שפה / Idioma" onclick="switchLang(event)"><span id="lang-flag">🇮🇱</span><span id="lang-label">עברית</span><svg class="lang-chev" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button><div class="lang-menu" id="lang-menu" hidden><button type="button" data-l="he" lang="he" onclick="applyLang('he')"><span aria-hidden="true">🇮🇱</span>עברית</button><button type="button" data-l="en" lang="en" onclick="applyLang('en')"><span aria-hidden="true">🇺🇸</span>English</button><button type="button" data-l="es" lang="es" onclick="applyLang('es')"><span aria-hidden="true">🇲🇽</span>Español</button></div></div>
+      <a class="nav-wa" href="https://wa.me/13478065604" target="_blank" rel="noopener">
+        <svg aria-hidden="true" focusable="false" class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-i18n="nav_wa">וואטסאפ</span>
+      </a>
+      <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</nav>
+
+<main id="main" tabindex="-1">
+<section class="hero sm"><div class="wrap hero-in">
+  <div class="hero-sub-label" data-i18n="pr_label">מחירים</div>
+  <h1 data-i18n="pr_h1">מחירים ברורים לכל שירות</h1>
+  <p class="hero-sub" data-i18n="pr_sub">תדעו מה לצפות עוד לפני שמתחילים. אגרות מדינה או ממשלה מאושרות מולכם לפני התשלום.</p>
+</div></section>
+
+<section class="pr-sec"><div class="wrap">
+  <h2 class="pr-h2" data-i18n="pr_biz">שירותים לעסקים</h2>
+  <div class="pr-grid">
+    <div class="pr-card"><div class="pr-name" data-i18n="s1_eyebrow">הקמת עסק</div><div class="pr-price" data-i18n="s1_price"><span class="amt">$150</span> <span class="fee">+ אגרות מדינה</span></div><a class="pr-link" href="service-formation.html"><span data-i18n="pr_more">לפרטים נוספים</span><span class="arr" aria-hidden="true">›</span></a></div>
+    <div class="pr-card"><div class="pr-name" data-i18n="s2_eyebrow">הנהלת חשבונות ושכר</div><div class="pr-price" data-i18n="s2_price">החל מ-<span class="amt">$99</span> לחודש*</div><p class="pr-fn" data-i18n="s2_note">*התמחור החודשי משתנה בהתאם לשירותים הנבחרים ולצורכי העסק שלכם.</p><a class="pr-link" href="service-financial.html"><span data-i18n="pr_more">לפרטים נוספים</span><span class="arr" aria-hidden="true">›</span></a></div>
+    <div class="pr-card"><div class="pr-name" data-i18n="s3_eyebrow">פרודוקטיביות עובדים ובקרת איכות</div><div class="pr-price" data-i18n="s3_price">החל מ-<span class="amt">$300</span></div><a class="pr-link" href="service-team.html"><span data-i18n="pr_more">לפרטים נוספים</span><span class="arr" aria-hidden="true">›</span></a></div>
+    <div class="pr-card"><div class="pr-name" data-i18n="s4_eyebrow">ייעוץ וניהול Google Guarantee</div><div class="pr-price" data-i18n="s4_price">החל מ-<span class="amt">$150</span></div><a class="pr-link" href="service-google.html"><span data-i18n="pr_more">לפרטים נוספים</span><span class="arr" aria-hidden="true">›</span></a></div>
+    <div class="pr-card"><div class="pr-name" data-i18n="s6_eyebrow">עוזרת וירטואלית</div><div class="pr-price" data-i18n="s6_price">חבילות <span class="amt">שעות גמישות</span></div><a class="pr-link" href="service-assistant.html"><span data-i18n="pr_more">לפרטים נוספים</span><span class="arr" aria-hidden="true">›</span></a></div>
+    <div class="pr-card"><div class="pr-name" data-i18n="s8_eyebrow">ניהול ביקורות לקוחות</div><div class="pr-price" data-i18n="s8_price"><span class="amt">$250</span> לחודש</div><a class="pr-link" href="service-reviews.html"><span data-i18n="pr_more">לפרטים נוספים</span><span class="arr" aria-hidden="true">›</span></a></div>
+  </div>
+  <h2 class="pr-h2" data-i18n="pr_imm">שירותי הגירה</h2>
+  <div class="pr-grid">
+    <div class="pr-card"><div class="pr-name" data-i18n="s7_t1">הארכת ויזת תייר B-2</div><div class="pr-price" data-i18n="s7_p1"><span class="amt">$250</span> + אגרת הגשה ממשלתית</div><a class="pr-link" href="service-immigration.html"><span data-i18n="pr_more">לפרטים נוספים</span><span class="arr" aria-hidden="true">›</span></a></div>
+    <div class="pr-card"><div class="pr-name" data-i18n="s7_t2">בקשת אזרחות (התאזרחות)</div><div class="pr-price" data-i18n="s7_p2"><span class="amt">$389</span> + אגרת הגשה ממשלתית</div><a class="pr-link" href="service-immigration.html"><span data-i18n="pr_more">לפרטים נוספים</span><span class="arr" aria-hidden="true">›</span></a></div>
+    <div class="pr-card"><div class="pr-name" data-i18n="s7_t3">הגרלת הגרין קארד (DV Lottery)</div><div class="pr-price" data-i18n="s7_p3"><span class="amt">$75</span></div><a class="pr-link" href="service-immigration.html"><span data-i18n="pr_more">לפרטים נוספים</span><span class="arr" aria-hidden="true">›</span></a></div>
+    <div class="pr-card"><div class="pr-name" data-i18n="s7_t4">בקשה וחידוש דרכון אמריקאי</div><div class="pr-price" data-i18n="s7_p4"><span class="amt">$75</span> + אגרות ממשלתיות</div><a class="pr-link" href="service-immigration.html"><span data-i18n="pr_more">לפרטים נוספים</span><span class="arr" aria-hidden="true">›</span></a></div>
+  </div>
+</div></section>
+
+<section class="notsure"><div class="wrap fu">
+  <h2 data-i18n="ns_h">לא בטוחים מאיפה להתחיל?</h2>
+  <p data-i18n="ns_p">נכוון אתכם לכיוון הנכון ונעזור לעסק שלכם לבנות בסיס חזק ומאורגן לצמיחה. בואו נדאג שהעסק שלכם יהיה מסודר.</p>
+  <a class="btn btn-primary" href="https://wa.me/13478065604" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="ns_btn">בואו נדבר</span></a>
+</div></section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a class="brand" href="index.html"><div class="brand-mark"><svg viewBox="0 0 100 100" width="100%" height="100%" aria-hidden="true" focusable="false"><path d="M24 33L33 42L50 24" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><line x1="60" y1="33" x2="77" y2="33" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".55"/><line x1="24" y1="55" x2="77" y2="55" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="24" y1="75" x2="58" y2="75" stroke="#fff" stroke-width="9" stroke-linecap="round"/></svg></div><span class="brand-txt"><span class="brand-name">Sort<span class="brand-ed">ed</span></span><span class="brand-tag" data-i18n="brand_tag">העסק שלכם בארה״ב, מסודר</span></span></a>
+        <p class="f-tag" data-i18n="ft_tag">תמיכה אישית בצד העסקי והמנהלי של העסק שלכם בארה״ב, בעברית ובאנגלית.</p>
+        <a class="f-wa" href="https://wa.me/13478065604" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="ft_wa">שלחו הודעה בוואטסאפ</span></a>
+      </div>
+      <div class="f-col" role="navigation" aria-labelledby="ft-s"><h3 id="ft-s" data-i18n="ft_services">שירותים</h3><ul><li><a href="service-formation.html" data-i18n="sv1">הקמת עסק</a></li><li><a href="service-financial.html" data-i18n="sv2">הנהלת חשבונות ושכר</a></li><li><a href="service-team.html" data-i18n="sv3">פרודוקטיביות עובדים ובקרת איכות</a></li><li><a href="service-google.html" data-i18n="sv4">Google Guarantee</a></li><li><a href="service-assistant.html" data-i18n="sv6">עוזרת וירטואלית</a></li><li><a href="service-reviews.html" data-i18n="sv8">ניהול ביקורות לקוחות</a></li><li><a href="service-immigration.html" data-i18n="sv7">ניירת הגירה</a></li></ul></div>
+      <div class="f-col" role="navigation" aria-labelledby="ft-c"><h3 id="ft-c" data-i18n="ft_company">החברה</h3><ul><li><a href="index.html" data-i18n="f_home">ראשי</a></li><li><a href="pricing.html" data-i18n="f_pricing">מחירים</a></li><li><a href="about.html" data-i18n="f_about">אודות</a></li><li><a href="faq.html" data-i18n="f_faq">שאלות נפוצות</a></li><li><a href="contact.html" data-i18n="f_contact">צרו קשר</a></li><li><a href="privacy.html" data-i18n="f_privacy">מדיניות פרטיות</a></li><li><a href="terms.html" data-i18n="f_terms">תנאי שימוש</a></li><li><a href="accessibility.html" data-i18n="f_access">הצהרת נגישות</a></li></ul></div>
+      <div class="f-col"><h3 data-i18n="ft_contact">צרו קשר</h3><ul class="f-contact">
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg><a href="tel:+13478065604" dir="ltr">347-806-5604</a></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:sortedusa@gmail.com" dir="ltr">sortedusa@gmail.com</a></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><a href="https://wa.me/13478065604" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span data-i18n="ft_area">שירות ללקוחות בכל רחבי ארה״ב</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg><span data-i18n="ft_lang">עברית ואנגלית</span></li>
+      </ul></div>
+    </div>
+    <div class="f-bottom">
+      <span class="f-copy" data-i18n="f_copy">© 2026 מסודר · עוזרים לעסקים לצמוח מאז 2008</span>
+    </div>
+    <div class="f-disclaimer"><b data-i18n="disc_t">כתב ויתור:</b> <span data-i18n="disc_p">אנחנו מספקים שירותי תמיכה מנהלית ועסקית, ולא מספקים ייעוץ משפטי או ייעוץ מס. בכל נושא משפטי או מיסויי, אנחנו ממליצים להתייעץ עם עורך דין או איש מקצוע בתחום המס.</span></div>
+  </div>
+</footer>
+
+<a class="wa-fl" href="https://wa.me/13478065604" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<button type="button" class="a11y-fab" id="a11y-fab" aria-expanded="false" aria-controls="a11y-panel" aria-label="פתיחת תפריט נגישות (Alt+A)" data-i18n-aria="ax_open"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="4.2" r="2.2"/><path d="M4 7.6c2.6.7 5.3 1 8 1s5.4-.3 8-1l.5 1.9c-2 .6-4.1.9-6.2 1.1V14l2.3 7.2-1.9.6L12.4 15h-.8l-2.3 6.8-1.9-.6L9.7 14v-3.4c-2.1-.2-4.2-.5-6.2-1.1z"/></svg></button>
+<div class="a11y-panel" id="a11y-panel" role="dialog" aria-labelledby="a11y-title" hidden>
+  <div class="a11y-head"><b id="a11y-title" data-i18n="ax_title">תפריט נגישות</b><button type="button" class="a11y-x" id="a11y-x" aria-label="סגירת תפריט נגישות" data-i18n-aria="ax_close">&times;</button></div>
+  <div class="a11y-size"><span data-i18n="ax_text">גודל טקסט</span><button type="button" data-ax="dec" aria-label="הקטנת טקסט" data-i18n-aria="ax_dec">A-</button><button type="button" data-ax="inc" aria-label="הגדלת טקסט" data-i18n-aria="ax_inc">A+</button></div>
+  <div class="a11y-grid"><button type="button" data-ax="contrast" aria-pressed="false"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18" /><path d="M12 3a9 9 0 010 18z" fill="currentColor"/></svg><span data-i18n="ax_contrast">ניגודיות גבוהה</span></button><button type="button" data-ax="gray" aria-pressed="false"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg><span data-i18n="ax_gray">גווני אפור</span></button><button type="button" data-ax="links" aria-pressed="false"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></svg><span data-i18n="ax_links">הדגשת קישורים</span></button><button type="button" data-ax="font" aria-pressed="false"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l6-16 6 16M6.5 14h7"/><path d="M17 20h4"/></svg><span data-i18n="ax_font">גופן קריא</span></button><button type="button" data-ax="spacing" aria-pressed="false"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 5v14M1.5 7L3 5l1.5 2M1.5 17L3 19l1.5-2"/></svg><span data-i18n="ax_spacing">ריווח טקסט</span></button><button type="button" data-ax="motion" aria-pressed="false"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 9v6M14 9v6"/></svg><span data-i18n="ax_motion">עצירת אנימציות</span></button><button type="button" data-ax="cursor" aria-pressed="false"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 8-6 1.5L10 19z"/></svg><span data-i18n="ax_cursor">סמן גדול</span></button></div>
+  <div class="a11y-foot"><button type="button" class="a11y-reset" data-ax="reset" data-i18n="ax_reset">איפוס הגדרות</button><a href="accessibility.html" data-i18n="ax_stmt">הצהרת נגישות</a></div>
+  <small class="a11y-hint" data-i18n="ax_hint">קיצור מקלדת: Alt+A</small>
+</div>
+<div class="ck" id="ck" role="region" aria-label="הודעה על שימוש בעוגיות" data-i18n-aria="ck_label" hidden>
+  <p class="ck-txt"><span data-i18n="ck_p">אנחנו משתמשים באחסון מקומי בדפדפן (בדומה לעוגיות) כדי לזכור את העדפות השפה והנגישות שלכם, והאתר טוען גופנים מ-Google Fonts. בלחיצה על ״אישור״ אתם מסכימים לכך.</span><a href="privacy.html" data-i18n="ck_more">מדיניות פרטיות</a></p>
+  <button type="button" class="btn btn-primary ck-ok" id="ck-ok" data-i18n="ck_ok">אישור</button>
+</div>
+
+<script>
+const t = {"he": {"nav_wa": "וואטסאפ", "ns_h": "לא בטוחים מאיפה להתחיל?", "ns_p": "נכוון אתכם לכיוון הנכון ונעזור לעסק שלכם לבנות בסיס חזק ומאורגן לצמיחה. בואו נדאג שהעסק שלכם יהיה מסודר.", "ns_btn": "בואו נדבר", "f_copy": "© 2026 מסודר · עוזרים לעסקים לצמוח מאז 2008", "disc_t": "כתב ויתור:", "disc_p": "אנחנו מספקים שירותי תמיכה מנהלית ועסקית, ולא מספקים ייעוץ משפטי או ייעוץ מס. בכל נושא משפטי או מיסויי, אנחנו ממליצים להתייעץ עם עורך דין או איש מקצוע בתחום המס.", "how_label": "איך זה עובד", "how_h": "פשוט מהתחלה ועד הסוף", "step1_t": "ספרו לנו מה אתם צריכים", "step1_d": "ספרו לנו מה אתם מנסים להשיג ואיפה אתם צריכים תמיכה, בין אם זה ייעוץ קצר או עבודה מעשית לאורך הדרך.", "step2_t": "אנחנו מטפלים בפרטים", "step2_d": "אנו מנהלים את העבודה המנהלית, ההקמה והמערכות שהעסק שלכם צריך, עם תמיכה שוטפת לאורך כל הדרך.", "step3_t": "אתם חוזרים לעסק", "step3_d": "עם המערכות והתמיכה הנכונות במקום, תוכלו להתמקד במה שאתם הכי טובים בו ולהצמיח את העסק שלכם.", "how_cta": "בואו נתחיל", "hero_btn1": "בואו נתחיל", "m_home": "ראשי", "m_services": "שירותים", "m_about": "אודות", "m_faq": "שאלות נפוצות", "sv1": "הקמת עסק", "sv2": "הנהלת חשבונות ושכר", "sv3": "פרודוקטיביות עובדים ובקרת איכות", "sv4": "Google Guarantee", "sv5": "עיצוב ופיתוח אתרים", "f_about": "אודות", "f_faq": "שאלות נפוצות", "m_menu": "תפריט", "skip": "דלג לתוכן הראשי", "nav_label": "ניווט ראשי", "ax_open": "פתיחת תפריט נגישות (Alt+A)", "ax_title": "תפריט נגישות", "ax_close": "סגירת תפריט נגישות", "ax_text": "גודל טקסט", "ax_dec": "הקטנת טקסט", "ax_inc": "הגדלת טקסט", "ax_contrast": "ניגודיות גבוהה", "ax_gray": "גווני אפור", "ax_links": "הדגשת קישורים", "ax_font": "גופן קריא", "ax_spacing": "ריווח טקסט", "ax_motion": "עצירת אנימציות", "ax_cursor": "סמן גדול", "ax_reset": "איפוס הגדרות", "ax_stmt": "הצהרת נגישות", "ax_hint": "קיצור מקלדת: Alt+A", "f_access": "הצהרת נגישות", "ck_label": "הודעה על שימוש בעוגיות", "ck_p": "אנחנו משתמשים באחסון מקומי בדפדפן (בדומה לעוגיות) כדי לזכור את העדפות השפה והנגישות שלכם, והאתר טוען גופנים מ-Google Fonts. בלחיצה על ״אישור״ אתם מסכימים לכך.", "ck_more": "מדיניות פרטיות", "ck_ok": "אישור", "wa_label": "שליחת הודעה בוואטסאפ", "f_privacy": "מדיניות פרטיות", "f_terms": "תנאי שימוש", "doc_title": "שאלות נפוצות | מסודר", "fq_label": "שאלות נפוצות", "fq_h1": "שאלות שבעלי עסקים שואלים אותנו", "fq_sub": "תשובות כנות, בשפה פשוטה. לא מצאתם את מה שחיפשתם? שלחו לנו הודעה.", "q1": "אתם נותנים ייעוץ משפטי או ייעוץ מס?", "a1": "לא. אנחנו מספקים תמיכה מנהלית ועסקית, כמו הגשות, הקמה, סדר וניהול שוטף. כשמשהו דורש חוות דעת משפטית או מיסויית, נגיד לכם את זה ונמליץ להתייעץ עם עורך דין או עם איש מקצוע בתחום המס.", "q2": "צריך לגור בארה״ב כדי לפתוח שם עסק?", "a2": "לא בהכרח. בעלי עסקים רבים פותחים LLC אמריקאי כשהם גרים מחוץ לארה״ב. הקמת החברה היא בדרך כלל החלק הקל. פתיחת חשבון בנק וההתנהלות מול המס דורשות יותר תכנון. נעבור איתכם על מה שרלוונטי למצב שלכם.", "q3": "באיזו מדינה כדאי לרשום את ה-LLC שלי?", "a3": "תלוי איפה תפעלו בפועל. אם העסק שלכם מקוון או מרוחק, בלי מיקום ספציפי, בדרך כלל נמליץ על מדינה פשוטה וזולה כמו וויומינג. אם אתם עובדים פיזית ממדינה מסוימת (משרד, לקוחות, נוכחות אמיתית), בדרך כלל נרשום שם, או נציין אם צריך לרשום בשתיהן.", "q4": "מה אם אני פותח LLC במדינה אחת אבל פועל במדינה אחרת?", "a4": "ייתכן שתצטרכו גם רישום כ-LLC זר (Foreign LLC) במדינה שבה אתם פועלים בפועל, למשל, אם פתחתם בוויומינג אבל יש לכם לקוחות או משרד בפלורידה. אנחנו בודקים את זה איתכם כבר בהתחלה, כדי שלא תופתעו בהמשך.", "q5": "האם אגרות המדינה כלולות במחיר?", "a5": "המחירים שלנו הם על השירות. אגרות ממשלתיות ואגרות הגשה של המדינה נפרדות ומשתנות ממדינה למדינה. נגיד לכם את הסכומים המדויקים מראש, לפני שמשהו מוגש.", "q6": "אתם יכולים לעזור לי לפתוח חשבון בנק בארה״ב?", "a6": "כן, וזה הרבה פעמים צוואר הבקבוק האמיתי: בנקים רבים לא יפתחו חשבון מרחוק בלי SSN או הגעה פיזית, גם אחרי שה-LLC וה-EIN מוכנים. אנחנו מלווים אתכם בתהליך בפועל, כדי שזה לא יעצור את ההשקה.", "q7": "אני צריך ITIN?", "a7": "רק אם אין לכם SSN. תצטרכו אותו כדי להגיש דוח מס אישי שקשור להכנסות של ה-LLC, אז הוא לא אופציונלי לתמיד, אבל לרוב לא נדרש ביום הראשון. נגיד לכם אם זה רלוונטי אליכם.", "q8": "כבר יש לי עסק. אתם עדיין יכולים לעזור?", "a8": "בהחלט. רוב השירותים שלנו בנויים לעסקים שכבר פעילים: הנהלת חשבונות, שכר, QuickBooks, ניהול צוות ואימות בגוגל. ספרו לנו איפה מרגיש לכם מבולגן, ונתחיל משם.", "q9": "אתם יכולים להוציא לי רישיון מקצועי (אינסטלציה, מיזוג אוויר, מנעולנות וכו׳)?", "a9": "רישיונות מקצועיים אישיים דורשים בדרך כלל מבחן מדינתי וניסיון מתועד, ולכן אף אחד לא יכול להוציא אותם בשמכם. מה שאנחנו כן עושים: ממפים בדיוק מה נדרש בתחום ובמדינה שלכם, מטפלים בהגשות העסקיות, ומכוונים אתכם לוועדה המדינתית הנכונה.", "q10": "אתם מבטיחים שאקבל את תג Google Verified?", "a10": "אף אחד לא יכול להבטיח. ההחלטה הסופית היא של גוגל. מה שאנחנו כן יכולים לעשות זה לוודא שהעסק באמת עומד בדרישות, שהמסמכים תואמים ושהבקשה מלאה, וכך להסיר את הסיבות הנפוצות לעיכובים ולדחיות.", "q11": "צריך להיפגש פנים אל פנים?", "a11": "לא. אנחנו עובדים עם לקוחות בכל רחבי ארה״ב דרך וואטסאפ וטלפון, בעברית או באנגלית, מה שנוח לכם.", "q12": "כמה זמן זה לוקח?", "a12": "תלוי בשירות, ובהגשות גם במדינה. חלק מהמדינות מטפלות בתוך ימים, אחרות בתוך שבועות. לפני שמתחילים, ניתן לכם לוח זמנים מציאותי למקרה הספציפי שלכם."}, "en": {"nav_wa": "WhatsApp", "ns_h": "Not Sure Where to Start?", "ns_p": "We’ll guide you in the right direction and help your business build a strong, organized foundation for growth. Let’s get your business sorted.", "ns_btn": "Start the Conversation", "f_copy": "© 2026 Sorted · Helping Businesses Grow Since 2008", "disc_t": "Disclaimer:", "disc_p": "We provide administrative and business support services and do not provide legal or tax advice. For legal or tax matters, we recommend consulting a qualified attorney or tax professional.", "how_label": "How It Works", "how_h": "Simple From Start to Finish", "step1_t": "Tell Us What You Need", "step1_d": "Tell us what you're trying to accomplish and where you need support, whether that's a quick consultation or hands-on work.", "step2_t": "We Handle the Details", "step2_d": "We manage the administrative work, setup, and systems your business needs, with ongoing support every step of the way.", "step3_t": "You Get Back to Business", "step3_d": "With the right systems and support in place, you can focus on what you do best and grow your business.", "how_cta": "Get Started", "hero_btn1": "Get Started", "m_home": "Home", "m_services": "Services", "m_about": "About", "m_faq": "FAQ", "sv1": "Business Formation", "sv2": "Bookkeeping & Payroll", "sv3": "Productivity & Quality Control", "sv4": "Google Guarantee", "sv5": "Website Design", "f_about": "About", "f_faq": "FAQ", "m_menu": "Menu", "skip": "Skip to main content", "nav_label": "Main navigation", "ax_open": "Open accessibility menu (Alt+A)", "ax_title": "Accessibility", "ax_close": "Close accessibility menu", "ax_text": "Text size", "ax_dec": "Smaller text", "ax_inc": "Larger text", "ax_contrast": "High contrast", "ax_gray": "Grayscale", "ax_links": "Highlight links", "ax_font": "Readable font", "ax_spacing": "Text spacing", "ax_motion": "Stop animations", "ax_cursor": "Large cursor", "ax_reset": "Reset settings", "ax_stmt": "Accessibility statement", "ax_hint": "Keyboard shortcut: Alt+A", "f_access": "Accessibility", "ck_label": "Cookie notice", "ck_p": "We use local browser storage (similar to cookies) to remember your language and accessibility preferences, and the site loads fonts from Google Fonts. By clicking “Accept” you agree to this.", "ck_more": "Privacy Policy", "ck_ok": "Accept", "wa_label": "Message us on WhatsApp", "f_privacy": "Privacy Policy", "f_terms": "Terms & Conditions", "doc_title": "FAQ | Sorted", "fq_label": "FAQ", "fq_h1": "Questions Business Owners Ask Us", "fq_sub": "Honest answers in plain language. Didn't find what you're looking for? Send us a message.", "q1": "Do you provide legal or tax advice?", "a1": "No. We provide administrative and business support, such as filings, setup, organization, and ongoing back-office work. When something needs a legal or tax opinion, we'll tell you, and recommend speaking with an attorney or a tax professional.", "q2": "Do I need to live in the US to open a business there?", "a2": "Not necessarily. Many owners form a US LLC while living abroad. Forming the company is usually the easy part. Opening a bank account and handling taxes can take more planning. We'll walk you through what applies to your situation.", "q3": "Which state should my LLC be formed in?", "a3": "It depends on where you'll actually operate. If your business is online or remote with no specific location, we usually recommend a simple, low-cost state like Wyoming. If you're physically working from a specific state (an office, clients there, a real presence), we'll usually form there instead, or flag if you need to register in both.", "q4": "What if I form my LLC in one state but operate in another?", "a4": "You may also need to register as a “foreign LLC” in the state where you actually do business, for example, if you formed in Wyoming but have clients or an office in Florida. We check this with you at the start, so it doesn't surprise you later.", "q5": "Are state fees included in your prices?", "a5": "Our prices are for our service. Government and state filing fees are separate and vary from state to state. We'll tell you the exact amounts upfront, before anything is filed.", "q6": "Can you help me open a US bank account?", "a6": "Yes, and this is often the real bottleneck: many banks won't open an account remotely without an SSN or an in-person visit, even after your LLC and EIN are done. We guide you through the actual process so it doesn't stall your launch.", "q7": "Do I need an ITIN?", "a7": "Only if you don't already have an SSN. You'll need it to file a personal tax return tied to your LLC's income, so it's not optional forever, just often not needed on day one. We'll tell you if this applies to you.", "q8": "I already have a business. Can you still help?", "a8": "Absolutely. Most of our services are built for businesses that are already operating, including bookkeeping, payroll, QuickBooks, team management, and Google verification. Tell us where things feel messy and we'll start there.", "q9": "Can you get my trade license (plumbing, HVAC, locksmith, etc.)?", "a9": "Personal trade licenses usually require a state exam and documented experience, so no one can get them on your behalf. What we do: map out exactly what your trade and state require, handle the business-side filings, and point you to the right state board.", "q10": "Can you guarantee I'll get the Google Verified badge?", "a10": "No one can. The final decision is Google's. What we can do is make sure your business actually qualifies, your documents match, and your application is complete, which removes the most common reasons for delays and rejections.", "q11": "Do we need to meet in person?", "a11": "No. We work with clients across the US over WhatsApp and phone, in English, Hebrew, or Spanish, whichever is easier for you.", "q12": "How long does it take?", "a12": "It depends on the service and, for filings, on the state. Some process in days, others take weeks. Before we start, we'll give you a realistic timeline for your specific case."}};
+Object.assign(t.he, {"sv6": "עוזרת וירטואלית"}); Object.assign(t.en, {"sv6": "Virtual Assistant"});
+
+Object.assign(t.he, {"sv7": "ניירת הגירה"}); Object.assign(t.en, {"sv7": "Immigration Paperwork"});
+Object.assign(t.he, {"ft_tag": "תמיכה אישית בצד העסקי והמנהלי של העסק שלכם בארה״ב, בעברית ובאנגלית.", "ft_services": "שירותים", "ft_company": "החברה", "ft_contact": "צרו קשר", "ft_area": "שירות ללקוחות בכל רחבי ארה״ב", "ft_lang": "עברית ואנגלית", "ft_wa": "שלחו הודעה בוואטסאפ", "f_home": "ראשי"}); Object.assign(t.en, {"ft_tag": "Personal support for the business and administrative side of your US business, in English, Hebrew, and Spanish.", "ft_services": "Services", "ft_company": "Company", "ft_contact": "Contact", "ft_area": "Serving clients across the US", "ft_lang": "English, Hebrew & Spanish", "ft_wa": "Message us on WhatsApp", "f_home": "Home"});
+Object.assign(t.he, {"sv8": "ניהול ביקורות לקוחות"}); Object.assign(t.en, {"sv8": "Client Reviews Management"});
+Object.assign(t.he, {"m_contact": "צרו קשר", "f_contact": "צרו קשר"}); Object.assign(t.en, {"m_contact": "Contact", "f_contact": "Contact"});
+Object.assign(t.he, {"f_copy": "© 2026 מסודר · עוזרים לעסקים לצמוח מאז 2008", "doc_title": "שאלות נפוצות | מסודר"});
+let lang = 'he';
+function applyLang(l){
+  lang = l;
+  const root = document.documentElement;
+  const flag = document.getElementById('lang-flag');
+  const label = document.getElementById('lang-label');
+  if (l === 'en'){ root.setAttribute('lang','en'); root.setAttribute('dir','ltr'); flag.textContent='🇺🇸'; label.textContent='English'; }
+  else if (l === 'es'){ root.setAttribute('lang','es-MX'); root.setAttribute('dir','ltr'); flag.textContent='🇲🇽'; label.textContent='Español'; }
+  else { root.setAttribute('lang','he'); root.setAttribute('dir','rtl'); flag.textContent='🇮🇱'; label.textContent='עברית'; }
+  document.querySelectorAll('#lang-menu [data-l]').forEach(b=>b.setAttribute('aria-current', b.dataset.l===l ? 'true' : 'false'));
+  const lm = document.getElementById('lang-menu'); if (lm) { lm.hidden = true; const lb = document.getElementById('lang-btn'); if (lb) lb.setAttribute('aria-expanded','false'); }
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if (t[l][key] !== undefined) el.innerHTML = t[l][key];
+  });
+  if (t[l].doc_title) document.title = t[l].doc_title;
+  try { localStorage.setItem('sorted_lang', l); } catch(e){}
+}
+function switchLang(e){ if (e) e.stopPropagation(); const m = document.getElementById('lang-menu'); const b = document.getElementById('lang-btn'); m.hidden = !m.hidden; b.setAttribute('aria-expanded', String(!m.hidden)); }
+document.addEventListener('click', e => { const w = document.getElementById('lang-wrap'); if (w && !w.contains(e.target)) { document.getElementById('lang-menu').hidden = true; document.getElementById('lang-btn').setAttribute('aria-expanded','false'); } });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { const m = document.getElementById('lang-menu'); if (m && !m.hidden) { m.hidden = true; document.getElementById('lang-btn').focus(); } } });
+(function(){ let s = null; try { s = localStorage.getItem('sorted_lang'); } catch(e){} if (s === 'en') applyLang('en'); else if (s === 'es') { t.es = Object.assign({}, t.en); applyLang('es'); } })();
+
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 10), {passive:true});
+const burger = document.getElementById('burger');
+burger.addEventListener('click', () => { const o = nav.classList.toggle('open'); burger.setAttribute('aria-expanded', o); });
+const drop = document.getElementById('m-drop');
+drop.querySelector('.m-drop-btn').addEventListener('click', e => { e.stopPropagation(); const o = drop.classList.toggle('open'); e.currentTarget.setAttribute('aria-expanded', o); });
+document.addEventListener('click', e => { if (!drop.contains(e.target)) drop.classList.remove('open'); });
+document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if (e.isIntersecting){ e.target.classList.add('v'); io.unobserve(e.target); } });
+}, {threshold:.1, rootMargin:'0px 0px -28px 0px'});
+document.querySelectorAll('.fu, .sg').forEach(el=>io.observe(el));
+
+
+/* accessibility menu + cookie notice */
+(function(){
+  const h = document.documentElement, fab = document.getElementById('a11y-fab'), panel = document.getElementById('a11y-panel');
+  const KEYS = ['contrast','gray','links','font','spacing','motion','cursor'];
+  let st = {}; try { st = JSON.parse(localStorage.getItem('sorted_a11y') || '{}'); } catch(e){}
+  function save(){ try { localStorage.setItem('sorted_a11y', JSON.stringify(st)); } catch(e){} }
+  function render(){
+    KEYS.forEach(k => { h.classList.toggle('ax-' + k, !!st[k]); const b = panel.querySelector('[data-ax="'+k+'"]'); if (b) b.setAttribute('aria-pressed', !!st[k]); });
+    if (st.size) h.setAttribute('data-ax-size', st.size); else h.removeAttribute('data-ax-size');
+  }
+  function open(o){ panel.hidden = !o; fab.setAttribute('aria-expanded', o); if (o) panel.querySelector('button').focus(); else fab.focus(); }
+  fab.addEventListener('click', () => open(panel.hidden));
+  document.getElementById('a11y-x').addEventListener('click', () => open(false));
+  panel.addEventListener('click', e => {
+    const b = e.target.closest('[data-ax]'); if (!b) return;
+    const a = b.dataset.ax;
+    if (a === 'inc') st.size = Math.min((st.size || 0) + 1, 3);
+    else if (a === 'dec') st.size = Math.max((st.size || 0) - 1, 0);
+    else if (a === 'reset') st = {};
+    else st[a] = !st[a];
+    save(); render();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.altKey && e.code === 'KeyA') { e.preventDefault(); open(panel.hidden); }
+    else if (e.key === 'Escape' && !panel.hidden) open(false);
+  });
+  render();
+  // translated aria-labels
+  function aria(){ document.querySelectorAll('[data-i18n-aria]').forEach(el => { const v = t[lang][el.dataset.i18nAria]; if (v) el.setAttribute('aria-label', v); }); }
+  const _apply = applyLang; applyLang = function(l){ _apply(l); aria(); }; aria();
+  // cookie notice
+  const ck = document.getElementById('ck'); let ok = null;
+  try { ok = localStorage.getItem('sorted_consent'); } catch(e){}
+  if (!ok) ck.hidden = false;
+  document.getElementById('ck-ok').addEventListener('click', () => { try { localStorage.setItem('sorted_consent', new Date().toISOString()); } catch(e){} ck.hidden = true; });
+})();
+
+Object.assign(t.he, {"brand_tag": "העסק שלכם בארה״ב, מסודר"}); Object.assign(t.en, {"brand_tag": "Your U.S. Business. Handled."}); applyLang(lang);
+t.es = Object.assign({}, t.en, {"nav_wa": "WhatsApp", "ns_h": "¿No sabe por dónde empezar?", "ns_p": "Le orientaremos en la dirección correcta y ayudaremos a su negocio a construir una base sólida y organizada para crecer. Pongamos su negocio en orden.", "ns_btn": "Iniciemos la conversación", "f_copy": "© 2026 Sorted · Ayudando a los negocios a crecer desde 2008", "disc_t": "Aviso:", "disc_p": "Brindamos servicios de apoyo administrativo y empresarial, y no ofrecemos asesoría legal ni fiscal. Para asuntos legales o fiscales, le recomendamos consultar a un abogado o a un profesional fiscal calificado.", "m_home": "Inicio", "m_services": "Servicios", "m_about": "Nosotros", "m_faq": "Preguntas frecuentes", "sv1": "Constitución de empresas", "sv2": "Contabilidad y nómina", "sv3": "Productividad y control de calidad", "sv4": "Google Guarantee", "f_about": "Nosotros", "f_faq": "Preguntas frecuentes", "skip": "Ir al contenido principal", "ax_title": "Accesibilidad", "ax_text": "Tamaño del texto", "ax_contrast": "Alto contraste", "ax_gray": "Escala de grises", "ax_links": "Resaltar enlaces", "ax_font": "Fuente legible", "ax_spacing": "Espaciado del texto", "ax_motion": "Detener animaciones", "ax_cursor": "Cursor grande", "ax_reset": "Restablecer ajustes", "ax_stmt": "Declaración de accesibilidad", "ax_hint": "Atajo de teclado: Alt+A", "f_access": "Accesibilidad", "ck_p": "Usamos el almacenamiento local del navegador (similar a las cookies) para recordar su idioma y sus preferencias de accesibilidad, y el sitio carga fuentes desde Google Fonts. Al hacer clic en “Aceptar”, usted está de acuerdo con esto.", "ck_more": "Aviso de privacidad", "ck_ok": "Aceptar", "f_privacy": "Aviso de privacidad", "f_terms": "Términos y condiciones", "doc_title": "Preguntas frecuentes | Sorted", "fq_label": "Preguntas frecuentes", "fq_h1": "Preguntas que nos hacen los dueños de negocios", "fq_sub": "Respuestas honestas y en lenguaje claro. ¿No encontró lo que buscaba? Envíenos un mensaje.", "q1": "¿Ofrecen asesoría legal o fiscal?", "a1": "No. Brindamos apoyo administrativo y empresarial, como trámites, configuración, organización y trabajo administrativo continuo. Cuando algo requiere una opinión legal o fiscal, se lo decimos y le recomendamos consultar a un abogado o a un profesional fiscal.", "q2": "¿Necesito vivir en EE. UU. para abrir un negocio allá?", "a2": "No necesariamente. Muchos dueños constituyen una LLC en EE. UU. mientras viven en el extranjero. Constituir la empresa suele ser lo más sencillo. Abrir una cuenta bancaria y manejar los impuestos puede requerir más planeación. Le explicamos lo que aplica a su situación.", "q3": "¿En qué estado debo constituir mi LLC?", "a3": "Depende de dónde vaya a operar realmente. Si su negocio es en línea o remoto, sin una ubicación específica, normalmente recomendamos un estado sencillo y de bajo costo como Wyoming. Si trabaja físicamente desde un estado en particular (una oficina, clientes ahí, una presencia real), normalmente la constituimos en ese estado, o le avisamos si necesita registrarse en ambos.", "q4": "¿Qué pasa si constituyo mi LLC en un estado pero opero en otro?", "a4": "Es posible que también tenga que registrarse como “LLC extranjera” en el estado donde realmente hace negocios; por ejemplo, si la constituyó en Wyoming pero tiene clientes o una oficina en Florida. Lo revisamos con usted desde el inicio para que no se lleve sorpresas después.", "q5": "¿Sus precios incluyen las cuotas estatales?", "a5": "Nuestros precios corresponden a nuestro servicio. Las cuotas gubernamentales y estatales de registro son aparte y varían de un estado a otro. Le informamos los montos exactos por adelantado, antes de presentar cualquier trámite.", "q6": "¿Me pueden ayudar a abrir una cuenta bancaria en EE. UU.?", "a6": "Sí, y muchas veces este es el verdadero obstáculo: muchos bancos no abren cuentas a distancia sin un SSN o una visita en persona, incluso después de tener su LLC y su EIN. Le guiamos en el proceso real para que no se detenga el arranque de su negocio.", "q7": "¿Necesito un ITIN?", "a7": "Solo si todavía no tiene un SSN. Lo necesitará para presentar una declaración de impuestos personal vinculada a los ingresos de su LLC, así que tarde o temprano será necesario, aunque muchas veces no desde el primer día. Le diremos si aplica en su caso.", "q8": "Ya tengo un negocio. ¿Aun así me pueden ayudar?", "a8": "Por supuesto. La mayoría de nuestros servicios están pensados para negocios que ya están operando, incluidos contabilidad, nómina, QuickBooks, gestión de equipos y verificación de Google. Díganos dónde siente que hay desorden y empezamos por ahí.", "q9": "¿Pueden tramitar mi licencia de oficio (plomería, HVAC, cerrajería, etc.)?", "a9": "Las licencias de oficio personales normalmente requieren un examen estatal y experiencia comprobada, así que nadie puede obtenerlas en su nombre. Lo que sí hacemos: identificar exactamente lo que su oficio y su estado requieren, encargarnos de los trámites del lado del negocio y orientarle hacia la junta estatal correspondiente.", "q10": "¿Pueden garantizar que obtendré la insignia Google Verified?", "a10": "Nadie puede. La decisión final es de Google. Lo que sí podemos hacer es asegurarnos de que su negocio realmente califique, de que sus documentos coincidan y de que su solicitud esté completa, lo cual elimina las causas más comunes de retrasos y rechazos.", "q11": "¿Necesitamos reunirnos en persona?", "a11": "No. Trabajamos con clientes en todo EE. UU. por WhatsApp y teléfono, en español o inglés, como le resulte más cómodo.", "q12": "¿Cuánto tiempo toma?", "a12": "Depende del servicio y, en el caso de los trámites, del estado. Algunos se resuelven en días y otros toman semanas. Antes de empezar, le damos un plazo realista para su caso específico.", "sv6": "Asistente virtual", "sv7": "Trámites migratorios", "ft_tag": "Apoyo personalizado para el lado administrativo y operativo de su negocio en EE. UU., en español e inglés.", "ft_services": "Servicios", "ft_company": "Empresa", "ft_contact": "Contacto", "ft_area": "Atendemos a clientes en todo EE. UU.", "ft_lang": "Español e inglés", "ft_wa": "Escríbanos por WhatsApp", "f_home": "Inicio", "sv8": "Gestión de reseñas de clientes", "m_contact": "Contacto", "f_contact": "Contacto", "brand_tag": "Su negocio en EE. UU. Resuelto.", "nav_label": "Navegación principal", "ax_open": "Abrir el menú de accesibilidad (Alt+A)", "ax_close": "Cerrar el menú de accesibilidad", "ax_dec": "Texto más pequeño", "ax_inc": "Texto más grande", "ck_label": "Aviso de cookies", "rv_label": "Lo que dicen nuestros clientes", "ct_msg_title": "New inquiry from the website", "ct_msg_name": "Name", "ct_msg_phone": "Phone", "ct_msg_email": "Email", "ct_msg_service": "Service", "ct_msg_lang": "Preferred language"});
+if (lang === "es") applyLang("es");
+Object.assign(t.he, {"m_pricing": "מחירים", "f_pricing": "מחירים"}); Object.assign(t.en, {"m_pricing": "Pricing", "f_pricing": "Pricing"}); Object.assign(t.es, {"m_pricing": "Precios", "f_pricing": "Precios", "m_faq": "Preguntas"}); applyLang(lang);
+Object.assign(t.he, {"doc_title": "מחירים | מסודר", "pr_label": "מחירים", "pr_h1": "מחירים ברורים לכל שירות", "pr_sub": "תדעו מה לצפות עוד לפני שמתחילים. אגרות מדינה או ממשלה מאושרות מולכם לפני התשלום.", "pr_biz": "שירותים לעסקים", "pr_imm": "שירותי הגירה", "pr_more": "לפרטים נוספים", "s2_note": "*התמחור החודשי משתנה בהתאם לשירותים הנבחרים ולצורכי העסק שלכם.", "s1_eyebrow": "הקמת עסק", "s2_eyebrow": "הנהלת חשבונות ושכר", "s3_eyebrow": "פרודוקטיביות עובדים ובקרת איכות", "s4_eyebrow": "ייעוץ וניהול Google Guarantee", "s6_eyebrow": "עוזרת וירטואלית", "s8_eyebrow": "ניהול ביקורות לקוחות", "s1_price": "<span class=\"amt\">$150</span> <span class=\"fee\">+ אגרות מדינה</span>", "s2_price": "החל מ-<span class=\"amt\">$99</span> לחודש*", "s3_price": "החל מ-<span class=\"amt\">$300</span>", "s4_price": "החל מ-<span class=\"amt\">$150</span>", "s6_price": "חבילות <span class=\"amt\">שעות גמישות</span>", "s8_price": "<span class=\"amt\">$250</span> לחודש", "s7_t1": "הארכת ויזת תייר B-2", "s7_t2": "בקשת אזרחות (התאזרחות)", "s7_t3": "הגרלת הגרין קארד (DV Lottery)", "s7_t4": "בקשה וחידוש דרכון אמריקאי", "s7_p1": "<span class=\"amt\">$250</span> + אגרת הגשה ממשלתית", "s7_p2": "<span class=\"amt\">$389</span> + אגרת הגשה ממשלתית", "s7_p3": "<span class=\"amt\">$75</span>", "s7_p4": "<span class=\"amt\">$75</span> + אגרות ממשלתיות"}); Object.assign(t.en, {"doc_title": "Pricing | Sorted", "pr_label": "Pricing", "pr_h1": "Clear Pricing for Every Service", "pr_sub": "Know what to expect before we begin. Any state or government fees are confirmed with you before payment.", "pr_biz": "Business Services", "pr_imm": "Immigration Services", "pr_more": "Learn more", "s2_note": "*Monthly pricing varies based on the services selected and your business needs.", "s1_eyebrow": "Business Formation", "s2_eyebrow": "Bookkeeping & Payroll", "s3_eyebrow": "Employee Productivity & Quality Control", "s4_eyebrow": "Google Guarantee Consultation & Administration", "s6_eyebrow": "Virtual Assistant", "s8_eyebrow": "Client Reviews Management", "s1_price": "<span class=\"amt\">$150</span> <span class=\"fee\">+ state fees</span>", "s2_price": "Starting at <span class=\"amt\">$99</span>/month*", "s3_price": "Starting at <span class=\"amt\">$300</span>", "s4_price": "Starting at <span class=\"amt\">$150</span>", "s6_price": "Flexible <span class=\"amt\">hourly plans</span>", "s8_price": "<span class=\"amt\">$250</span> / month", "s7_t1": "B-2 Tourist Visa Extension", "s7_t2": "Citizenship Application (Naturalization)", "s7_t3": "Green Card Lottery (DV Lottery) Application", "s7_t4": "US Passport Application & Renewal", "s7_p1": "<span class=\"amt\">$250</span> + government filing fee", "s7_p2": "<span class=\"amt\">$389</span> + government filing fee", "s7_p3": "<span class=\"amt\">$75</span>", "s7_p4": "<span class=\"amt\">$75</span> + government fees"}); Object.assign(t.es, {"doc_title": "Precios | Sorted", "pr_label": "Precios", "pr_h1": "Precios claros para cada servicio", "pr_sub": "Sepa qué esperar antes de comenzar. Cualquier cuota estatal o gubernamental se confirma con usted antes del pago.", "pr_biz": "Servicios para empresas", "pr_imm": "Servicios migratorios", "pr_more": "Ver más", "s2_note": "*El precio mensual varía según los servicios seleccionados y las necesidades de su negocio.", "s1_eyebrow": "Constitución de empresas", "s2_eyebrow": "Contabilidad y nómina", "s3_eyebrow": "Productividad del personal y control de calidad", "s4_eyebrow": "Asesoría y gestión de Google Guarantee", "s6_eyebrow": "Asistente virtual", "s8_eyebrow": "Gestión de reseñas de clientes", "s1_price": "<span class=\"amt\">$150</span> <span class=\"fee\">+ cuotas estatales</span>", "s2_price": "Desde <span class=\"amt\">$99</span>/mes*", "s3_price": "Desde <span class=\"amt\">$300</span>", "s4_price": "Desde <span class=\"amt\">$150</span>", "s6_price": "<span class=\"amt\">Planes por hora</span> flexibles", "s8_price": "<span class=\"amt\">$250</span> / mes", "s7_t1": "Extensión de visa de turista B-2", "s7_t2": "Solicitud de ciudadanía (naturalización)", "s7_t3": "Solicitud para la Lotería de Visas (DV Lottery)", "s7_t4": "Solicitud y renovación de pasaporte estadounidense", "s7_p1": "<span class=\"amt\">$250</span> + cuota gubernamental de trámite", "s7_p2": "<span class=\"amt\">$389</span> + cuota gubernamental de trámite", "s7_p3": "<span class=\"amt\">$75</span>", "s7_p4": "<span class=\"amt\">$75</span> + cuotas gubernamentales"}); applyLang(lang);
+</script>
+</body>
+</html>
