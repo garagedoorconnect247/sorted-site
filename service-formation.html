@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl" id="root">
+<html lang="en" dir="ltr" id="root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>הקמת עסק | מסודר</title>
+<title>Business Formation | Sorted</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2224%22%20fill%3D%22%231656E0%22/%3E%3Cpath%20d%3D%22M24%2033L33%2042L50%2024%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%229%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Cline%20x1%3D%2260%22%20y1%3D%2233%22%20x2%3D%2277%22%20y2%3D%2233%22%20stroke%3D%22%23fff%22%20stroke-width%3D%229%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.55%22/%3E%3Cline%20x1%3D%2224%22%20y1%3D%2255%22%20x2%3D%2277%22%20y2%3D%2255%22%20stroke%3D%22%23fff%22%20stroke-width%3D%229%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%2224%22%20y1%3D%2275%22%20x2%3D%2258%22%20y2%3D%2275%22%20stroke%3D%22%23fff%22%20stroke-width%3D%229%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E">
-<meta name="description" content="אנחנו מקימים את העסק שלכם בכל אחת מ-50 המדינות, עם עמידה מלאה בדרישות, כחוק ובצורה מסודרת מהיום הראשון, בין אם זה העסק הראשון שלכם או הבא בתור. אנחנו מטפלים ב">
+<meta name="description" content="הקמת עסק, ניהול פיננסי ותמיכה תפעולית לבעלי עסקים בארה״ב.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&family=Heebo:wght@400;500;600;700;800&family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#0B1220; --ink-2:#3B4658; --muted:#7C8798;
@@ -98,6 +98,7 @@ section{padding:64px 0}
 .svc-h{font-size:1.15rem;font-weight:800;color:var(--navy);letter-spacing:-.01em;margin-bottom:8px}
 .svc-desc{font-size:.96rem;color:var(--ink-2)}
 .svc-price{display:inline-flex;align-items:baseline;gap:5px;background:var(--blue-l);color:var(--blue-d);font-weight:700;font-size:.86rem;padding:6px 14px;border-radius:99px;margin-top:12px}
+.price-fn{font-size:.78rem;color:var(--muted);margin:8px 0 0}
 .svc-price .amt{font-size:1rem;font-weight:800}
 .svc-list{list-style:none;display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:24px}
 .svc-list li{display:flex;align-items:flex-start;gap:8px;font-size:.88rem;color:var(--ink-2)}
@@ -162,6 +163,128 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
   .fu,.svc-card{opacity:1!important;transform:none!important;transition:none!important}
 }
 
+
+/* HERO SPLIT */
+.hero-split{text-align:start;padding:80px 0 88px}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.hero-eyebrow{display:inline-block;font-size:.85rem;font-weight:700;color:var(--blue-d);background:#fff;border:1px solid var(--blue-l2);padding:6px 14px;border-radius:99px;margin-bottom:20px}
+.hero-split h1{font-size:clamp(2.2rem,4.6vw,3.3rem);margin-bottom:18px}
+.hero-split .hero-sub{margin:0 0 30px;max-width:540px}
+.hero-split .hero-actions{justify-content:flex-start}
+.trust{list-style:none;display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px}
+.trust li{display:flex;align-items:center;gap:7px;font-size:.88rem;font-weight:500;color:var(--ink-2)}
+.trust svg{width:16px;height:16px;color:var(--wa-d);flex-shrink:0}
+.hero-visual{position:relative;padding:10px 0 34px}
+.hv-card{background:#fff;border:1px solid var(--border);border-radius:20px;box-shadow:0 30px 60px -20px rgba(14,35,64,.22),0 8px 20px rgba(14,35,64,.06);padding:24px;max-width:420px;margin-inline-start:auto;animation:hvIn .7s cubic-bezier(.2,.7,.2,1) both}
+.hv-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.hv-logo{width:40px;height:40px;border-radius:10px;background:var(--blue);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center}
+.hv-t{flex-grow:1;display:flex;flex-direction:column;line-height:1.3}
+.hv-t b{color:var(--navy);font-size:1rem}
+.hv-t span{font-size:.8rem;color:var(--muted)}
+.hv-badge{font-size:.74rem;font-weight:700;color:#B45309;background:#FEF3C7;padding:5px 10px;border-radius:99px;white-space:nowrap}
+.hv-bar{height:8px;background:var(--blue-l);border-radius:99px;overflow:hidden}
+.hv-bar span{display:block;height:100%;width:60%;background:linear-gradient(90deg,var(--blue),#4F86F7);border-radius:99px;transform-origin:left center;animation:hvBar 1.3s .3s cubic-bezier(.4,0,.2,1) both}
+[dir=rtl] .hv-bar span{transform-origin:right center}
+.hv-pct{font-size:.78rem;color:var(--muted);margin:8px 0 14px}
+.hv-rows{display:flex;flex-direction:column;gap:8px}
+.hv-row{display:flex;align-items:center;gap:12px;padding:11px 12px;border:1px solid var(--border);border-radius:12px;font-size:.9rem;animation:hvRow .5s var(--d) cubic-bezier(.2,.7,.2,1) both}
+.hv-ic{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:2px solid var(--border-2)}
+.hv-ic svg{width:13px;height:13px}
+.hv-row.done .hv-ic{background:var(--wa);border-color:var(--wa);color:#fff}
+.hv-row.prog{border-color:var(--blue-l2);background:var(--blue-l)}
+.hv-row.prog .hv-ic{border-color:var(--blue-l2);background:#fff}
+.spin{width:12px;height:12px;border-radius:50%;border:2px solid var(--blue-l2);border-top-color:var(--blue);animation:spin 1s linear infinite}
+.hv-lbl{flex-grow:1;color:var(--navy);font-weight:500}
+.hv-row.next .hv-lbl{color:var(--muted)}
+.hv-st{font-size:.76rem;font-weight:600;color:var(--wa-d)}
+.hv-row.prog .hv-st{color:var(--blue)}
+.hv-row.next .hv-st{color:var(--muted)}
+.hv-chip{position:absolute;bottom:0;inset-inline-start:0;display:flex;align-items:center;gap:10px;background:var(--navy);color:#fff;font-size:.84rem;font-weight:500;padding:12px 16px;border-radius:14px;box-shadow:0 16px 30px -10px rgba(14,35,64,.4);animation:hvRow .6s 1.4s cubic-bezier(.2,.7,.2,1) both}
+.hv-chip-ic{width:22px;height:22px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hv-chip-ic svg{width:12px;height:12px}
+@keyframes hvIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes hvRow{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes hvBar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.hv-card,.hv-row,.hv-chip,.hv-bar span{animation:none}.spin{animation:none}}
+/* SUPPORT SPLIT */
+.support{text-align:start;padding:80px 0}
+.support-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.support-copy h2{font-size:clamp(1.5rem,3.2vw,2.1rem);margin-bottom:16px}
+.support-copy p{font-size:1rem;color:var(--ink-2);margin-bottom:12px}
+.support-copy .svc-link{margin-top:8px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stat{background:var(--paper);border:1px solid var(--border);border-radius:var(--rl);padding:26px 22px}
+.stat b{display:block;unicode-bidi:plaintext;font-size:2.3rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1.1;margin-bottom:8px}
+.stat span{font-size:.88rem;color:var(--ink-2);line-height:1.45;display:block}
+.stat.hl{background:var(--blue);border-color:var(--blue)}
+.stat.hl b,.stat.hl span{color:#fff}
+@media(max-width:900px){
+  .hero-grid,.support-grid{grid-template-columns:1fr;gap:36px}
+  .hv-card{margin-inline:auto}
+  .hero-split{padding:56px 0 64px}
+  .support{padding:56px 0}
+}
+@media(max-width:480px){
+  .hv-card{padding:18px}
+  .hv-chip{font-size:.78rem;padding:10px 12px}
+  .stat{padding:20px 16px}.stat b{font-size:1.9rem}
+}
+
+
+/* SERVICE CARD TOGGLE */
+.svc-more{border-top:1px solid var(--border);margin-bottom:18px}
+.svc-more summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;padding:14px 0;font-size:.92rem;font-weight:600;color:var(--navy);user-select:none}
+.svc-more summary::-webkit-details-marker{display:none}
+.svc-more summary:hover{color:var(--blue)}
+.svc-more .cnt{font-size:.74rem;font-weight:700;color:var(--blue);background:var(--blue-l);padding:2px 8px;border-radius:99px}
+.svc-more .chev{width:16px;height:16px;margin-inline-start:auto;color:var(--blue);transition:transform var(--e)}
+.svc-more[open] .chev{transform:rotate(180deg)}
+.svc-more .svc-list{margin:2px 0 6px;animation:hvRow .3s ease both}
+.svc-card .svc-top{margin-bottom:6px}
+.svc-more{margin-top:auto}
+.svc-stack:has(.svc-more[open]){align-items:flex-start}
+.svc-card .svc-more~.svc-link{margin-top:0}
+
+
+/* WHY CARD IN SERVICES */
+.svc-card.why-svc{background:var(--navy);border-color:var(--navy);color:#fff;position:relative;overflow:hidden}
+.why-svc::before{content:"";position:absolute;top:-80px;inset-inline-end:-80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(79,134,247,.35) 0%,transparent 70%)}
+.why-svc>*{position:relative}
+.why-svc:hover{border-color:var(--blue)}
+.wy-label{display:inline-block;align-self:flex-start;font-size:.74rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#9FC1FF;background:rgba(255,255,255,.08);padding:5px 12px;border-radius:99px;margin-bottom:14px}
+.why-svc .svc-h{color:#fff;margin-bottom:18px}
+.wy-list{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:20px}
+.wy-list li{display:flex;align-items:flex-start;gap:10px;font-size:.92rem;color:#DCE4F2}
+.wy-ic{width:20px;height:20px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.wy-ic svg{width:11px;height:11px;color:#fff}
+.wy-p{font-size:.9rem;color:#B0BBCE;margin-top:auto;margin-bottom:16px}
+.wy-btn{justify-content:center;width:100%}
+@media(min-width:720px){
+  .svc-stack>.svc-card.why-svc{flex-basis:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);grid-template-areas:"label list" "h list" "p list" "btn list";column-gap:48px;align-items:start;padding:36px 40px}
+  .why-svc .wy-label{grid-area:label;justify-self:start}
+  .why-svc .svc-h{grid-area:h;font-size:1.45rem;margin-bottom:12px}
+  .why-svc .wy-p{grid-area:p;margin-top:0}
+  .why-svc .wy-btn{grid-area:btn;width:auto;justify-self:start}
+  .why-svc .wy-list{grid-area:list;display:grid;grid-template-columns:1fr 1fr;gap:16px 28px;margin:0;align-self:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px 26px}
+  .why-svc .wy-list li{font-size:.98rem}
+}
+@media(min-width:720px) and (max-width:900px){.svc-stack>.svc-card.why-svc{grid-template-columns:1fr;grid-template-areas:"label" "h" "list" "p" "btn";row-gap:0}.why-svc .wy-list{margin-bottom:20px}}
+
+
+/* SUPPORT PANEL */
+.support{padding:24px 0 72px}
+.support-grid{position:relative;overflow:hidden;background:linear-gradient(135deg,#EAF1FF 0%,#F6F9FD 55%,#E4EEFF 100%);border:1px solid var(--blue-l2);border-radius:28px;padding:56px}
+.support-grid::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(22,86,224,.13) 1.2px,transparent 1.2px);background-size:22px 22px;-webkit-mask-image:linear-gradient(to left,#000 0%,transparent 60%);mask-image:linear-gradient(to left,#000 0%,transparent 60%);pointer-events:none}
+[dir=rtl] .support-grid::before{-webkit-mask-image:linear-gradient(to right,#000 0%,transparent 60%);mask-image:linear-gradient(to right,#000 0%,transparent 60%)}
+.support-grid::after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;bottom:-160px;inset-inline-start:-120px;background:radial-gradient(circle,rgba(22,86,224,.12) 0%,transparent 70%);pointer-events:none}
+.support-grid>*{position:relative;z-index:1}
+.support .stat{background:#fff;border-color:#fff;box-shadow:0 10px 28px -12px rgba(14,35,64,.18)}
+.support .stat.hl{background:var(--blue);border-color:var(--blue);box-shadow:0 14px 30px -10px rgba(22,86,224,.5)}
+@media(max-width:1128px){.support-grid{width:auto;margin-inline:24px}}
+@media(max-width:900px){.support-grid{padding:36px 28px;border-radius:22px}}
+@media(max-width:480px){.support{padding:12px 0 48px}.support-grid{padding:28px 18px;margin-inline:16px}}
+
 /* MENU */
 .brand{flex-shrink:0}
 .menu{display:flex;align-items:center;gap:2px}
@@ -192,77 +315,6 @@ footer{background:var(--paper);border-top:1px solid var(--border);padding:34px 0
 }
 @media(max-width:480px){.nav-wa span{display:none}.nav-wa{padding:9px 11px}.lang-btn{padding:7px 9px}.nav-actions{gap:6px}}
 .f-links a{display:inline-flex}
-
-/* SUB-PAGES */
-.hero.sm{padding:72px 0 64px}
-.crumbs{font-size:.82rem;color:var(--muted);margin-bottom:16px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
-.crumbs a:hover{color:var(--blue)}
-.hero .svc-price{margin:0 0 28px}
-.inc{background:var(--paper)}
-.detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.detail{background:#fff;border:1px solid var(--border);border-radius:var(--rl);padding:26px;display:flex;gap:16px;align-items:flex-start;transition:border-color var(--e),box-shadow var(--e)}
-.detail:hover{border-color:var(--blue);box-shadow:0 12px 32px rgba(22,86,224,.07)}
-.detail-ic{width:36px;height:36px;border-radius:10px;background:var(--blue-l);color:var(--blue);flex-shrink:0;display:flex;align-items:center;justify-content:center}
-.detail-ic svg{width:18px;height:18px}
-.detail h3{font-size:1.02rem;font-weight:700;color:var(--navy);margin-bottom:6px;line-height:1.35}
-.detail p{font-size:.92rem;color:var(--ink-2)}
-.other-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.other{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--border);border-radius:14px;padding:20px;transition:all var(--e)}
-.other:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0 10px 24px rgba(22,86,224,.07)}
-.o-e{font-size:.74rem;font-weight:700;color:var(--blue-d);letter-spacing:.03em;text-transform:uppercase}
-.o-h{font-weight:700;color:var(--navy);font-size:.95rem;line-height:1.35}
-.o-more{margin-top:auto;padding-top:8px;font-size:.85rem;font-weight:600;color:var(--blue);display:inline-flex;align-items:center;gap:6px}
-/* ABOUT */
-.story{display:grid;grid-template-columns:1.35fr 1fr;gap:44px;align-items:start}
-.story .label{margin-bottom:8px}
-.story h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;color:var(--navy);letter-spacing:-.02em;margin-bottom:18px}
-.story p{font-size:1.02rem;color:var(--ink-2);margin-bottom:16px}
-.facts{background:var(--navy);color:#fff;border-radius:var(--rl);padding:28px}
-.founder{display:flex;align-items:center;gap:14px;padding-bottom:18px;margin-bottom:6px;border-bottom:1px solid rgba(255,255,255,.12)}
-.avatar{width:54px;height:54px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;flex-shrink:0}
-.founder b{display:block;font-size:1.08rem}
-.founder span{font-size:.85rem;color:#B0BBCE}
-.fact{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:.9rem}
-.fact:last-child{border-bottom:none}
-.fact span:first-child{color:#B0BBCE}
-.fact span:last-child{font-weight:600;text-align:end}
-.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.val{background:#fff;border:1px solid var(--border);border-radius:var(--rl);padding:24px}
-.val .why-ic{margin:0 0 14px}
-.val h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:6px}
-.val p{font-size:.88rem;color:var(--ink-2)}
-.exp{background:var(--paper)}
-.exp-in{max-width:720px;margin:0 auto;text-align:center}
-.exp-in h2{font-size:clamp(1.4rem,3.2vw,1.9rem);font-weight:800;color:var(--navy);letter-spacing:-.02em;margin-bottom:14px}
-.exp-in p{color:var(--ink-2);font-size:1rem}
-.tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:22px}
-.tag{background:#fff;border:1px solid var(--border-2);border-radius:99px;padding:7px 14px;font-size:.85rem;color:var(--ink-2)}
-/* LEGAL */
-.legal{max-width:760px;margin:0 auto}
-.lg-upd{display:inline-block;font-size:.82rem;color:var(--muted);background:var(--paper);border:1px solid var(--border);padding:5px 12px;border-radius:99px;margin-bottom:28px}
-.lg-sec{padding:22px 0;border-top:1px solid var(--border)}
-.lg-sec h2{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:10px;display:flex;gap:10px;align-items:baseline}
-.lg-sec h2 .n{font-size:.78rem;font-weight:800;color:var(--blue);background:var(--blue-l);padding:2px 8px;border-radius:6px}
-.lg-sec p,.lg-sec li{font-size:.97rem;color:var(--ink-2)}
-.lg-sec p+p,.lg-sec ul+p{margin-top:10px}
-.lg-sec ul{margin:8px 0 0;padding-inline-start:22px;display:flex;flex-direction:column;gap:6px}
-.lg-sec a{color:var(--blue);font-weight:600}
-/* FAQ */
-.faq-sec{background:var(--paper)}
-.faq-list{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
-.faq-item{background:#fff;border:1px solid var(--border);border-radius:14px;transition:border-color var(--e)}
-.faq-item[open]{border-color:var(--blue-l2);box-shadow:0 8px 24px rgba(22,86,224,.06)}
-.faq-item summary{cursor:pointer;list-style:none;padding:20px 22px;font-weight:600;color:var(--navy);display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:1rem;line-height:1.45}
-.faq-item summary::-webkit-details-marker{display:none}
-.faq-item summary:hover{color:var(--blue)}
-.pm{width:20px;height:20px;color:var(--blue);flex-shrink:0;transition:transform var(--e)}
-.faq-item[open] .pm{transform:rotate(45deg)}
-.faq-a{padding:0 22px 22px;color:var(--ink-2);font-size:.96rem}
-@media(max-width:900px){.other-grid{grid-template-columns:repeat(2,1fr)}.values-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:820px){.story{grid-template-columns:1fr;gap:28px}}
-@media(max-width:720px){.detail-grid{grid-template-columns:1fr}}
-@media(max-width:640px){.hero.sm{padding:52px 0 44px}.detail{padding:20px}.faq-item summary{padding:18px}.faq-a{padding:0 18px 18px}}
-@media(max-width:480px){.other-grid,.values-grid{grid-template-columns:1fr}}
 
 /* ===== ACCESSIBILITY ===== */
 :root{--muted:#5E6878;--wa:#0B7A5E;--wa-d:#0A6E55}
@@ -319,6 +371,22 @@ html.ax-contrast a svg{color:#FFE500!important}
 .ck .ck-ok:hover{background:var(--wa-d)}
 @media(max-width:640px){.ck{flex-direction:column;align-items:stretch;gap:12px;padding:16px}.ck .ck-ok{justify-content:center}.a11y-fab,.wa-fl{width:50px;height:50px;bottom:16px}.a11y-fab{inset-inline-start:16px}.wa-fl{inset-inline-end:16px}}
 @media print{.a11y-fab,.a11y-panel,.ck,.wa-fl{display:none!important}}
+.reviews{background:var(--paper)}
+.rv-viewport{overflow:hidden;position:relative;direction:ltr;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);padding:6px 0}
+.rv-track{display:flex;gap:18px;width:max-content;direction:ltr;animation:rv-scroll 60s linear infinite}
+.rv-viewport:hover .rv-track,.rv-viewport:focus-within .rv-track{animation-play-state:paused}
+@keyframes rv-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 9px))}}
+.rv-card{margin:0;width:300px;flex-shrink:0;background:var(--white);border:1px solid var(--border);border-radius:var(--rl);padding:22px;display:flex;flex-direction:column;gap:12px;transition:border-color var(--e),box-shadow var(--e)}
+html[dir="rtl"] .rv-card{direction:rtl}
+.rv-card:hover{border-color:var(--blue);box-shadow:0 10px 26px rgba(22,86,224,.08)}
+.rv-mark{width:22px;height:22px;color:var(--blue)}
+.rv-card blockquote{margin:0;font-size:.9rem;line-height:1.6;color:var(--ink-2);flex-grow:1}
+.rv-card figcaption{display:flex;flex-direction:column;gap:2px;padding-top:12px;border-top:1px solid var(--border)}
+.rv-name{font-weight:800;color:var(--navy);font-size:.92rem}
+.rv-svc{font-size:.72rem;font-weight:700;color:var(--blue-d);text-transform:uppercase;letter-spacing:.03em}
+@media(max-width:640px){.rv-card{width:260px}.rv-track{animation-duration:50s}}
+@media(prefers-reduced-motion:reduce){.rv-track{animation:none}.rv-viewport{overflow-x:auto;-webkit-mask-image:none;mask-image:none}}
+html.ax-motion .rv-track{animation:none}html.ax-motion .rv-viewport{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
 footer{background:var(--navy);color:#C9D3E3;padding:56px 0 28px;border-top:0}
 .f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:36px}
 footer .brand-name{color:#fff}.brand-ed{color:var(--blue)}html[lang="es-MX"] .ct-radio:has(input[value="he"]){display:none}footer .brand-ed{color:#8FB0FF}footer .brand-name span{color:#7FA6F5}
@@ -339,14 +407,308 @@ footer .f-disclaimer b{color:#C9D3E3}
 @media(max-width:900px){.f-grid{grid-template-columns:1fr 1fr}.f-brand{grid-column:1/-1}}
 @media(max-width:520px){.f-grid{grid-template-columns:1fr;gap:30px}}
 .svc-price .fee{font-size:.92em;font-weight:600;margin-inline-start:4px;opacity:.85}
-.price-note{font-size:.86rem;color:var(--muted);max-width:520px;margin:-16px auto 26px;text-align:center}
+.price-note{font-size:.86rem;color:var(--muted);max-width:520px;margin:-16px 0 26px}
+.desc-lead{display:block;font-weight:700;color:var(--navy);margin-bottom:6px}
+.imm-it{display:flex;flex-direction:column;gap:2px}
+.imm-it small{font-size:.8rem;color:#9FB0CA}
+.imm-it small .amt{color:#fff;font-weight:700}
+.imm-btn{background:#fff;color:var(--navy);gap:8px}
+.imm-btn:hover{background:var(--blue-l)}
+.imm-btn .arr{width:16px;height:16px}
+html[dir="rtl"] .imm-btn .arr{transform:scaleX(-1)}
 /* heading scale */
 .hero h1{font-size:clamp(1.9rem,4.2vw,2.6rem)}
 .hero.sm .hero-in{max-width:760px}
 .sec-head h2,.story h2{font-size:clamp(1.35rem,2.8vw,1.75rem)}
 .exp-in h2{font-size:clamp(1.3rem,2.6vw,1.65rem)}
 .notsure h2,.support-copy h2{font-size:clamp(1.35rem,2.8vw,1.75rem)}
-.brand-txt{display:flex;flex-direction:column;line-height:1.1}.brand-tag{font-size:.68rem;font-weight:500;color:var(--blue);letter-spacing:.01em;margin-top:2px}footer .brand-tag{color:#8FB0FF}@media(max-width:420px){.brand-tag{font-size:.6rem}}.lang-wrap{position:relative}.lang-chev{opacity:.6}.lang-menu{position:absolute;top:calc(100% + 6px);inset-inline-end:0;min-width:150px;background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 10px 30px rgba(14,35,64,.12);padding:6px;z-index:200;display:flex;flex-direction:column;gap:2px}.lang-menu[hidden]{display:none}.lang-menu button{display:flex;align-items:center;gap:8px;width:100%;text-align:start;padding:8px 10px;border-radius:7px;font-size:.85rem;font-weight:600;color:var(--ink-2);background:none;border:0;cursor:pointer;font-family:inherit}.lang-menu button:hover,.lang-menu button:focus-visible{background:var(--blue-l)}.lang-menu button[aria-current="true"]{color:var(--blue)}@media(max-width:480px){#lang-label{display:none}.lang-btn{gap:4px}}@media(max-width:380px){.brand-tag{font-size:.54rem;letter-spacing:0}}@media(max-width:340px){.brand-tag{display:none}}.nav-tel{white-space:nowrap}@media(max-width:1199px){html[lang="es-MX"] .nav-tel{display:none!important}}h1,h2,h3{text-wrap:balance}</style>
+.brand-txt{display:flex;flex-direction:column;line-height:1.1}.brand-tag{font-size:.68rem;font-weight:500;color:var(--blue);letter-spacing:.01em;margin-top:2px}footer .brand-tag{color:#8FB0FF}@media(max-width:420px){.brand-tag{font-size:.6rem}}.lang-wrap{position:relative}.lang-chev{opacity:.6}.lang-menu{position:absolute;top:calc(100% + 6px);inset-inline-end:0;min-width:150px;background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 10px 30px rgba(14,35,64,.12);padding:6px;z-index:200;display:flex;flex-direction:column;gap:2px}.lang-menu[hidden]{display:none}.lang-menu button{display:flex;align-items:center;gap:8px;width:100%;text-align:start;padding:8px 10px;border-radius:7px;font-size:.85rem;font-weight:600;color:var(--ink-2);background:none;border:0;cursor:pointer;font-family:inherit}.lang-menu button:hover,.lang-menu button:focus-visible{background:var(--blue-l)}.lang-menu button[aria-current="true"]{color:var(--blue)}@media(max-width:480px){#lang-label{display:none}.lang-btn{gap:4px}}@media(max-width:380px){.brand-tag{font-size:.54rem;letter-spacing:0}}@media(max-width:340px){.brand-tag{display:none}}.nav-tel{white-space:nowrap}@media(max-width:1199px){html[lang="es-MX"] .nav-tel{display:none!important}}h1,h2,h3{text-wrap:balance}
+.pr{--ink:#0F1E33;--blue:#1656E0;--blue-d:#0F3FAE;--mist:#EEF2F8;--slate:#566275;--line:#DCE2EB;--serif:"Frank Ruhl Libre",Georgia,serif;--sans:"Heebo","Rubik",system-ui,sans-serif;font-family:var(--sans);color:var(--ink)}
+.pr p{margin:0}
+.p-wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.p-h1,.p-h2,.p-row-t,.p-statement-t,.p-cover-h{font-family:var(--serif);font-weight:500;letter-spacing:-.015em;color:var(--ink)}
+.p-hero{padding:96px 0 112px;background:#fff}
+.p-hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:72px;align-items:center}
+.p-kicker{font-size:1rem;font-weight:500;color:var(--blue);margin-bottom:22px}
+.p-h1{font-size:clamp(3rem,6.2vw,5.4rem);line-height:.98;margin:0}
+.p-lead{font-size:1.2rem;line-height:1.65;color:var(--slate);max-width:36ch}
+.p-hero .p-lead{margin:30px 0 40px}
+.p-actions{display:flex;flex-wrap:wrap;align-items:center;gap:28px}
+.p-btn{display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:#fff;font-weight:500;font-size:1.02rem;padding:17px 28px;border-radius:999px;text-decoration:none;transition:background .2s}
+.p-btn svg{width:20px;height:20px}.p-btn:hover{background:var(--blue-d)}
+.p-textlink{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-weight:500;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:6px}
+.p-textlink:hover{color:var(--blue)}
+.p-note{margin-top:22px;font-size:.95rem;color:var(--slate)}
+.pr a:focus-visible{outline:3px solid #8FB0FF;outline-offset:4px;border-radius:6px}
+.p-hero-fig{margin:0}
+.p-photo{position:relative;border-radius:22px;background:var(--mist) var(--img) center/cover no-repeat;overflow:hidden;display:grid;place-items:center}
+.p-photo-hero{aspect-ratio:4/5;background-position:30% 62%}
+.p-ph{font-size:.9rem;color:#7C889A;padding:10px 16px;border:1.5px dashed #B9C5D8;border-radius:10px;background:rgba(255,255,255,.7)}
+.p-hero-fig figcaption{margin-top:16px;font-size:.95rem;color:var(--slate);padding-inline-start:16px;border-inline-start:2px solid var(--blue)}
+.p-hero-copy>*,.p-hero-fig{animation:pUp .8s cubic-bezier(.2,.8,.2,1) both}
+.p-hero-copy>*:nth-child(2){animation-delay:.08s}.p-hero-copy>*:nth-child(3){animation-delay:.16s}.p-hero-copy>*:nth-child(4){animation-delay:.24s}.p-hero-fig{animation-delay:.2s}
+@keyframes pUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.p-hero-copy>*,.p-hero-fig{animation:none}}
+html.ax-motion .p-hero-copy>*,html.ax-motion .p-hero-fig{animation:none}
+.p-statement{background:var(--mist);padding:112px 0}
+.p-statement-t{font-size:clamp(1.7rem,3.2vw,2.6rem);line-height:1.3;max-width:28ch}
+.p-svc{padding:128px 0;background:#fff}
+.p-svc-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:80px;align-items:start}
+.p-svc-intro{position:sticky;top:110px;display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+.p-h2{font-size:clamp(2.1rem,3.8vw,3.1rem);line-height:1.08;margin:0}
+.p-svc-intro p{color:var(--slate);line-height:1.6;max-width:30ch;font-size:1.05rem}
+.p-rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.p-row{border-bottom:1px solid var(--line)}
+.p-row-link{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:34px 8px;color:inherit;text-decoration:none;transition:background .25s,padding .25s}
+.p-row-link:hover{background:var(--mist);padding-inline:24px}
+.p-row-main{display:flex;flex-direction:column;gap:8px}
+.p-row-t{font-size:clamp(1.5rem,2.4vw,1.95rem);line-height:1.15;margin:0}
+.p-row p{color:var(--slate);line-height:1.6;max-width:48ch}
+.p-row-go{display:inline-flex;align-items:center;gap:8px;flex:none;font-weight:500;color:var(--blue);font-size:.98rem}
+.p-arr{width:18px;height:18px;flex:none;transition:transform .2s}
+.pr a:hover .p-arr{transform:translateX(4px)}
+html[dir="rtl"] .p-arr{transform:scaleX(-1)}html[dir="rtl"] .pr a:hover .p-arr{transform:scaleX(-1) translateX(4px)}
+li.p-row:not(:has(.p-row-link)){display:flex;align-items:center;justify-content:space-between;gap:32px;padding:34px 8px}
+.p-row-links{display:flex;gap:10px;flex-wrap:wrap;flex:none}
+.p-chip{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:1.5px solid var(--line);border-radius:999px;color:var(--ink);font-weight:500;font-size:.95rem;text-decoration:none;transition:border-color .2s,color .2s}
+.p-chip:hover{border-color:var(--blue);color:var(--blue)}
+.p-approach{background:var(--mist);padding:128px 0}
+.p-approach .p-photo{background-color:#DDE4EE}
+.p-why{position:relative;margin-top:8px;padding:32px 34px 30px;border-radius:24px;background:var(--ink);color:#fff;overflow:hidden;isolation:isolate;box-shadow:0 30px 60px -34px rgba(15,30,51,.55)}
+.p-why::before{content:"";position:absolute;right:-80px;top:-120px;width:320px;height:320px;border-radius:50%;background:radial-gradient(closest-side,rgba(22,86,224,.55),transparent);z-index:-1}
+.p-why-h{display:inline-flex;align-items:center;gap:10px;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8FB0FF;margin-bottom:22px!important}
+.p-why-h::before{content:"";width:24px;height:2px;border-radius:2px;background:#8FB0FF}
+.p-why ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.p-why li{display:flex;align-items:center;gap:16px;padding:15px 0;font-size:1.06rem;font-weight:500;line-height:1.45}
+.p-why li+li{border-top:1px solid rgba(255,255,255,.1)}
+.p-why-ic{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:10px;color:var(--ink)}
+.p-why-ic svg{width:17px;height:17px}
+.p-why li:nth-child(1) .p-why-ic{background:#6E9BFF}.p-why li:nth-child(2) .p-why-ic{background:#3FD0B4}.p-why li:nth-child(3) .p-why-ic{background:#A68BFF}.p-why li:nth-child(4) .p-why-ic{background:#FFB547}
+@media (max-width:640px){.p-why{padding:26px 22px 22px}.p-why li{font-size:1rem}}
+.p-adv{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.p-adv-i{--c:#1656E0;--cs:#E6EEFF;position:relative;background:#fff;border-radius:20px;padding:30px 26px 28px;display:flex;flex-direction:column;gap:8px;box-shadow:0 1px 0 rgba(15,30,51,.04),0 18px 36px -24px rgba(15,30,51,.22);transition:transform .3s,box-shadow .3s;overflow:hidden}
+.p-adv-i::before{content:"";position:absolute;left:24px;right:24px;top:0;height:3px;border-radius:0 0 3px 3px;background:var(--c)}
+.p-adv-i:hover{transform:translateY(-3px);box-shadow:0 1px 0 rgba(15,30,51,.04),0 24px 44px -24px rgba(15,30,51,.32)}
+.p-adv-teal{--c:#0E9F86;--cs:#E1F5F0}.p-adv-violet{--c:#6B4FE0;--cs:#EEEAFE}.p-adv-amber{--c:#C9780A;--cs:#FDF0DC}
+.p-adv-ic{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--cs);color:var(--c);margin-bottom:8px}
+.p-adv-ic svg{width:22px;height:22px}
+.pr .p-adv-t{font-family:var(--sans);font-weight:600;font-size:1.1rem;letter-spacing:-.01em;line-height:1.25;margin:0;color:var(--ink)}
+.p-adv-d{color:var(--slate);line-height:1.55;font-size:.97rem}
+@media (max-width:1000px){.p-adv{grid-template-columns:1fr 1fr;margin-top:48px}}@media (max-width:520px){.p-adv{grid-template-columns:1fr;gap:14px}}
+@media (prefers-reduced-motion:reduce){.p-adv-i{transition:none}.p-adv-i:hover{transform:none}}
+.p-ap-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:88px;align-items:center}
+.p-photo-ap{aspect-ratio:5/4}
+.p-ap-copy{display:flex;flex-direction:column;gap:28px}
+.p-values{margin:12px 0 0;display:grid;gap:0;border-top:1px solid #CFD8E5}
+.p-values div{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid #CFD8E5}
+.p-values dt{font-family:var(--serif);font-size:1.3rem;font-weight:500}
+.p-values dd{margin:0;color:var(--slate);line-height:1.55;align-self:center}
+.p-call{background:var(--ink);padding:128px 0;color:#fff}
+.p-call-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:88px;align-items:center}
+.p-call .p-h2{color:#fff}
+.p-call .p-lead{color:#B9C4D6;margin:24px 0 40px}
+.p-btn-light{background:#fff;color:var(--ink)}.p-btn-light:hover{background:#DCE6FF}.p-btn-light svg{color:#0B7A5E}
+.p-cover{border-inline-start:1px solid rgba(255,255,255,.18);padding-inline-start:56px}
+.p-cover-h{color:#fff;font-size:1.4rem;margin:0 0 24px}
+.p-cover ol{list-style:none;counter-reset:c;margin:0;padding:0;display:grid;gap:22px}
+.p-cover li{counter-increment:c;display:grid;grid-template-columns:44px 1fr;align-items:baseline;font-size:1.12rem;line-height:1.5;color:#E4EAF4}
+.p-cover li::before{content:counter(c);font-family:var(--serif);font-size:1.5rem;color:#8FB0FF}
+@media (max-width:1000px){
+ .p-hero-grid,.p-svc-grid,.p-ap-grid,.p-call-grid{grid-template-columns:1fr;gap:48px}
+ .p-svc-intro{position:static}
+ .p-hero{padding:56px 0 72px}.p-statement{padding:72px 0}.p-svc,.p-approach,.p-call{padding:80px 0}
+ .p-photo-hero{aspect-ratio:4/3}
+ .p-cover{border-inline-start:0;padding-inline-start:0;border-top:1px solid rgba(255,255,255,.18);padding-top:40px}
+}
+@media (max-width:640px){
+ .p-wrap{padding:0 20px}
+ .p-row-link,li.p-row:not(:has(.p-row-link)){flex-direction:column;align-items:flex-start;gap:16px;padding:28px 0}
+ .p-row-link:hover{padding-inline:0;background:none}
+ .p-values div{grid-template-columns:1fr;gap:4px}
+ .p-actions{gap:18px}
+}
+
+.p-h1{font-size:clamp(2.2rem,4.9vw,4.4rem)}.p-h1 span{display:block;white-space:nowrap}
+@media (min-width:961px){.p-hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}}
+.p-cmp{margin-top:8px;border-radius:18px;overflow:hidden;background:#fff;border:1px solid #CFD8E5}
+.p-cmp-row{display:grid;grid-template-columns:1fr 1fr}
+.p-cmp-row>span{padding:18px 22px;line-height:1.5;font-size:1rem}
+.p-cmp-row>span:first-child{color:var(--slate)}
+.p-cmp-row>span:last-child{background:var(--ink);color:#fff;font-weight:500}
+.p-cmp-row+.p-cmp-row>span{border-top:1px solid #E3E9F1}.p-cmp-row+.p-cmp-row>span:last-child{border-top-color:rgba(255,255,255,.1)}
+.p-cmp-head>span{font-size:.9rem;font-weight:600;text-decoration:none!important;color:var(--slate)!important;padding-block:14px}
+.p-cmp-head>span:last-child{color:#8FB0FF!important}
+.p-faq{padding:128px 0;background:#fff}
+.p-faq-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:56px}
+.p-faq-head .p-h2{max-width:16ch}
+.p-faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px 72px}
+.p-qa{display:flex;flex-direction:column;gap:12px;padding-top:24px;border-top:2px solid var(--ink)}
+.p-q{font-family:var(--serif);font-weight:500;font-size:1.4rem;line-height:1.25;margin:0;color:var(--ink)}
+.p-qa p{color:var(--slate);line-height:1.65;max-width:52ch}
+.p-call{background:var(--blue)}
+.p-call .p-lead{color:#DCE6FF}
+.p-cover{border-inline-start-color:rgba(255,255,255,.3)}
+.p-cover li{grid-template-columns:48px 1fr}
+.p-cover li::before{color:#fff;opacity:.7}
+.p-cover li b{display:block;font-weight:600;color:#fff;font-size:1.12rem}
+.p-cover li span{display:block;color:#DCE6FF;font-size:1rem;margin-top:4px}
+.p-btn-light:hover{background:#E8EFFF}
+@media (max-width:1000px){.p-faq{padding:80px 0}.p-faq-grid{grid-template-columns:1fr;gap:36px}}
+@media (max-width:640px){.p-cmp-row>span{padding:14px 14px;font-size:.92rem}}
+.p-svc2{position:relative;padding:128px 0;background:var(--ink);color:#fff;overflow:hidden;isolation:isolate}
+.p-svc2::before{content:"";position:absolute;inset:-30% -10% auto auto;width:60vw;height:60vw;max-width:820px;max-height:820px;border-radius:50%;background:radial-gradient(closest-side,rgba(22,86,224,.45),transparent);z-index:-1}
+.p-svc2-head{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:64px;align-items:end;margin-bottom:64px}
+.p-svc2-k{display:inline-flex;align-items:center;gap:10px;margin:0 0 22px;font-size:.82rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8FB0FF}
+.p-svc2-k::before{content:"";width:28px;height:2px;background:#8FB0FF;border-radius:2px}
+.p-svc2-h{font-family:var(--sans);font-weight:800;font-size:clamp(2.2rem,4.6vw,4rem);line-height:1.04;letter-spacing:-.035em;margin:0;color:#fff}
+.p-svc2-h em{font-style:normal;background:linear-gradient(90deg,#6E9BFF,#4FD1B8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.p-svc2-side{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+.p-svc2-side p{margin:0;color:#B9C4D6;line-height:1.65;font-size:1.08rem}
+.p-textlink-light{color:#fff;border-color:rgba(255,255,255,.5)}.p-textlink-light:hover{color:#8FB0FF;border-color:#8FB0FF}
+.p-sc-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
+.p-sc{grid-column:span 2;--c:#6E9BFF;--cs:rgba(110,155,255,.14);position:relative;border-radius:22px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);transition:transform .3s,background .3s,border-color .3s}
+.p-sc-wide{grid-column:span 3}
+.p-sc-blue{--c:#6E9BFF;--cs:rgba(110,155,255,.16)}.p-sc-teal{--c:#3FD0B4;--cs:rgba(63,208,180,.15)}.p-sc-amber{--c:#FFB547;--cs:rgba(255,181,71,.15)}.p-sc-violet{--c:#A68BFF;--cs:rgba(166,139,255,.16)}.p-sc-coral{--c:#FF8572;--cs:rgba(255,133,114,.15)}.p-sc-sky{--c:#5CC8FF;--cs:rgba(92,200,255,.15)}
+.p-sc::after{content:"";position:absolute;left:28px;right:28px;top:0;height:3px;border-radius:0 0 3px 3px;background:var(--c);opacity:.9}
+.p-sc:hover{transform:translateY(-4px);background:rgba(255,255,255,.07);border-color:color-mix(in srgb,var(--c) 45%,transparent)}
+.p-sc-link,li.p-sc:not(:has(.p-sc-link)){display:flex;flex-direction:column;gap:14px;padding:34px 30px 30px;color:inherit;text-decoration:none;height:100%;box-sizing:border-box}
+.p-sc-link{border-radius:22px}
+.p-sc-ic{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:var(--cs);color:var(--c);margin-bottom:8px}
+.p-sc-ic svg{width:26px;height:26px}
+.p-sc-t{font-family:var(--sans);font-weight:700;font-size:1.4rem;letter-spacing:-.015em;line-height:1.2;margin:0;color:#fff}
+.p-sc-p{margin:0;color:#B9C4D6;line-height:1.6;font-size:1rem}
+.p-sc-go{margin-top:auto;padding-top:10px;display:inline-flex;align-items:center;gap:8px;color:var(--c);font-weight:600;font-size:.97rem}
+.p-sc-go .p-arr,.p-sc-chip .p-arr{width:18px;height:18px;transition:transform .25s}
+.p-sc-link:hover .p-sc-go .p-arr,.p-sc-chip:hover .p-arr{transform:translateX(4px)}
+.p-sc-links{margin-top:auto;padding-top:10px;display:flex;flex-wrap:wrap;gap:10px}
+.p-sc-chip{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--cs);color:var(--c);font-weight:600;font-size:.95rem;text-decoration:none;transition:background .2s,color .2s}
+.p-sc-chip:hover{background:var(--c);color:var(--ink)}
+.p-sc a:focus-visible{outline:3px solid #8FB0FF;outline-offset:3px}
+@media (max-width:1000px){.p-svc2{padding:80px 0}.p-svc2-head{grid-template-columns:1fr;gap:24px;margin-bottom:44px}.p-sc-grid{grid-template-columns:1fr 1fr}.p-sc,.p-sc-wide{grid-column:span 1}}
+@media (max-width:640px){.p-sc-grid{grid-template-columns:1fr;gap:14px}.p-sc,.p-sc-wide{grid-column:auto}.p-sc-link,li.p-sc:not(:has(.p-sc-link)){padding:28px 24px 24px}}
+@media (prefers-reduced-motion:reduce){.p-sc,.p-sc-go .p-arr{transition:none}.p-sc:hover{transform:none}}
+
+.gp .g-h1,.gp .g-h2,.gp .g-svc-t,.gp .g-step-t{font-family:var(--sans);letter-spacing:-.03em;color:var(--ink);margin:0}
+.g-h1{font-weight:800;font-size:clamp(2.6rem,5.6vw,4.6rem);line-height:1.02}
+.g-h1 em,.g-h2 em{font-style:normal;background:linear-gradient(90deg,#1656E0,#14A58A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.g-h2{font-weight:800;font-size:clamp(2rem,3.6vw,3rem);line-height:1.06}
+.gp .g-h2-light{color:#fff}
+.g-hero{padding:72px 0 112px;background:#fff;position:relative;overflow:hidden}
+.g-hero::before{content:"";position:absolute;right:-12%;top:-20%;width:55vw;height:55vw;max-width:760px;max-height:760px;border-radius:50%;background:radial-gradient(closest-side,rgba(20,165,138,.12),transparent);pointer-events:none}
+.g-hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:72px;align-items:center;position:relative}
+.g-crumb{display:flex;gap:10px;font-size:.92rem;color:var(--slate);margin-bottom:36px}
+.g-crumb a{color:var(--slate);text-decoration:none}.g-crumb a:hover{color:var(--blue)}
+.g-hero .p-lead{margin:28px 0 40px;max-width:44ch}
+.g-mock{margin:0}
+.g-mock-card{background:linear-gradient(160deg,#F3F6FB,#E9EEF7);border:1px solid var(--line);border-radius:28px;padding:28px;display:flex;flex-direction:column;gap:14px;box-shadow:0 30px 60px -30px rgba(15,30,51,.25)}
+.g-search{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:14px 20px;color:var(--ink);font-size:1rem}
+.g-search svg{width:20px;height:20px;color:var(--slate)}
+.g-ad{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.g-ad-main{position:relative;border:1.5px solid #14A58A;box-shadow:0 14px 30px -18px rgba(20,165,138,.6);transform:translateX(-14px)}
+.g-ad-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+.g-ad-lbl{font-size:.78rem;font-weight:600;color:var(--slate)}
+.g-badge{display:inline-flex;align-items:center;gap:6px;background:#E3F6F1;color:#0B7A64;font-size:.8rem;font-weight:600;padding:6px 12px;border-radius:999px}
+.g-badge svg{width:15px;height:15px}
+.g-ad-name{font-weight:700;font-size:1.2rem;color:var(--ink);margin-bottom:6px}
+.g-ad-meta{display:flex;gap:8px;align-items:center;font-size:.92rem;color:var(--slate);margin-top:2px}
+.g-stars{color:#F2A93B;letter-spacing:1px}
+.g-ad-btn{position:absolute;right:22px;bottom:20px;background:var(--blue);color:#fff;font-weight:600;font-size:.9rem;padding:9px 18px;border-radius:999px}
+[dir=rtl] .g-ad-btn{right:auto;left:22px}[dir=rtl] .g-ad-main{transform:translateX(14px)}
+.g-ad-ghost{display:flex;flex-direction:column;gap:9px;opacity:.75}
+.g-ad-ghost i{display:block;height:10px;border-radius:6px;background:#E2E8F1}
+.g-ad-ghost i:nth-child(1){width:46%;height:13px}.g-ad-ghost i:nth-child(2){width:72%}.g-ad-ghost i:nth-child(3){width:58%}
+.g-mock figcaption{margin-top:14px;font-size:.85rem;color:#7C889A;text-align:center}
+.g-two{background:var(--ink);padding:120px 0;position:relative;overflow:hidden;isolation:isolate}
+.g-two::before{content:"";position:absolute;left:-15%;bottom:-40%;width:60vw;height:60vw;max-width:820px;max-height:820px;border-radius:50%;background:radial-gradient(closest-side,rgba(22,86,224,.4),transparent);z-index:-1}
+.g-two-head{margin-bottom:52px;max-width:760px}
+.g-two-head .p-kicker{margin-bottom:16px}
+.g-two-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.g-svc.g-svc-coral{--c:#FF8572;--cs:rgba(255,133,114,.15)}
+.g-svc-note{margin-top:auto!important;padding-top:24px;color:#8E9BB0;font-size:.92rem}
+@media (max-width:1180px) and (min-width:1001px){.g-svc{padding:34px 26px 30px}}
+.g-svc{--c:#6E9BFF;--cs:rgba(110,155,255,.16);position:relative;padding:40px 36px 36px;border-radius:24px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09)}
+.g-svc::after{content:"";position:absolute;left:32px;right:32px;top:0;height:3px;border-radius:0 0 3px 3px;background:var(--c)}
+.g-svc-teal{--c:#3FD0B4;--cs:rgba(63,208,180,.15)}
+.g-svc .p-sc-ic{background:var(--cs);color:var(--c);margin-bottom:22px}
+.gp .g-svc-t{color:#fff;font-weight:700;font-size:1.6rem;letter-spacing:-.02em}
+.g-svc-p{color:#B9C4D6;line-height:1.6;margin:12px 0 26px!important;font-size:1.02rem}
+.g-svc{display:flex;flex-direction:column}
+.g-price{margin-top:auto;padding-top:28px}
+.g-price-row{display:flex;align-items:baseline;gap:8px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);color:#B9C4D6;font-size:1rem}
+.g-price-row b{font-size:2.3rem;font-weight:800;letter-spacing:-.03em;color:#fff;line-height:1}
+.g-price p{margin-top:8px!important;color:#8E9BB0;font-size:.92rem;line-height:1.5}
+.g-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.g-list li{display:flex;gap:12px;align-items:flex-start;color:#E4EAF3;line-height:1.5;font-size:1rem}
+.g-chk{flex:none;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--cs,rgba(110,155,255,.16));color:var(--c,#6E9BFF);margin-top:1px}
+.g-chk svg{width:14px;height:14px}
+.g-rev{margin-top:22px;display:flex;align-items:center;gap:22px;padding:24px 30px;border-radius:20px;background:rgba(255,133,114,.1);border:1px solid rgba(255,133,114,.25);color:#fff;text-decoration:none;transition:background .25s}
+.g-rev:hover{background:rgba(255,133,114,.17)}
+.g-rev-ic{flex:none;display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:rgba(255,133,114,.18);color:#FF8572;font-size:1.3rem}
+.g-rev-txt{display:flex;flex-direction:column;gap:4px;flex:1}
+.g-rev-txt b{font-size:1.08rem}.g-rev-txt span{color:#B9C4D6;line-height:1.5;font-size:.97rem}
+.g-rev-go{flex:none;display:inline-flex;align-items:center;gap:8px;color:#FF8572;font-weight:600}
+.g-rev-go .p-arr{width:18px;height:18px}
+.g-fit{padding:120px 0;background:#fff}
+.g-fit-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:stretch}
+.g-fit-col{padding:12px 24px 12px 0;display:flex;flex-direction:column;gap:36px}
+.g-list-dark li{color:var(--ink);font-size:1.08rem}
+.g-list-dark .g-chk{--cs:#E8EFFF;--c:var(--blue)}
+.g-get{background:linear-gradient(150deg,#1656E0,#0F3FAE);border-radius:28px;padding:48px 44px;display:flex;flex-direction:column;gap:32px}
+.g-get .g-chk{--cs:rgba(255,255,255,.18);--c:#fff}
+.g-get .g-list li{color:#fff;font-size:1.05rem}
+.g-how{padding:120px 0;background:var(--mist)}
+.g-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.g-steps li{background:#fff;border-radius:22px;padding:30px 26px;display:flex;flex-direction:column;gap:12px;border:1px solid var(--line)}
+.g-n{font-weight:800;font-size:.95rem;color:var(--blue);letter-spacing:.06em}
+.gp .g-step-t{font-weight:700;font-size:1.25rem;letter-spacing:-.015em}
+.g-steps p{color:var(--slate);line-height:1.6}
+.g-call{padding:112px 0}
+.g-call-in{display:flex;flex-direction:column;align-items:center;text-align:center}
+.g-call .p-lead{margin:22px auto 36px;max-width:46ch}
+.g-call-actions{justify-content:center}
+.gp .p-faq .g-h2{max-width:none}
+@media (max-width:1000px){
+ .g-hero-grid,.g-two-grid,.g-fit-grid{grid-template-columns:1fr;gap:48px}
+ .g-hero,.g-two,.g-fit,.g-how,.g-call{padding:80px 0}
+ .g-hero{padding-top:40px}
+ .g-steps{grid-template-columns:1fr 1fr}
+ .g-fit-col{padding:0}
+ .g-ad-main{transform:none}
+}
+@media (max-width:640px){
+ .p-wrap{padding:0 20px}
+ .g-steps{grid-template-columns:1fr}
+ .g-svc{padding:34px 24px 28px}
+ .g-get{padding:36px 26px}
+ .g-mock-card{padding:18px;border-radius:22px}
+ .g-rev{flex-direction:column;align-items:flex-start;padding:24px}
+ .g-ad-btn{position:static;display:inline-block;margin-top:12px}
+}
+
+.f-pk-head{display:flex;align-items:center;gap:16px;padding:6px 6px 18px;border-bottom:1px solid var(--line)}
+.f-pk-big{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:var(--blue);color:#fff;flex:none}
+.f-pk-big svg{width:26px;height:26px}
+.f-pk-head b{display:block;font-size:1.15rem;color:var(--ink)}
+.f-pk-head span{font-size:.92rem;color:var(--slate)}
+.f-pk-list{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.f-pk-list li{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.f-pk-ic{flex:none;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#E3F6F1;color:#0B7A64}
+.f-pk-ic svg{width:15px;height:15px}
+.f-pk-n{flex:1;font-weight:500;color:var(--ink)}
+.f-pk-tag{font-size:.78rem;font-weight:600;color:#0B7A64;background:#E3F6F1;padding:4px 10px;border-radius:999px}
+.f-pk-list li:last-child .f-pk-tag{color:#8A4210;background:#FDE9D7}
+.f-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.f-it{--c:#6E9BFF;--cs:rgba(110,155,255,.16);position:relative;padding:36px 30px 32px;border-radius:22px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);transition:transform .3s,background .3s,border-color .3s}
+.f-it::after{content:"";position:absolute;left:28px;right:28px;top:0;height:3px;border-radius:0 0 3px 3px;background:var(--c)}
+.f-it:hover{transform:translateY(-4px);background:rgba(255,255,255,.07);border-color:color-mix(in srgb,var(--c) 45%,transparent)}
+.f-it-teal{--c:#3FD0B4;--cs:rgba(63,208,180,.15)}.f-it-violet{--c:#A68BFF;--cs:rgba(166,139,255,.16)}.f-it-amber{--c:#FFB547;--cs:rgba(255,181,71,.15)}.f-it-coral{--c:#FF8572;--cs:rgba(255,133,114,.15)}
+.f-it .p-sc-ic{background:var(--cs);color:var(--c);margin-bottom:20px}
+.gp .f-it-t{font-family:var(--sans);font-weight:700;font-size:1.3rem;letter-spacing:-.015em;line-height:1.25;color:#fff;margin:0 0 12px}
+.f-it-p{color:#B9C4D6;line-height:1.65;font-size:.98rem}
+@media (max-width:1000px){.f-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.f-grid{grid-template-columns:1fr;gap:14px}.f-it{padding:30px 22px 26px}.f-pk-list li{padding:12px 12px}}
+@media (prefers-reduced-motion:reduce){.f-it{transition:none}.f-it:hover{transform:none}}
+</style>
 <script>(function(){try{var s=JSON.parse(localStorage.getItem('sorted_a11y')||'{}'),h=document.documentElement;Object.keys(s).forEach(function(k){if(k==='size'){if(s.size)h.setAttribute('data-ax-size',s.size)}else if(s[k])h.classList.add('ax-'+k)})}catch(e){}})();</script>
 </head>
 <body>
@@ -361,8 +723,8 @@ footer .f-disclaimer b{color:#C9D3E3}
     <div class="menu" id="menu">
       <a href="index.html" class="m-link" data-i18n="m_home">ראשי</a>
       <div class="m-drop" id="m-drop">
-        <button type="button" class="m-link m-drop-btn on" aria-haspopup="true" aria-expanded="false"><span data-i18n="m_services">שירותים</span><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="m-drop-panel"><a href="service-formation.html" class="on"><span data-i18n="sv1">הקמת עסק</span></a><a href="service-financial.html" class=""><span data-i18n="sv2">הנהלת חשבונות ושכר</span></a><a href="service-team.html" class=""><span data-i18n="sv3">פרודוקטיביות עובדים ובקרת איכות</span></a><a href="service-google.html" class=""><span data-i18n="sv4">Google Guarantee</span></a><a href="service-assistant.html" class=""><span data-i18n="sv6">עוזרת וירטואלית</span></a><a href="service-reviews.html" class=""><span data-i18n="sv8">ניהול ביקורות לקוחות</span></a><a href="service-immigration.html" class=""><span data-i18n="sv7">ניירת הגירה</span></a></div>
+        <button type="button" class="m-link m-drop-btn" aria-haspopup="true" aria-expanded="false"><span data-i18n="m_services">שירותים</span><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="m-drop-panel"><a href="service-formation.html" class=""><span data-i18n="sv1">LLC & Company Formation</span></a><a href="service-financial.html" class=""><span data-i18n="sv2">Bookkeeping, Payroll & QuickBooks</span></a><a href="service-assistant.html" class=""><span data-i18n="sv6">Virtual Assistance</span></a><a href="service-team.html" class=""><span data-i18n="sv3">Team Training & Performance</span></a><a href="service-google.html" class=""><span data-i18n="sv4">Google Ads & Advertising</span></a><a href="service-immigration.html" class=""><span data-i18n="sv7">Government Applications</span></a></div>
       </div>
       <a href="pricing.html" class="m-link" data-i18n="m_pricing">מחירים</a>
       <a href="about.html" class="m-link" data-i18n="m_about">אודות</a>
@@ -381,102 +743,77 @@ footer .f-disclaimer b{color:#C9D3E3}
   </div>
 </nav>
 
-<main id="main" tabindex="-1">
-<section class="hero sm"><div class="wrap hero-in">
-  <div class="crumbs"><a href="index.html" data-i18n="m_home">ראשי</a><span>/</span><a href="index.html#services" data-i18n="m_services">שירותים</a><span>/</span><span data-i18n="s1_eyebrow">הקמת עסק</span></div>
-  <div class="hero-sub-label" data-i18n="s1_eyebrow">הקמת עסק</div>
-  <h1 data-i18n="s1_h">מתחילים את העסק נכון</h1>
-  <p class="hero-sub" data-i18n="s1_desc">אנחנו מקימים את העסק שלכם בכל אחת מ-50 המדינות, עם עמידה מלאה בדרישות, כחוק ובצורה מסודרת מהיום הראשון, בין אם זה העסק הראשון שלכם או הבא בתור. אנחנו מטפלים בבירוקרטיה ובונים את הבסיס שמתאים לכם, כדי שתוכלו להתמקד בגדילה שלו.</p>
-  <div class="hero-actions">
-    <a class="btn btn-primary" href="https://wa.me/13478065604" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="hero_btn1">בואו נתחיל</span></a>
-    <a class="btn btn-ghost" href="index.html#services" data-i18n="sp_back">כל השירותים</a>
+<main id="main" tabindex="-1" class="pr gp">
+<section class="g-hero"><div class="p-wrap g-hero-grid">
+  <div class="g-hero-copy">
+    <nav class="g-crumb" aria-label="Breadcrumb"><a href="index.html" data-i18n="f_home">Home</a><span aria-hidden="true">/</span><span data-i18n="f_crumb">Business Formation</span></nav>
+    <p class="p-kicker" data-i18n="f_kicker">Business Formation</p>
+    <h1 class="g-h1" data-i18n="f_h1">Start Your Business<br><em>the Right Way</em></h1>
+    <p class="p-lead" data-i18n="f_lead">We set up your business in any of the 50 states, fully compliant from day one, whether it's your first business or your next. We handle the paperwork and build the foundation that's right for you, so you can focus on growing it.</p>
+    <div class="p-actions">
+      <a class="p-btn" href="https://wa.me/13478065604?text=Hi%2C%20I%27d%20like%20to%20start%20my%20business." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg><span data-i18n="f_cta">Start Your Business</span></a>
+      <a class="p-textlink" href="tel:+13478065604" data-i18n="f_call">Or call 347-806-5604</a>
+    </div>
+    <p class="p-note" data-i18n="f_note">State filing fees are separate. You know the exact costs before anything is filed.</p>
+  </div>
+  <figure class="g-mock f-pk" aria-label="What your formation package includes">
+    <div class="g-mock-card">
+      <div class="f-pk-head"><span class="f-pk-big" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg></span><div><b data-i18n="f_pk_h">Your formation package</b><span data-i18n="f_pk_s">Organized, labeled and explained</span></div></div>
+      <ul class="f-pk-list"><li><span class="f-pk-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="f-pk-n" data-i18n="f_pk1">Articles of Organization</span><span class="f-pk-tag" data-i18n="f_pk_tag">Ready</span></li><li><span class="f-pk-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="f-pk-n" data-i18n="f_pk2">EIN confirmation letter</span><span class="f-pk-tag" data-i18n="f_pk_tag">Ready</span></li><li><span class="f-pk-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="f-pk-n" data-i18n="f_pk3">Operating Agreement</span><span class="f-pk-tag" data-i18n="f_pk_tag">Ready</span></li><li><span class="f-pk-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="f-pk-n" data-i18n="f_pk4">Registered Agent</span><span class="f-pk-tag" data-i18n="f_pk_tag">Ready</span></li><li><span class="f-pk-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="f-pk-n" data-i18n="f_pk5">Next steps checklist</span><span class="f-pk-tag" data-i18n="f_pk_free">Free</span></li></ul>
+    </div>
+  </figure>
+</div></section>
+
+<section class="g-two"><div class="p-wrap">
+  <div class="g-two-head"><p class="p-svc2-k" data-i18n="f_inc_k">What's Included</p><h2 class="g-h2 g-h2-light" data-i18n="f_inc_h">Every Step, Clearly Explained</h2></div>
+  <div class="f-grid">
+    <article class="f-it f-it-blue"><span class="p-sc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/><path d="M4 21h16"/></svg></span><h3 class="f-it-t" data-i18n="f_i1t">Business Formation (LLC, S Corp, or C Corp)</h3><p class="f-it-p" data-i18n="f_i1p">We register your business with the state and advise you on choosing the right structure. A Limited Liability Company (LLC) is straightforward and flexible, an S Corp can lower your self-employment taxes once you're profitable, and a C Corp is built for bringing in investors. Whichever you choose, your business becomes a separate legal entity that protects your personal assets and positions you as an established business with banks, clients, partners, and investors.</p></article>
+    <article class="f-it f-it-teal"><span class="p-sc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><h3 class="f-it-t" data-i18n="f_i2t">Registered Agent</h3><p class="f-it-p" data-i18n="f_i2p">Every state requires you to name a Registered Agent before registering your business. They are a person or company with a physical address in that state that officially receives legal and government mail on your behalf. This also keeps your residential address off public records. We arrange this service for you if needed.</p></article>
+    <article class="f-it f-it-violet"><span class="p-sc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg></span><h3 class="f-it-t" data-i18n="f_i3t">DBA Filing</h3><p class="f-it-p" data-i18n="f_i3p">A DBA ("Doing Business As") allows you to operate and market your business under a name other than its legal registered name. Depending on your location, it is filed with the state or the county. Without a DBA, banks and clients recognize only your legal business name, and payments issued to your brand name may be declined.</p></article>
+    <article class="f-it f-it-amber"><span class="p-sc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="12" r="2.5"/><path d="M14 10h4M14 14h4"/></svg></span><h3 class="f-it-t" data-i18n="f_i4t">EIN (Federal Tax ID)</h3><p class="f-it-p" data-i18n="f_i4p">An Employer Identification Number (EIN) is the federal tax identification number for your business. It is required to open a business bank account, hire employees, register for state taxes, receive payments, and file taxes correctly. The IRS issues it at no cost, and we manage the application process, even if you do not have a Social Security Number (SSN).</p></article>
+    <article class="f-it f-it-coral"><span class="p-sc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h4"/></svg></span><h3 class="f-it-t" data-i18n="f_i5t">Operating Agreement</h3><p class="f-it-p" data-i18n="f_i5p">An Operating Agreement is an internal document that defines the ownership of your business and how decisions are made. Most banks require an Operating Agreement to open a business account. In the event of a dispute, a disagreement between partners, or an audit, it protects your interests and serves as formal proof that your business is legitimate.</p></article>
+    <article class="f-it f-it-blue"><span class="p-sc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg></span><h3 class="f-it-t" data-i18n="f_i6t">Organized Business Document Package</h3><p class="f-it-p" data-i18n="f_i6p">Upon completion, you receive all of your formation documents, including your EIN confirmation letter, filed Articles of Organization, and Operating Agreement, organized, clearly labeled, and explained in plain language. As an added benefit of using Sorted's services, you will receive a free downloadable checklist of next steps, such as registering for state taxes and meeting your annual state requirements, together with additional resources to help you plan your next moves.</p></article>
   </div>
 </div></section>
 
-<section class="inc"><div class="wrap">
-  <div class="sec-head fu">
-    <span class="label" data-i18n="sp_inc_label">מה כלול</span>
-    <h2 data-i18n="sp_inc_h">כל שלב, מוסבר בבהירות</h2>
+<section class="g-fit"><div class="p-wrap g-fit-grid">
+  <div class="g-fit-col">
+    <h2 class="g-h2" data-i18n="f_fit_h">Is This Right for You?</h2>
+    <ul class="g-list g-list-dark"><li><span class="g-chk"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="f_fit1">You are starting your first business in the U.S.</span></li><li><span class="g-chk"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="f_fit2">You live outside the U.S. or do not have a Social Security Number</span></li><li><span class="g-chk"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="f_fit3">You are adding a new company to the ones you already run</span></li><li><span class="g-chk"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="f_fit4">You are not sure whether an LLC or a corporation fits you best</span></li></ul>
   </div>
-  <div class="detail-grid">
-    <div class="detail">
-      <div class="detail-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
-      <div><h3 data-i18n="s1_l1">הקמת עסק (LLC, S Corp, או C Corp)</h3><p data-i18n="s1_d1">אנחנו רושמים את העסק שלכם מול המדינה ומייעצים לכם בבחירת המבנה המתאים. חברה בערבון מוגבל (LLC) היא ברורה וגמישה, S Corp יכול להפחית את מס העצמאים שלכם כשהעסק רווחי, ו-C Corp בנוי להכנסת משקיעים. מה שלא תבחרו, העסק הופך לישות משפטית נפרדת שמגינה על הרכוש האישי שלכם ומציבה אתכם כעסק מבוסס בעיני בנקים, לקוחות, שותפים ומשקיעים.</p></div>
-    </div>
-    <div class="detail">
-      <div class="detail-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
-      <div><h3 data-i18n="s1_l5">סוכן רשום (Registered Agent)</h3><p data-i18n="s1_d5">כל מדינה מחייבת אתכם למנות סוכן רשום (Registered Agent) לפני רישום העסק. מדובר באדם או בחברה עם כתובת פיזית באותה מדינה, המקבלים באופן רשמי דואר משפטי וממשלתי בשמכם. בנוסף, כך נשמרת כתובת המגורים שלכם מחוץ לרשומות הציבוריות. אנו מארגנים עבורכם את השירות במידת הצורך.</p></div>
-    </div>
-    <div class="detail">
-      <div class="detail-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
-      <div><h3 data-i18n="s1_l6">רישום DBA</h3><p data-i18n="s1_d6">רישום DBA (Doing Business As) מאפשר לכם לפעול ולשווק את העסק תחת שם שונה משמו המשפטי הרשום. בהתאם למיקום העסק, הרישום מוגש למדינה או למחוז. ללא DBA, בנקים ולקוחות מכירים רק בשם המשפטי של העסק, ותשלומים שהונפקו על שם המותג עלולים להידחות.</p></div>
-    </div>
-    <div class="detail">
-      <div class="detail-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
-      <div><h3 data-i18n="s1_l2">מספר EIN (מספר זיהוי פדרלי לצורכי מס)</h3><p data-i18n="s1_d2">מספר זיהוי מעסיק (EIN) הוא מספר הזיהוי הפדרלי של העסק שלכם לצורכי מס. הוא נדרש כדי לפתוח חשבון בנק עסקי, להעסיק עובדים, להירשם למיסי המדינה, לקבל תשלומים ולהגיש דוחות מס כראוי. רשות המסים האמריקאית (IRS) מנפיקה אותו ללא עלות, ואנו מנהלים את תהליך הבקשה, גם אם אין לכם מספר ביטוח לאומי אמריקאי (SSN).</p></div>
-    </div>
-    <div class="detail">
-      <div class="detail-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
-      <div><h3 data-i18n="s1_l3">הסכם תפעול (Operating Agreement)</h3><p data-i18n="s1_d3">הסכם תפעול (Operating Agreement) הוא מסמך פנימי הקובע את הבעלות על העסק שלכם ואת אופן קבלת ההחלטות. רוב הבנקים דורשים הסכם תפעול לצורך פתיחת חשבון בנק עסקי. במקרה של מחלוקת, חילוקי דעות בין שותפים או ביקורת, הוא מגן על האינטרסים שלכם ומשמש הוכחה רשמית לכך שהעסק שלכם לגיטימי.</p></div>
-    </div>
-    <div class="detail">
-      <div class="detail-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
-      <div><h3 data-i18n="s1_l7">חבילת מסמכים עסקית מאורגנת</h3><p data-i18n="s1_d7">בסיום התהליך, תקבלו את כל מסמכי ההקמה שלכם, כולל מכתב אישור ה-EIN, תעודת ההתאגדות (Articles of Organization) שהוגשה והסכם התפעול, מאורגנים, מסומנים בבירור ומוסברים בשפה פשוטה. כהטבה נוספת ללקוחות מסודר, תקבלו רשימת צעדים להמשך להורדה ללא עלות, כמו רישום למיסי המדינה ועמידה בדרישות השנתיות של המדינה, לצד משאבים נוספים שיעזרו לכם לתכנן את הצעדים הבאים.</p></div>
-    </div>
+  <div class="g-get">
+    <h2 class="g-h2 g-h2-light" data-i18n="f_get_h">What You Receive</h2>
+    <ul class="g-list"><li><span class="g-chk"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="f_get1">A registered business in the state you choose</span></li><li><span class="g-chk"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="f_get2">Your EIN, Operating Agreement and formation documents</span></li><li><span class="g-chk"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="f_get3">Everything organized, labeled and explained in plain language</span></li><li><span class="g-chk"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="f_get4">A free checklist of next steps and annual requirements</span></li></ul>
   </div>
 </div></section>
 
-<section class="how"><div class="wrap">
-  <div class="sec-head fu">
-    <span class="label" data-i18n="how_label">איך זה עובד</span>
-    <h2 data-i18n="how_h">פשוט מהתחלה ועד הסוף</h2>
-  </div>
-  <div class="step-row sg fu"><div class="step-card"><div class="step-num">01</div><h3 data-i18n="step1_t">ספרו לנו מה אתם צריכים</h3><p data-i18n="step1_d">ספרו לנו מה אתם מנסים להשיג ואיפה אתם צריכים תמיכה, בין אם זה ייעוץ קצר או עבודה מעשית לאורך הדרך.</p></div><div class="step-card"><div class="step-num">02</div><h3 data-i18n="step2_t">אנחנו מטפלים בפרטים</h3><p data-i18n="step2_d">אנו מנהלים את העבודה המנהלית, ההקמה והמערכות שהעסק שלכם צריך, עם תמיכה שוטפת לאורך כל הדרך.</p></div><div class="step-card"><div class="step-num">03</div><h3 data-i18n="step3_t">אתם חוזרים לעסק</h3><p data-i18n="step3_d">עם המערכות והתמיכה הנכונות במקום, תוכלו להתמקד במה שאתם הכי טובים בו ולהצמיח את העסק שלכם.</p></div></div>
+<section class="g-how"><div class="p-wrap">
+  <div class="g-two-head"><p class="p-kicker" data-i18n="f_how_k">How It Works</p><h2 class="g-h2" data-i18n="f_how_h">Simple From Start to Finish</h2></div>
+  <ol class="g-steps">
+    <li><span class="g-n">01</span><h3 class="g-step-t" data-i18n="f_h1t">Tell us your plans</h3><p data-i18n="f_h1p">Send us a message or call, and we help you choose the right structure and state.</p></li>
+    <li><span class="g-n">02</span><h3 class="g-step-t" data-i18n="f_h2t">A clear plan and price</h3><p data-i18n="f_h2p">You know the scope, our fee and the state fees before anything is filed.</p></li>
+    <li><span class="g-n">03</span><h3 class="g-step-t" data-i18n="f_h3t">We file everything</h3><p data-i18n="f_h3p">State registration, Registered Agent, EIN and Operating Agreement, handled for you.</p></li>
+    <li><span class="g-n">04</span><h3 class="g-step-t" data-i18n="f_h4t">Your documents, organized</h3><p data-i18n="f_h4p">You receive your complete package and your next steps checklist.</p></li>
+  </ol>
 </div></section>
 
-<section class="more-svc"><div class="wrap">
-  <div class="sec-head fu">
-    <span class="label" data-i18n="sp_other_label">שירותים נוספים</span>
-    <h2 data-i18n="sp_other_h">דרכים נוספות שבהן נוכל לסייע לעסק שלכם</h2>
-  </div>
-  <div class="other-grid">
-    <a class="other" href="service-financial.html">
-      <span class="o-e" data-i18n="s2_eyebrow">הנהלת חשבונות ושכר</span>
-      <span class="o-h" data-i18n="s2_h">חשבונות מדויקים. שכר מסודר</span>
-      <span class="o-more"><span data-i18n="sp_more">לפרטים</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-    </a>
-    <a class="other" href="service-team.html">
-      <span class="o-e" data-i18n="s3_eyebrow">פרודוקטיביות עובדים ובקרת איכות</span>
-      <span class="o-h" data-i18n="s3_h">צוות שעובד. איכות שאפשר לסמוך עליה</span>
-      <span class="o-more"><span data-i18n="sp_more">לפרטים</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-    </a>
-    <a class="other" href="service-google.html">
-      <span class="o-e" data-i18n="s4_eyebrow">ייעוץ וניהול Google Guarantee</span>
-      <span class="o-h" data-i18n="s4_h">זכאים. מורשים. מאומתים</span>
-      <span class="o-more"><span data-i18n="sp_more">לפרטים</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-    </a>
-    <a class="other" href="service-assistant.html">
-      <span class="o-e" data-i18n="s6_eyebrow">עוזרת וירטואלית</span>
-      <span class="o-h" data-i18n="s6_h">העזרה שאתם צריכים, בלי העלות של משרה מלאה</span>
-      <span class="o-more"><span data-i18n="sp_more">לפרטים</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-    </a>
-    <a class="other" href="service-reviews.html">
-      <span class="o-e" data-i18n="s8_eyebrow">ניהול ביקורות לקוחות</span>
-      <span class="o-h" data-i18n="s8_h">המוניטין שלכם, מנוהל ומוגן</span>
-      <span class="o-more"><span data-i18n="sp_more">לפרטים</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-    </a>
-    <a class="other" href="service-immigration.html">
-      <span class="o-e" data-i18n="s7_eyebrow">ניירת הגירה</span>
-      <span class="o-h" data-i18n="s7_h">טפסים מורכבים. הכנה מדויקת</span>
-      <span class="o-more"><span data-i18n="sp_more">לפרטים</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-    </a>
+<section class="p-faq"><div class="p-wrap">
+  <div class="p-faq-head"><h2 class="g-h2" data-i18n="f_faq_h">Good to Know</h2><a class="p-textlink" href="faq.html"><span data-i18n="f_faq_all">Read all questions</span><svg class="p-arr" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  <div class="p-faq-grid">
+    <div class="p-qa"><h3 class="p-q" data-i18n="f_q1">How long does it take?</h3><p data-i18n="f_a1">Typically up to two weeks depending on the state, with faster expedited options available for an additional fee.</p></div>
+    <div class="p-qa"><h3 class="p-q" data-i18n="f_q2">Do I need to live in the U.S. to open a business there?</h3><p data-i18n="f_a2">Not necessarily. Many owners form a U.S. LLC while living abroad. We'll walk you through what applies to your situation.</p></div>
+    <div class="p-qa"><h3 class="p-q" data-i18n="f_q3">Do I need an EIN, and can I get one without a Social Security number?</h3><p data-i18n="f_a3">In most cases, yes. An EIN is needed to open a business bank account, hire employees, and file taxes. You don't need a Social Security number (SSN) to get one. Without an SSN, the application can't be completed online, so it usually takes a little longer and an additional $50 service fee applies. We prepare and file the application for you as part of our business formation service.</p></div>
+    <div class="p-qa"><h3 class="p-q" data-i18n="f_q4">Are state fees included in your prices?</h3><p data-i18n="f_a4">Our prices are for our service. Government and state filing fees are separate, and we'll tell you the exact costs in advance, before anything is filed.</p></div>
   </div>
 </div></section>
 
-<section class="notsure"><div class="wrap fu">
-  <h2 data-i18n="ns_h">לא בטוחים מאיפה להתחיל?</h2>
-  <p data-i18n="ns_p">נכוון אתכם לכיוון הנכון ונעזור לעסק שלכם לבנות בסיס חזק ומאורגן לצמיחה. בואו נדאג שהעסק שלכם יהיה מסודר.</p>
-  <a class="btn btn-primary" href="https://wa.me/13478065604" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="ns_btn">בואו נדבר</span></a>
+<section class="p-call g-call"><div class="p-wrap g-call-in">
+  <h2 class="g-h2 g-h2-light" data-i18n="f_call_h">Ready to Start Your Business?</h2>
+  <p class="p-lead" data-i18n="f_call_p">Send us a message or give us a call. We'll answer your questions and get your business started.</p>
+  <div class="p-actions g-call-actions">
+    <a class="p-btn p-btn-light" href="https://wa.me/13478065604?text=Hi%2C%20I%27d%20like%20to%20start%20my%20business." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg><span data-i18n="f_call_btn">Message Us on WhatsApp</span></a>
+    <a class="p-textlink p-textlink-light" href="tel:+13478065604" data-i18n="f_call">Or call 347-806-5604</a>
+  </div>
 </div></section>
 </main>
 
@@ -488,7 +825,7 @@ footer .f-disclaimer b{color:#C9D3E3}
         <p class="f-tag" data-i18n="ft_tag">תמיכה אישית בצד העסקי והמנהלי של העסק שלכם בארה״ב, בעברית ובאנגלית.</p>
         <a class="f-wa" href="https://wa.me/13478065604" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="ft_wa">שלחו הודעה בוואטסאפ</span></a>
       </div>
-      <div class="f-col" role="navigation" aria-labelledby="ft-s"><h3 id="ft-s" data-i18n="ft_services">שירותים</h3><ul><li><a href="service-formation.html" data-i18n="sv1">הקמת עסק</a></li><li><a href="service-financial.html" data-i18n="sv2">הנהלת חשבונות ושכר</a></li><li><a href="service-team.html" data-i18n="sv3">פרודוקטיביות עובדים ובקרת איכות</a></li><li><a href="service-google.html" data-i18n="sv4">Google Guarantee</a></li><li><a href="service-assistant.html" data-i18n="sv6">עוזרת וירטואלית</a></li><li><a href="service-reviews.html" data-i18n="sv8">ניהול ביקורות לקוחות</a></li><li><a href="service-immigration.html" data-i18n="sv7">ניירת הגירה</a></li></ul></div>
+      <div class="f-col" role="navigation" aria-labelledby="ft-s"><h3 id="ft-s" data-i18n="ft_services">שירותים</h3><ul><li><a href="service-formation.html" data-i18n="sv1">LLC & Company Formation</a></li><li><a href="service-financial.html" data-i18n="sv2">Bookkeeping, Payroll & QuickBooks</a></li><li><a href="service-assistant.html" data-i18n="sv6">Virtual Assistance</a></li><li><a href="service-team.html" data-i18n="sv3">Team Training & Performance</a></li><li><a href="service-google.html" data-i18n="sv4">Google Ads & Advertising</a></li><li><a href="service-immigration.html" data-i18n="sv7">Government Applications</a></li></ul></div>
       <div class="f-col" role="navigation" aria-labelledby="ft-c"><h3 id="ft-c" data-i18n="ft_company">החברה</h3><ul><li><a href="index.html" data-i18n="f_home">ראשי</a></li><li><a href="pricing.html" data-i18n="f_pricing">מחירים</a></li><li><a href="about.html" data-i18n="f_about">אודות</a></li><li><a href="faq.html" data-i18n="f_faq">שאלות נפוצות</a></li><li><a href="contact.html" data-i18n="f_contact">צרו קשר</a></li><li><a href="privacy.html" data-i18n="f_privacy">מדיניות פרטיות</a></li><li><a href="terms.html" data-i18n="f_terms">תנאי שימוש</a></li><li><a href="accessibility.html" data-i18n="f_access">הצהרת נגישות</a></li></ul></div>
       <div class="f-col"><h3 data-i18n="ft_contact">צרו קשר</h3><ul class="f-contact">
         <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg><a href="tel:+13478065604" dir="ltr">347-806-5604</a></li>
@@ -521,20 +858,183 @@ footer .f-disclaimer b{color:#C9D3E3}
 </div>
 
 <script>
-const t = {"he": {"nav_wa": "וואטסאפ", "ns_h": "לא בטוחים מאיפה להתחיל?", "ns_p": "נכוון אתכם לכיוון הנכון ונעזור לעסק שלכם לבנות בסיס חזק ומאורגן לצמיחה. בואו נדאג שהעסק שלכם יהיה מסודר.", "ns_btn": "בואו נדבר", "f_copy": "© 2026 מסודר · עוזרים לעסקים לצמוח מאז 2008", "disc_t": "כתב ויתור:", "disc_p": "אנחנו מספקים שירותי תמיכה מנהלית ועסקית, ולא מספקים ייעוץ משפטי או ייעוץ מס. בכל נושא משפטי או מיסויי, אנחנו ממליצים להתייעץ עם עורך דין או איש מקצוע בתחום המס.", "how_label": "איך זה עובד", "how_h": "פשוט מהתחלה ועד הסוף", "step1_t": "ספרו לנו מה אתם צריכים", "step1_d": "ספרו לנו מה אתם מנסים להשיג ואיפה אתם צריכים תמיכה, בין אם זה ייעוץ קצר או עבודה מעשית לאורך הדרך.", "step2_t": "אנחנו מטפלים בפרטים", "step2_d": "אנו מנהלים את העבודה המנהלית, ההקמה והמערכות שהעסק שלכם צריך, עם תמיכה שוטפת לאורך כל הדרך.", "step3_t": "אתם חוזרים לעסק", "step3_d": "עם המערכות והתמיכה הנכונות במקום, תוכלו להתמקד במה שאתם הכי טובים בו ולהצמיח את העסק שלכם.", "how_cta": "בואו נתחיל", "hero_btn1": "בואו נתחיל", "m_home": "ראשי", "m_services": "שירותים", "m_about": "אודות", "m_faq": "שאלות נפוצות", "sv1": "הקמת עסק", "sv2": "הנהלת חשבונות ושכר", "sv3": "פרודוקטיביות עובדים ובקרת איכות", "sv4": "Google Guarantee", "sv5": "עיצוב ופיתוח אתרים", "f_about": "אודות", "f_faq": "שאלות נפוצות", "m_menu": "תפריט", "skip": "דלג לתוכן הראשי", "nav_label": "ניווט ראשי", "ax_open": "פתיחת תפריט נגישות (Alt+A)", "ax_title": "תפריט נגישות", "ax_close": "סגירת תפריט נגישות", "ax_text": "גודל טקסט", "ax_dec": "הקטנת טקסט", "ax_inc": "הגדלת טקסט", "ax_contrast": "ניגודיות גבוהה", "ax_gray": "גווני אפור", "ax_links": "הדגשת קישורים", "ax_font": "גופן קריא", "ax_spacing": "ריווח טקסט", "ax_motion": "עצירת אנימציות", "ax_cursor": "סמן גדול", "ax_reset": "איפוס הגדרות", "ax_stmt": "הצהרת נגישות", "ax_hint": "קיצור מקלדת: Alt+A", "f_access": "הצהרת נגישות", "ck_label": "הודעה על שימוש בעוגיות", "ck_p": "אנחנו משתמשים באחסון מקומי בדפדפן (בדומה לעוגיות) כדי לזכור את העדפות השפה והנגישות שלכם, והאתר טוען גופנים מ-Google Fonts. בלחיצה על ״אישור״ אתם מסכימים לכך.", "ck_more": "מדיניות פרטיות", "ck_ok": "אישור", "wa_label": "שליחת הודעה בוואטסאפ", "f_privacy": "מדיניות פרטיות", "f_terms": "תנאי שימוש", "sp_back": "כל השירותים", "sp_inc_label": "מה כלול", "sp_inc_h": "כל שלב, מוסבר בבהירות", "sp_other_label": "שירותים נוספים", "sp_other_h": "דרכים נוספות שבהן נוכל לסייע לעסק שלכם", "sp_more": "לפרטים", "s1_eyebrow": "הקמת עסק", "s1_h": "מתחילים את העסק נכון", "s1_desc": "אנחנו מקימים את העסק שלכם בכל אחת מ-50 המדינות, בצורה תקינה לגמרי מהיום הראשון, בין אם זה העסק הראשון שלכם או הבא בתור. אנחנו מטפלים בניירת ובונים את הבסיס שמתאים לכם, כדי שתוכלו להתמקד בלהצמיח אותו.", "s1_price": "<span class=\"amt\">$150</span> <span class=\"fee\">+ אגרות מדינה</span>", "s1_l1": "הקמת עסק (LLC, S Corp, או C Corp)", "s1_d1": "אנחנו רושמים את העסק שלכם מול המדינה ומייעצים לכם בבחירת המבנה המתאים. חברה בערבון מוגבל (LLC) היא ברורה וגמישה, S Corp יכול להפחית את מס העצמאים שלכם כשהעסק רווחי, ו-C Corp בנוי להכנסת משקיעים. מה שלא תבחרו, העסק הופך לישות משפטית נפרדת שמגינה על הרכוש האישי שלכם ומציבה אתכם כעסק מבוסס בעיני בנקים, לקוחות, שותפים ומשקיעים.", "s1_l2": "מספר EIN (מספר זיהוי פדרלי לצורכי מס)", "s1_d2": "מספר זיהוי מעסיק (EIN) הוא מספר הזיהוי הפדרלי של העסק שלכם לצורכי מס. הוא נדרש כדי לפתוח חשבון בנק עסקי, להעסיק עובדים, להירשם למיסי המדינה, לקבל תשלומים ולהגיש דוחות מס כראוי. רשות המסים האמריקאית (IRS) מנפיקה אותו ללא עלות, ואנו מנהלים את תהליך הבקשה, גם אם אין לכם מספר ביטוח לאומי אמריקאי (SSN).", "s1_l3": "הסכם תפעול (Operating Agreement)", "s1_d3": "הסכם תפעול (Operating Agreement) הוא מסמך פנימי הקובע את הבעלות על העסק שלכם ואת אופן קבלת ההחלטות. רוב הבנקים דורשים הסכם תפעול לצורך פתיחת חשבון בנק עסקי. במקרה של מחלוקת, חילוקי דעות בין שותפים או ביקורת, הוא מגן על האינטרסים שלכם ומשמש הוכחה רשמית לכך שהעסק שלכם לגיטימי.", "s1_l4": "הכוונה לרישיון עסק", "s1_d4": "האם אתם צריכים רישיון תלוי בעיר, במדינה ובתחום שלכם, ואין תשובה אחת שמתאימה לכולם. אנחנו בודקים מה רלוונטי לעסק ולמיקום הספציפיים שלכם, אומרים לכם בכנות מה נדרש ומה לא, ומלווים אתכם בהגשת הבקשה.", "s1_l5": "סוכן רשום (Registered Agent)", "s1_d5": "כל מדינה מחייבת אתכם למנות סוכן רשום (Registered Agent) לפני רישום העסק. מדובר באדם או בחברה עם כתובת פיזית באותה מדינה, המקבלים באופן רשמי דואר משפטי וממשלתי בשמכם. בנוסף, כך נשמרת כתובת המגורים שלכם מחוץ לרשומות הציבוריות. אנו מארגנים עבורכם את השירות במידת הצורך.", "s1_l6": "רישום DBA", "s1_d6": "רישום DBA (Doing Business As) מאפשר לכם לפעול ולשווק את העסק תחת שם שונה משמו המשפטי הרשום. בהתאם למיקום העסק, הרישום מוגש למדינה או למחוז. ללא DBA, בנקים ולקוחות מכירים רק בשם המשפטי של העסק, ותשלומים שהונפקו על שם המותג עלולים להידחות.", "s1_l7": "חבילת מסמכים עסקית מאורגנת", "s1_d7": "בסיום התהליך, תקבלו את כל מסמכי ההקמה שלכם, כולל מכתב אישור ה-EIN, תעודת ההתאגדות (Articles of Organization) שהוגשה והסכם התפעול, מאורגנים, מסומנים בבירור ומוסברים בשפה פשוטה. כהטבה נוספת ללקוחות מסודר, תקבלו רשימת צעדים להמשך להורדה ללא עלות, כמו רישום למיסי המדינה ועמידה בדרישות השנתיות של המדינה, לצד משאבים נוספים שיעזרו לכם לתכנן את הצעדים הבאים.", "s2_eyebrow": "הנהלת חשבונות ושכר", "s2_h": "חשבונות מדויקים. שכר מסודר", "s3_eyebrow": "פרודוקטיביות עובדים ובקרת איכות", "s3_h": "צוות שעובד. איכות שאפשר לסמוך עליה", "s4_eyebrow": "ייעוץ וניהול Google Guarantee", "s4_h": "זכאים. מורשים. מאומתים", "s5_eyebrow": "עיצוב ופיתוח אתרים", "s5_h": "בנוי כדי לייצג את העסק שלכם", "doc_title": "הקמת עסק | מסודר", "s1_fee_note": "אגרות ההגשה של המדינה משתנות לפי המדינה שבה רושמים את העסק, ומשולמות בנפרד. נגיד לכם את הסכום המדויק לפני ההגשה."}, "en": {"nav_wa": "WhatsApp", "ns_h": "Not Sure Where to Start?", "ns_p": "We’ll guide you in the right direction and help your business build a strong, organized foundation for growth. Let’s get your business sorted.", "ns_btn": "Start the Conversation", "f_copy": "© 2026 Sorted · Helping Businesses Grow Since 2008", "disc_t": "Disclaimer:", "disc_p": "We provide administrative and business support services and do not provide legal or tax advice. For legal or tax matters, we recommend consulting a qualified attorney or tax professional.", "how_label": "How It Works", "how_h": "Simple From Start to Finish", "step1_t": "Tell Us What You Need", "step1_d": "Tell us what you're trying to accomplish and where you need support, whether that's a quick consultation or hands-on work.", "step2_t": "We Handle the Details", "step2_d": "We manage the administrative work, setup, and systems your business needs, with ongoing support every step of the way.", "step3_t": "You Get Back to Business", "step3_d": "With the right systems and support in place, you can focus on what you do best and grow your business.", "how_cta": "Get Started", "hero_btn1": "Get Started", "m_home": "Home", "m_services": "Services", "m_about": "About", "m_faq": "FAQ", "sv1": "Business Formation", "sv2": "Bookkeeping & Payroll", "sv3": "Productivity & Quality Control", "sv4": "Google Guarantee", "sv5": "Website Design", "f_about": "About", "f_faq": "FAQ", "m_menu": "Menu", "skip": "Skip to main content", "nav_label": "Main navigation", "ax_open": "Open accessibility menu (Alt+A)", "ax_title": "Accessibility", "ax_close": "Close accessibility menu", "ax_text": "Text size", "ax_dec": "Smaller text", "ax_inc": "Larger text", "ax_contrast": "High contrast", "ax_gray": "Grayscale", "ax_links": "Highlight links", "ax_font": "Readable font", "ax_spacing": "Text spacing", "ax_motion": "Stop animations", "ax_cursor": "Large cursor", "ax_reset": "Reset settings", "ax_stmt": "Accessibility statement", "ax_hint": "Keyboard shortcut: Alt+A", "f_access": "Accessibility", "ck_label": "Cookie notice", "ck_p": "We use local browser storage (similar to cookies) to remember your language and accessibility preferences, and the site loads fonts from Google Fonts. By clicking “Accept” you agree to this.", "ck_more": "Privacy Policy", "ck_ok": "Accept", "wa_label": "Message us on WhatsApp", "f_privacy": "Privacy Policy", "f_terms": "Terms & Conditions", "sp_back": "All Services", "sp_inc_label": "What's Included", "sp_inc_h": "Every Step, Clearly Explained", "sp_other_label": "More Services", "sp_other_h": "More Ways We Can Support Your Business", "sp_more": "Learn more", "s1_eyebrow": "Business Formation", "s1_h": "Start Your Business the Right Way", "s1_desc": "We set up your business in any of the 50 states, fully compliant from day one, whether it's your first business or your next. We handle the paperwork and build the foundation that's right for you, so you can focus on growing it.", "s1_price": "<span class=\"amt\">$150</span> <span class=\"fee\">+ state fees</span>", "s1_l1": "Business Formation (LLC, S Corp, or C Corp)", "s1_d1": "We register your business with the state and advise you on choosing the right structure. A Limited Liability Company (LLC) is straightforward and flexible, an S Corp can lower your self-employment taxes once you're profitable, and a C Corp is built for bringing in investors. Whichever you choose, your business becomes a separate legal entity that protects your personal assets and positions you as an established business with banks, clients, partners, and investors.", "s1_l2": "EIN (Federal Tax ID)", "s1_d2": "An Employer Identification Number (EIN) is the federal tax identification number for your business. It is required to open a business bank account, hire employees, register for state taxes, receive payments, and file taxes correctly. The IRS issues it at no cost, and we manage the application process, even if you do not have a Social Security Number (SSN).", "s1_l3": "Operating Agreement", "s1_d3": "An Operating Agreement is an internal document that defines the ownership of your business and how decisions are made. Most banks require an Operating Agreement to open a business account. In the event of a dispute, a disagreement between partners, or an audit, it protects your interests and serves as formal proof that your business is legitimate.", "s1_l4": "Business License Guidance", "s1_d4": "Whether you need a license depends on your city, state, and industry, and there's no single national answer. We check what applies to your specific business and location, tell you honestly what's required and what isn't, and guide you through applying.", "s1_l5": "Registered Agent", "s1_d5": "Every state requires you to name a Registered Agent before registering your business. They are a person or company with a physical address in that state that officially receives legal and government mail on your behalf. This also keeps your residential address off public records. We arrange this service for you if needed.", "s1_l6": "DBA Filing", "s1_d6": "A DBA (\"Doing Business As\") allows you to operate and market your business under a name other than its legal registered name. Depending on your location, it is filed with the state or the county. Without a DBA, banks and clients recognize only your legal business name, and payments issued to your brand name may be declined.", "s1_l7": "Organized Business Document Package", "s1_d7": "Upon completion, you receive all of your formation documents, including your EIN confirmation letter, filed Articles of Organization, and Operating Agreement, organized, clearly labeled, and explained in plain language. As an added benefit of using Sorted's services, you will receive a free downloadable checklist of next steps, such as registering for state taxes and meeting your annual state requirements, together with additional resources to help you plan your next moves.", "s2_eyebrow": "Bookkeeping & Payroll", "s2_h": "Accurate Books. Reliable Payroll", "s3_eyebrow": "Employee Productivity & Quality Control", "s3_h": "Productivity You Can See. Quality You Can Trust", "s4_eyebrow": "Google Guarantee Consultation & Administration", "s4_h": "Eligible. Licensed. Verified", "s5_eyebrow": "Website Design & Development", "s5_h": "Built to Represent Your Business", "doc_title": "Business Formation | Sorted", "s1_fee_note": "State filing fees depend on the state you register in and are paid separately. We'll tell you the exact amount before anything is filed."}};
-Object.assign(t.he, {"sv6": "עוזרת וירטואלית", "s6_eyebrow": "עוזרת וירטואלית", "s6_h": "העזרה שאתם צריכים, בלי העלות של משרה מלאה"}); Object.assign(t.en, {"sv6": "Virtual Assistant", "s6_eyebrow": "Virtual Assistant", "s6_h": "The Help You Need, Without the Full-Time Cost"});
+const t = {
+  he: {
+    nav_wa:"וואטסאפ",
+    hero_h1:"העסק שלכם בארה״ב, מסודר",
+    hero_label:"תפסיקו להתעסק בניירת. תתחילו לנהל עסק",
+    hero_sub:"אתם מנהלים את העסק. הצוות שלנו מנהל את כל מה שמאחוריו, הכול במקום אחד, מהקמה, כספים ועובדים ועד הניירת השוטפת, בליווי אישי לאורך כל הדרך.",
+    hero_btn1:"בואו נתחיל", hero_btn2:"גלו את השירותים",
+    sup_h:"התמיכה שאתם צריכים. בלי כאב הראש",
+    sup_p1:"לנהל עסק באמריקה זה הרבה דברים במקביל, מההקמה הנכונה ועד ניהול הכספים, השכר, והצוות.",
+    sup_p2:"אנחנו נותנים לבעלי עסקים מבנה, תמיכה, ושקט נפשי, עם ליווי צמוד שישמור על הצד המנהלי של העסק שלכם מסודר ורץ חלק.",
+    svc_label:"השירותים שלנו", svc_h:"איך אנחנו עוזרים",
+    s1_eyebrow:"הקמת עסק", s1_h:"מתחילים את העסק נכון",
+    s1_desc:"אנחנו מקימים את העסק שלכם בארה״ב נכון מהיום הראשון, מטפלים בניירת ובונים בסיס שמתאים לכם.",
+    s1_l1:"הקמת עסק (LLC, S Corp, או C Corp)", s1_l2:"מספר EIN (תעודת זהות פדרלית)", s1_l3:"הסכם הפעלה (Operating Agreement)", s1_l4:"הכוונה לרישיון עסק", s1_l5:"סוכן רשום (Registered Agent)", s1_l6:"רישום DBA", s1_l7:"חבילת מסמכים עסקית מאורגנת",
+    s1_d1:'אנחנו רושמים את העסק שלכם רשמית מול המדינה. כרגע, מבחינה משפטית, "אתם" וה"עסק שלכם" זה אותו דבר. אם קורה משהו, החסכונות האישיים שלכם חשופים. LLC יוצר הפרדה. העסק הופך לישות משפטית נפרדת, כדי שהרכוש האישי שלכם יהיה מוגן.',
+    s1_d2:"תחשבו על זה כמו תעודת זהות, אבל לעסק. בלי זה אי אפשר לפתוח חשבון בנק עסקי, לקבל תשלומים כעסק, או להגיש דוחות מס נכון. מונפק על ידי רשות המס האמריקאית (IRS), בחינם. אנחנו מטפלים בהגשה.",
+    s1_d3:"מסמך פנימי קצר שקובע מי הבעלים ואיך מתקבלות החלטות. רוב הבנקים לא יפתחו חשבון בלעדיו, ואם אי פעם תהיה מחלוקת, חילוקי דעות עם שותף, או ביקורת, זה המסמך שמוכיח שהעסק שלכם לגיטימי ומאורגן, לא רק שם על טופס.",
+    s1_d4:"האם אתם צריכים רישיון תלוי לגמרי בעיר, המדינה, והתחום שלכם. אין תשובה אחת שמתאימה לכולם. אנחנו בודקים מה באמת רלוונטי לעסק ולמיקום הספציפיים שלכם, ואומרים לכם בכנות מה נדרש ומה לא.",
+    s1_d5:"ביטוח אחריות כללי (וכל ביטוח ספציפי לתחום שלכם) מגן על העסק שלכם אם קורה משהו. פגיעה בלקוח, נזק לרכוש, תביעה. אנחנו עוזרים לכם להבין איזה כיסוי הגיוני ולהקים אותו.",
+    s1_d6:'אם אתם רוצים לפעול או לפרסם תחת שם שונה מהשם הרשמי של ה-LLC, צריך להגיש את זה מול המדינה או המחוז. בלעדיו, בנקים ולקוחות מכירים משפטית רק בשם הרשום של ה-LLC.',
+    s1_d7:"בסוף, אתם לא מקבלים ערימת PDF-ים שאתם לא מבינים. אתם מקבלים כל מסמך, תעודת ה-EIN, מסמכי הרישום, הסכם ההפעלה, מאורגן, מסומן, ומוסבר בשפה פשוטה, עם צ'קליסט של מה לעשות עכשיו.",
+    s1_link:"גלו עוד על הקמת עסק",
+    s1_price:'<span class="amt">$150</span> <span class="fee">+ אגרות מדינה</span>',
+    s2_eyebrow:"הנהלת חשבונות ושכר", s2_h:"חשבונות מדויקים. שכר מסודר",
+    s2_desc:"בחרו את התמיכה הפיננסית והמנהלית שאתם צריכים, מ-QuickBooks ועד שכר ודוחות, כדי שתמיד תדעו איפה העסק שלכם עומד.",
+    s2_l1:"הנהלת חשבונות ספקים ולקוחות (AP/AR)", s2_l2:"הקמה וניהול QuickBooks", s2_l3:"שירותי שכר", s2_l4:"ניהול תשלומים לקבלני משנה (1099)", s2_l5:"דוחות כספיים",
+    s2_d1:"מעקב אחר מה שהעסק שלכם חייב (חשבונות, תשלומים לספקים) ומה שחייבים לכם (חשבוניות לקוחות, תשלומים שטרם התקבלו). אנחנו דואגים שכלום לא ישולם באיחור וכלום לא ייפול בין הכיסאות בגבייה.",
+    s2_d2:"הקמת QuickBooks נכון מההתחלה, חשבונות מסווגים, חיבור לחשבון בנק, או לקיחת ניהול שוטף אם זה כבר מוקם אבל לא מתוחזק כמו שצריך.",
+    s2_d3:"לוודא שהעובדים שלכם מקבלים תשלום מדויק ובזמן, עם הניכויים הנכונים והדיווח הנדרש, כדי שלא תהיו חשופים לקנסות על טעויות בשכר.",
+    s2_d4:"הקמה וניהול של תוכנית פנסיה עבורכם ו/או העובדים שלכם, כולל הטיפול בדרישות המנהליות השוטפות שמגיעות עם הצעת תוכנית כזו.",
+    s2_d5:"דוחות ברורים, שבועיים או חודשיים, כולל רווח והפסד, תזרים מזומנים ומאזן, שמראים איך העסק שלכם באמת מתפקד, ומוסברים בשפה פשוטה כדי שתוכלו לקבל החלטות בביטחון.",
+    s2_link:"גלו עוד על הנהלת חשבונות ושכר",
+    s2_price:'החל מ-<span class="amt">$99</span> לחודש*',
+    s3_eyebrow:"פרודוקטיביות עובדים ובקרת איכות", s3_h:"צוות שעובד. איכות שאפשר לסמוך עליה",
+    s3_desc:"אנחנו מקימים מערכות למעקב אחרי הצוות שלכם, במקום או מרחוק, ומכשירים אותו לעבוד במקצועיות, כדי שתהיה לכם תמונה ברורה של הביצועים וצוות שמייצג את העסק שלכם בביטחון.",
+    s3_l1:"הקמת מערכת ניהול ומעקב צוות", s3_l3:"מעקב שעות כניסה/יציאה ונוכחות", s3_l4:"מעקב אחר פעילות עובדים", s3_l5:"דוחות פרודוקטיביות וביצועים", s3_l6:"מערכות לניהול צוות מרוחק",
+    s3_l7:"הדרכת עובדים ומוקדים טלפוניים", s3_l8:"אימון בתקשורת מקצועית ושפה", s3_l9:"מדריכי עובד רשמיים", s3_l10:"חומרי הדרכה וקליטת עובדים חדשים",
+    s3_d1:"אנחנו מטמיעים מערכת אמיתית למעקב אחר עבודת הצוות שלכם, כדי שיהיו לכם נתונים אמיתיים במקום רק לקוות שדברים מתבצעים.",
+    s3_d7:"הדרכת הנציגים שלכם איך לטפל בשיחות לקוחות בצורה מדויקת. מה להגיד, איך להגיד את זה, איך לייצג את העסק שלכם בצורה מקצועית בטלפון. מבוסס על 20 שנות ניסיון מעשי בהדרכת מוקדים טלפוניים.",
+    s3_d8:"אימון נציגים על דיבור ברור ומקצועי. טון, קצב, ניסוח, כדי שכל אינטראקציה עם לקוח תישמע עקבית ותייצג את העסק שלכם בצורה טובה, לא משנה מי עונה לטלפון.",
+    s3_d9:"אנחנו כותבים את מדריך העובד הרשמי לעסק שלכם. מדיניות, ציפיות, סטנדרטים להתנהגות, כדי שלצוות שלכם יהיה מסמך ייחוס ברור ומקצועי, ולכם יהיה משהו להצביע עליו כשעולות בעיות.",
+    s3_d10:"אנחנו בונים את חומרי ההדרכה שעובדים חדשים עוברים בפועל, כדי שהקליטה תהיה עקבית וניתנת לחזרה, לא מאולתרת בכל פעם שמישהו חדש מצטרף.",
+    s3_d3:"דעו בדיוק מתי הצוות שלכם באמת עובד, לא רק אילו שעות הם משובצים.",
+    s3_d4:"נראות לגבי מה שהעובדים באמת עושים בשעות העבודה. האם הם עובדים, או באתרים ואפליקציות לא קשורים במקום זה.",
+    s3_d5:"דוחות קבועים שמראים איך הצוות שלכם באמת מתפקד. תפוקה, עקביות, ואיכות, לא ניחושים.",
+    s3_d6:"בנוי במיוחד לניהול צוות שעובד מחוץ לארץ, מבוסס על ניסיון מעשי בניהול צוותים מרוחקים בחו״ל.",
+    s3_link:"גלו עוד על פרודוקטיביות ובקרת איכות",
+    s3_price:'החל מ-<span class="amt">$300</span>',
+    s4_eyebrow:"ייעוץ וניהול Google Guarantee", s4_h:"זכאים. מורשים. מאומתים",
+    s4_desc:"אנחנו מלווים אתכם בכל דרישה לתג Google Verified, מרישיונות וביטוח ועד ערעורים, כדי שתקבלו אימות ולידים איכותיים.",
+    s4_l1:"בדיקת זכאות (מודל העסק וסטטוס פרופיל עסקי בגוגל)", s4_l2:"דרישות רישיון עסק והכוונה בהגשה", s4_l3:"הסדרת ביטוח עסקי ואימות כיסוי", s4_l4:"הכנה לבדיקת רקע (בעלים ועובדי שטח)", s4_l5:"התאמת מסמכים בין כל ההגשות", s4_l6:"הגשת בקשה, מעקב וערעורים", s4_l7:"מעקב חידוש שנתי ותאימות",
+    s4_link:"גלו עוד על Google Guarantee",
+    s4_price:'החל מ-<span class="amt">$150</span>',
+    s5_eyebrow:"עיצוב ופיתוח אתרים", s5_h:"בנוי כדי לייצג את העסק שלכם",
+    s5_desc:"האתר שלכם הוא לרוב המקום הראשון שבו לקוחות פוגשים את העסק שלכם. אנחנו בונים אתר מקצועי, מהיר, וידידותי למנועי חיפוש, שמייצג אתכם נכון כבר מהיום הראשון.",
+    s5_l1:"עיצוב ובניית אתר עסקי", s5_l2:"אופטימיזציה למנועי חיפוש (SEO)", s5_l3:"אתר ידידותי למובייל ומהיר בטעינה", s5_l4:"הכוונה בהקמת דומיין ואחסון", s5_l5:"חיבור לפרופיל עסקי בגוגל", s5_l6:"טופסי יצירת קשר והקמת חיוג ישיר", s5_l7:"עדכונים ותחזוקה שוטפת (אופציונלי)",
+    s5_link:"גלו עוד על עיצוב אתרים",
+    s5_price:'החל מ-<span class="amt">$500</span>',
+    why_label:"למה לעבוד איתנו", why_h:"ניסיון אמיתי. תמיכה מעשית. שקט נפשי מלא",
+    w1_t:"+25 שנות ניסיון", w1_d:"תפעול עסקי, מנהלה, פיננסים, כוח אדם, שכר, וניהול צוות.",
+    w2_t:"תמיכה מעשית", w2_d:"עובדים איתכם כדי להטמיע מערכות ותהליכים שבאמת מתאימים לעסק שלכם.",
+    w3_t:"מקום אחד לכמה צרכים", w3_d:"מהקמה ועד עמידה שוטפת בדרישות, אנחנו עוזרים לשמור על העסק שלכם מסודר ומוכן להצלחה לטווח ארוך.",
+    how_label:"איך זה עובד", how_h:"פשוט מהתחלה ועד הסוף",
+    step1_t:"ספרו לנו מה אתם צריכים", step1_d:"ספרו לנו מה אתם מנסים להשיג ואיפה אתם צריכים תמיכה, בין אם זה ייעוץ קצר או עבודה מעשית לאורך הדרך.",
+    step2_t:"אנחנו מטפלים בפרטים", step2_d:"אנו מנהלים את העבודה המנהלית, ההקמה והמערכות שהעסק שלכם צריך, עם תמיכה שוטפת לאורך כל הדרך.",
+    step3_t:"אתם חוזרים לעסק", step3_d:"עם המערכות והתמיכה הנכונות במקום, תוכלו להתמקד במה שאתם הכי טובים בו ולהצמיח את העסק שלכם.",
+    how_cta:"בואו נתחיל",
+    ns_h:"לא בטוחים מאיפה להתחיל?", ns_p:"נכוון אתכם לכיוון הנכון ונעזור לעסק שלכם לבנות בסיס חזק ומאורגן לצמיחה. בואו נדאג שהעסק שלכם יהיה מסודר.", ns_btn:"בואו נדבר",
+    f_copy:"© 2026 מסודר · עוזרים לעסקים לצמוח מאז 2008",
+    disc_t:"כתב ויתור:", disc_p:"אנחנו מספקים שירותי תמיכה מנהלית ועסקית, ולא מספקים ייעוץ משפטי או ייעוץ מס. בכל נושא משפטי או מיסויי, אנחנו ממליצים להתייעץ עם עורך דין או איש מקצוע בתחום המס."
+  },
+  en: {
+    nav_wa:"WhatsApp",
+    hero_h1:"Do the Business Side of Things, Better",
+    hero_label:"Stop Doing Paperwork. Start Doing Business",
+    hero_sub:"You run the business. Our team runs everything behind it, all in one place, from setup, finances and staff to daily paperwork, handled personally from start to finish.",
+    hero_btn1:"Get Started", hero_btn2:"Explore Services",
+    sup_h:"The Support You Need. Without the Overhead",
+    sup_p1:"Running a business comes with a lot of moving parts, from setting up correctly to managing finances, payroll, and your team.",
+    sup_p2:"We give business owners structure, support, and peace of mind, with hands-on help that keeps the administrative side of your business sorted and running smoothly.",
+    svc_label:"Our Services", svc_h:"How We Help",
+    s1_eyebrow:"Business Formation", s1_h:"Start Your Business the Right Way",
+    s1_desc:"We set up your US business the right way from day one, handling the paperwork and building a foundation that fits you.",
+    s1_l1:"Business Formation (LLC, S Corp, or C Corp)", s1_l2:"EIN (Federal Tax ID)", s1_l3:"Operating Agreement", s1_l4:"Business License Guidance", s1_l5:"Registered Agent", s1_l6:"DBA Filing", s1_l7:"Organized Business Document Package",
+    s1_d1:'We register your business with the state, officially. Right now, legally, "you" and "your business" are the same thing. If something goes wrong, your personal savings are exposed. An LLC creates a separation. The business becomes its own legal entity, so your personal assets are protected.',
+    s1_d2:"Think of this like a social security number, but for your business. Without it, you can't open a business bank account, get paid as a business, or file taxes correctly. Issued by the IRS, free of charge. We handle the application.",
+    s1_d3:"A short internal document defining who owns the business and how decisions get made. Most banks won't open an account without one, and if you ever face a dispute, a partner disagreement, or an audit, this is the document that proves your business is legitimate and organized, not just a name on a filing.",
+    s1_d4:"Whether you need a license depends entirely on your city, state, and industry. There's no single national answer. We check what actually applies to your specific business and location, and tell you honestly what's required and what isn't.",
+    s1_d5:"General liability coverage (and any industry specific coverage you need) protects your business if something goes wrong. A client injury, property damage, a lawsuit. We help you understand what coverage makes sense and get it set up.",
+    s1_d6:"If you want to operate or advertise under a name different from your official LLC name, you need this filed with the state or county. Without it, banks and clients legally only recognize your LLC's official registered name.",
+    s1_d7:"At the end, you don't get a pile of PDFs you don't understand. You get every document, your EIN letter, filed Articles, Operating Agreement, organized, labeled, and explained in plain language, with a checklist of what to do next.",
+    s1_link:"Explore Business Setup",
+    s1_price:'<span class="amt">$150</span> <span class="fee">+ state fees</span>',
+    s2_eyebrow:"Bookkeeping & Payroll", s2_h:"Accurate Books. Reliable Payroll",
+    s2_desc:"Choose the financial and administrative support you need, from QuickBooks to payroll to reporting, so your books are accurate and your team is paid on time.",
+    s2_l1:"Accounts Payable & Accounts Receivable", s2_l2:"QuickBooks Setup & Management", s2_l3:"Payroll Services", s2_l4:"1099 & Contractor Payment Management", s2_l5:"Financial Reporting",
+    s2_d1:"Keeping track of what your business owes (bills, vendor payments) and what's owed to you (client invoices, payments due). We make sure nothing gets paid late and nothing gets missed on collection.",
+    s2_d2:"Setting up QuickBooks correctly from the start, categorized accounts, connected bank feeds, or taking over ongoing management if it's already set up but not being maintained properly.",
+    s2_d3:"Making sure your employees get paid accurately and on time, with the right taxes withheld and filed, so you're not exposed to penalties for payroll mistakes.",
+    s2_d4:"Setting up and maintaining a retirement plan for you and/or your employees, handling the ongoing administrative requirements that come with offering one.",
+    s2_d5:"Clear weekly or monthly reports, including profit and loss, cash flow, and balance sheet, that show how your business is really doing, explained in plain language so you can make decisions with confidence.",
+    s2_link:"Explore Bookkeeping & Payroll",
+    s2_price:'Starting at <span class="amt">$99</span>/month*',
+    s3_eyebrow:"Employee Productivity & Quality Control", s3_h:"Productivity You Can See. Quality You Can Trust",
+    s3_desc:"We set up the systems to track your team, on site or remote, and train them to work professionally, so you have clear visibility into performance and a team that represents your business with confidence.",
+    s3_l1:"Team Management & Monitoring System Setup", s3_l3:"Clock In/Clock Out & Attendance Tracking", s3_l4:"Employee Activity Monitoring", s3_l5:"Productivity & Performance Reporting", s3_l6:"Remote Team Management Systems",
+    s3_l7:"Employee & Call Center Training", s3_l8:"Professional Communication & Language Coaching", s3_l9:"Employee Handbooks", s3_l10:"New Employee Onboarding & Training Materials",
+    s3_d1:"We implement a real system for tracking your team's work, so you have actual data instead of just hoping things are getting done.",
+    s3_d7:"Training your agents on how to accurately handle customer calls. What to say, how to say it, how to represent your business professionally on the phone. Built on 20 years of hands on call center training experience.",
+    s3_d8:"Coaching agents on clear, professional speaking. Tone, pacing, phrasing, so every customer interaction sounds consistent and represents your business well, regardless of who picks up the phone.",
+    s3_d9:"We write the official employee handbook for your business. Policies, expectations, conduct standards, so your team has a clear, professional reference document, and you have something to point to when issues come up.",
+    s3_d10:"We build the actual training materials new hires go through, so onboarding is consistent and repeatable, not improvised every time someone new joins.",
+    s3_d3:"Know exactly when your team is actually working, not just what hours they're scheduled for.",
+    s3_d4:"Visibility into what employees are actually doing during work hours. Are they working, or on unrelated sites and apps instead.",
+    s3_d5:"Regular reports showing how your team is actually performing. Output, consistency, and quality, not guesswork.",
+    s3_d6:"Built specifically for managing staff working abroad, based on hands on experience running remote teams overseas.",
+    s3_link:"Explore Productivity & Quality Control",
+    s3_price:'Starting at <span class="amt">$300</span>',
+    s4_eyebrow:"Google Guarantee Consultation & Administration", s4_h:"Eligible. Licensed. Verified",
+    s4_desc:"We guide you through every requirement for the Google Verified badge, from licenses and insurance to appeals, so you can get verified and get quality leads.",
+    s4_l1:"Eligibility Check (Business Model & Google Business Profile Status)", s4_l2:"Business License Requirements & Application Guidance", s4_l3:"Business Insurance Setup & Verification", s4_l4:"Background Check Preparation (Owner & Field Workers)", s4_l5:"Document Matching Across All Filings", s4_l6:"Application Submission, Follow-Up & Appeals", s4_l7:"Annual Renewal & Compliance Tracking",
+    s4_link:"Explore Google Guarantee Services",
+    s4_price:'Starting at <span class="amt">$150</span>',
+    s5_eyebrow:"Website Design & Development", s5_h:"Built to Represent Your Business",
+    s5_desc:"Your website is often the first place customers meet your business. We build a professional, fast, SEO-friendly site that represents you well from day one.",
+    s5_l1:"Business Website Design & Build", s5_l2:"SEO Optimization", s5_l3:"Mobile-Friendly, Fast-Loading Pages", s5_l4:"Domain & Hosting Setup Guidance", s5_l5:"Google Business Profile Integration", s5_l6:"Contact Forms & Click-to-Call Setup", s5_l7:"Ongoing Updates & Maintenance (optional)",
+    s5_link:"Explore Website Design",
+    s5_price:'Starting at <span class="amt">$500</span>',
+    why_label:"Why Work With Us", why_h:"Real Experience. Practical Support. Total Peace of Mind",
+    w1_t:"25+ Years of Experience", w1_d:"Business operations, administration, finance, staffing, payroll, and team management.",
+    w2_t:"Hands-On Support", w2_d:"We work with you to implement systems and processes that actually fit your business.",
+    w3_t:"One Place for Multiple Needs", w3_d:"From formation to ongoing compliance, we help keep your business sorted and positioned for long-term success.",
+    how_label:"How It Works", how_h:"Simple From Start to Finish",
+    step1_t:"Tell Us What You Need", step1_d:"Tell us what you're trying to accomplish and where you need support, whether that's a quick consultation or hands-on work.",
+    step2_t:"We Handle the Details", step2_d:"We manage the administrative work, setup, and systems your business needs, with ongoing support every step of the way.",
+    step3_t:"You Get Back to Business", step3_d:"With the right systems and support in place, you can focus on what you do best and grow your business.",
+    how_cta:"Get Started",
+    ns_h:"Not Sure Where to Start?", ns_p:"We’ll guide you in the right direction and help your business build a strong, organized foundation for growth. Let’s get your business sorted.", ns_btn:"Start the Conversation",
+    f_copy:"© 2026 Sorted · Helping Businesses Grow Since 2008",
+    disc_t:"Disclaimer:", disc_p:"We provide administrative and business support services and do not provide legal or tax advice. For legal or tax matters, we recommend consulting a qualified attorney or tax professional."
+  }
+};
 
-Object.assign(t.he, {"sv7": "ניירת הגירה", "s7_eyebrow": "ניירת הגירה", "s7_h": "טפסים מורכבים. הכנה מדויקת"}); Object.assign(t.en, {"sv7": "Immigration Paperwork", "s7_eyebrow": "Immigration Paperwork", "s7_h": "Complex Forms. Accurate Preparation"});
+const C = {"he": {"m_home": "ראשי", "m_services": "שירותים", "m_about": "אודות", "m_faq": "שאלות נפוצות", "sv1": "הקמת עסק", "sv2": "הנהלת חשבונות ושכר", "sv3": "פרודוקטיביות עובדים ובקרת איכות", "sv4": "Google Guarantee", "sv5": "עיצוב ופיתוח אתרים", "f_about": "אודות", "f_faq": "שאלות נפוצות", "m_menu": "תפריט", "doc_title": "הבירוקרטיה של העסק שלכם באמריקה, מסודרת | מסודר"}, "en": {"m_home": "Home", "m_services": "Services", "m_about": "About", "m_faq": "FAQ", "sv1": "Business Formation", "sv2": "Bookkeeping & Payroll", "sv3": "Productivity & Quality Control", "sv4": "Google Guarantee", "sv5": "Website Design", "f_about": "About", "f_faq": "FAQ", "m_menu": "Menu", "doc_title": "Sorted | Your U.S. Business. Handled."}};
+Object.assign(t.he, C.he); Object.assign(t.en, C.en);
+const X = {"he": {"trust1": "<bdi dir=\"ltr\">25+</bdi> שנות ניסיון", "trust2": "עברית ואנגלית", "trust3": "עוזרים לעסקים מאז 2008", "hv_title": "העסק שלכם", "hv_sub": "צ׳קליסט הקמה", "hv_badge": "בתהליך", "hv_pct": "3 מתוך 5 הושלמו", "hv_r1": "הקמת LLC", "hv_r2": "מספר EIN", "hv_r3": "הסכם הפעלה", "hv_r4": "חשבון בנק עסקי", "hv_r5": "הקמת QuickBooks", "hv_done": "הושלם", "hv_prog": "בתהליך", "hv_next": "הבא בתור", "hv_chip": "כל המסמכים מסודרים ומוסברים", "sup_label": "איך אנחנו עוזרים", "sup_more": "הכירו אותנו", "st1_n": "25+", "st1_l": "שנות ניסיון עסקי בארה״ב", "st2_n": "6", "st2_l": "תחומי שירות במקום אחד", "st3_n": "2008", "st3_l": "עוזרים לעסקים לצמוח מאז", "st4_n": "1:1", "st4_l": "ליווי אישי, בעברית או באנגלית"}, "en": {"trust1": "25+ years of experience", "trust2": "English, Hebrew & Spanish", "trust3": "Helping businesses since 2008", "hv_title": "Your Business", "hv_sub": "Setup checklist", "hv_badge": "In progress", "hv_pct": "3 of 5 complete", "hv_r1": "LLC Formation", "hv_r2": "EIN Number", "hv_r3": "Operating Agreement", "hv_r4": "Business Bank Account", "hv_r5": "QuickBooks Setup", "hv_done": "Done", "hv_prog": "In progress", "hv_next": "Up next", "hv_chip": "Every document organized & explained", "sup_label": "How We Help", "sup_more": "Meet us", "st1_n": "25+", "st1_l": "Years of Business Experience in the US", "st2_n": "6", "st2_l": "Service Areas in One Place", "st3_n": "2008", "st3_l": "Helping Businesses Grow Since", "st4_n": "1:1", "st4_l": "Personal Support, in English, Hebrew, or Spanish"}};
+Object.assign(t.he, X.he); Object.assign(t.en, X.en);
+const X2 = {"he": {"inc_toggle": "איך אנחנו עוזרים", "s3_desc": "אנחנו מקימים מערכות למעקב אחרי הצוות שלכם, במקום או מרחוק, ומכשירים אותו לעבוד במקצועיות, כדי שתהיה לכם תמונה ברורה של הביצועים וצוות שמייצג את העסק שלכם בביטחון."}, "en": {"inc_toggle": "Our services", "s3_desc": "We set up the systems to track your team, on site or remote, and train them to work professionally, so you have clear visibility into performance and a team that represents your business with confidence."}};
+Object.assign(t.he, X2.he); Object.assign(t.en, X2.en);
+const X3 = {"he": {"s1_desc": "אנחנו מקימים את העסק שלכם בארה״ב נכון מהיום הראשון, מטפלים בניירת ובונים בסיס שמתאים לכם.", "s4_desc": "אנחנו מלווים אתכם בכל דרישה לתג Google Verified, מרישיונות וביטוח ועד ערעורים, כדי שתקבלו אימות ולידים איכותיים.", "wy_label": "למה מסודר", "wy_h": "לא בטוחים מה מתאים לכם?", "wy1": "ליווי אישי, ישירות איתנו", "wy2": "עברית ואנגלית", "wy3": "מחירים ברורים מראש", "wy4": "כנות לגבי מה צריך, ומה לא", "wy5": "<bdi dir=\"ltr\">25+</bdi> שנות ניסיון", "wy6": "שירות בכל רחבי ארה״ב", "wy_p": "ספרו לנו מה אתם מנסים לעשות, ונגיד לכם בדיוק מאיפה להתחיל.", "wy_btn": "דברו איתנו בוואטסאפ"}, "en": {"s1_desc": "We set up your US business the right way from day one, handling the paperwork and building a foundation that fits you.", "s4_desc": "We guide you through every requirement for the Google Verified badge, from licenses and insurance to appeals, so you can get verified and get quality leads.", "wy_label": "Why Sorted", "wy_h": "Not Sure Which Service Fits?", "wy1": "Personal support, directly with us", "wy2": "English, Hebrew & Spanish", "wy3": "Clear pricing upfront", "wy4": "Honest about what you need, and what you don't", "wy5": "25+ years of experience", "wy6": "Clients across the US", "wy_p": "Tell us what you're trying to do, and we'll tell you exactly where to start.", "wy_btn": "Chat with us on WhatsApp"}};
+Object.assign(t.he, X3.he); Object.assign(t.en, X3.en);
+const X4 = {"he": {"f_privacy": "מדיניות פרטיות", "f_terms": "תנאי שימוש"}, "en": {"f_privacy": "Privacy Policy", "f_terms": "Terms & Conditions"}};
+Object.assign(t.he, X4.he); Object.assign(t.en, X4.en);
+const X5 = {"he": {"skip": "דלג לתוכן הראשי", "nav_label": "ניווט ראשי", "ax_open": "פתיחת תפריט נגישות (Alt+A)", "ax_title": "תפריט נגישות", "ax_close": "סגירת תפריט נגישות", "ax_text": "גודל טקסט", "ax_dec": "הקטנת טקסט", "ax_inc": "הגדלת טקסט", "ax_contrast": "ניגודיות גבוהה", "ax_gray": "גווני אפור", "ax_links": "הדגשת קישורים", "ax_font": "גופן קריא", "ax_spacing": "ריווח טקסט", "ax_motion": "עצירת אנימציות", "ax_cursor": "סמן גדול", "ax_reset": "איפוס הגדרות", "ax_stmt": "הצהרת נגישות", "ax_hint": "קיצור מקלדת: Alt+A", "f_access": "הצהרת נגישות", "ck_label": "הודעה על שימוש בעוגיות", "ck_p": "אנחנו משתמשים באחסון מקומי בדפדפן (בדומה לעוגיות) כדי לזכור את העדפות השפה והנגישות שלכם, והאתר טוען גופנים מ-Google Fonts. בלחיצה על ״אישור״ אתם מסכימים לכך.", "ck_more": "מדיניות פרטיות", "ck_ok": "אישור", "wa_label": "שליחת הודעה בוואטסאפ"}, "en": {"skip": "Skip to main content", "nav_label": "Main navigation", "ax_open": "Open accessibility menu (Alt+A)", "ax_title": "Accessibility", "ax_close": "Close accessibility menu", "ax_text": "Text size", "ax_dec": "Smaller text", "ax_inc": "Larger text", "ax_contrast": "High contrast", "ax_gray": "Grayscale", "ax_links": "Highlight links", "ax_font": "Readable font", "ax_spacing": "Text spacing", "ax_motion": "Stop animations", "ax_cursor": "Large cursor", "ax_reset": "Reset settings", "ax_stmt": "Accessibility statement", "ax_hint": "Keyboard shortcut: Alt+A", "f_access": "Accessibility", "ck_label": "Cookie notice", "ck_p": "We use local browser storage (similar to cookies) to remember your language and accessibility preferences, and the site loads fonts from Google Fonts. By clicking “Accept” you agree to this.", "ck_more": "Privacy Policy", "ck_ok": "Accept", "wa_label": "Message us on WhatsApp"}};
+Object.assign(t.he, X5.he); Object.assign(t.en, X5.en);
+Object.assign(t.he, {"sv6": "עוזרת וירטואלית", "s6_eyebrow": "עוזרת וירטואלית", "s6_h": "העזרה שאתם צריכים, בלי העלות של משרה מלאה", "s6_desc": "עוזרת מנוסה אחת, לא AI, שמטפלת במנהלה, בחשבוניות, בתיאומים ועוד, רק לשעות שאתם צריכים.", "s6_price": "חבילות <span class=\"amt\">שעות גמישות</span>", "s6_link": "גלו עוד על עוזרת וירטואלית", "s6_l1": "שעות שמתאימות לכם", "s6_d1": "בוחרים כמה שעות בשבוע או בחודש, ומגדילים או מקטינים לפי הצורך.", "s6_l2": "עוזרת אישית בכירה וקבועה", "s6_d2": "לא מתחילה ולא מוקד שירות. עוזרת אחת שמכירה את העסק, את הלקוחות ואת הדרך שבה אתם אוהבים לעבוד.", "s6_l3": "ניהול ספרים שבועי", "s6_d3": "רישום הכנסות והוצאות ושמירה על הספרים מעודכנים, כל שבוע.", "s6_l4": "הפקת חשבוניות וגביית תשלומים", "s6_d4": "שליחת חשבוניות בזמן, מעקב אחרי מי שעוד לא שילם ותזכורות מנומסות עד שהכסף בחשבון.", "s6_l5": "ניהול עובדים", "s6_d5": "תיאום משימות ומשמרות, מעקב אחרי ביצוע וקשר שוטף עם הצוות בשמכם.", "s6_l6": "יומן, מיילים ותיאומים", "s6_d6": "סינון מיילים, קביעת פגישות ותיאום מול ספקים, כדי שהיום שלכם יתנהל בלי בלגן.", "s6_l7": "גם משימות אישיות", "s6_d7": "תורים, הזמנות, טפסים וסידורים: כל מה שגוזל לכם זמן גם מחוץ לעסק.", "s6_l8": "לא ברשימה? רק תשאלו", "s6_d8": "תגידו מה צריך, וסביר להניח שנוכל לעשות את זה."}); Object.assign(t.en, {"sv6": "Virtual Assistant", "s6_eyebrow": "Virtual Assistant", "s6_h": "The Help You Need, Without the Full-Time Cost", "s6_desc": "One experienced assistant, not AI, who handles your admin, invoices, scheduling, and more, for only the hours you need.", "s6_price": "Flexible <span class=\"amt\">hourly plans</span>", "s6_link": "Explore Virtual Assistant", "s6_l1": "Hours That Fit You", "s6_d1": "Pick your weekly or monthly hours, and scale up or down as your needs change.", "s6_l2": "A Dedicated, Experienced Assistant", "s6_d2": "Not entry-level, not a call center. One assistant who knows your business, your clients, and how you like things done.", "s6_l3": "Weekly Bookkeeping", "s6_d3": "Income and expenses recorded and your books kept up to date, every week.", "s6_l4": "Invoicing & Collecting Payments", "s6_d4": "Invoices sent on time, follow-up on who hasn't paid, and polite reminders until the money is in.", "s6_l5": "Managing Employees", "s6_d5": "Coordinating tasks and schedules, following up on work, and staying in touch with your team on your behalf.", "s6_l6": "Calendar, Email & Scheduling", "s6_d6": "Inbox triage, booking meetings, and coordinating with vendors, so your day runs smoothly.", "s6_l7": "Personal Tasks, Too", "s6_d7": "Appointments, bookings, forms, and errands: anything eating your time outside the business, too.", "s6_l8": "Not on the List? Just Ask", "s6_d8": "You name it, we can probably do it."});
+
+Object.assign(t.he, {"sv7": "ניירת הגירה", "s7_eyebrow": "ניירת הגירה", "s7_h": "טפסים מורכבים. הכנה מדויקת", "s7_desc": "אנחנו מכינים את הטפסים, מסדרים את המסמכים ועוקבים אחרי כל מועד לגרין קארד, אזרחות ואישורי עבודה, עם הסבר בשפה פשוטה.", "s7_price": "החל מ-<span class=\"amt\">$199</span>", "s7_link": "גלו עוד על ניירת הגירה", "s7_l1": "בקשות לגרין קארד", "s7_d1": "עזרה בהכנת בקשה לגרין קארד או לחידוש שלו, עם כל הטפסים ממולאים וכל המסמכים התומכים במקום.", "s7_l2": "אזרחות (התאזרחות)", "s7_d2": "אנחנו מכינים את בקשת האזרחות, בודקים שוב את התאריכים ואת היסטוריית הנסיעות, ועוזרים לכם לדעת למה לצפות בראיון.", "s7_l3": "אישורי עבודה", "s7_d3": "בקשות ראשונות וחידושים, שמוגשים בזמן כדי שלא יהיה פער ביכולת שלכם לעבוד.", "s7_l4": "מסמכי נסיעה", "s7_d4": "היתרי כניסה חוזרת ואישור נסיעה בזמן שהבקשה שלכם בטיפול, מוכנים כראוי ומוגשים לפני שאתם מתכננים לטוס.", "s7_l5": "הארכת ויזה", "s7_d5": "עזרה בהכנת בקשות הארכה למבקרים שצריכים עוד זמן בארה״ב, שמוגשות לפני שתקופת השהייה הנוכחית מסתיימת.", "s7_l6": "רשימת מסמכים ותרגומים", "s7_d6": "אנחנו אומרים לכם בדיוק אילו מסמכים צריך ומתאמים תרגומים מאושרים של מסמכים בעברית, כמו תעודות לידה ונישואין.", "s7_l7": "מעקב אחרי התיק ותזכורות", "s7_d7": "אנחנו עוקבים אחרי סטטוס התיק, הודעות מהרשויות, תורים ותאריכי חידוש, ומעדכנים אתכם מה הלאה.", "s7_l8": "כנות לגבי הגבולות שלנו", "s7_d8": "לתשומת לבכם: השירותים הינם מנהליים בלבד ואינם כוללים ייעוץ או ייצוג משפטי."}); Object.assign(t.en, {"sv7": "Immigration Paperwork", "s7_eyebrow": "Immigration Paperwork", "s7_h": "Complex Forms. Accurate Preparation", "s7_desc": "We prepare your forms, organize your documents, and track every deadline for green cards, citizenship, and work permits, explained in plain language.", "s7_price": "Starting at <span class=\"amt\">$199</span>", "s7_link": "Explore Immigration Paperwork", "s7_l1": "Green Card Applications", "s7_d1": "Help preparing your green card application or renewal, with every form completed and every supporting document in place.", "s7_l2": "Citizenship (Naturalization)", "s7_d2": "We prepare your citizenship application, double-check your dates and travel history, and help you know what to expect at the interview.", "s7_l3": "Work Permits", "s7_d3": "First-time applications and renewals, filed on time so there's no gap in your ability to work.", "s7_l4": "Travel Documents", "s7_d4": "Re-entry permits and travel permission while your application is pending, prepared correctly and submitted before you plan to travel.", "s7_l5": "Visa Extensions", "s7_d5": "Help preparing extension requests for visitors who need more time in the US, filed before your current stay runs out.", "s7_l6": "Document Checklist & Translations", "s7_d6": "We tell you exactly which documents you need and coordinate certified translations of Hebrew documents like birth and marriage certificates.", "s7_l7": "Case Tracking & Reminders", "s7_d7": "We keep an eye on your case status, government notices, appointments, and renewal dates, and let you know what's coming next.", "s7_l8": "Honest About Our Limits", "s7_d8": "Please note: Services are administrative only and do not include legal advice or legal representation."});
+Object.assign(t.he, {"rv_label": "מה הלקוחות שלנו אומרים", "rv_h": "עסקים אמיתיים. תוצאות אמיתיות", "rv1_q": "להקים עסק בארה״ב הרגיש לי מציף. מסודר הפכו את כל התהליך לפשוט ומסודר, הסבירו הכול בבהירות, וחסכו לי המון זמן ולחץ.", "rv1_n": "דניאל ר.", "rv1_s": "הקמת עסק", "rv2_q": "מסודר עזרו לי לסדר הכול ולהקים את QuickBooks כמו שצריך. היום אני באמת מבין מה קורה בכספים של העסק שלי.", "rv2_n": "מיכאל ל.", "rv2_s": "הנהלת חשבונות וכספים", "rv3_q": "אף פעם לא הרגשתי סתם עוד לקוח. בכל פעם שהייתה לי שאלה, מישהו לקח את הזמן להסביר, והתמיכה בעברית ובאנגלית הקלה על הכול.", "rv3_n": "עמית ש.", "rv3_s": "ליווי אישי", "rv4_q": "מסודר עזרו לנו להטמיע מערכות מסודרות למעקב אחרי שעות, פעילות, הדרכה ופרודוקטיביות. ניהול הצוות הרבה יותר קל היום.", "rv4_n": "רונן ק.", "rv4_s": "ניהול צוות", "rv5_q": "הם טיפלו בהנהלת החשבונות, בחשבוניות, בתשלומים ובכל הפרטים הקטנים שכל הזמן הצטברו. סוף סוף יש לי על מי לסמוך מאחורי הקלעים.", "rv5_n": "דוד מ.", "rv5_s": "הנהלת חשבונות ושכר", "rv6_q": "לעמוד בקצב של הספרים והכספים היה כאב ראש אמיתי. מסודר סידרו הכול, והיום יש לי תמונה ברורה יותר של מצב העסק.", "rv6_n": "ליאור ט.", "rv6_s": "הנהלת חשבונות וכספים"}); Object.assign(t.en, {"rv_label": "What Our Clients Say", "rv_h": "Real Businesses. Real Results", "rv1_q": "Starting a business in the U.S. felt overwhelming. Sorted made the entire process simple and organized, explained everything clearly, and saved me a lot of time and stress.", "rv1_n": "Daniel R.", "rv1_s": "Business Formation", "rv2_q": "Sorted helped me get everything organized and set up properly in QuickBooks. Now I actually understand what's going on with my business finances.", "rv2_n": "Michael L.", "rv2_s": "Bookkeeping & Finances", "rv3_q": "I never felt like just another customer. Whenever I had a question, someone took the time to explain things, and having support in Hebrew and English made everything easier.", "rv3_n": "Amit S.", "rv3_s": "Personal Support", "rv4_q": "Sorted helped us put proper systems in place for tracking hours, activity, training, and productivity. Managing the team is significantly easier now.", "rv4_n": "Ronen K.", "rv4_s": "Team Management", "rv5_q": "They took care of the bookkeeping, invoices, payments, and all the little details that kept piling up. I finally have someone I can rely on behind the scenes.", "rv5_n": "David M.", "rv5_s": "Bookkeeping & Payroll", "rv6_q": "Keeping up with our books was a real headache. Sorted organized everything, and now I have a clearer picture of how the business is doing.", "rv6_n": "Lior T.", "rv6_s": "Bookkeeping & Finances"});
 Object.assign(t.he, {"ft_tag": "תמיכה אישית בצד העסקי והמנהלי של העסק שלכם בארה״ב, בעברית ובאנגלית.", "ft_services": "שירותים", "ft_company": "החברה", "ft_contact": "צרו קשר", "ft_area": "שירות ללקוחות בכל רחבי ארה״ב", "ft_lang": "עברית ואנגלית", "ft_wa": "שלחו הודעה בוואטסאפ", "f_home": "ראשי"}); Object.assign(t.en, {"ft_tag": "Personal support for the business and administrative side of your US business, in English, Hebrew, and Spanish.", "ft_services": "Services", "ft_company": "Company", "ft_contact": "Contact", "ft_area": "Serving clients across the US", "ft_lang": "English, Hebrew & Spanish", "ft_wa": "Message us on WhatsApp", "f_home": "Home"});
-Object.assign(t.he, {"sv8": "ניהול ביקורות לקוחות", "s8_eyebrow": "ניהול ביקורות לקוחות", "s8_h": "המוניטין שלכם, מנוהל ומוגן"}); Object.assign(t.en, {"sv8": "Client Reviews Management", "s8_eyebrow": "Client Reviews Management", "s8_h": "Your Reputation, Managed and Protected"});
+Object.assign(t.he, {"svc_h": "כל מה שהעסק שלכם צריך, תחת קורת גג אחת", "sup_label": "מה אנחנו עושים", "s8_eyebrow": "ניהול ביקורות לקוחות", "s8_h": "המוניטין שלכם, מנוהל ומוגן", "s8_desc": "אנחנו עוקבים אחרי הביקורות שלכם בגוגל, ב-Yelp ובפלטפורמות נוספות, מקימים מערכת שעונה אוטומטית על כל ביקורת ומדווחים על ביקורות מזויפות או פוגעניות להסרה, כדי שהמוניטין שלכם ברשת יעבוד לטובתכם.", "s8_price": "<span class=\"amt\">$250</span> לחודש", "s8_link": "גלו עוד על ניהול ביקורות לקוחות", "s8_t1": "מעקב אחרי ביקורות בכל הפלטפורמות", "s8_t2": "מענה אוטומטי לכל ביקורת", "s8_t3": "דיווח על ביקורות מזויפות ובקשות הסרה", "s8_t4": "מענה מקצועי לביקורות שליליות", "imm_label": "שירותי הגירה", "imm_h": "ניירת הגירה, מוכנה בדיוק מרבי", "imm_p": "הצוות שלנו מכין את הטפסים, מארגן את המסמכים התומכים ועוקב אחר מועדים חשובים, כדי לסייע לבקשה שלכם להתקדם ללא עיכובים מיותרים.", "imm_btn": "לכל שירותי ההגירה", "s7_p1": "<span class=\"amt\">$250</span> + אגרת הגשה ממשלתית", "s7_p2": "<span class=\"amt\">$389</span> + אגרת הגשה ממשלתית", "s7_p3": "<span class=\"amt\">$75</span>", "s7_p4": "<span class=\"amt\">$75</span> + אגרות ממשלתיות", "st2_n": "7"}); Object.assign(t.en, {"svc_h": "Everything Your Business Needs,<br> Under One Roof", "sup_label": "What We Do", "s8_eyebrow": "Client Reviews Management", "s8_h": "Your Reputation, Managed and Protected", "s8_desc": "Our review management system tracks feedback across Google, Yelp, and other platforms, helping ensure every review receives a timely, professional reply. Fake or abusive reviews are reported for removal to protect your online reputation.", "s8_price": "<span class=\"amt\">$250</span> / month", "s8_link": "Explore Client Reviews Management", "s8_t1": "Review Monitoring Across Platforms", "s8_t2": "Automatic Replies to Every Review", "s8_t3": "Fake Review Reporting & Removal Requests", "s8_t4": "Professional Responses to Negative Reviews", "imm_label": "Immigration Services", "imm_h": "Immigration Paperwork, Prepared With Precision", "imm_p": "Our team prepares your forms, organizes your supporting documents, and keeps track of key deadlines, helping your application move forward without unnecessary delays.", "imm_btn": "Explore Immigration Services", "s7_p1": "<span class=\"amt\">$250</span> + government filing fee", "s7_p2": "<span class=\"amt\">$389</span> + government filing fee", "s7_p3": "<span class=\"amt\">$75</span>", "s7_p4": "<span class=\"amt\">$75</span> + government fees", "st2_n": "7"});
+Object.assign(t.he, {"sv8": "ניהול ביקורות לקוחות"}); Object.assign(t.en, {"sv8": "Client Reviews Management"});
+Object.assign(t.he, {"s8_t1": "מעקב ומענה אוטומטי לביקורות", "s8_x1": "אנחנו עוקבים אחרי הביקורות שלכם בגוגל, ב-Yelp ובפלטפורמות נוספות, ומקימים מערכת שעונה על כל ביקורת במהירות ובמקצועיות, בסגנון של העסק שלכם.", "s8_t2": "טיפול בביקורות מזויפות ושליליות", "s8_x2": "אנחנו מדווחים על ביקורות מזויפות או פוגעניות ומגישים בקשות הסרה בשמכם, ומנסחים תגובות רגועות ומקצועיות לביקורות שליליות. ההחלטה הסופית על הסרה נתונה לכל פלטפורמה.", "s8_t3": "הקמת נוכחות בגוגל וב-Yelp", "s8_x3": "אנחנו מקימים ומשפרים את הפרופיל העסקי שלכם בגוגל ואת הדף שלכם ב-Yelp, ועוזרים לכם להתחיל לפרסם ב-Google Ads וב-Yelp, כדי שיותר לקוחות ימצאו אתכם ויראו את הביקורות שהרווחתם."}); Object.assign(t.en, {"s8_t1": "Review Monitoring & Automatic Replies", "s8_x1": "We track your reviews on Google, Yelp, and other platforms, and set up a system that replies to every one promptly and professionally, in your business's voice.", "s8_t2": "Fake & Negative Review Handling", "s8_x2": "We report fake or abusive reviews and submit removal requests on your behalf, and craft calm, professional replies to negative ones. Final removal decisions rest with each platform.", "s8_t3": "Google & Yelp Business Setup", "s8_x3": "We set up and optimize your Google Business Profile and Yelp page, and help you get started with Google Ads and Yelp advertising, so more clients find you and see the reviews you've earned."});
+Object.assign(t.he, {"s8_t3": "הקמת פרופיל בגוגל וב-Yelp", "s8_x3": "אנחנו מקימים ומשפרים את הפרופיל העסקי שלכם בגוגל ואת הדף שלכם ב-Yelp, כדי שיותר לקוחות ימצאו אתכם ויראו את הביקורות שהרווחתם."}); Object.assign(t.en, {"s8_t3": "Google & Yelp Profile Setup", "s8_x3": "We set up and optimize your Google Business Profile and Yelp page, so more clients find you and see the reviews you've earned."});
+Object.assign(t.he, {"s6_desc": "עוזרת אישית בכירה וייעודית, שמותאמת אישית לעסק שלכם, ומטפלת במנהלה, בחשבוניות, בתיאומים ועוד, רק לשעות שאתם צריכים."}); Object.assign(t.en, {"s6_desc": "A dedicated executive assistant, personally matched to your business, who handles your admin, invoices, scheduling, and more, for only the hours you need."});
+Object.assign(t.he, {"s6_x4": "חשבוניות יוצאות בזמן, ואנחנו עוקבים מול לקוחות/ספקים לגבי תשלומים פתוחים, באדיבות ובמקצועיות, עד שהכול מוסדר."}); Object.assign(t.en, {"s6_x4": "Invoices go out on time, and we follow up with customers/vendors on outstanding payments, politely and professionally, until everything is settled."});
 Object.assign(t.he, {"m_contact": "צרו קשר", "f_contact": "צרו קשר"}); Object.assign(t.en, {"m_contact": "Contact", "f_contact": "Contact"});
-Object.assign(t.he, {"f_copy": "© 2026 מסודר · עוזרים לעסקים לצמוח מאז 2008", "doc_title": "הקמת עסק | מסודר"});
-Object.assign(t.he, {"s1_desc": "אנחנו מקימים את העסק שלכם בכל אחת מ-50 המדינות, בצורה תקינה לגמרי מהיום הראשון, בין אם זה העסק הראשון שלכם או הבא בתור. אנחנו מטפלים בבירוקרטיה ובונים את הבסיס שמתאים לכם, כדי שתוכלו להתמקד בלהצמיח אותו."});
-Object.assign(t.he, {"s1_desc": "אנחנו מקימים את העסק שלכם בכל אחת מ-50 המדינות, עם עמידה מלאה בדרישות, כחוק ובצורה מסודרת מהיום הראשון, בין אם זה העסק הראשון שלכם או הבא בתור. אנחנו מטפלים בבירוקרטיה ובונים את הבסיס שמתאים לכם, כדי שתוכלו להתמקד בלהצמיח אותו."});
-Object.assign(t.he, {"s1_desc": "אנחנו מקימים את העסק שלכם בכל אחת מ-50 המדינות, עם עמידה מלאה בדרישות, כחוק ובצורה מסודרת מהיום הראשון, בין אם זה העסק הראשון שלכם או הבא בתור. אנחנו מטפלים בבירוקרטיה ובונים את הבסיס שמתאים לכם, כדי שתוכלו להתמקד בגדילה שלו."});
-Object.assign(t.he, {"s1_fee_note": "אגרות ההגשה של המדינה משתנות לפי המדינה שבה רושמים את העסק, ומשולמות בנפרד. האגרות והחיובים המדויקים נמסרים לפני התשלום."}); Object.assign(t.en, {"s1_fee_note": "State filing fees depend on the state you register in and are paid separately. The exact fees and charges are provided prior to payment."});
-Object.assign(t.he, {"s1_fee_note": "אגרות ההגשה של המדינה משתנות לפי המדינה שבה רושמים את העסק, ומשולמות בנפרד. הסכום המדויק מוצג לפני התשלום."}); Object.assign(t.en, {"s1_fee_note": "State filing fees depend on the state you register in and are paid separately. The exact fee is provided prior to payment."});
-let lang = 'he';
+Object.assign(t.he, {"st2_n": "50", "st2_l": "עוזרים ללקוחות בכל מדינות ארה״ב"}); Object.assign(t.en, {"st2_n": "50", "st2_l": "U.S. States Served"});
+Object.assign(t.he, {"f_copy": "© 2026 מסודר · עוזרים לעסקים לצמוח מאז 2008", "doc_title": "הבירוקרטיה של העסק שלכם באמריקה, מסודרת", "wy_label": "למה ״מסודר״", "rv1_q": "להקים עסק בארה״ב הרגיש לי מציף. ״מסודר״ הפכו את כל התהליך לפשוט ומסודר, הסבירו הכול בבהירות, וחסכו לי המון זמן ולחץ.", "rv2_q": "״מסודר״ עזרו לי לסדר הכול ולהקים את QuickBooks כמו שצריך. היום אני באמת מבין מה קורה בכספים של העסק שלי.", "rv4_q": "״מסודר״ עזרו לנו להטמיע מערכות מסודרות למעקב אחרי שעות, פעילות, הדרכה ופרודוקטיביות. ניהול הצוות הרבה יותר קל היום.", "rv6_q": "לעמוד בקצב של הספרים והכספים היה כאב ראש אמיתי. ״מסודר״ סידרו הכול, והיום יש לי תמונה ברורה יותר של מצב העסק."});
+Object.assign(t.he, {"doc_title": "הבירוקרטיה של העסק שלכם באמריקה, מסודרת"});
+Object.assign(t.en, {"doc_title": "Sorted | Your U.S. Business. Handled."});
+Object.assign(t.he, {"sup_p1": "ניהול עסק בארה״ב כרוך במשימות רבות במקביל, מההקמה הנכונה ועד ניהול הכספים, השכר והצוות."});
+Object.assign(t.he, {"sup_p1": "ניהול עסק בארה״ב דורש התמודדות עם משימות רבות במקביל, מההקמה הנכונה ועד ניהול הכספים, השכר והצוות."});
+Object.assign(t.he, {"sup_p2": "אנחנו מעניקים לבעלי עסקים תכנית מובנית אישית, תמיכה ושקט נפשי, עם ליווי צמוד שדואג שהצד המנהלי של העסק יתנהל ביעילות."});
+Object.assign(t.he, {"sup_p2": "אנחנו נותנים לבעלי עסקים תכנית מובנית אישית, תמיכה, ושקט נפשי, עם ליווי צמוד שישמור על הצד המנהלי של העסק שלכם מסודר ורץ חלק."});
+Object.assign(t.he, {"s2_note": "*התמחור החודשי משתנה בהתאם לשירותים הנבחרים ולצורכי העסק שלכם."}); Object.assign(t.en, {"s2_note": "*Monthly pricing varies based on the services selected and your business needs."});
+let lang = 'en';
 function applyLang(l){
   lang = l;
   const root = document.documentElement;
@@ -555,7 +1055,7 @@ function applyLang(l){
 function switchLang(e){ if (e) e.stopPropagation(); const m = document.getElementById('lang-menu'); const b = document.getElementById('lang-btn'); m.hidden = !m.hidden; b.setAttribute('aria-expanded', String(!m.hidden)); }
 document.addEventListener('click', e => { const w = document.getElementById('lang-wrap'); if (w && !w.contains(e.target)) { document.getElementById('lang-menu').hidden = true; document.getElementById('lang-btn').setAttribute('aria-expanded','false'); } });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') { const m = document.getElementById('lang-menu'); if (m && !m.hidden) { m.hidden = true; document.getElementById('lang-btn').focus(); } } });
-(function(){ let s = null; try { s = localStorage.getItem('sorted_lang'); } catch(e){} if (s === 'en') applyLang('en'); else if (s === 'es') { t.es = Object.assign({}, t.en); applyLang('es'); } })();
+(function(){ let s = null; try { s = localStorage.getItem('sorted_lang'); } catch(e){} if (s === 'he') applyLang('he'); else if (s === 'en') applyLang('en'); else if (s === 'es') { t.es = Object.assign({}, t.en); applyLang('es'); } })();
 
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 10), {passive:true});
@@ -570,7 +1070,6 @@ const io = new IntersectionObserver(entries=>{
   entries.forEach(e=>{ if (e.isIntersecting){ e.target.classList.add('v'); io.unobserve(e.target); } });
 }, {threshold:.1, rootMargin:'0px 0px -28px 0px'});
 document.querySelectorAll('.fu, .sg').forEach(el=>io.observe(el));
-
 
 /* accessibility menu + cookie notice */
 (function(){
@@ -609,10 +1108,24 @@ document.querySelectorAll('.fu, .sg').forEach(el=>io.observe(el));
   document.getElementById('ck-ok').addEventListener('click', () => { try { localStorage.setItem('sorted_consent', new Date().toISOString()); } catch(e){} ck.hidden = true; });
 })();
 
+Object.assign(t.he, {"s3_t1": "הקמת מערכת לניהול צוות", "s3_x1": "אנחנו מקימים מערכת ברורה למעקב אחרי העבודה של הצוות שלכם, בין אם הוא במקום ובין אם מרוחק, כדי שיהיו לכם נתונים אמיתיים במקום ניחושים. מבוסס על ניסיון מעשי בניהול צוותים בחו״ל.", "s3_t2": "מדריכי עובדים וקליטת עובדים", "s3_x2": "אנחנו כותבים את מדריך העובד שלכם, כולל נהלים, ציפיות וסטנדרטים של התנהגות, ובונים את חומרי ההדרכה לעובדים חדשים. הצוות שלכם מקבל כללים ברורים מהיום הראשון, והקליטה עקבית בכל פעם.", "s3_t3": "הדרכת נציגי שירות לקוחות", "s3_x3": "אנחנו מכשירים את הצוות שלכם לטפל בלקוחות במקצועיות: מה להגיד, איך להגיד, ואיך לייצג את העסק בכל שיחה. זה כולל אימון על טון, קצב ודיבור ברור, ומבוסס על 20 שנות ניסיון מעשי בהדרכת מוקדים טלפוניים.", "s3_t4": "מעקב נוכחות, פעילות וביצועים", "s3_x4": "דעו מתי הצוות שלכם עובד ואיך הזמן מנוצל. אנחנו עוקבים אחרי נוכחות, שעות עבודה, פעילות ותפוקה, עם דוחות קבועים שעוזרים לזהות דפוסים, למדוד ביצועים ולטפל בבעיות מוקדם. קבלו מידע ברור ואובייקטיבי על העבודה של הצוות — כדי שתוכלו לקבל החלטות על סמך עובדות, לא ניחושים."}); Object.assign(t.en, {"s3_t1": "Team Management System Setup", "s3_x1": "We set up a clear system to track your team's work, whether they're on site or remote, so you have real data instead of guesswork. Built on hands-on experience managing teams overseas.", "s3_t2": "Employee Handbooks & Onboarding", "s3_x2": "We write your employee handbook, covering policies, expectations, and conduct standards, and build the training materials new hires go through. Your team gets clear rules from day one, and onboarding is consistent every time.", "s3_t3": "Call Scripts & Communication Training", "s3_x3": "We train your team to handle customers professionally: what to say, how to say it, and how to represent your business on every call. That includes coaching on tone, pacing, and clear speaking, built on 20 years of hands-on call center training experience.", "s3_t4": "Attendance, Activity & Performance Tracking", "s3_x4": "Know when your team is working and how their time is being spent. We track attendance, working hours, activity, and productivity, with regular reports that help you identify patterns, measure performance, and address issues early. Get clear, objective information about your team’s work — so you can make decisions based on facts, not guesswork."}); if (lang==="en") applyLang("en");
+
+Object.assign(t.he, {"s6_t1": "עוזרת אמיתית ומנוסה", "s6_x1": "לא מתחילה. לא מוקד טלפוני. לא AI. עוזרת אחת מנוסה שמכירה את העסק, את הלקוחות ואת הדרך שבה אתם אוהבים לעבוד, ומטפלת בדברים בדיוק כמו שאתם הייתם מטפלים בהם.", "s6_t2": "שעות גמישות", "s6_x2": "בחרו את כמות השעות שמתאימה לכם, שבועית או חודשית. צריכים יותר עזרה בחודש אחד ופחות בחודש הבא? פשוט משנים.", "s6_t3": "יומן, תיאומים ותקשורת", "s6_x3": "תיבת המייל מנוהלת, פגישות נקבעות, לקוחות וספקים מקבלים מענה, ומועדים נמצאים במעקב, כך שהפרטים הקטנים לא מתפספסים.", "s6_t4": "חשבוניות ומעקב תשלומים", "s6_x4": "חשבוניות יוצאות בזמן, ואנחנו עוקבים מול לקוחות שעוד לא שילמו, באדיבות ובמקצועיות, עד שהתשלום נכנס.", "s6_t5": "ניהול רישומים ומסמכים", "s6_x5": "רישומים, קבצים, גיליונות ודפי חשבון מסודרים ומעודכנים במקום אחד, כך שמסמכים חשובים תמיד זמינים כשאתם צריכים אותם.", "s6_t6": "תיאום צוות", "s6_x6": "משימות מחולקות, לוחות זמנים מנוהלים, מעקב שוטף ובדיקה שהכל מתבצע, כדי שהצוות שלכם יישאר מאורגן והעבודה באמת תיעשה.", "s6_t7": "גם משימות אישיות", "s6_x7": "הזמן שלכם חשוב גם מחוץ לעבודה. תורים, הזמנות, טפסים, בירורים וכל הדברים הקטנים שממשיכים לנחות ברשימה שלכם, בטיפול.", "s6_t8": "צריכים משהו אחר? פשוט תשאלו", "s6_x8": "יש משהו ברשימה שלכם שלא מופיע כאן? תשאלו אותנו. אם נוכל לטפל בזה, נוריד לכם את זה מהראש."}); Object.assign(t.en, {"s6_t1": "A Real, Experienced Assistant", "s6_x1": "Not a beginner. Not a call center. Not AI. One experienced person who learns your business, your clients, and the way you like things done, and handles them the same way you would.", "s6_t2": "Flexible Hours", "s6_x2": "Choose the hours that work for you, weekly or monthly. Need more help one month and less the next? Just adjust.", "s6_t3": "Calendar, Scheduling & Communication", "s6_x3": "Your inbox managed, appointments scheduled, clients and vendors answered, and deadlines tracked, so the details never slip.", "s6_t4": "Invoicing & Payment Follow-Up", "s6_x4": "Invoices go out on time, and we follow up with customers who haven't paid, politely and professionally, until the payment comes in.", "s6_t5": "Records & Document Management", "s6_x5": "Records, files, spreadsheets, and statements kept organized and up to date in one place, so important documents are always easy to find when you need them.", "s6_t6": "Team Coordination", "s6_x6": "Tasks assigned, schedules managed, check-ins done, and follow-through on everything, so your team stays organized and things actually get done.", "s6_t7": "Personal Tasks, Too", "s6_x7": "Your time matters outside of work, too. Appointments, bookings, forms, research, and all the little things that keep landing on your list, handled.", "s6_t8": "Need Something Else? Just Ask", "s6_x8": "Something on your list that isn't here? Ask us. If we can handle it, we'll take it off your plate."}); if (lang==="en") applyLang("en");
+
+Object.assign(t.he, {"s7_t1": "הארכת ויזת תייר B-2", "s7_t2": "בקשה לאזרחות אמריקאית", "s7_t3": "הגרלת הגרין קארד (DV Lottery)", "s7_t4": "הנפקה וחידוש דרכון אמריקאי", "s7_desc": "אנחנו מכינים את הטפסים והמסמכים להארכת ויזת תייר, אזרחות, הגרלת הגרין קארד ודרכון אמריקאי, עם הסבר בשפה פשוטה."}); Object.assign(t.en, {"s7_t1": "B-2 Tourist Visa Extension", "s7_t2": "Citizenship Application (Naturalization)", "s7_t3": "Green Card Lottery (DV Lottery) Application", "s7_t4": "US Passport Application & Renewal", "s7_desc": "We prepare your forms and documents for tourist visa extensions, citizenship, the Green Card Lottery, and US passports, explained in plain language."}); if (lang==="en") applyLang("en");
+
+Object.assign(t.he, {"s7_price": "החל מ-<span class=\"amt\">$75</span>"}); Object.assign(t.en, {"s7_price": "Starting at <span class=\"amt\">$75</span>"}); if (lang==="en") applyLang("en");
+Object.assign(t.he, {"s7_t1": "הארכת ויזת תייר B-2", "s7_x1": "צריכים עוד זמן בארה״ב? אנו מכינים את בקשת ההארכה, מארגנים את המסמכים התומכים הנדרשים ומסייעים לכם למלא את הבקשה כראוי. בנוסף, אנו בודקים את הסטטוס הנוכחי שלכם ואת לוח הזמנים להגשה, כדי לסייע בהגשת הבקשה לפני שתוקף השהייה המאושרת שלכם מסתיים.", "s7_t2": "בקשת אזרחות (התאזרחות)", "s7_x2": "אנו מכינים את בקשת האזרחות שלכם, בודקים את פרטי הזכאות, התאריכים והיסטוריית הנסיעות, ומסייעים לכם לאסוף את המסמכים התומכים הנדרשים. בנוסף, אנו מסבירים למה לצפות במהלך תהליך הבקשה והראיון.", "s7_t3": "הגרלת הגרין קארד (DV Lottery)", "s7_x3": "אנו מסייעים לכם למלא ולהגיש את הרישום להגרלה כראוי, כולל בדיקת הפרטים הנדרשים ודרישות התמונה. לפני ההגשה, אנו בודקים את הרישום כדי לאתר טעויות נפוצות. ההרשמה הרשמית ללא עלות; התשלום שלנו הוא עבור הסיוע בהכנה ובהגשה.", "s7_t4": "בקשה וחידוש דרכון אמריקאי", "s7_x4": "בין אם אתם מגישים בקשה לדרכון אמריקאי ראשון ובין אם מחדשים דרכון קיים, אנו מכינים את הבקשה המתאימה, בודקים את התמונה והמסמכים התומכים, ומסייעים לוודא שהכול מולא והוגש כראוי.", "s7_note": "לתשומת לבכם: השירותים הינם מנהליים בלבד ואינם כוללים ייעוץ או ייצוג משפטי."}); if (lang==="he" && typeof applyLang==="function") applyLang("he");
 Object.assign(t.he, {"brand_tag": "העסק שלכם בארה״ב, מסודר"}); Object.assign(t.en, {"brand_tag": "Your U.S. Business. Handled."}); applyLang(lang);
-t.es = Object.assign({}, t.en, {"nav_wa": "WhatsApp", "ns_h": "¿No sabe por dónde empezar?", "ns_p": "Le orientaremos en la dirección correcta y ayudaremos a su negocio a construir una base sólida y organizada para crecer. Pongamos su negocio en orden.", "ns_btn": "Iniciemos la conversación", "f_copy": "© 2026 Sorted · Ayudando a los negocios a crecer desde 2008", "disc_t": "Aviso:", "disc_p": "Brindamos servicios de apoyo administrativo y empresarial, y no ofrecemos asesoría legal ni fiscal. Para asuntos legales o fiscales, le recomendamos consultar a un abogado o a un profesional fiscal calificado.", "how_label": "Cómo funciona", "how_h": "Sencillo de principio a fin", "step1_t": "Cuéntenos qué necesita", "step1_d": "Díganos qué quiere lograr y dónde necesita apoyo, ya sea una consulta rápida o trabajo práctico.", "step2_t": "Nos encargamos de los detalles", "step2_d": "Gestionamos el trabajo administrativo, la configuración y los sistemas que su negocio necesita, con apoyo continuo en cada paso.", "step3_t": "Usted vuelve a su negocio", "step3_d": "Con los sistemas y el apoyo adecuados, puede enfocarse en lo que mejor hace y hacer crecer su negocio.", "hero_btn1": "Comenzar", "m_home": "Inicio", "m_services": "Servicios", "m_about": "Nosotros", "m_faq": "Preguntas frecuentes", "sv1": "Constitución de empresas", "sv2": "Contabilidad y nómina", "sv3": "Productividad y control de calidad", "sv4": "Google Guarantee", "f_about": "Nosotros", "f_faq": "Preguntas frecuentes", "skip": "Ir al contenido principal", "ax_title": "Accesibilidad", "ax_text": "Tamaño del texto", "ax_contrast": "Alto contraste", "ax_gray": "Escala de grises", "ax_links": "Resaltar enlaces", "ax_font": "Fuente legible", "ax_spacing": "Espaciado del texto", "ax_motion": "Detener animaciones", "ax_cursor": "Cursor grande", "ax_reset": "Restablecer ajustes", "ax_stmt": "Declaración de accesibilidad", "ax_hint": "Atajo de teclado: Alt+A", "f_access": "Accesibilidad", "ck_p": "Usamos el almacenamiento local del navegador (similar a las cookies) para recordar su idioma y sus preferencias de accesibilidad, y el sitio carga fuentes desde Google Fonts. Al hacer clic en “Aceptar”, usted está de acuerdo con esto.", "ck_more": "Aviso de privacidad", "ck_ok": "Aceptar", "f_privacy": "Aviso de privacidad", "f_terms": "Términos y condiciones", "sp_back": "Todos los servicios", "sp_inc_label": "Qué incluye", "sp_inc_h": "Cada paso, explicado con claridad", "sp_other_label": "Más servicios", "sp_other_h": "Más formas de apoyar a su negocio", "sp_more": "Ver más", "s1_eyebrow": "Constitución de empresas", "s1_h": "Inicie su negocio de la manera correcta", "s1_desc": "Constituimos su negocio en cualquiera de los 50 estados, en total cumplimiento desde el primer día, ya sea su primer negocio o el siguiente. Nos encargamos del papeleo y construimos la base adecuada para usted, para que pueda enfocarse en hacerlo crecer.", "s1_price": "<span class=\"amt\">$150</span> <span class=\"fee\">+ cuotas estatales</span>", "s1_l1": "Constitución de empresa (LLC, S Corp o C Corp)", "s1_d1": "Registramos su negocio ante el estado y le asesoramos para elegir la estructura adecuada. Una Sociedad de Responsabilidad Limitada (LLC) es sencilla y flexible, una S Corp puede reducir sus impuestos de autoempleo una vez que genere utilidades, y una C Corp está diseñada para atraer inversionistas. Sea cual sea su elección, su negocio se convierte en una entidad legal independiente que protege su patrimonio personal y le da la imagen de un negocio establecido ante bancos, clientes, socios e inversionistas.", "s1_l2": "EIN (número de identificación fiscal federal)", "s1_d2": "El Número de Identificación del Empleador (EIN) es el número federal de identificación fiscal de su negocio. Se requiere para abrir una cuenta bancaria empresarial, contratar empleados, registrarse para los impuestos estatales, recibir pagos y declarar impuestos correctamente. El IRS lo emite sin costo, y nosotros gestionamos el trámite, incluso si no tiene Número de Seguro Social (SSN).", "s1_l3": "Acuerdo operativo (Operating Agreement)", "s1_d3": "El Acuerdo Operativo (Operating Agreement) es un documento interno que define la propiedad de su negocio y cómo se toman las decisiones. La mayoría de los bancos lo exigen para abrir una cuenta empresarial. En caso de una disputa, un desacuerdo entre socios o una auditoría, protege sus intereses y sirve como prueba formal de que su negocio es legítimo.", "s1_l5": "Agente registrado (Registered Agent)", "s1_d5": "Todos los estados exigen designar un Agente Registrado (Registered Agent) antes de registrar su negocio. Se trata de una persona o empresa con domicilio físico en ese estado que recibe oficialmente, en su nombre, la correspondencia legal y gubernamental. Además, así su domicilio particular no aparece en los registros públicos. Si lo necesita, nosotros gestionamos este servicio.", "s1_l6": "Registro de DBA (nombre comercial)", "s1_d6": "Un DBA (\"Doing Business As\", o nombre comercial) le permite operar y promocionar su negocio con un nombre distinto a su razón social registrada. Según su ubicación, se registra ante el estado o el condado. Sin un DBA, los bancos y los clientes solo reconocen la razón social de su negocio, y los pagos emitidos a nombre de su marca podrían ser rechazados.", "s1_l7": "Paquete organizado de documentos de la empresa", "s1_d7": "Al concluir, recibe todos sus documentos de constitución, incluidos la carta de confirmación del EIN, los Artículos de Organización (Articles of Organization) presentados y el Acuerdo Operativo, organizados, claramente identificados y explicados en lenguaje sencillo. Como beneficio adicional de los servicios de Sorted, recibirá una lista descargable y gratuita de los siguientes pasos, como registrarse para los impuestos estatales y cumplir con sus obligaciones estatales anuales, junto con recursos adicionales para planear sus próximos movimientos.", "s2_eyebrow": "Contabilidad y nómina", "s2_h": "Contabilidad precisa. Nómina confiable", "s3_eyebrow": "Productividad del personal y control de calidad", "s3_h": "Productividad visible. Calidad confiable", "s4_eyebrow": "Asesoría y gestión de Google Guarantee", "s4_h": "Elegible. Con licencia. Verificado", "doc_title": "Constitución de empresas | Sorted", "s1_fee_note": "Las cuotas estatales de registro dependen del estado donde registre su negocio y se pagan por separado. El monto exacto se le informa antes del pago.", "sv6": "Asistente virtual", "s6_eyebrow": "Asistente virtual", "s6_h": "La ayuda que necesita, sin el costo de tiempo completo", "sv7": "Trámites migratorios", "s7_eyebrow": "Trámites migratorios", "s7_h": "Formularios complejos. Preparación precisa", "ft_tag": "Apoyo personalizado para el lado administrativo y operativo de su negocio en EE. UU., en español e inglés.", "ft_services": "Servicios", "ft_company": "Empresa", "ft_contact": "Contacto", "ft_area": "Atendemos a clientes en todo EE. UU.", "ft_lang": "Español e inglés", "ft_wa": "Escríbanos por WhatsApp", "f_home": "Inicio", "sv8": "Gestión de reseñas de clientes", "s8_eyebrow": "Gestión de reseñas de clientes", "s8_h": "Su reputación, gestionada y protegida", "m_contact": "Contacto", "f_contact": "Contacto", "brand_tag": "Su negocio en EE. UU. Resuelto.", "nav_label": "Navegación principal", "ax_open": "Abrir el menú de accesibilidad (Alt+A)", "ax_close": "Cerrar el menú de accesibilidad", "ax_dec": "Texto más pequeño", "ax_inc": "Texto más grande", "ck_label": "Aviso de cookies", "rv_label": "Lo que dicen nuestros clientes", "ct_msg_title": "New inquiry from the website", "ct_msg_name": "Name", "ct_msg_phone": "Phone", "ct_msg_email": "Email", "ct_msg_service": "Service", "ct_msg_lang": "Preferred language"});
+Object.assign(t.en, {"s3_t3": "Call Scripts & Communication Training", "s3_x3": "Custom call scripts and practical employee training to improve call handling, deliver consistent customer service, respond confidently to common questions, and ensure every customer interaction reflects your business standards."}); applyLang(lang);
+Object.assign(t.he, {"s3_t3": "תסריטי שיחה והדרכת תקשורת", "s3_x3": "תסריטי שיחה מותאמים אישית והדרכה מעשית, המסייעים לצוות שלכם לנהל שיחות עם לקוחות באופן מקצועי. ההדרכה כוללת טון דיבור, בהירות, ניהול שיחות ומענה לשאלות נפוצות, כדי לסייע שכל פנייה תשקף את הסטנדרטים של העסק שלכם."}); Object.assign(t.en, {"s3_x3": "Custom call scripts and practical training that helps your team handle customer calls professionally. Training covers tone, clarity, call handling, and responses to common questions, helping ensure every interaction reflects your business standards."}); applyLang(lang);
+Object.assign(t.en, {"s8_x1": "Review monitoring keeps track of new reviews on Google, Yelp, and other platforms in one place. We set up a system that responds to reviews promptly and professionally, in your business's voice, helping maintain a consistent and positive online presence.", "s8_x2": "Fake, abusive, or policy-violating reviews are reported to the platform with a formal removal request submitted on your behalf. For negative reviews, we prepare calm, professional responses that address the concern and protect your reputation. Final removal decisions rest with each platform."}); applyLang(lang);
+Object.assign(t.he, {"s8_x1": "אנו עוקבים אחר ביקורות חדשות ב-Google, ב-Yelp ובפלטפורמות נוספות, במקום אחד. בנוסף, אנו מקימים מערכת המגיבה לביקורות במהירות ובמקצועיות, בסגנון של העסק שלכם, כדי לסייע בשמירה על נוכחות מקוונת עקבית וחיובית.", "s8_x2": "ביקורות מזויפות, פוגעניות או כאלה שמפרות את מדיניות הפלטפורמה מדווחות לפלטפורמה, יחד עם בקשת הסרה רשמית שמוגשת בשמכם. לביקורות שליליות, אנו מנסחים תגובות רגועות ומקצועיות שמתייחסות לנושא ומגנות על המוניטין שלכם. ההחלטה הסופית על הסרה נתונה לכל פלטפורמה."}); applyLang(lang);
+t.es = Object.assign({}, t.en, {"nav_wa": "WhatsApp", "hero_h1": "Lleve el lado administrativo de su negocio, mejor", "hero_label": "Deje el papeleo. Dedíquese a su negocio", "hero_sub": "Usted dirige el negocio. Nuestro equipo se encarga de todo lo que hay detrás, en un solo lugar, desde la constitución, las finanzas y el personal hasta el papeleo diario, con atención personalizada de principio a fin.", "hero_btn1": "Comenzar", "hero_btn2": "Ver servicios", "sup_h": "El apoyo que necesita. Sin los gastos fijos", "sup_p1": "Operar un negocio implica muchos frentes, desde constituirlo correctamente hasta administrar las finanzas, la nómina y a su equipo.", "sup_p2": "Brindamos a los dueños de negocios estructura, apoyo y tranquilidad, con ayuda práctica que mantiene en orden y funcionando sin contratiempos el lado administrativo de su negocio.", "svc_label": "Nuestros servicios", "svc_h": "Todo lo que su negocio necesita, en un solo lugar", "s1_eyebrow": "Constitución de empresas", "s1_h": "Inicie su negocio de la manera correcta", "s1_desc": "Constituimos su negocio en EE. UU. correctamente desde el primer día, nos encargamos del papeleo y construimos una base a su medida.", "s1_l1": "Constitución de empresa (LLC, S Corp o C Corp)", "s1_l2": "EIN (número de identificación fiscal federal)", "s1_l3": "Acuerdo operativo (Operating Agreement)", "s1_l4": "Orientación sobre licencias comerciales", "s1_l5": "Agente registrado (Registered Agent)", "s1_l6": "Registro de DBA (nombre comercial)", "s1_l7": "Paquete organizado de documentos de la empresa", "s1_link": "Ver constitución de empresas", "s1_price": "<span class=\"amt\">$150</span> <span class=\"fee\">+ cuotas estatales</span>", "s2_eyebrow": "Contabilidad y nómina", "s2_h": "Contabilidad precisa. Nómina confiable", "s2_desc": "Elija el apoyo financiero y administrativo que necesita, desde QuickBooks hasta nómina y reportes, para que su contabilidad sea precisa y su equipo reciba su pago a tiempo.", "s2_l1": "Cuentas por pagar y cuentas por cobrar", "s2_l2": "Configuración y gestión de QuickBooks", "s2_l3": "Servicios de nómina", "s2_l4": "Gestión de pagos a contratistas y formularios 1099", "s2_l5": "Reportes financieros", "s2_link": "Ver contabilidad y nómina", "s2_price": "Desde <span class=\"amt\">$99</span>/mes*", "s3_eyebrow": "Productividad del personal y control de calidad", "s3_h": "Productividad visible. Calidad confiable", "s3_desc": "Implementamos los sistemas para dar seguimiento a su equipo, presencial o remoto, y lo capacitamos para trabajar de forma profesional, para que tenga una visión clara del desempeño y un equipo que represente su negocio con confianza.", "s3_link": "Ver productividad y control de calidad", "s3_price": "Desde <span class=\"amt\">$300</span>", "s4_eyebrow": "Asesoría y gestión de Google Guarantee", "s4_h": "Elegible. Con licencia. Verificado", "s4_desc": "Le guiamos en cada requisito para obtener la insignia Google Verified, desde licencias y seguros hasta apelaciones, para que pueda verificarse y recibir clientes potenciales de calidad.", "s4_l1": "Revisión de elegibilidad (modelo de negocio y estado del perfil de Google Business)", "s4_l2": "Requisitos de licencia comercial y orientación para la solicitud", "s4_l3": "Contratación y verificación del seguro del negocio", "s4_l4": "Preparación para la verificación de antecedentes (dueño y personal de campo)", "s4_l5": "Coincidencia de datos en todos los trámites", "s4_l6": "Envío de la solicitud, seguimiento y apelaciones", "s4_link": "Ver servicios de Google Guarantee", "s4_price": "Desde <span class=\"amt\">$150</span>", "why_label": "Por qué trabajar con nosotros", "why_h": "Experiencia real. Apoyo práctico. Total tranquilidad", "w1_t": "Más de 25 años de experiencia", "w1_d": "Operaciones, administración, finanzas, recursos humanos, nómina y gestión de equipos.", "w2_t": "Apoyo práctico", "w2_d": "Trabajamos con usted para implementar sistemas y procesos que realmente se ajusten a su negocio.", "w3_t": "Un solo lugar para múltiples necesidades", "w3_d": "Desde la constitución hasta el cumplimiento continuo, ayudamos a que su negocio se mantenga en orden y preparado para el éxito a largo plazo.", "how_label": "Cómo funciona", "how_h": "Sencillo de principio a fin", "step1_t": "Cuéntenos qué necesita", "step1_d": "Díganos qué quiere lograr y dónde necesita apoyo, ya sea una consulta rápida o trabajo práctico.", "step2_t": "Nos encargamos de los detalles", "step2_d": "Gestionamos el trabajo administrativo, la configuración y los sistemas que su negocio necesita, con apoyo continuo en cada paso.", "step3_t": "Usted vuelve a su negocio", "step3_d": "Con los sistemas y el apoyo adecuados, puede enfocarse en lo que mejor hace y hacer crecer su negocio.", "how_cta": "Comenzar", "ns_h": "¿No sabe por dónde empezar?", "ns_p": "Le orientaremos en la dirección correcta y ayudaremos a su negocio a construir una base sólida y organizada para crecer. Pongamos su negocio en orden.", "ns_btn": "Iniciemos la conversación", "f_copy": "© 2026 Sorted · Ayudando a los negocios a crecer desde 2008", "disc_t": "Aviso:", "disc_p": "Brindamos servicios de apoyo administrativo y empresarial, y no ofrecemos asesoría legal ni fiscal. Para asuntos legales o fiscales, le recomendamos consultar a un abogado o a un profesional fiscal calificado.", "m_home": "Inicio", "m_services": "Servicios", "m_about": "Nosotros", "m_faq": "Preguntas frecuentes", "sv1": "Constitución de empresas", "sv2": "Contabilidad y nómina", "sv3": "Productividad y control de calidad", "sv4": "Google Guarantee", "f_about": "Nosotros", "f_faq": "Preguntas frecuentes", "doc_title": "Sorted | Su negocio en EE. UU. Resuelto.", "trust1": "Más de 25 años de experiencia", "trust2": "Español e inglés", "trust3": "Apoyando negocios desde 2008", "hv_title": "Su negocio", "hv_sub": "Lista de configuración", "hv_badge": "En proceso", "hv_pct": "3 de 5 completados", "hv_r1": "Constitución de la LLC", "hv_r2": "Número EIN", "hv_r3": "Acuerdo operativo (Operating Agreement)", "hv_r4": "Cuenta bancaria empresarial", "hv_r5": "Configuración de QuickBooks", "hv_done": "Listo", "hv_prog": "En proceso", "hv_next": "Siguiente", "hv_chip": "Cada documento organizado y explicado", "sup_label": "Lo que hacemos", "sup_more": "Conózcanos", "st1_n": "25+", "st1_l": "Años de experiencia empresarial en EE. UU.", "st2_n": "50", "st2_l": "Estados de EE. UU. atendidos", "st3_n": "2008", "st3_l": "Ayudando a los negocios a crecer desde", "st4_n": "1:1", "st4_l": "Atención personalizada en español o inglés", "inc_toggle": "Qué incluye", "f_privacy": "Aviso de privacidad", "f_terms": "Términos y condiciones", "skip": "Ir al contenido principal", "ax_title": "Accesibilidad", "ax_text": "Tamaño del texto", "ax_contrast": "Alto contraste", "ax_gray": "Escala de grises", "ax_links": "Resaltar enlaces", "ax_font": "Fuente legible", "ax_spacing": "Espaciado del texto", "ax_motion": "Detener animaciones", "ax_cursor": "Cursor grande", "ax_reset": "Restablecer ajustes", "ax_stmt": "Declaración de accesibilidad", "ax_hint": "Atajo de teclado: Alt+A", "f_access": "Accesibilidad", "ck_p": "Usamos el almacenamiento local del navegador (similar a las cookies) para recordar su idioma y sus preferencias de accesibilidad, y el sitio carga fuentes desde Google Fonts. Al hacer clic en “Aceptar”, usted está de acuerdo con esto.", "ck_more": "Aviso de privacidad", "ck_ok": "Aceptar", "sv6": "Asistente virtual", "s6_eyebrow": "Asistente virtual", "s6_h": "La ayuda que necesita, sin el costo de tiempo completo", "s6_desc": "Un asistente ejecutivo dedicado, asignado especialmente a su negocio, que se encarga de su administración, facturas, agenda y más, solo por las horas que necesite.", "s6_price": "<span class=\"amt\">Planes por hora</span> flexibles", "s6_link": "Ver asistente virtual", "sv7": "Trámites migratorios", "rv_label": "Lo que dicen nuestros clientes", "rv_h": "Negocios reales. Resultados reales", "rv1_q": "Iniciar un negocio en EE. UU. me parecía abrumador. Sorted hizo que todo el proceso fuera sencillo y ordenado, me explicó todo con claridad y me ahorró mucho tiempo y estrés.", "rv1_n": "Daniel R.", "rv1_s": "Constitución de empresas", "rv2_q": "Sorted me ayudó a poner todo en orden y a configurar correctamente QuickBooks. Ahora sí entiendo cómo van las finanzas de mi negocio.", "rv2_n": "Michael L.", "rv2_s": "Contabilidad y finanzas", "rv3_q": "Nunca me sentí como un cliente más. Cada vez que tenía una duda, alguien se tomaba el tiempo de explicarme, y contar con apoyo en hebreo y en inglés hizo todo más fácil.", "rv3_n": "Amit S.", "rv3_s": "Atención personalizada", "rv4_q": "Sorted nos ayudó a implementar sistemas adecuados para dar seguimiento a horas, actividad, capacitación y productividad. Ahora administrar al equipo es mucho más fácil.", "rv4_n": "Ronen K.", "rv4_s": "Gestión de equipos", "rv5_q": "Se encargaron de la contabilidad, las facturas, los pagos y todos esos pequeños detalles que se iban acumulando. Por fin tengo a alguien en quien puedo confiar tras bambalinas.", "rv5_n": "David M.", "rv5_s": "Contabilidad y nómina", "rv6_q": "Llevar al día nuestra contabilidad era un verdadero dolor de cabeza. Sorted organizó todo y ahora tengo una idea más clara de cómo va el negocio.", "rv6_n": "Lior T.", "rv6_s": "Contabilidad y finanzas", "ft_tag": "Apoyo personalizado para el lado administrativo y operativo de su negocio en EE. UU., en español e inglés.", "ft_services": "Servicios", "ft_company": "Empresa", "ft_contact": "Contacto", "ft_area": "Atendemos a clientes en todo EE. UU.", "ft_lang": "Español e inglés", "ft_wa": "Escríbanos por WhatsApp", "f_home": "Inicio", "s8_eyebrow": "Gestión de reseñas de clientes", "s8_h": "Su reputación, gestionada y protegida", "s8_desc": "Nuestro sistema de gestión de reseñas da seguimiento a los comentarios en Google, Yelp y otras plataformas, ayudando a que cada reseña reciba una respuesta oportuna y profesional. Las reseñas falsas u ofensivas se reportan para su eliminación y así proteger su reputación en línea.", "s8_price": "<span class=\"amt\">$250</span> / mes", "s8_link": "Ver gestión de reseñas", "s8_t1": "Monitoreo de reseñas y respuestas automáticas", "s8_t2": "Manejo de reseñas falsas y negativas", "imm_label": "Servicios migratorios", "imm_h": "Trámites migratorios, preparados con precisión", "imm_p": "Nuestro equipo prepara sus formularios, organiza sus documentos de respaldo y da seguimiento a los plazos clave, para ayudar a que su solicitud avance sin retrasos innecesarios.", "imm_btn": "Ver servicios migratorios", "s7_p1": "<span class=\"amt\">$250</span> + cuota gubernamental de trámite", "s7_p2": "<span class=\"amt\">$389</span> + cuota gubernamental de trámite", "s7_p3": "<span class=\"amt\">$75</span>", "s7_p4": "<span class=\"amt\">$75</span> + cuotas gubernamentales", "sv8": "Gestión de reseñas de clientes", "m_contact": "Contacto", "f_contact": "Contacto", "s2_note": "*El precio mensual varía según los servicios seleccionados y las necesidades de su negocio.", "s3_t1": "Implementación de sistema de gestión de equipos", "s3_t2": "Manuales del empleado e incorporación", "s3_t3": "Guiones de llamada y capacitación en comunicación", "s3_t4": "Seguimiento de asistencia, actividad y desempeño", "s6_t1": "Un asistente real y con experiencia", "s6_t2": "Horario flexible", "s6_t3": "Calendario, agenda y comunicación", "s6_t4": "Facturación y seguimiento de pagos", "s6_t5": "Gestión de registros y documentos", "s6_t6": "Coordinación del equipo", "s6_t7": "También tareas personales", "s6_t8": "¿Necesita algo más? Solo pregunte", "s7_t1": "Extensión de visa de turista B-2", "s7_t2": "Solicitud de ciudadanía (naturalización)", "s7_t3": "Solicitud para la Lotería de Visas (DV Lottery)", "s7_t4": "Solicitud y renovación de pasaporte estadounidense", "brand_tag": "Su negocio en EE. UU. Resuelto.", "nav_label": "Navegación principal", "ax_open": "Abrir el menú de accesibilidad (Alt+A)", "ax_close": "Cerrar el menú de accesibilidad", "ax_dec": "Texto más pequeño", "ax_inc": "Texto más grande", "ck_label": "Aviso de cookies", "ct_msg_title": "New inquiry from the website", "ct_msg_name": "Name", "ct_msg_phone": "Phone", "ct_msg_email": "Email", "ct_msg_service": "Service", "ct_msg_lang": "Preferred language"});
 if (lang === "es") applyLang("es");
 Object.assign(t.he, {"m_pricing": "מחירים", "f_pricing": "מחירים"}); Object.assign(t.en, {"m_pricing": "Pricing", "f_pricing": "Pricing"}); Object.assign(t.es, {"m_pricing": "Precios", "f_pricing": "Precios", "m_faq": "Preguntas"}); applyLang(lang);
+Object.assign(t.en, {"p_kicker": "Business support for U.S. companies", "p_h1": "<span>Your U.S. business.</span><span>Handled.</span>", "p_sub": "From forming your company to bookkeeping, payroll, Google Ads and daily admin, one dedicated team runs the back office so you can run your business.", "p_cta": "Book a Free 30-Minute Consultation", "p_call": "Or call 347-806-5604", "p_note": "No cost, no obligation. English, Hebrew & Spanish.", "p_cap": "One dedicated point of contact, from your first call onward.", "p_statement": "Since 2008, we have supported business owners in all 50 states, bringing more than 25 years of U.S. business experience to every client we work with.", "p_svc_k": "What We Do", "p_svc_h": "The Support You Need.<br><em>Without the Overhead</em>", "p_svc_p": "We give business owners structure, support, and peace of mind, with hands-on help that keeps the administrative side of your business sorted and running smoothly.", "p_pricing": "See pricing", "p_s1": "LLC & Company Formation", "p_s1p": "We set up your US business the right way from day one, handling the paperwork and building a foundation that fits you.", "p_s2": "Bookkeeping, Payroll & QuickBooks", "p_s2p": "Choose the financial and administrative support you need, from QuickBooks to payroll to reporting, so your books are accurate and your team is paid on time.", "p_s3": "Virtual Assistance", "p_s3p": "A dedicated executive assistant, personally matched to your business, who handles your admin, invoices, scheduling, and more, for only the hours you need.", "p_s6": "Team Training & Performance", "p_s6p": "Call scripts and practical training that help your team handle customer calls professionally, plus systems to track attendance and performance, on site or remote.", "p_s3a": "Virtual assistant", "p_s3b": "Team training", "p_s4": "Google Ads & Advertising", "p_s4p": "Google Ads campaigns, Google Guaranteed setup and review management that help more local customers find you and choose you.", "p_s4a": "Google Ads", "p_s4c": "Google Guaranteed", "p_s4b": "Reviews", "p_s5": "Government Applications", "p_s5p": "We prepare your forms and documents for tourist visa extensions, citizenship, the Green Card Lottery, and US passports, explained in plain language.", "p_more": "Learn more", "p_ap_h": "Your Back Office, Without the Hiring", "p_ap_p": "Think of us as the team behind your business. We handle the work an office employee would, so you get dependable help without salaries, training or full-time costs.", "p_v1": "Organized", "p_v1p": "Every document filed and easy to find.", "p_v2": "Clear", "p_v2p": "Plain explanations, without jargon.", "p_v3": "Dependable", "p_v3p": "Deadlines tracked and work delivered on time.", "p_call_h": "Start with a free 30-minute call", "p_call_p": "A relaxed conversation about your business. You leave with a clear next step.", "p_call_l": "What we cover", "p_c1": "Where your business stands today", "p_c2": "What's missing, overdue or worth improving", "p_c3": "A clear plan and a price for the work", "p_call_btn": "Book Your Free Call", "p_cmp_a": "High-volume services", "p_cmp_b": "Working with Sorted", "p_why_h": "Why Work With Sorted", "p_v1t": "One dedicated contact who knows your business", "p_v1d": "The same contact from your first call, who knows your history and your goals.", "p_v2t": "Formation, books, payroll, admin and Google in one place", "p_v2d": "Formation, books, payroll, admin and Google, handled by one team.", "p_v3t": "Personal support in English, Hebrew or Spanish", "p_v3d": "Personal support in English, Hebrew or Spanish.", "p_v4t": "You know the scope and the price before work begins", "p_v4d": "You know the scope and the price before work begins.", "p_r1a": "A new person every time you reach out", "p_r1b": "One dedicated contact who knows your business", "p_r2a": "A separate company for each need", "p_r2b": "Formation, books, payroll, admin and Google in one place", "p_r3a": "Support in English only", "p_r3b": "Personal support in English, Hebrew or Spanish", "p_r4a": "Fees and add-ons you discover later", "p_r4b": "You know the scope and the price before work begins", "p_faq_h": "Questions owners ask before starting", "p_faq_all": "Read all questions", "p_q1": "Do you provide legal or tax advice?", "p_a1": "No. We provide administrative and business support, such as filings, setup, organization and ongoing back-office work. When something needs a legal or tax opinion, we'll tell you and recommend speaking with an attorney or a tax professional.", "p_q2": "Do I need to live in the U.S. to open a business there?", "p_a2": "Not necessarily. Many owners form a U.S. LLC while living abroad. We'll walk you through what applies to your situation.", "p_q3": "Are state fees included in your prices?", "p_a3": "Our prices are for our service. Government and state filing fees are separate, and we'll tell you the exact costs in advance, before anything is filed.", "p_q4": "How long does it take?", "p_a4": "Typically up to two weeks depending on the state, with faster expedited options available for an additional fee.", "p_st_h": "How getting started works", "p_st1": "Free 30-minute call", "p_st1p": "We learn where your business stands and what you need.", "p_st2": "A clear plan and price", "p_st2p": "You know the scope and the cost before any work begins.", "p_st3": "We take it from there", "p_st3p": "Your dedicated contact handles the work and keeps you updated.", "p_ph1": "Photo: business owner at work, natural light", "p_ph2": "Photo: consultation with a client", "sv1": "LLC & Company Formation", "sv2": "Bookkeeping, Payroll & QuickBooks", "sv6": "Virtual Assistance", "sv3": "Team Training & Performance", "sv4": "Google Ads & Advertising", "sv7": "Government Applications"}); applyLang(lang);
+Object.assign(t.en, {"doc_title": "Business Formation | Sorted", "f_crumb": "Business Formation", "f_kicker": "Business Formation", "f_h1": "Start Your Business<br><em>the Right Way</em>", "f_lead": "We set up your business in any of the 50 states, fully compliant from day one, whether it's your first business or your next. We handle the paperwork and build the foundation that's right for you, so you can focus on growing it.", "f_cta": "Start Your Business", "f_call": "Or call 347-806-5604", "f_note": "State filing fees are separate. You know the exact costs before anything is filed.", "f_pk_h": "Your formation package", "f_pk_s": "Organized, labeled and explained", "f_pk1": "Articles of Organization", "f_pk2": "EIN confirmation letter", "f_pk3": "Operating Agreement", "f_pk4": "Registered Agent", "f_pk5": "Next steps checklist", "f_pk_tag": "Ready", "f_pk_free": "Free", "f_inc_k": "What's Included", "f_inc_h": "Every Step, Clearly Explained", "f_i1t": "Business Formation (LLC, S Corp, or C Corp)", "f_i1p": "We register your business with the state and advise you on choosing the right structure. A Limited Liability Company (LLC) is straightforward and flexible, an S Corp can lower your self-employment taxes once you're profitable, and a C Corp is built for bringing in investors. Whichever you choose, your business becomes a separate legal entity that protects your personal assets and positions you as an established business with banks, clients, partners, and investors.", "f_i2t": "Registered Agent", "f_i2p": "Every state requires you to name a Registered Agent before registering your business. They are a person or company with a physical address in that state that officially receives legal and government mail on your behalf. This also keeps your residential address off public records. We arrange this service for you if needed.", "f_i3t": "DBA Filing", "f_i3p": "A DBA (\"Doing Business As\") allows you to operate and market your business under a name other than its legal registered name. Depending on your location, it is filed with the state or the county. Without a DBA, banks and clients recognize only your legal business name, and payments issued to your brand name may be declined.", "f_i4t": "EIN (Federal Tax ID)", "f_i4p": "An Employer Identification Number (EIN) is the federal tax identification number for your business. It is required to open a business bank account, hire employees, register for state taxes, receive payments, and file taxes correctly. The IRS issues it at no cost, and we manage the application process, even if you do not have a Social Security Number (SSN).", "f_i5t": "Operating Agreement", "f_i5p": "An Operating Agreement is an internal document that defines the ownership of your business and how decisions are made. Most banks require an Operating Agreement to open a business account. In the event of a dispute, a disagreement between partners, or an audit, it protects your interests and serves as formal proof that your business is legitimate.", "f_i6t": "Organized Business Document Package", "f_i6p": "Upon completion, you receive all of your formation documents, including your EIN confirmation letter, filed Articles of Organization, and Operating Agreement, organized, clearly labeled, and explained in plain language. As an added benefit of using Sorted's services, you will receive a free downloadable checklist of next steps, such as registering for state taxes and meeting your annual state requirements, together with additional resources to help you plan your next moves.", "f_fit_h": "Is This Right for You?", "f_fit1": "You are starting your first business in the U.S.", "f_fit2": "You live outside the U.S. or do not have a Social Security Number", "f_fit3": "You are adding a new company to the ones you already run", "f_fit4": "You are not sure whether an LLC or a corporation fits you best", "f_get_h": "What You Receive", "f_get1": "A registered business in the state you choose", "f_get2": "Your EIN, Operating Agreement and formation documents", "f_get3": "Everything organized, labeled and explained in plain language", "f_get4": "A free checklist of next steps and annual requirements", "f_how_k": "How It Works", "f_how_h": "Simple From Start to Finish", "f_h1t": "Tell us your plans", "f_h1p": "Send us a message or call, and we help you choose the right structure and state.", "f_h2t": "A clear plan and price", "f_h2p": "You know the scope, our fee and the state fees before anything is filed.", "f_h3t": "We file everything", "f_h3p": "State registration, Registered Agent, EIN and Operating Agreement, handled for you.", "f_h4t": "Your documents, organized", "f_h4p": "You receive your complete package and your next steps checklist.", "f_faq_h": "Good to Know", "f_faq_all": "Read all questions", "f_q1": "How long does it take?", "f_a1": "Typically up to two weeks depending on the state, with faster expedited options available for an additional fee.", "f_q2": "Do I need to live in the U.S. to open a business there?", "f_a2": "Not necessarily. Many owners form a U.S. LLC while living abroad. We'll walk you through what applies to your situation.", "f_q3": "Do I need an EIN, and can I get one without a Social Security number?", "f_a3": "In most cases, yes. An EIN is needed to open a business bank account, hire employees, and file taxes. You don't need a Social Security number (SSN) to get one. Without an SSN, the application can't be completed online, so it usually takes a little longer and an additional $50 service fee applies. We prepare and file the application for you as part of our business formation service.", "f_q4": "Are state fees included in your prices?", "f_a4": "Our prices are for our service. Government and state filing fees are separate, and we'll tell you the exact costs in advance, before anything is filed.", "f_call_h": "Ready to Start Your Business?", "f_call_p": "Send us a message or give us a call. We'll answer your questions and get your business started.", "f_call_btn": "Message Us on WhatsApp"}); /*TR*/Object.assign(t.he,{"sv1": "הקמת LLC וחברות", "sv2": "הנהלת חשבונות, שכר ו־QuickBooks", "sv6": "עוזרת וירטואלית", "sv3": "הדרכת צוות וביצועים", "sv4": "Google Ads ופרסום", "sv7": "בקשות מול הממשל", "f_home": "ראשי", "f_crumb": "הקמת עסק", "f_kicker": "הקמת עסק", "f_h1": "מתחילים את העסק<br><em>בדרך הנכונה</em>", "f_lead": "אנחנו מקימים את העסק שלכם בכל אחת מ-50 המדינות, עם עמידה מלאה בדרישות, כחוק ובצורה מסודרת מהיום הראשון, בין אם זה העסק הראשון שלכם או הבא בתור. אנחנו מטפלים בבירוקרטיה ובונים את הבסיס שמתאים לכם, כדי שתוכלו להתמקד בגדילה שלו.", "f_cta": "הקימו את העסק", "f_call": "או התקשרו 347-806-5604", "f_note": "אגרות המדינה משולמות בנפרד. תדעו את העלות המדויקת לפני שמגישים משהו.", "f_pk_h": "חבילת ההקמה שלכם", "f_pk_s": "מסודר, מתויג ומוסבר", "f_pk1": "תעודת התאגדות (Articles of Organization)", "f_pk_tag": "מוכן", "f_pk2": "מכתב אישור EIN", "f_pk3": "הסכם הפעלה (Operating Agreement)", "f_pk4": "סוכן רשום (Registered Agent)", "f_pk5": "רשימת הצעדים הבאים", "f_pk_free": "חינם", "f_inc_k": "מה כלול", "f_inc_h": "כל שלב, מוסבר בבהירות", "f_i1t": "הקמת עסק (LLC, S Corp, או C Corp)", "f_i1p": "אנחנו רושמים את העסק שלכם מול המדינה ומייעצים לכם בבחירת המבנה המתאים. חברה בערבון מוגבל (LLC) היא ברורה וגמישה, S Corp יכול להפחית את מס העצמאים שלכם כשהעסק רווחי, ו-C Corp בנוי להכנסת משקיעים. מה שלא תבחרו, העסק הופך לישות משפטית נפרדת שמגינה על הרכוש האישי שלכם ומציבה אתכם כעסק מבוסס בעיני בנקים, לקוחות, שותפים ומשקיעים.", "f_i2t": "סוכן רשום (Registered Agent)", "f_i2p": "כל מדינה מחייבת אתכם למנות סוכן רשום (Registered Agent) לפני רישום העסק. מדובר באדם או בחברה עם כתובת פיזית באותה מדינה, המקבלים באופן רשמי דואר משפטי וממשלתי בשמכם. בנוסף, כך נשמרת כתובת המגורים שלכם מחוץ לרשומות הציבוריות. אנו מארגנים עבורכם את השירות במידת הצורך.", "f_i3t": "רישום DBA", "f_i3p": "רישום DBA (Doing Business As) מאפשר לכם לפעול ולשווק את העסק תחת שם שונה משמו המשפטי הרשום. בהתאם למיקום העסק, הרישום מוגש למדינה או למחוז. ללא DBA, בנקים ולקוחות מכירים רק בשם המשפטי של העסק, ותשלומים שהונפקו על שם המותג עלולים להידחות.", "f_i4t": "מספר EIN (תעודת זהות פדרלית)", "f_i4p": "מספר זיהוי מעסיק (EIN) הוא מספר הזיהוי הפדרלי של העסק שלכם לצורכי מס. הוא נדרש כדי לפתוח חשבון בנק עסקי, להעסיק עובדים, להירשם למיסי המדינה, לקבל תשלומים ולהגיש דוחות מס כראוי. רשות המסים האמריקאית (IRS) מנפיקה אותו ללא עלות, ואנו מנהלים את תהליך הבקשה, גם אם אין לכם מספר ביטוח לאומי אמריקאי (SSN).", "f_i5t": "הסכם הפעלה (Operating Agreement)", "f_i5p": "הסכם תפעול (Operating Agreement) הוא מסמך פנימי הקובע את הבעלות על העסק שלכם ואת אופן קבלת ההחלטות. רוב הבנקים דורשים הסכם תפעול לצורך פתיחת חשבון בנק עסקי. במקרה של מחלוקת, חילוקי דעות בין שותפים או ביקורת, הוא מגן על האינטרסים שלכם ומשמש הוכחה רשמית לכך שהעסק שלכם לגיטימי.", "f_i6t": "חבילת מסמכים עסקית מאורגנת", "f_i6p": "בסיום התהליך, תקבלו את כל מסמכי ההקמה שלכם, כולל מכתב אישור ה-EIN, תעודת ההתאגדות (Articles of Organization) שהוגשה והסכם התפעול, מאורגנים, מסומנים בבירור ומוסברים בשפה פשוטה. כהטבה נוספת ללקוחות מסודר, תקבלו רשימת צעדים להמשך להורדה ללא עלות, כמו רישום למיסי המדינה ועמידה בדרישות השנתיות של המדינה, לצד משאבים נוספים שיעזרו לכם לתכנן את הצעדים הבאים.", "f_fit_h": "זה מתאים לכם?", "f_fit1": "אתם פותחים את העסק הראשון שלכם בארה״ב", "f_fit2": "אתם גרים מחוץ לארה״ב או שאין לכם מספר ביטוח לאומי אמריקאי (SSN)", "f_fit3": "אתם מוסיפים חברה חדשה לעסקים שכבר יש לכם", "f_fit4": "אתם לא בטוחים אם LLC או תאגיד מתאים לכם יותר", "f_get_h": "מה אתם מקבלים", "f_get1": "עסק רשום במדינה שבחרתם", "f_get2": "מספר EIN, הסכם הפעלה ומסמכי ההקמה", "f_get3": "הכול מסודר, מתויג ומוסבר בשפה פשוטה", "f_get4": "רשימה חינמית של הצעדים הבאים והדרישות השנתיות", "f_how_k": "איך זה עובד", "f_how_h": "פשוט מהתחלה ועד הסוף", "f_h1t": "ספרו לנו על התוכניות שלכם", "f_h1p": "שלחו הודעה או התקשרו, ונעזור לכם לבחור את המבנה והמדינה המתאימים.", "f_h2t": "תוכנית ומחיר ברורים", "f_h2p": "אתם יודעים מה כלול, מה המחיר שלנו ומה אגרות המדינה לפני שמגישים משהו.", "f_h3t": "אנחנו מגישים הכול", "f_h3p": "רישום במדינה, סוכן רשום, EIN והסכם הפעלה, הכול בטיפולנו.", "f_h4t": "המסמכים שלכם, מסודרים", "f_h4p": "אתם מקבלים את החבילה המלאה ואת רשימת הצעדים הבאים.", "f_faq_h": "כדאי לדעת", "f_faq_all": "לכל השאלות", "f_q1": "כמה זמן זה לוקח?", "f_a1": "בדרך כלל עד שבועיים, בהתאם למדינה, עם אפשרות לשירות מזורז בתוספת תשלום.", "f_q2": "צריך לגור בארה״ב כדי לפתוח שם עסק?", "f_a2": "לא בהכרח. בעלי עסקים רבים מקימים LLC בארה״ב בזמן שהם גרים בחו״ל. נסביר לכם מה רלוונטי למצב שלכם.", "f_q3": "צריך מספר EIN, ואפשר לקבל אותו בלי SSN?", "f_a3": "ברוב המקרים כן. מספר EIN נדרש כדי לפתוח חשבון בנק עסקי, להעסיק עובדים ולהגיש דוחות מס. לא צריך SSN כדי לקבל אותו. ללא SSN לא ניתן להגיש את הבקשה באינטרנט, ולכן התהליך לוקח מעט יותר זמן וכרוך בתוספת של $50. אנחנו מכינים ומגישים את הבקשה עבורכם כחלק משירות הקמת העסק.", "f_q4": "האם אגרות המדינה כלולות במחיר?", "f_a4": "המחירים שלנו הם עבור השירות שלנו. אגרות ממשלתיות ואגרות מדינה משולמות בנפרד, ונגיד לכם מראש את העלות המדויקת, לפני שמגישים משהו.", "f_call_h": "מוכנים להקים את העסק?", "f_call_p": "שלחו לנו הודעה או התקשרו. נענה על השאלות שלכם ונתחיל להקים את העסק.", "f_call_btn": "שלחו לנו הודעה בוואטסאפ", "f_pricing": "מחירים", "f_about": "אודות", "f_faq": "שאלות נפוצות", "f_contact": "צרו קשר", "f_privacy": "מדיניות פרטיות", "f_terms": "תנאי שימוש", "f_access": "תפריט נגישות", "f_copy": "© 2026 מסודר · עוזרים לעסקים לצמוח מאז 2008", "doc_title": "הקמת עסק | מסודר"});Object.assign(t.es,{"sv1": "Constitución de LLC y empresas", "sv2": "Contabilidad, nómina y QuickBooks", "sv6": "Asistencia virtual", "sv3": "Capacitación y desempeño del equipo", "sv4": "Google Ads y publicidad", "sv7": "Trámites gubernamentales", "f_home": "Inicio", "f_crumb": "Constitución de empresas", "f_kicker": "Constitución de empresas", "f_h1": "Inicie su negocio<br><em>de la manera correcta</em>", "f_lead": "Constituimos su negocio en cualquiera de los 50 estados, en total cumplimiento desde el primer día, ya sea su primer negocio o el siguiente. Nos encargamos del papeleo y construimos la base adecuada para usted, para que pueda enfocarse en hacerlo crecer.", "f_cta": "Inicie su negocio", "f_call": "O llame al 347-806-5604", "f_note": "Las tarifas estatales son aparte. Conocerá los costos exactos antes de presentar cualquier trámite.", "f_pk_h": "Su paquete de constitución", "f_pk_s": "Organizado, etiquetado y explicado", "f_pk1": "Acta constitutiva (Articles of Organization)", "f_pk_tag": "Listo", "f_pk2": "Carta de confirmación del EIN", "f_pk3": "Acuerdo operativo (Operating Agreement)", "f_pk4": "Agente registrado (Registered Agent)", "f_pk5": "Lista de próximos pasos", "f_pk_free": "Gratis", "f_inc_k": "Qué incluye", "f_inc_h": "Cada paso, explicado con claridad", "f_i1t": "Constitución de empresa (LLC, S Corp o C Corp)", "f_i1p": "Registramos su negocio ante el estado y le asesoramos para elegir la estructura adecuada. Una Sociedad de Responsabilidad Limitada (LLC) es sencilla y flexible, una S Corp puede reducir sus impuestos de autoempleo una vez que genere utilidades, y una C Corp está diseñada para atraer inversionistas. Sea cual sea su elección, su negocio se convierte en una entidad legal independiente que protege su patrimonio personal y le da la imagen de un negocio establecido ante bancos, clientes, socios e inversionistas.", "f_i2t": "Agente registrado (Registered Agent)", "f_i2p": "Todos los estados exigen designar un Agente Registrado (Registered Agent) antes de registrar su negocio. Se trata de una persona o empresa con domicilio físico en ese estado que recibe oficialmente, en su nombre, la correspondencia legal y gubernamental. Además, así su domicilio particular no aparece en los registros públicos. Si lo necesita, nosotros gestionamos este servicio.", "f_i3t": "Registro de DBA (nombre comercial)", "f_i3p": "Un DBA (\"Doing Business As\", o nombre comercial) le permite operar y promocionar su negocio con un nombre distinto a su razón social registrada. Según su ubicación, se registra ante el estado o el condado. Sin un DBA, los bancos y los clientes solo reconocen la razón social de su negocio, y los pagos emitidos a nombre de su marca podrían ser rechazados.", "f_i4t": "EIN (número de identificación fiscal federal)", "f_i4p": "El Número de Identificación del Empleador (EIN) es el número federal de identificación fiscal de su negocio. Se requiere para abrir una cuenta bancaria empresarial, contratar empleados, registrarse para los impuestos estatales, recibir pagos y declarar impuestos correctamente. El IRS lo emite sin costo, y nosotros gestionamos el trámite, incluso si no tiene Número de Seguro Social (SSN).", "f_i5t": "Acuerdo operativo (Operating Agreement)", "f_i5p": "El Acuerdo Operativo (Operating Agreement) es un documento interno que define la propiedad de su negocio y cómo se toman las decisiones. La mayoría de los bancos lo exigen para abrir una cuenta empresarial. En caso de una disputa, un desacuerdo entre socios o una auditoría, protege sus intereses y sirve como prueba formal de que su negocio es legítimo.", "f_i6t": "Paquete organizado de documentos de la empresa", "f_i6p": "Al concluir, recibe todos sus documentos de constitución, incluidos la carta de confirmación del EIN, los Artículos de Organización (Articles of Organization) presentados y el Acuerdo Operativo, organizados, claramente identificados y explicados en lenguaje sencillo. Como beneficio adicional de los servicios de Sorted, recibirá una lista descargable y gratuita de los siguientes pasos, como registrarse para los impuestos estatales y cumplir con sus obligaciones estatales anuales, junto con recursos adicionales para planear sus próximos movimientos.", "f_fit_h": "¿Es para usted?", "f_fit1": "Va a abrir su primer negocio en EE. UU.", "f_fit2": "Vive fuera de EE. UU. o no tiene número de Seguro Social", "f_fit3": "Quiere sumar una nueva empresa a las que ya tiene", "f_fit4": "No sabe si le conviene más una LLC o una corporación", "f_get_h": "Lo que recibe", "f_get1": "Un negocio registrado en el estado que elija", "f_get2": "Su EIN, acuerdo operativo y documentos de constitución", "f_get3": "Todo organizado, etiquetado y explicado en palabras sencillas", "f_get4": "Una lista gratuita de próximos pasos y requisitos anuales", "f_how_k": "Cómo funciona", "f_how_h": "Sencillo de principio a fin", "f_h1t": "Cuéntenos sus planes", "f_h1p": "Envíenos un mensaje o llámenos, y le ayudamos a elegir la estructura y el estado adecuados.", "f_h2t": "Un plan y un precio claros", "f_h2p": "Conoce el alcance, nuestra tarifa y las tarifas estatales antes de presentar cualquier trámite.", "f_h3t": "Presentamos todo", "f_h3p": "Registro estatal, agente registrado, EIN y acuerdo operativo, todo a nuestro cargo.", "f_h4t": "Sus documentos, organizados", "f_h4p": "Recibe su paquete completo y su lista de próximos pasos.", "f_faq_h": "Bueno saber", "f_faq_all": "Ver todas las preguntas", "f_q1": "¿Cuánto tiempo toma?", "f_a1": "Normalmente hasta dos semanas, según el estado, con opciones urgentes más rápidas por un cargo adicional.", "f_q2": "¿Necesito vivir en EE. UU. para abrir un negocio allí?", "f_a2": "No necesariamente. Muchos dueños forman una LLC en EE. UU. mientras viven en el extranjero. Le explicaremos lo que aplica a su caso.", "f_q3": "¿Necesito un EIN y puedo obtenerlo sin número de Seguro Social?", "f_a3": "En la mayoría de los casos, sí. El EIN se necesita para abrir una cuenta bancaria empresarial, contratar empleados y presentar impuestos. No necesita un número de Seguro Social (SSN) para obtenerlo. Sin SSN, la solicitud no se puede completar en línea, por lo que suele tardar un poco más y tiene un cargo adicional de $50. Nosotros preparamos y presentamos la solicitud por usted como parte de nuestro servicio de constitución de empresas.", "f_q4": "¿Sus precios incluyen las cuotas estatales?", "f_a4": "Nuestros precios son por nuestro servicio. Las tarifas del gobierno y del estado son aparte, y le diremos los costos exactos por adelantado, antes de presentar cualquier trámite.", "f_call_h": "¿Listo para iniciar su negocio?", "f_call_p": "Envíenos un mensaje o llámenos. Responderemos sus preguntas y pondremos en marcha su negocio.", "f_call_btn": "Escríbanos por WhatsApp", "f_pricing": "Precios", "f_about": "Nosotros", "f_faq": "Preguntas", "f_contact": "Contacto", "f_privacy": "Aviso de privacidad", "f_terms": "Términos y condiciones", "f_access": "Accesibilidad", "f_copy": "© 2026 Sorted · Ayudando a los negocios a crecer desde 2008", "doc_title": "Constitución de empresas | Sorted"});/*TR*/applyLang(lang);
 </script>
 </body>
 </html>

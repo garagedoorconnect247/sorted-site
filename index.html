@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl" id="root">
+<html lang="en" dir="ltr" id="root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
 <meta name="description" content="הקמת עסק, ניהול פיננסי ותמיכה תפעולית לבעלי עסקים בארה״ב.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&family=Heebo:wght@400;500;600;700;800&family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#0B1220; --ink-2:#3B4658; --muted:#7C8798;
@@ -422,9 +422,174 @@ html[dir="rtl"] .imm-btn .arr{transform:scaleX(-1)}
 .sec-head h2,.story h2{font-size:clamp(1.35rem,2.8vw,1.75rem)}
 .exp-in h2{font-size:clamp(1.3rem,2.6vw,1.65rem)}
 .notsure h2,.support-copy h2{font-size:clamp(1.35rem,2.8vw,1.75rem)}
-.brand-txt{display:flex;flex-direction:column;line-height:1.1}.brand-tag{font-size:.68rem;font-weight:500;color:var(--blue);letter-spacing:.01em;margin-top:2px}footer .brand-tag{color:#8FB0FF}@media(max-width:420px){.brand-tag{font-size:.6rem}}.lang-wrap{position:relative}.lang-chev{opacity:.6}.lang-menu{position:absolute;top:calc(100% + 6px);inset-inline-end:0;min-width:150px;background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 10px 30px rgba(14,35,64,.12);padding:6px;z-index:200;display:flex;flex-direction:column;gap:2px}.lang-menu[hidden]{display:none}.lang-menu button{display:flex;align-items:center;gap:8px;width:100%;text-align:start;padding:8px 10px;border-radius:7px;font-size:.85rem;font-weight:600;color:var(--ink-2);background:none;border:0;cursor:pointer;font-family:inherit}.lang-menu button:hover,.lang-menu button:focus-visible{background:var(--blue-l)}.lang-menu button[aria-current="true"]{color:var(--blue)}@media(max-width:480px){#lang-label{display:none}.lang-btn{gap:4px}}@media(max-width:380px){.brand-tag{font-size:.54rem;letter-spacing:0}}@media(max-width:340px){.brand-tag{display:none}}.nav-tel{white-space:nowrap}@media(max-width:1199px){html[lang="es-MX"] .nav-tel{display:none!important}}h1,h2,h3{text-wrap:balance}</style>
+.brand-txt{display:flex;flex-direction:column;line-height:1.1}.brand-tag{font-size:.68rem;font-weight:500;color:var(--blue);letter-spacing:.01em;margin-top:2px}footer .brand-tag{color:#8FB0FF}@media(max-width:420px){.brand-tag{font-size:.6rem}}.lang-wrap{position:relative}.lang-chev{opacity:.6}.lang-menu{position:absolute;top:calc(100% + 6px);inset-inline-end:0;min-width:150px;background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 10px 30px rgba(14,35,64,.12);padding:6px;z-index:200;display:flex;flex-direction:column;gap:2px}.lang-menu[hidden]{display:none}.lang-menu button{display:flex;align-items:center;gap:8px;width:100%;text-align:start;padding:8px 10px;border-radius:7px;font-size:.85rem;font-weight:600;color:var(--ink-2);background:none;border:0;cursor:pointer;font-family:inherit}.lang-menu button:hover,.lang-menu button:focus-visible{background:var(--blue-l)}.lang-menu button[aria-current="true"]{color:var(--blue)}@media(max-width:480px){#lang-label{display:none}.lang-btn{gap:4px}}@media(max-width:380px){.brand-tag{font-size:.54rem;letter-spacing:0}}@media(max-width:340px){.brand-tag{display:none}}.nav-tel{white-space:nowrap}@media(max-width:1199px){html[lang="es-MX"] .nav-tel{display:none!important}}h1,h2,h3{text-wrap:balance}
+.pr{--ink:#0F1E33;--blue:#1656E0;--blue-d:#0F3FAE;--mist:#EEF2F8;--slate:#566275;--line:#DCE2EB;--serif:"Frank Ruhl Libre",Georgia,serif;--sans:"Heebo","Rubik",system-ui,sans-serif;font-family:var(--sans);color:var(--ink)}
+.pr p{margin:0}
+.p-wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.p-h1,.p-h2,.p-row-t,.p-statement-t,.p-cover-h{font-family:var(--serif);font-weight:500;letter-spacing:-.015em;color:var(--ink)}
+.p-hero{padding:96px 0 112px;background:#fff}
+.p-hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:72px;align-items:center}
+.p-kicker{font-size:1rem;font-weight:500;color:var(--blue);margin-bottom:22px}
+.p-h1{font-size:clamp(3rem,6.2vw,5.4rem);line-height:.98;margin:0}
+.p-lead{font-size:1.2rem;line-height:1.65;color:var(--slate);max-width:36ch}
+.p-hero .p-lead{margin:30px 0 40px}
+.p-actions{display:flex;flex-wrap:wrap;align-items:center;gap:28px}
+.p-btn{display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:#fff;font-weight:500;font-size:1.02rem;padding:17px 28px;border-radius:999px;text-decoration:none;transition:background .2s}
+.p-btn svg{width:20px;height:20px}.p-btn:hover{background:var(--blue-d)}
+.p-textlink{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-weight:500;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:6px}
+.p-textlink:hover{color:var(--blue)}
+.p-note{margin-top:22px;font-size:.95rem;color:var(--slate)}
+.pr a:focus-visible{outline:3px solid #8FB0FF;outline-offset:4px;border-radius:6px}
+.p-hero-fig{margin:0}
+.p-photo{position:relative;border-radius:22px;background:var(--mist) var(--img) center/cover no-repeat;overflow:hidden;display:grid;place-items:center}
+.p-photo-hero{aspect-ratio:4/5;background-position:30% 62%}
+.p-ph{font-size:.9rem;color:#7C889A;padding:10px 16px;border:1.5px dashed #B9C5D8;border-radius:10px;background:rgba(255,255,255,.7)}
+.p-hero-fig figcaption{margin-top:16px;font-size:.95rem;color:var(--slate);padding-inline-start:16px;border-inline-start:2px solid var(--blue)}
+.p-hero-copy>*,.p-hero-fig{animation:pUp .8s cubic-bezier(.2,.8,.2,1) both}
+.p-hero-copy>*:nth-child(2){animation-delay:.08s}.p-hero-copy>*:nth-child(3){animation-delay:.16s}.p-hero-copy>*:nth-child(4){animation-delay:.24s}.p-hero-fig{animation-delay:.2s}
+@keyframes pUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.p-hero-copy>*,.p-hero-fig{animation:none}}
+html.ax-motion .p-hero-copy>*,html.ax-motion .p-hero-fig{animation:none}
+.p-statement{background:var(--mist);padding:112px 0}
+.p-statement-t{font-size:clamp(1.7rem,3.2vw,2.6rem);line-height:1.3;max-width:28ch}
+.p-svc{padding:128px 0;background:#fff}
+.p-svc-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:80px;align-items:start}
+.p-svc-intro{position:sticky;top:110px;display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+.p-h2{font-size:clamp(2.1rem,3.8vw,3.1rem);line-height:1.08;margin:0}
+.p-svc-intro p{color:var(--slate);line-height:1.6;max-width:30ch;font-size:1.05rem}
+.p-rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.p-row{border-bottom:1px solid var(--line)}
+.p-row-link{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:34px 8px;color:inherit;text-decoration:none;transition:background .25s,padding .25s}
+.p-row-link:hover{background:var(--mist);padding-inline:24px}
+.p-row-main{display:flex;flex-direction:column;gap:8px}
+.p-row-t{font-size:clamp(1.5rem,2.4vw,1.95rem);line-height:1.15;margin:0}
+.p-row p{color:var(--slate);line-height:1.6;max-width:48ch}
+.p-row-go{display:inline-flex;align-items:center;gap:8px;flex:none;font-weight:500;color:var(--blue);font-size:.98rem}
+.p-arr{width:18px;height:18px;flex:none;transition:transform .2s}
+.pr a:hover .p-arr{transform:translateX(4px)}
+html[dir="rtl"] .p-arr{transform:scaleX(-1)}html[dir="rtl"] .pr a:hover .p-arr{transform:scaleX(-1) translateX(4px)}
+li.p-row:not(:has(.p-row-link)){display:flex;align-items:center;justify-content:space-between;gap:32px;padding:34px 8px}
+.p-row-links{display:flex;gap:10px;flex-wrap:wrap;flex:none}
+.p-chip{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:1.5px solid var(--line);border-radius:999px;color:var(--ink);font-weight:500;font-size:.95rem;text-decoration:none;transition:border-color .2s,color .2s}
+.p-chip:hover{border-color:var(--blue);color:var(--blue)}
+.p-approach{background:var(--mist);padding:128px 0}
+.p-approach .p-photo{background-color:#DDE4EE}
+.p-why{position:relative;margin-top:8px;padding:32px 34px 30px;border-radius:24px;background:var(--ink);color:#fff;overflow:hidden;isolation:isolate;box-shadow:0 30px 60px -34px rgba(15,30,51,.55)}
+.p-why::before{content:"";position:absolute;right:-80px;top:-120px;width:320px;height:320px;border-radius:50%;background:radial-gradient(closest-side,rgba(22,86,224,.55),transparent);z-index:-1}
+.p-why-h{display:inline-flex;align-items:center;gap:10px;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8FB0FF;margin-bottom:22px!important}
+.p-why-h::before{content:"";width:24px;height:2px;border-radius:2px;background:#8FB0FF}
+.p-why ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.p-why li{display:flex;align-items:center;gap:16px;padding:15px 0;font-size:1.06rem;font-weight:500;line-height:1.45}
+.p-why li+li{border-top:1px solid rgba(255,255,255,.1)}
+.p-why-ic{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:10px;color:var(--ink)}
+.p-why-ic svg{width:17px;height:17px}
+.p-why li:nth-child(1) .p-why-ic{background:#6E9BFF}.p-why li:nth-child(2) .p-why-ic{background:#3FD0B4}.p-why li:nth-child(3) .p-why-ic{background:#A68BFF}.p-why li:nth-child(4) .p-why-ic{background:#FFB547}
+@media (max-width:640px){.p-why{padding:26px 22px 22px}.p-why li{font-size:1rem}}
+.p-adv{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.p-adv-i{--c:#1656E0;--cs:#E6EEFF;position:relative;background:#fff;border-radius:20px;padding:30px 26px 28px;display:flex;flex-direction:column;gap:8px;box-shadow:0 1px 0 rgba(15,30,51,.04),0 18px 36px -24px rgba(15,30,51,.22);transition:transform .3s,box-shadow .3s;overflow:hidden}
+.p-adv-i::before{content:"";position:absolute;left:24px;right:24px;top:0;height:3px;border-radius:0 0 3px 3px;background:var(--c)}
+.p-adv-i:hover{transform:translateY(-3px);box-shadow:0 1px 0 rgba(15,30,51,.04),0 24px 44px -24px rgba(15,30,51,.32)}
+.p-adv-teal{--c:#0E9F86;--cs:#E1F5F0}.p-adv-violet{--c:#6B4FE0;--cs:#EEEAFE}.p-adv-amber{--c:#C9780A;--cs:#FDF0DC}
+.p-adv-ic{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--cs);color:var(--c);margin-bottom:8px}
+.p-adv-ic svg{width:22px;height:22px}
+.pr .p-adv-t{font-family:var(--sans);font-weight:600;font-size:1.1rem;letter-spacing:-.01em;line-height:1.25;margin:0;color:var(--ink)}
+.p-adv-d{color:var(--slate);line-height:1.55;font-size:.97rem}
+@media (max-width:1000px){.p-adv{grid-template-columns:1fr 1fr;margin-top:48px}}@media (max-width:520px){.p-adv{grid-template-columns:1fr;gap:14px}}
+@media (prefers-reduced-motion:reduce){.p-adv-i{transition:none}.p-adv-i:hover{transform:none}}
+.p-ap-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:88px;align-items:center}
+.p-photo-ap{aspect-ratio:5/4}
+.p-ap-copy{display:flex;flex-direction:column;gap:28px}
+.p-values{margin:12px 0 0;display:grid;gap:0;border-top:1px solid #CFD8E5}
+.p-values div{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid #CFD8E5}
+.p-values dt{font-family:var(--serif);font-size:1.3rem;font-weight:500}
+.p-values dd{margin:0;color:var(--slate);line-height:1.55;align-self:center}
+.p-call{background:var(--ink);padding:128px 0;color:#fff}
+.p-call-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:88px;align-items:center}
+.p-call .p-h2{color:#fff}
+.p-call .p-lead{color:#B9C4D6;margin:24px 0 40px}
+.p-btn-light{background:#fff;color:var(--ink)}.p-btn-light:hover{background:#DCE6FF}.p-btn-light svg{color:#0B7A5E}
+.p-cover{border-inline-start:1px solid rgba(255,255,255,.18);padding-inline-start:56px}
+.p-cover-h{color:#fff;font-size:1.4rem;margin:0 0 24px}
+.p-cover ol{list-style:none;counter-reset:c;margin:0;padding:0;display:grid;gap:22px}
+.p-cover li{counter-increment:c;display:grid;grid-template-columns:44px 1fr;align-items:baseline;font-size:1.12rem;line-height:1.5;color:#E4EAF4}
+.p-cover li::before{content:counter(c);font-family:var(--serif);font-size:1.5rem;color:#8FB0FF}
+@media (max-width:1000px){
+ .p-hero-grid,.p-svc-grid,.p-ap-grid,.p-call-grid{grid-template-columns:1fr;gap:48px}
+ .p-svc-intro{position:static}
+ .p-hero{padding:56px 0 72px}.p-statement{padding:72px 0}.p-svc,.p-approach,.p-call{padding:80px 0}
+ .p-photo-hero{aspect-ratio:4/3}
+ .p-cover{border-inline-start:0;padding-inline-start:0;border-top:1px solid rgba(255,255,255,.18);padding-top:40px}
+}
+@media (max-width:640px){
+ .p-wrap{padding:0 20px}
+ .p-row-link,li.p-row:not(:has(.p-row-link)){flex-direction:column;align-items:flex-start;gap:16px;padding:28px 0}
+ .p-row-link:hover{padding-inline:0;background:none}
+ .p-values div{grid-template-columns:1fr;gap:4px}
+ .p-actions{gap:18px}
+}
+
+.p-h1{font-size:clamp(2.2rem,4.9vw,4.4rem)}.p-h1 span{display:block;white-space:nowrap}
+@media (min-width:961px){.p-hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}}
+.p-cmp{margin-top:8px;border-radius:18px;overflow:hidden;background:#fff;border:1px solid #CFD8E5}
+.p-cmp-row{display:grid;grid-template-columns:1fr 1fr}
+.p-cmp-row>span{padding:18px 22px;line-height:1.5;font-size:1rem}
+.p-cmp-row>span:first-child{color:var(--slate)}
+.p-cmp-row>span:last-child{background:var(--ink);color:#fff;font-weight:500}
+.p-cmp-row+.p-cmp-row>span{border-top:1px solid #E3E9F1}.p-cmp-row+.p-cmp-row>span:last-child{border-top-color:rgba(255,255,255,.1)}
+.p-cmp-head>span{font-size:.9rem;font-weight:600;text-decoration:none!important;color:var(--slate)!important;padding-block:14px}
+.p-cmp-head>span:last-child{color:#8FB0FF!important}
+.p-faq{padding:128px 0;background:#fff}
+.p-faq-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:56px}
+.p-faq-head .p-h2{max-width:16ch}
+.p-faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px 72px}
+.p-qa{display:flex;flex-direction:column;gap:12px;padding-top:24px;border-top:2px solid var(--ink)}
+.p-q{font-family:var(--serif);font-weight:500;font-size:1.4rem;line-height:1.25;margin:0;color:var(--ink)}
+.p-qa p{color:var(--slate);line-height:1.65;max-width:52ch}
+.p-call{background:var(--blue)}
+.p-call .p-lead{color:#DCE6FF}
+.p-cover{border-inline-start-color:rgba(255,255,255,.3)}
+.p-cover li{grid-template-columns:48px 1fr}
+.p-cover li::before{color:#fff;opacity:.7}
+.p-cover li b{display:block;font-weight:600;color:#fff;font-size:1.12rem}
+.p-cover li span{display:block;color:#DCE6FF;font-size:1rem;margin-top:4px}
+.p-btn-light:hover{background:#E8EFFF}
+@media (max-width:1000px){.p-faq{padding:80px 0}.p-faq-grid{grid-template-columns:1fr;gap:36px}}
+@media (max-width:640px){.p-cmp-row>span{padding:14px 14px;font-size:.92rem}}
+.p-svc2{position:relative;padding:128px 0;background:var(--ink);color:#fff;overflow:hidden;isolation:isolate}
+.p-svc2::before{content:"";position:absolute;inset:-30% -10% auto auto;width:60vw;height:60vw;max-width:820px;max-height:820px;border-radius:50%;background:radial-gradient(closest-side,rgba(22,86,224,.45),transparent);z-index:-1}
+.p-svc2-head{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:64px;align-items:end;margin-bottom:64px}
+.p-svc2-k{display:inline-flex;align-items:center;gap:10px;margin:0 0 22px;font-size:.82rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8FB0FF}
+.p-svc2-k::before{content:"";width:28px;height:2px;background:#8FB0FF;border-radius:2px}
+.p-svc2-h{font-family:var(--sans);font-weight:800;font-size:clamp(2.2rem,4.6vw,4rem);line-height:1.04;letter-spacing:-.035em;margin:0;color:#fff}
+.p-svc2-h em{font-style:normal;background:linear-gradient(90deg,#6E9BFF,#4FD1B8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.p-svc2-side{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+.p-svc2-side p{margin:0;color:#B9C4D6;line-height:1.65;font-size:1.08rem}
+.p-textlink-light{color:#fff;border-color:rgba(255,255,255,.5)}.p-textlink-light:hover{color:#8FB0FF;border-color:#8FB0FF}
+.p-sc-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
+.p-sc{grid-column:span 2;--c:#6E9BFF;--cs:rgba(110,155,255,.14);position:relative;border-radius:22px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);transition:transform .3s,background .3s,border-color .3s}
+.p-sc-wide{grid-column:span 3}
+.p-sc-blue{--c:#6E9BFF;--cs:rgba(110,155,255,.16)}.p-sc-teal{--c:#3FD0B4;--cs:rgba(63,208,180,.15)}.p-sc-amber{--c:#FFB547;--cs:rgba(255,181,71,.15)}.p-sc-violet{--c:#A68BFF;--cs:rgba(166,139,255,.16)}.p-sc-coral{--c:#FF8572;--cs:rgba(255,133,114,.15)}.p-sc-sky{--c:#5CC8FF;--cs:rgba(92,200,255,.15)}
+.p-sc::after{content:"";position:absolute;left:28px;right:28px;top:0;height:3px;border-radius:0 0 3px 3px;background:var(--c);opacity:.9}
+.p-sc:hover{transform:translateY(-4px);background:rgba(255,255,255,.07);border-color:color-mix(in srgb,var(--c) 45%,transparent)}
+.p-sc-link,li.p-sc:not(:has(.p-sc-link)){display:flex;flex-direction:column;gap:14px;padding:34px 30px 30px;color:inherit;text-decoration:none;height:100%;box-sizing:border-box}
+.p-sc-link{border-radius:22px}
+.p-sc-ic{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:var(--cs);color:var(--c);margin-bottom:8px}
+.p-sc-ic svg{width:26px;height:26px}
+.p-sc-t{font-family:var(--sans);font-weight:700;font-size:1.4rem;letter-spacing:-.015em;line-height:1.2;margin:0;color:#fff}
+.p-sc-p{margin:0;color:#B9C4D6;line-height:1.6;font-size:1rem}
+.p-sc-go{margin-top:auto;padding-top:10px;display:inline-flex;align-items:center;gap:8px;color:var(--c);font-weight:600;font-size:.97rem}
+.p-sc-go .p-arr,.p-sc-chip .p-arr{width:18px;height:18px;transition:transform .25s}
+.p-sc-link:hover .p-sc-go .p-arr,.p-sc-chip:hover .p-arr{transform:translateX(4px)}
+.p-sc-links{margin-top:auto;padding-top:10px;display:flex;flex-wrap:wrap;gap:10px}
+.p-sc-chip{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--cs);color:var(--c);font-weight:600;font-size:.95rem;text-decoration:none;transition:background .2s,color .2s}
+.p-sc-chip:hover{background:var(--c);color:var(--ink)}
+.p-sc a:focus-visible{outline:3px solid #8FB0FF;outline-offset:3px}
+@media (max-width:1000px){.p-svc2{padding:80px 0}.p-svc2-head{grid-template-columns:1fr;gap:24px;margin-bottom:44px}.p-sc-grid{grid-template-columns:1fr 1fr}.p-sc,.p-sc-wide{grid-column:span 1}}
+@media (max-width:640px){.p-sc-grid{grid-template-columns:1fr;gap:14px}.p-sc,.p-sc-wide{grid-column:auto}.p-sc-link,li.p-sc:not(:has(.p-sc-link)){padding:28px 24px 24px}}
+@media (prefers-reduced-motion:reduce){.p-sc,.p-sc-go .p-arr{transition:none}.p-sc:hover{transform:none}}
+</style>
 <script>(function(){try{var s=JSON.parse(localStorage.getItem('sorted_a11y')||'{}'),h=document.documentElement;Object.keys(s).forEach(function(k){if(k==='size'){if(s.size)h.setAttribute('data-ax-size',s.size)}else if(s[k])h.classList.add('ax-'+k)})}catch(e){}})();</script>
-</head>
+<style>.p-photo-ap{display:none!important}.p-ap-grid{grid-template-columns:1fr!important;max-width:860px}</style></head>
 <body>
 <a class="skip" href="#main" data-i18n="skip">דלג לתוכן הראשי</a>
 
@@ -438,7 +603,7 @@ html[dir="rtl"] .imm-btn .arr{transform:scaleX(-1)}
       <a href="index.html" class="m-link on" data-i18n="m_home">ראשי</a>
       <div class="m-drop" id="m-drop">
         <button type="button" class="m-link m-drop-btn" aria-haspopup="true" aria-expanded="false"><span data-i18n="m_services">שירותים</span><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="m-drop-panel"><a href="service-formation.html" class=""><span data-i18n="sv1">הקמת עסק</span></a><a href="service-financial.html" class=""><span data-i18n="sv2">הנהלת חשבונות ושכר</span></a><a href="service-team.html" class=""><span data-i18n="sv3">פרודוקטיביות עובדים ובקרת איכות</span></a><a href="service-google.html" class=""><span data-i18n="sv4">Google Guarantee</span></a><a href="service-assistant.html" class=""><span data-i18n="sv6">עוזרת וירטואלית</span></a><a href="service-reviews.html" class=""><span data-i18n="sv8">ניהול ביקורות לקוחות</span></a><a href="service-immigration.html" class=""><span data-i18n="sv7">ניירת הגירה</span></a></div>
+        <div class="m-drop-panel"><a href="service-formation.html" class=""><span data-i18n="sv1">LLC & Company Formation</span></a><a href="service-financial.html" class=""><span data-i18n="sv2">Bookkeeping, Payroll & QuickBooks</span></a><a href="service-assistant.html" class=""><span data-i18n="sv6">Virtual Assistance</span></a><a href="service-team.html" class=""><span data-i18n="sv3">Team Training & Performance</span></a><a href="service-google.html" class=""><span data-i18n="sv4">Google Ads & Advertising</span></a><a href="service-immigration.html" class=""><span data-i18n="sv7">Government Applications</span></a></div>
       </div>
       <a href="pricing.html" class="m-link" data-i18n="m_pricing">מחירים</a>
       <a href="about.html" class="m-link" data-i18n="m_about">אודות</a>
@@ -457,231 +622,92 @@ html[dir="rtl"] .imm-btn .arr{transform:scaleX(-1)}
   </div>
 </nav>
 
-<main id="main" tabindex="-1">
-
-<section class="hero hero-split"><div class="wrap hero-grid">
-  <div class="hero-copy">
-    <div class="hero-eyebrow" data-i18n="hero_label">תפסיקו להתעסק בניירת. תתחילו לנהל עסק</div>
-    <h1 data-i18n="hero_h1">העסק שלכם בארה״ב, מסודר</h1>
-    <p class="hero-sub" data-i18n="hero_sub">אתם מנהלים את העסק. הצוות שלנו מנהל את כל מה שמאחוריו, הכול במקום אחד, מהקמה, כספים ועובדים ועד הניירת השוטפת, בליווי אישי לאורך כל הדרך.</p>
-    <div class="hero-actions">
-    <a class="btn btn-primary" href="https://wa.me/13478065604" target="_blank" rel="noopener">
-      <svg aria-hidden="true" focusable="false" class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      <span data-i18n="hero_btn1">בואו נתחיל</span>
-    </a>
-    <a class="btn btn-ghost" href="#services" data-i18n="hero_btn2">גלו את השירותים</a>
-  </div>
-    <ul class="trust"><li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="trust1"><bdi dir="ltr">25+</bdi> שנות ניסיון</span></li><li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="trust2">עברית ואנגלית</span></li><li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="trust3">עוזרים לעסקים מאז 2008</span></li></ul>
-  </div>
-  <div class="hero-visual" aria-hidden="true">
-    <div class="hv-card">
-      <div class="hv-head">
-        <div class="hv-logo">S</div>
-        <div class="hv-t"><b data-i18n="hv_title">העסק שלכם</b><span data-i18n="hv_sub">צ׳קליסט הקמה</span></div>
-        <span class="hv-badge" data-i18n="hv_badge">בתהליך</span>
-      </div>
-      <div class="hv-bar"><span></span></div>
-      <div class="hv-pct" data-i18n="hv_pct">3 מתוך 5 הושלמו</div>
-      <div class="hv-rows"><div class="hv-row done" style="--d:0.53s"><span class="hv-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="hv-lbl" data-i18n="hv_r1">הקמת LLC</span><span class="hv-st" data-i18n="hv_done">הושלם</span></div><div class="hv-row done" style="--d:0.71s"><span class="hv-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="hv-lbl" data-i18n="hv_r2">מספר EIN</span><span class="hv-st" data-i18n="hv_done">הושלם</span></div><div class="hv-row done" style="--d:0.89s"><span class="hv-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="hv-lbl" data-i18n="hv_r3">הסכם הפעלה</span><span class="hv-st" data-i18n="hv_done">הושלם</span></div><div class="hv-row prog" style="--d:1.07s"><span class="hv-ic"><span class="spin"></span></span><span class="hv-lbl" data-i18n="hv_r4">חשבון בנק עסקי</span><span class="hv-st" data-i18n="hv_prog">בתהליך</span></div><div class="hv-row next" style="--d:1.25s"><span class="hv-ic"></span><span class="hv-lbl" data-i18n="hv_r5">הקמת QuickBooks</span><span class="hv-st" data-i18n="hv_next">הבא בתור</span></div></div>
+<main id="main" tabindex="-1" class="pr">
+<section class="p-hero"><div class="p-wrap p-hero-grid">
+  <div class="p-hero-copy">
+    <p class="p-kicker" data-i18n="p_kicker">Business support for U.S. companies</p>
+    <h1 class="p-h1" data-i18n="p_h1"><span>Your U.S. business.</span><span>Handled.</span></h1>
+    <p class="p-lead" data-i18n="p_sub">From forming your company to bookkeeping, payroll, Google Ads and daily admin, one dedicated team runs the back office so you can run your business.</p>
+    <div class="p-actions">
+      <a class="p-btn" href="https://wa.me/13478065604?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%2030-minute%20consultation." target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="p_cta">Book a Free 30-Minute Consultation</span></a>
+      <a class="p-textlink" href="tel:+13478065604" data-i18n="p_call">Or call 347-806-5604</a>
     </div>
+    <p class="p-note" data-i18n="p_note">No cost, no obligation. English, Hebrew & Spanish.</p>
+  </div>
+  <figure class="p-hero-fig">
+    <div class="p-photo p-photo-hero" style="--img:url('images/home-hero.jpg')" role="img" aria-label="Business owner working at a laptop in a bright home office"></div>
+    <figcaption data-i18n="p_cap">One dedicated point of contact, from your first call onward.</figcaption>
+  </figure>
+</div></section>
+
+<section class="p-statement"><div class="p-wrap">
+  <p class="p-statement-t" data-i18n="p_statement">Since 2008, we have supported business owners in all 50 states, bringing more than 25 years of U.S. business experience to every client we work with.</p>
+</div></section>
+
+<section class="p-svc2" id="services"><div class="p-wrap">
+  <div class="p-svc2-head">
+    <div>
+      <p class="p-svc2-k" data-i18n="p_svc_k">What We Do</p>
+      <h2 class="p-svc2-h" data-i18n="p_svc_h">The Support You Need.<br><em>Without the Overhead</em></h2>
+    </div>
+    <div class="p-svc2-side">
+      <p data-i18n="p_svc_p">We give business owners structure, support, and peace of mind, with hands-on help that keeps the administrative side of your business sorted and running smoothly.</p>
+      <a class="p-textlink p-textlink-light" href="pricing.html"><span data-i18n="p_pricing">See pricing</span><svg class="p-arr" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+  <ul class="p-sc-grid">
+    <li class="p-sc p-sc-blue"><a class="p-sc-link" href="service-formation.html"><span class="p-sc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/><path d="M4 21h16"/></svg></span><h3 class="p-sc-t" data-i18n="p_s1">LLC & Company Formation</h3><p class="p-sc-p" data-i18n="p_s1p">We set up your US business the right way from day one, handling the paperwork and building a foundation that fits you.</p><span class="p-sc-go"><span data-i18n="p_more">Learn more</span><svg class="p-arr" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+    <li class="p-sc p-sc-teal"><a class="p-sc-link" href="service-financial.html"><span class="p-sc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg></span><h3 class="p-sc-t" data-i18n="p_s2">Bookkeeping, Payroll & QuickBooks</h3><p class="p-sc-p" data-i18n="p_s2p">Choose the financial and administrative support you need, from QuickBooks to payroll to reporting, so your books are accurate and your team is paid on time.</p><span class="p-sc-go"><span data-i18n="p_more">Learn more</span><svg class="p-arr" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+    <li class="p-sc p-sc-violet"><a class="p-sc-link" href="service-assistant.html"><span class="p-sc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18.5 14.8c1.6.9 2.6 2.7 3 5.2"/></svg></span><h3 class="p-sc-t" data-i18n="p_s3">Virtual Assistance</h3><p class="p-sc-p" data-i18n="p_s3p">A dedicated executive assistant, personally matched to your business, who handles your admin, invoices, scheduling, and more, for only the hours you need.</p><span class="p-sc-go"><span data-i18n="p_more">Learn more</span><svg class="p-arr" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+    <li class="p-sc p-sc-sky"><a class="p-sc-link" href="service-team.html"><span class="p-sc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><h3 class="p-sc-t" data-i18n="p_s6">Team Training & Performance</h3><p class="p-sc-p" data-i18n="p_s6p">Call scripts and practical training that help your team handle customer calls professionally, plus systems to track attendance and performance, on site or remote.</p><span class="p-sc-go"><span data-i18n="p_more">Learn more</span><svg class="p-arr" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+    <li class="p-sc p-sc-coral"><a class="p-sc-link" href="service-google.html"><span class="p-sc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span><h3 class="p-sc-t" data-i18n="p_s4">Google Ads & Advertising</h3><p class="p-sc-p" data-i18n="p_s4p">Google Ads campaigns, Google Guaranteed setup and review management that help more local customers find you and choose you.</p><span class="p-sc-go"><span data-i18n="p_more">Learn more</span><svg class="p-arr" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+    <li class="p-sc p-sc-amber"><a class="p-sc-link" href="service-immigration.html"><span class="p-sc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13l2 2 4-4"/></svg></span><h3 class="p-sc-t" data-i18n="p_s5">Government Applications</h3><p class="p-sc-p" data-i18n="p_s5p">We prepare your forms and documents for tourist visa extensions, citizenship, the Green Card Lottery, and US passports, explained in plain language.</p><span class="p-sc-go"><span data-i18n="p_more">Learn more</span><svg class="p-arr" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+  </ul>
+</div></section>
+
+<section class="p-approach"><div class="p-wrap p-ap-grid">
+  <div class="p-photo p-photo-ap" style="--img:url('images/home-consultation.jpg')" role="img" aria-label="Consultation with a client"><span class="p-ph" data-i18n="p_ph2">Photo: consultation with a client</span></div>
+  <div class="p-ap-copy">
+    <h2 class="p-h2" data-i18n="p_ap_h">Your Back Office, Without the Hiring</h2>
+    <p class="p-lead" data-i18n="p_ap_p">Think of us as the team behind your business. We handle the work an office employee would, so you get dependable help without salaries, training or full-time costs.</p>
+    <div class="p-why">
+      <p class="p-why-h" data-i18n="p_why_h">Why Work With Sorted</p>
+      <ul>
+        <li><span class="p-why-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span data-i18n="p_v1t">One dedicated contact who knows your business</span></li>
+        <li><span class="p-why-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span data-i18n="p_v2t">Formation, books, payroll, admin and Google in one place</span></li>
+        <li><span class="p-why-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span data-i18n="p_v3t">Personal support in English, Hebrew or Spanish</span></li>
+        <li><span class="p-why-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span data-i18n="p_v4t">You know the scope and the price before work begins</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="p-faq"><div class="p-wrap">
+  <div class="p-faq-head"><h2 class="p-h2" data-i18n="p_faq_h">Questions owners ask before starting</h2><a class="p-textlink" href="faq.html"><span data-i18n="p_faq_all">Read all questions</span><svg class="p-arr" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  <div class="p-faq-grid">
+    <div class="p-qa"><h3 class="p-q" data-i18n="p_q1">Do you provide legal or tax advice?</h3><p data-i18n="p_a1">No. We provide administrative and business support, such as filings, setup, organization and ongoing back-office work. When something needs a legal or tax opinion, we'll tell you and recommend speaking with an attorney or a tax professional.</p></div>
+    <div class="p-qa"><h3 class="p-q" data-i18n="p_q2">Do I need to live in the U.S. to open a business there?</h3><p data-i18n="p_a2">Not necessarily. Many owners form a U.S. LLC while living abroad. We'll walk you through what applies to your situation.</p></div>
+    <div class="p-qa"><h3 class="p-q" data-i18n="p_q3">Are state fees included in your prices?</h3><p data-i18n="p_a3">Our prices are for our service. Government and state filing fees are separate, and we'll tell you the exact costs in advance, before anything is filed.</p></div>
+    <div class="p-qa"><h3 class="p-q" data-i18n="p_q4">How long does it take?</h3><p data-i18n="p_a4">Typically up to two weeks depending on the state, with faster expedited options available for an additional fee.</p></div>
   </div>
 </div></section>
 
-<section class="support"><div class="wrap support-grid fu">
-  <div class="support-copy">
-    <span class="label" data-i18n="sup_label">מה אנחנו עושים</span>
-    <h2 data-i18n="sup_h">התמיכה שאתם צריכים. בלי כאב הראש</h2>
-    <p data-i18n="sup_p1">ניהול עסק בארה״ב דורש התמודדות עם משימות רבות במקביל, מההקמה הנכונה ועד ניהול הכספים, השכר והצוות.</p><p data-i18n="sup_p2">אנחנו נותנים לבעלי עסקים תכנית מובנית אישית, תמיכה, ושקט נפשי, עם ליווי צמוד שישמור על הצד המנהלי של העסק שלכם מסודר ורץ חלק.</p>
-    <a class="svc-link" href="about.html"><span data-i18n="sup_more">הכירו אותנו</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<section class="p-call"><div class="p-wrap p-call-grid">
+  <div>
+    <h2 class="p-h2" data-i18n="p_call_h">Start with a free 30-minute call</h2>
+    <p class="p-lead" data-i18n="p_call_p">A relaxed conversation about your business. You leave with a clear next step.</p>
+    <a class="p-btn p-btn-light" href="https://wa.me/13478065604?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%2030-minute%20consultation." target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="p_call_btn">Book Your Free Call</span></a>
   </div>
-  <div class="stats"><div class="stat hl"><b data-i18n="st1_n">25+</b><span data-i18n="st1_l">שנות ניסיון עסקי בארה״ב</span></div><div class="stat"><b data-i18n="st2_n">50</b><span data-i18n="st2_l">עוזרים ללקוחות בכל מדינות ארה״ב</span></div><div class="stat"><b data-i18n="st3_n">2008</b><span data-i18n="st3_l">עוזרים לעסקים לצמוח מאז</span></div><div class="stat"><b data-i18n="st4_n">1:1</b><span data-i18n="st4_l">ליווי אישי, בעברית או באנגלית</span></div></div>
-</div></section>
-
-<section class="services" id="services"><div class="wrap">
-  <div class="sec-head fu">
-    <span class="label" data-i18n="svc_label">השירותים שלנו</span>
-    <h2 data-i18n="svc_h">כל מה שהעסק שלכם צריך, תחת קורת גג אחת</h2>
-  </div>
-  <div class="svc-stack sg fu">
-
-    <div class="svc-card">
-      <div class="svc-top">
-        <span class="svc-num">01</span>
-        <div class="svc-titles">
-          <div class="svc-eyebrow" data-i18n="s1_eyebrow">הקמת עסק</div>
-          <div class="svc-h" data-i18n="s1_h">מתחילים את העסק נכון</div>
-          <p class="svc-desc" data-i18n="s1_desc">אנחנו מקימים את העסק שלכם בארה״ב נכון מהיום הראשון, מטפלים בניירת ובונים בסיס שמתאים לכם.</p>
-        </div>
-      </div>
-      <details class="svc-more"><summary><span data-i18n="inc_toggle">איך אנחנו עוזרים</span><span class="cnt">7</span><svg aria-hidden="true" focusable="false" class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l1">הקמת עסק (LLC, S Corp, או C Corp)</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l5">סוכן רשום (Registered Agent)</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l2">מספר EIN (תעודת זהות פדרלית)</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l3">הסכם הפעלה (Operating Agreement)</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l6">רישום DBA</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l4">הכוונה לרישיון עסק</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s1_l7">חבילת מסמכים עסקית מאורגנת</span></li>
-      </ul></details>
-      <a class="svc-link" href="service-formation.html"><span data-i18n="s1_link">גלו עוד על הקמת עסק</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
-
-    <div class="svc-card">
-      <div class="svc-top">
-        <span class="svc-num">02</span>
-        <div class="svc-titles">
-          <div class="svc-eyebrow" data-i18n="s2_eyebrow">הנהלת חשבונות ושכר</div>
-          <div class="svc-h" data-i18n="s2_h">חשבונות מדויקים. שכר מסודר</div>
-          <p class="svc-desc" data-i18n="s2_desc">בחרו את התמיכה הפיננסית והמנהלית שאתם צריכים, מ-QuickBooks ועד שכר ודוחות, כדי שתמיד תדעו איפה העסק שלכם עומד.</p>
-        </div>
-      </div>
-      <details class="svc-more"><summary><span data-i18n="inc_toggle">איך אנחנו עוזרים</span><span class="cnt">5</span><svg aria-hidden="true" focusable="false" class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l1">הנהלת חשבונות ספקים ולקוחות (AP/AR)</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l2">הקמה וניהול QuickBooks</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l3">שירותי שכר</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l4">ניהול תשלומים לקבלני משנה (1099)</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s2_l5">דוחות כספיים</span></li>
-      </ul></details>
-      <a class="svc-link" href="service-financial.html"><span data-i18n="s2_link">גלו עוד על הנהלת חשבונות ושכר</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
-
-    <div class="svc-card">
-      <div class="svc-top">
-        <span class="svc-num">03</span>
-        <div class="svc-titles">
-          <div class="svc-eyebrow" data-i18n="s3_eyebrow">פרודוקטיביות עובדים ובקרת איכות</div>
-          <div class="svc-h" data-i18n="s3_h">צוות שעובד. איכות שאפשר לסמוך עליה</div>
-          <p class="svc-desc" data-i18n="s3_desc">אנחנו מקימים מערכות למעקב אחרי הצוות שלכם, במקום או מרחוק, ומכשירים אותו לעבוד במקצועיות, כדי שתהיה לכם תמונה ברורה של הביצועים וצוות שמייצג את העסק שלכם בביטחון.</p>
-        </div>
-      </div>
-      <details class="svc-more"><summary><span data-i18n="inc_toggle">איך אנחנו עוזרים</span><span class="cnt">4</span><svg aria-hidden="true" focusable="false" class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_t1">הקמת מערכת לניהול צוות</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_t2">מדריכי עובדים וקליטת עובדים</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_t3">תסריטי שיחה והדרכת תקשורת</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s3_t4">מעקב נוכחות, פעילות וביצועים</span></li>
-      </ul></details>
-      <a class="svc-link" href="service-team.html"><span data-i18n="s3_link">גלו עוד על פרודוקטיביות ובקרת איכות</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
-
-    <div class="svc-card">
-      <div class="svc-top">
-        <span class="svc-num">04</span>
-        <div class="svc-titles">
-          <div class="svc-eyebrow" data-i18n="s4_eyebrow">ייעוץ וניהול Google Guarantee</div>
-          <div class="svc-h" data-i18n="s4_h">זכאים. מורשים. מאומתים</div>
-          <p class="svc-desc" data-i18n="s4_desc">אנחנו מלווים אתכם בכל דרישה לתג Google Verified, מרישיונות וביטוח ועד ערעורים, כדי שתקבלו אימות ולידים איכותיים.</p>
-        </div>
-      </div>
-      <details class="svc-more"><summary><span data-i18n="inc_toggle">איך אנחנו עוזרים</span><span class="cnt">6</span><svg aria-hidden="true" focusable="false" class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l1">בדיקת זכאות (מודל העסק וסטטוס פרופיל עסקי בגוגל)</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l2">דרישות רישיון עסק והכוונה בהגשה</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l3">הסדרת ביטוח עסקי ואימות כיסוי</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l4">הכנה לבדיקת רקע (בעלים ועובדי שטח)</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l5">התאמת מסמכים בין כל ההגשות</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s4_l6">הגשת בקשה, מעקב וערעורים</span></li>
-      </ul></details>
-      <a class="svc-link" href="service-google.html"><span data-i18n="s4_link">גלו עוד על Google Guarantee</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
-
-    <div class="svc-card">
-      <div class="svc-top">
-        <span class="svc-num">05</span>
-        <div class="svc-titles">
-          <div class="svc-eyebrow" data-i18n="s6_eyebrow">עוזרת וירטואלית</div>
-          <div class="svc-h" data-i18n="s6_h">העזרה שאתם צריכים, בלי העלות של משרה מלאה</div>
-          <p class="svc-desc" data-i18n="s6_desc">עוזרת אישית בכירה וייעודית, שמותאמת אישית לעסק שלכם, ומטפלת במנהלה, בחשבוניות, בתיאומים ועוד, רק לשעות שאתם צריכים.</p>
-        </div>
-      </div>
-      <details class="svc-more"><summary><span data-i18n="inc_toggle">איך אנחנו עוזרים</span><span class="cnt">8</span><svg aria-hidden="true" focusable="false" class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s6_t1">עוזרת אמיתית ומנוסה</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s6_t2">שעות גמישות</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s6_t3">יומן, תיאומים ותקשורת</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s6_t4">חשבוניות ומעקב תשלומים</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s6_t5">ניהול רישומים ומסמכים</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s6_t6">תיאום צוות</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s6_t7">גם משימות אישיות</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s6_t8">צריכים משהו אחר? פשוט תשאלו</span></li>
-      </ul></details>
-      <a class="svc-link" href="service-assistant.html"><span data-i18n="s6_link">גלו עוד על עוזרת וירטואלית</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
-
-    <div class="svc-card">
-      <div class="svc-top">
-        <span class="svc-num">06</span>
-        <div class="svc-titles">
-          <div class="svc-eyebrow" data-i18n="s8_eyebrow">ניהול ביקורות לקוחות</div>
-          <div class="svc-h" data-i18n="s8_h">המוניטין שלכם, מנוהל ומוגן</div>
-          <p class="svc-desc" data-i18n="s8_desc">אנחנו עוקבים אחרי הביקורות שלכם בגוגל, ב-Yelp ובפלטפורמות נוספות, מקימים מערכת שעונה אוטומטית על כל ביקורת ומדווחים על ביקורות מזויפות או פוגעניות להסרה, כדי שהמוניטין שלכם ברשת יעבוד לטובתכם.</p>
-        </div>
-      </div>
-      <details class="svc-more"><summary><span data-i18n="inc_toggle">איך אנחנו עוזרים</span><span class="cnt">2</span><svg aria-hidden="true" focusable="false" class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="svc-list">
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s8_t1">מעקב ומענה אוטומטי לביקורות</span></li>
-        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="s8_t2">טיפול בביקורות מזויפות ושליליות</span></li>
-      </ul></details>
-      <a class="svc-link" href="service-reviews.html"><span data-i18n="s8_link">גלו עוד על ניהול ביקורות לקוחות</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
-
-    <div class="svc-card why-svc imm-box">
-      <span class="wy-label" data-i18n="imm_label">שירותי הגירה</span>
-      <div class="svc-h" data-i18n="imm_h">ניירת הגירה, מוכנה בדיוק מרבי</div>
-      <ul class="wy-list"><li><span class="wy-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="imm-it"><span data-i18n="s7_t1">הארכת ויזת תייר B-2</span></span></li><li><span class="wy-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="imm-it"><span data-i18n="s7_t2">בקשת אזרחות (התאזרחות)</span></span></li><li><span class="wy-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="imm-it"><span data-i18n="s7_t3">הגרלת הגרין קארד (DV Lottery)</span></span></li><li><span class="wy-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="imm-it"><span data-i18n="s7_t4">בקשה וחידוש דרכון אמריקאי</span></span></li></ul>
-      <p class="wy-p" data-i18n="imm_p">הצוות שלנו מכין את הטפסים, מארגן את המסמכים התומכים ועוקב אחר מועדים חשובים, כדי לסייע לבקשה שלכם להתקדם ללא עיכובים מיותרים.</p>
-      <a class="btn btn-primary wy-btn imm-btn" href="service-immigration.html"><span data-i18n="imm_btn">לכל שירותי ההגירה</span><svg aria-hidden="true" focusable="false" class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
-
+  <div class="p-cover">
+    <h3 class="p-cover-h" data-i18n="p_st_h">How getting started works</h3>
+    <ol>
+      <li><div><b data-i18n="p_st1">Free 30-minute call</b><span data-i18n="p_st1p">We learn where your business stands and what you need.</span></div></li>
+      <li><div><b data-i18n="p_st2">A clear plan and price</b><span data-i18n="p_st2p">You know the scope and the cost before any work begins.</span></div></li>
+      <li><div><b data-i18n="p_st3">We take it from there</b><span data-i18n="p_st3p">Your dedicated contact handles the work and keeps you updated.</span></div></li>
+    </ol>
   </div>
 </div></section>
-
-<section class="why"><div class="wrap">
-  <div class="sec-head fu">
-    <span class="label" data-i18n="why_label">למה לעבוד איתנו</span>
-    <h2 data-i18n="why_h">ניסיון אמיתי. תמיכה מעשית. שקט נפשי מלא</h2>
-  </div>
-  <div class="why-grid sg fu">
-    <div class="why-card">
-      <div class="why-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
-      <h3 data-i18n="w1_t">+25 שנות ניסיון</h3>
-      <p data-i18n="w1_d">תפעול עסקי, מנהלה, פיננסים, כוח אדם, שכר, וניהול צוות.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
-      <h3 data-i18n="w2_t">תמיכה מעשית</h3>
-      <p data-i18n="w2_d">עובדים איתכם כדי להטמיע מערכות ותהליכים שבאמת מתאימים לעסק שלכם.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-ic"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v3"/></svg></div>
-      <h3 data-i18n="w3_t">מקום אחד לכמה צרכים</h3>
-      <p data-i18n="w3_d">מהקמה ועד עמידה שוטפת בדרישות, אנחנו עוזרים לשמור על העסק שלכם מסודר ומוכן להצלחה לטווח ארוך.</p>
-    </div>
-  </div>
-</div></section>
-
-<section class="how"><div class="wrap">
-  <div class="sec-head fu">
-    <span class="label" data-i18n="how_label">איך זה עובד</span>
-    <h2 data-i18n="how_h">פשוט מהתחלה ועד הסוף</h2>
-  </div>
-  <div class="step-row sg fu">
-    <div class="step-card"><div class="step-num">01</div><h3 data-i18n="step1_t">ספרו לנו מה אתם צריכים</h3><p data-i18n="step1_d">ספרו לנו מה אתם מנסים להשיג ואיפה אתם צריכים תמיכה, בין אם זה ייעוץ קצר או עבודה מעשית לאורך הדרך.</p></div>
-    <div class="step-card"><div class="step-num">02</div><h3 data-i18n="step2_t">אנחנו מטפלים בפרטים</h3><p data-i18n="step2_d">אנו מנהלים את העבודה המנהלית, ההקמה והמערכות שהעסק שלכם צריך, עם תמיכה שוטפת לאורך כל הדרך.</p></div>
-    <div class="step-card"><div class="step-num">03</div><h3 data-i18n="step3_t">אתם חוזרים לעסק</h3><p data-i18n="step3_d">עם המערכות והתמיכה הנכונות במקום, תוכלו להתמקד במה שאתם הכי טובים בו ולהצמיח את העסק שלכם.</p></div>
-  </div>
-  <div class="how-cta fu">
-    <a class="btn btn-primary" href="https://wa.me/13478065604" target="_blank" rel="noopener">
-      <svg aria-hidden="true" focusable="false" class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      <span data-i18n="how_cta">בואו נתחיל</span>
-    </a>
-  </div>
-</div></section>
-
-<section class="notsure"><div class="wrap fu">
-  <h2 data-i18n="ns_h">לא בטוחים מאיפה להתחיל?</h2>
-  <p data-i18n="ns_p">נכוון אתכם לכיוון הנכון ונעזור לעסק שלכם לבנות בסיס חזק ומאורגן לצמיחה. בואו נדאג שהעסק שלכם יהיה מסודר.</p>
-  <a class="btn btn-primary" href="https://wa.me/13478065604" target="_blank" rel="noopener">
-    <svg aria-hidden="true" focusable="false" class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    <span data-i18n="ns_btn">בואו נדבר</span>
-  </a>
-</div></section>
-
 </main>
 
 <footer>
@@ -692,7 +718,7 @@ html[dir="rtl"] .imm-btn .arr{transform:scaleX(-1)}
         <p class="f-tag" data-i18n="ft_tag">תמיכה אישית בצד העסקי והמנהלי של העסק שלכם בארה״ב, בעברית ובאנגלית.</p>
         <a class="f-wa" href="https://wa.me/13478065604" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="ft_wa">שלחו הודעה בוואטסאפ</span></a>
       </div>
-      <div class="f-col" role="navigation" aria-labelledby="ft-s"><h3 id="ft-s" data-i18n="ft_services">שירותים</h3><ul><li><a href="service-formation.html" data-i18n="sv1">הקמת עסק</a></li><li><a href="service-financial.html" data-i18n="sv2">הנהלת חשבונות ושכר</a></li><li><a href="service-team.html" data-i18n="sv3">פרודוקטיביות עובדים ובקרת איכות</a></li><li><a href="service-google.html" data-i18n="sv4">Google Guarantee</a></li><li><a href="service-assistant.html" data-i18n="sv6">עוזרת וירטואלית</a></li><li><a href="service-reviews.html" data-i18n="sv8">ניהול ביקורות לקוחות</a></li><li><a href="service-immigration.html" data-i18n="sv7">ניירת הגירה</a></li></ul></div>
+      <div class="f-col" role="navigation" aria-labelledby="ft-s"><h3 id="ft-s" data-i18n="ft_services">שירותים</h3><ul><li><a href="service-formation.html" data-i18n="sv1">LLC & Company Formation</a></li><li><a href="service-financial.html" data-i18n="sv2">Bookkeeping, Payroll & QuickBooks</a></li><li><a href="service-assistant.html" data-i18n="sv6">Virtual Assistance</a></li><li><a href="service-team.html" data-i18n="sv3">Team Training & Performance</a></li><li><a href="service-google.html" data-i18n="sv4">Google Ads & Advertising</a></li><li><a href="service-immigration.html" data-i18n="sv7">Government Applications</a></li></ul></div>
       <div class="f-col" role="navigation" aria-labelledby="ft-c"><h3 id="ft-c" data-i18n="ft_company">החברה</h3><ul><li><a href="index.html" data-i18n="f_home">ראשי</a></li><li><a href="pricing.html" data-i18n="f_pricing">מחירים</a></li><li><a href="about.html" data-i18n="f_about">אודות</a></li><li><a href="faq.html" data-i18n="f_faq">שאלות נפוצות</a></li><li><a href="contact.html" data-i18n="f_contact">צרו קשר</a></li><li><a href="privacy.html" data-i18n="f_privacy">מדיניות פרטיות</a></li><li><a href="terms.html" data-i18n="f_terms">תנאי שימוש</a></li><li><a href="accessibility.html" data-i18n="f_access">הצהרת נגישות</a></li></ul></div>
       <div class="f-col"><h3 data-i18n="ft_contact">צרו קשר</h3><ul class="f-contact">
         <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg><a href="tel:+13478065604" dir="ltr">347-806-5604</a></li>
@@ -901,7 +927,7 @@ Object.assign(t.he, {"sup_p1": "ניהול עסק בארה״ב דורש התמו
 Object.assign(t.he, {"sup_p2": "אנחנו מעניקים לבעלי עסקים תכנית מובנית אישית, תמיכה ושקט נפשי, עם ליווי צמוד שדואג שהצד המנהלי של העסק יתנהל ביעילות."});
 Object.assign(t.he, {"sup_p2": "אנחנו נותנים לבעלי עסקים תכנית מובנית אישית, תמיכה, ושקט נפשי, עם ליווי צמוד שישמור על הצד המנהלי של העסק שלכם מסודר ורץ חלק."});
 Object.assign(t.he, {"s2_note": "*התמחור החודשי משתנה בהתאם לשירותים הנבחרים ולצורכי העסק שלכם."}); Object.assign(t.en, {"s2_note": "*Monthly pricing varies based on the services selected and your business needs."});
-let lang = 'he';
+let lang = 'en';
 function applyLang(l){
   lang = l;
   const root = document.documentElement;
@@ -922,7 +948,7 @@ function applyLang(l){
 function switchLang(e){ if (e) e.stopPropagation(); const m = document.getElementById('lang-menu'); const b = document.getElementById('lang-btn'); m.hidden = !m.hidden; b.setAttribute('aria-expanded', String(!m.hidden)); }
 document.addEventListener('click', e => { const w = document.getElementById('lang-wrap'); if (w && !w.contains(e.target)) { document.getElementById('lang-menu').hidden = true; document.getElementById('lang-btn').setAttribute('aria-expanded','false'); } });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') { const m = document.getElementById('lang-menu'); if (m && !m.hidden) { m.hidden = true; document.getElementById('lang-btn').focus(); } } });
-(function(){ let s = null; try { s = localStorage.getItem('sorted_lang'); } catch(e){} if (s === 'en') applyLang('en'); else if (s === 'es') { t.es = Object.assign({}, t.en); applyLang('es'); } })();
+(function(){ let s = null; try { s = localStorage.getItem('sorted_lang'); } catch(e){} if (s === 'he') applyLang('he'); else if (s === 'en') applyLang('en'); else if (s === 'es') { t.es = Object.assign({}, t.en); applyLang('es'); } })();
 
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 10), {passive:true});
@@ -991,6 +1017,7 @@ Object.assign(t.he, {"s8_x1": "אנו עוקבים אחר ביקורות חדש�
 t.es = Object.assign({}, t.en, {"nav_wa": "WhatsApp", "hero_h1": "Lleve el lado administrativo de su negocio, mejor", "hero_label": "Deje el papeleo. Dedíquese a su negocio", "hero_sub": "Usted dirige el negocio. Nuestro equipo se encarga de todo lo que hay detrás, en un solo lugar, desde la constitución, las finanzas y el personal hasta el papeleo diario, con atención personalizada de principio a fin.", "hero_btn1": "Comenzar", "hero_btn2": "Ver servicios", "sup_h": "El apoyo que necesita. Sin los gastos fijos", "sup_p1": "Operar un negocio implica muchos frentes, desde constituirlo correctamente hasta administrar las finanzas, la nómina y a su equipo.", "sup_p2": "Brindamos a los dueños de negocios estructura, apoyo y tranquilidad, con ayuda práctica que mantiene en orden y funcionando sin contratiempos el lado administrativo de su negocio.", "svc_label": "Nuestros servicios", "svc_h": "Todo lo que su negocio necesita, en un solo lugar", "s1_eyebrow": "Constitución de empresas", "s1_h": "Inicie su negocio de la manera correcta", "s1_desc": "Constituimos su negocio en EE. UU. correctamente desde el primer día, nos encargamos del papeleo y construimos una base a su medida.", "s1_l1": "Constitución de empresa (LLC, S Corp o C Corp)", "s1_l2": "EIN (número de identificación fiscal federal)", "s1_l3": "Acuerdo operativo (Operating Agreement)", "s1_l4": "Orientación sobre licencias comerciales", "s1_l5": "Agente registrado (Registered Agent)", "s1_l6": "Registro de DBA (nombre comercial)", "s1_l7": "Paquete organizado de documentos de la empresa", "s1_link": "Ver constitución de empresas", "s1_price": "<span class=\"amt\">$150</span> <span class=\"fee\">+ cuotas estatales</span>", "s2_eyebrow": "Contabilidad y nómina", "s2_h": "Contabilidad precisa. Nómina confiable", "s2_desc": "Elija el apoyo financiero y administrativo que necesita, desde QuickBooks hasta nómina y reportes, para que su contabilidad sea precisa y su equipo reciba su pago a tiempo.", "s2_l1": "Cuentas por pagar y cuentas por cobrar", "s2_l2": "Configuración y gestión de QuickBooks", "s2_l3": "Servicios de nómina", "s2_l4": "Gestión de pagos a contratistas y formularios 1099", "s2_l5": "Reportes financieros", "s2_link": "Ver contabilidad y nómina", "s2_price": "Desde <span class=\"amt\">$99</span>/mes*", "s3_eyebrow": "Productividad del personal y control de calidad", "s3_h": "Productividad visible. Calidad confiable", "s3_desc": "Implementamos los sistemas para dar seguimiento a su equipo, presencial o remoto, y lo capacitamos para trabajar de forma profesional, para que tenga una visión clara del desempeño y un equipo que represente su negocio con confianza.", "s3_link": "Ver productividad y control de calidad", "s3_price": "Desde <span class=\"amt\">$300</span>", "s4_eyebrow": "Asesoría y gestión de Google Guarantee", "s4_h": "Elegible. Con licencia. Verificado", "s4_desc": "Le guiamos en cada requisito para obtener la insignia Google Verified, desde licencias y seguros hasta apelaciones, para que pueda verificarse y recibir clientes potenciales de calidad.", "s4_l1": "Revisión de elegibilidad (modelo de negocio y estado del perfil de Google Business)", "s4_l2": "Requisitos de licencia comercial y orientación para la solicitud", "s4_l3": "Contratación y verificación del seguro del negocio", "s4_l4": "Preparación para la verificación de antecedentes (dueño y personal de campo)", "s4_l5": "Coincidencia de datos en todos los trámites", "s4_l6": "Envío de la solicitud, seguimiento y apelaciones", "s4_link": "Ver servicios de Google Guarantee", "s4_price": "Desde <span class=\"amt\">$150</span>", "why_label": "Por qué trabajar con nosotros", "why_h": "Experiencia real. Apoyo práctico. Total tranquilidad", "w1_t": "Más de 25 años de experiencia", "w1_d": "Operaciones, administración, finanzas, recursos humanos, nómina y gestión de equipos.", "w2_t": "Apoyo práctico", "w2_d": "Trabajamos con usted para implementar sistemas y procesos que realmente se ajusten a su negocio.", "w3_t": "Un solo lugar para múltiples necesidades", "w3_d": "Desde la constitución hasta el cumplimiento continuo, ayudamos a que su negocio se mantenga en orden y preparado para el éxito a largo plazo.", "how_label": "Cómo funciona", "how_h": "Sencillo de principio a fin", "step1_t": "Cuéntenos qué necesita", "step1_d": "Díganos qué quiere lograr y dónde necesita apoyo, ya sea una consulta rápida o trabajo práctico.", "step2_t": "Nos encargamos de los detalles", "step2_d": "Gestionamos el trabajo administrativo, la configuración y los sistemas que su negocio necesita, con apoyo continuo en cada paso.", "step3_t": "Usted vuelve a su negocio", "step3_d": "Con los sistemas y el apoyo adecuados, puede enfocarse en lo que mejor hace y hacer crecer su negocio.", "how_cta": "Comenzar", "ns_h": "¿No sabe por dónde empezar?", "ns_p": "Le orientaremos en la dirección correcta y ayudaremos a su negocio a construir una base sólida y organizada para crecer. Pongamos su negocio en orden.", "ns_btn": "Iniciemos la conversación", "f_copy": "© 2026 Sorted · Ayudando a los negocios a crecer desde 2008", "disc_t": "Aviso:", "disc_p": "Brindamos servicios de apoyo administrativo y empresarial, y no ofrecemos asesoría legal ni fiscal. Para asuntos legales o fiscales, le recomendamos consultar a un abogado o a un profesional fiscal calificado.", "m_home": "Inicio", "m_services": "Servicios", "m_about": "Nosotros", "m_faq": "Preguntas frecuentes", "sv1": "Constitución de empresas", "sv2": "Contabilidad y nómina", "sv3": "Productividad y control de calidad", "sv4": "Google Guarantee", "f_about": "Nosotros", "f_faq": "Preguntas frecuentes", "doc_title": "Sorted | Su negocio en EE. UU. Resuelto.", "trust1": "Más de 25 años de experiencia", "trust2": "Español e inglés", "trust3": "Apoyando negocios desde 2008", "hv_title": "Su negocio", "hv_sub": "Lista de configuración", "hv_badge": "En proceso", "hv_pct": "3 de 5 completados", "hv_r1": "Constitución de la LLC", "hv_r2": "Número EIN", "hv_r3": "Acuerdo operativo (Operating Agreement)", "hv_r4": "Cuenta bancaria empresarial", "hv_r5": "Configuración de QuickBooks", "hv_done": "Listo", "hv_prog": "En proceso", "hv_next": "Siguiente", "hv_chip": "Cada documento organizado y explicado", "sup_label": "Lo que hacemos", "sup_more": "Conózcanos", "st1_n": "25+", "st1_l": "Años de experiencia empresarial en EE. UU.", "st2_n": "50", "st2_l": "Estados de EE. UU. atendidos", "st3_n": "2008", "st3_l": "Ayudando a los negocios a crecer desde", "st4_n": "1:1", "st4_l": "Atención personalizada en español o inglés", "inc_toggle": "Qué incluye", "f_privacy": "Aviso de privacidad", "f_terms": "Términos y condiciones", "skip": "Ir al contenido principal", "ax_title": "Accesibilidad", "ax_text": "Tamaño del texto", "ax_contrast": "Alto contraste", "ax_gray": "Escala de grises", "ax_links": "Resaltar enlaces", "ax_font": "Fuente legible", "ax_spacing": "Espaciado del texto", "ax_motion": "Detener animaciones", "ax_cursor": "Cursor grande", "ax_reset": "Restablecer ajustes", "ax_stmt": "Declaración de accesibilidad", "ax_hint": "Atajo de teclado: Alt+A", "f_access": "Accesibilidad", "ck_p": "Usamos el almacenamiento local del navegador (similar a las cookies) para recordar su idioma y sus preferencias de accesibilidad, y el sitio carga fuentes desde Google Fonts. Al hacer clic en “Aceptar”, usted está de acuerdo con esto.", "ck_more": "Aviso de privacidad", "ck_ok": "Aceptar", "sv6": "Asistente virtual", "s6_eyebrow": "Asistente virtual", "s6_h": "La ayuda que necesita, sin el costo de tiempo completo", "s6_desc": "Un asistente ejecutivo dedicado, asignado especialmente a su negocio, que se encarga de su administración, facturas, agenda y más, solo por las horas que necesite.", "s6_price": "<span class=\"amt\">Planes por hora</span> flexibles", "s6_link": "Ver asistente virtual", "sv7": "Trámites migratorios", "rv_label": "Lo que dicen nuestros clientes", "rv_h": "Negocios reales. Resultados reales", "rv1_q": "Iniciar un negocio en EE. UU. me parecía abrumador. Sorted hizo que todo el proceso fuera sencillo y ordenado, me explicó todo con claridad y me ahorró mucho tiempo y estrés.", "rv1_n": "Daniel R.", "rv1_s": "Constitución de empresas", "rv2_q": "Sorted me ayudó a poner todo en orden y a configurar correctamente QuickBooks. Ahora sí entiendo cómo van las finanzas de mi negocio.", "rv2_n": "Michael L.", "rv2_s": "Contabilidad y finanzas", "rv3_q": "Nunca me sentí como un cliente más. Cada vez que tenía una duda, alguien se tomaba el tiempo de explicarme, y contar con apoyo en hebreo y en inglés hizo todo más fácil.", "rv3_n": "Amit S.", "rv3_s": "Atención personalizada", "rv4_q": "Sorted nos ayudó a implementar sistemas adecuados para dar seguimiento a horas, actividad, capacitación y productividad. Ahora administrar al equipo es mucho más fácil.", "rv4_n": "Ronen K.", "rv4_s": "Gestión de equipos", "rv5_q": "Se encargaron de la contabilidad, las facturas, los pagos y todos esos pequeños detalles que se iban acumulando. Por fin tengo a alguien en quien puedo confiar tras bambalinas.", "rv5_n": "David M.", "rv5_s": "Contabilidad y nómina", "rv6_q": "Llevar al día nuestra contabilidad era un verdadero dolor de cabeza. Sorted organizó todo y ahora tengo una idea más clara de cómo va el negocio.", "rv6_n": "Lior T.", "rv6_s": "Contabilidad y finanzas", "ft_tag": "Apoyo personalizado para el lado administrativo y operativo de su negocio en EE. UU., en español e inglés.", "ft_services": "Servicios", "ft_company": "Empresa", "ft_contact": "Contacto", "ft_area": "Atendemos a clientes en todo EE. UU.", "ft_lang": "Español e inglés", "ft_wa": "Escríbanos por WhatsApp", "f_home": "Inicio", "s8_eyebrow": "Gestión de reseñas de clientes", "s8_h": "Su reputación, gestionada y protegida", "s8_desc": "Nuestro sistema de gestión de reseñas da seguimiento a los comentarios en Google, Yelp y otras plataformas, ayudando a que cada reseña reciba una respuesta oportuna y profesional. Las reseñas falsas u ofensivas se reportan para su eliminación y así proteger su reputación en línea.", "s8_price": "<span class=\"amt\">$250</span> / mes", "s8_link": "Ver gestión de reseñas", "s8_t1": "Monitoreo de reseñas y respuestas automáticas", "s8_t2": "Manejo de reseñas falsas y negativas", "imm_label": "Servicios migratorios", "imm_h": "Trámites migratorios, preparados con precisión", "imm_p": "Nuestro equipo prepara sus formularios, organiza sus documentos de respaldo y da seguimiento a los plazos clave, para ayudar a que su solicitud avance sin retrasos innecesarios.", "imm_btn": "Ver servicios migratorios", "s7_p1": "<span class=\"amt\">$250</span> + cuota gubernamental de trámite", "s7_p2": "<span class=\"amt\">$389</span> + cuota gubernamental de trámite", "s7_p3": "<span class=\"amt\">$75</span>", "s7_p4": "<span class=\"amt\">$75</span> + cuotas gubernamentales", "sv8": "Gestión de reseñas de clientes", "m_contact": "Contacto", "f_contact": "Contacto", "s2_note": "*El precio mensual varía según los servicios seleccionados y las necesidades de su negocio.", "s3_t1": "Implementación de sistema de gestión de equipos", "s3_t2": "Manuales del empleado e incorporación", "s3_t3": "Guiones de llamada y capacitación en comunicación", "s3_t4": "Seguimiento de asistencia, actividad y desempeño", "s6_t1": "Un asistente real y con experiencia", "s6_t2": "Horario flexible", "s6_t3": "Calendario, agenda y comunicación", "s6_t4": "Facturación y seguimiento de pagos", "s6_t5": "Gestión de registros y documentos", "s6_t6": "Coordinación del equipo", "s6_t7": "También tareas personales", "s6_t8": "¿Necesita algo más? Solo pregunte", "s7_t1": "Extensión de visa de turista B-2", "s7_t2": "Solicitud de ciudadanía (naturalización)", "s7_t3": "Solicitud para la Lotería de Visas (DV Lottery)", "s7_t4": "Solicitud y renovación de pasaporte estadounidense", "brand_tag": "Su negocio en EE. UU. Resuelto.", "nav_label": "Navegación principal", "ax_open": "Abrir el menú de accesibilidad (Alt+A)", "ax_close": "Cerrar el menú de accesibilidad", "ax_dec": "Texto más pequeño", "ax_inc": "Texto más grande", "ck_label": "Aviso de cookies", "ct_msg_title": "New inquiry from the website", "ct_msg_name": "Name", "ct_msg_phone": "Phone", "ct_msg_email": "Email", "ct_msg_service": "Service", "ct_msg_lang": "Preferred language"});
 if (lang === "es") applyLang("es");
 Object.assign(t.he, {"m_pricing": "מחירים", "f_pricing": "מחירים"}); Object.assign(t.en, {"m_pricing": "Pricing", "f_pricing": "Pricing"}); Object.assign(t.es, {"m_pricing": "Precios", "f_pricing": "Precios", "m_faq": "Preguntas"}); applyLang(lang);
+Object.assign(t.en, {"p_kicker": "Business support for U.S. companies", "p_h1": "<span>Your U.S. business.</span><span>Handled.</span>", "p_sub": "From forming your company to bookkeeping, payroll, Google Ads and daily admin, one dedicated team runs the back office so you can run your business.", "p_cta": "Book a Free 30-Minute Consultation", "p_call": "Or call 347-806-5604", "p_note": "No cost, no obligation. English, Hebrew & Spanish.", "p_cap": "One dedicated point of contact, from your first call onward.", "p_statement": "Since 2008, we have supported business owners in all 50 states, bringing more than 25 years of U.S. business experience to every client we work with.", "p_svc_k": "What We Do", "p_svc_h": "The Support You Need.<br><em>Without the Overhead</em>", "p_svc_p": "We give business owners structure, support, and peace of mind, with hands-on help that keeps the administrative side of your business sorted and running smoothly.", "p_pricing": "See pricing", "p_s1": "LLC & Company Formation", "p_s1p": "We set up your US business the right way from day one, handling the paperwork and building a foundation that fits you.", "p_s2": "Bookkeeping, Payroll & QuickBooks", "p_s2p": "Choose the financial and administrative support you need, from QuickBooks to payroll to reporting, so your books are accurate and your team is paid on time.", "p_s3": "Virtual Assistance", "p_s3p": "A dedicated executive assistant, personally matched to your business, who handles your admin, invoices, scheduling, and more, for only the hours you need.", "p_s6": "Team Training & Performance", "p_s6p": "Call scripts and practical training that help your team handle customer calls professionally, plus systems to track attendance and performance, on site or remote.", "p_s3a": "Virtual assistant", "p_s3b": "Team training", "p_s4": "Google Ads & Advertising", "p_s4p": "Google Ads campaigns, Google Guaranteed setup and review management that help more local customers find you and choose you.", "p_s4a": "Google Ads", "p_s4c": "Google Guaranteed", "p_s4b": "Reviews", "p_s5": "Government Applications", "p_s5p": "We prepare your forms and documents for tourist visa extensions, citizenship, the Green Card Lottery, and US passports, explained in plain language.", "p_more": "Learn more", "p_ap_h": "Your Back Office, Without the Hiring", "p_ap_p": "Think of us as the team behind your business. We handle the work an office employee would, so you get dependable help without salaries, training or full-time costs.", "p_v1": "Organized", "p_v1p": "Every document filed and easy to find.", "p_v2": "Clear", "p_v2p": "Plain explanations, without jargon.", "p_v3": "Dependable", "p_v3p": "Deadlines tracked and work delivered on time.", "p_call_h": "Start with a free 30-minute call", "p_call_p": "A relaxed conversation about your business. You leave with a clear next step.", "p_call_l": "What we cover", "p_c1": "Where your business stands today", "p_c2": "What's missing, overdue or worth improving", "p_c3": "A clear plan and a price for the work", "p_call_btn": "Book Your Free Call", "p_cmp_a": "High-volume services", "p_cmp_b": "Working with Sorted", "p_why_h": "Why Work With Sorted", "p_v1t": "One dedicated contact who knows your business", "p_v1d": "The same contact from your first call, who knows your history and your goals.", "p_v2t": "Formation, books, payroll, admin and Google in one place", "p_v2d": "Formation, books, payroll, admin and Google, handled by one team.", "p_v3t": "Personal support in English, Hebrew or Spanish", "p_v3d": "Personal support in English, Hebrew or Spanish.", "p_v4t": "You know the scope and the price before work begins", "p_v4d": "You know the scope and the price before work begins.", "p_r1a": "A new person every time you reach out", "p_r1b": "One dedicated contact who knows your business", "p_r2a": "A separate company for each need", "p_r2b": "Formation, books, payroll, admin and Google in one place", "p_r3a": "Support in English only", "p_r3b": "Personal support in English, Hebrew or Spanish", "p_r4a": "Fees and add-ons you discover later", "p_r4b": "You know the scope and the price before work begins", "p_faq_h": "Questions owners ask before starting", "p_faq_all": "Read all questions", "p_q1": "Do you provide legal or tax advice?", "p_a1": "No. We provide administrative and business support, such as filings, setup, organization and ongoing back-office work. When something needs a legal or tax opinion, we'll tell you and recommend speaking with an attorney or a tax professional.", "p_q2": "Do I need to live in the U.S. to open a business there?", "p_a2": "Not necessarily. Many owners form a U.S. LLC while living abroad. We'll walk you through what applies to your situation.", "p_q3": "Are state fees included in your prices?", "p_a3": "Our prices are for our service. Government and state filing fees are separate, and we'll tell you the exact costs in advance, before anything is filed.", "p_q4": "How long does it take?", "p_a4": "Typically up to two weeks depending on the state, with faster expedited options available for an additional fee.", "p_st_h": "How getting started works", "p_st1": "Free 30-minute call", "p_st1p": "We learn where your business stands and what you need.", "p_st2": "A clear plan and price", "p_st2p": "You know the scope and the cost before any work begins.", "p_st3": "We take it from there", "p_st3p": "Your dedicated contact handles the work and keeps you updated.", "p_ph1": "Photo: business owner at work, natural light", "p_ph2": "Photo: consultation with a client", "sv1": "LLC & Company Formation", "sv2": "Bookkeeping, Payroll & QuickBooks", "sv6": "Virtual Assistance", "sv3": "Team Training & Performance", "sv4": "Google Ads & Advertising", "sv7": "Government Applications"}); /*TR*/Object.assign(t.he,{"sv1": "הקמת LLC וחברות", "sv2": "הנהלת חשבונות, שכר ו־QuickBooks", "sv6": "עוזרת וירטואלית", "sv3": "הדרכת צוות וביצועים", "sv4": "Google Ads ופרסום", "sv7": "בקשות מול הממשל", "p_kicker": "ליווי עסקי לחברות בארה״ב", "p_h1": "<span>העסק שלכם בארה״ב.</span><span>מסודר.</span>", "p_sub": "מהקמת החברה ועד הנהלת חשבונות, שכר, Google Ads ואדמיניסטרציה שוטפת, צוות אחד ומסור מנהל את המשרד האחורי, כדי שאתם תוכלו לנהל את העסק.", "p_cta": "קבעו שיחת ייעוץ חינם של 30 דקות", "p_call": "או התקשרו 347-806-5604", "p_note": "ללא עלות וללא התחייבות. בעברית, באנגלית ובספרדית.", "p_cap": "איש קשר אחד וקבוע, כבר מהשיחה הראשונה.", "p_statement": "מאז 2008 אנחנו מלווים בעלי עסקים בכל 50 המדינות, ומביאים לכל לקוח יותר מ־25 שנות ניסיון עסקי בארה״ב.", "p_svc_k": "מה אנחנו עושים", "p_svc_h": "התמיכה שאתם צריכים.<br><em>בלי כאב הראש</em>", "p_svc_p": "אנחנו נותנים לבעלי עסקים תכנית מובנית אישית, תמיכה, ושקט נפשי, עם ליווי צמוד שישמור על הצד המנהלי של העסק שלכם מסודר ורץ חלק.", "p_pricing": "למחירים", "p_s1": "הקמת LLC וחברות", "p_s1p": "אנחנו מקימים את העסק שלכם בארה״ב נכון מהיום הראשון, מטפלים בניירת ובונים בסיס שמתאים לכם.", "p_more": "לפרטים נוספים", "p_s2": "הנהלת חשבונות, שכר ו־QuickBooks", "p_s2p": "בחרו את התמיכה הפיננסית והמנהלית שאתם צריכים, מ-QuickBooks ועד שכר ודוחות, כדי שתמיד תדעו איפה העסק שלכם עומד.", "p_s3": "עוזרת וירטואלית", "p_s3p": "עוזרת אישית בכירה וייעודית, שמותאמת אישית לעסק שלכם, ומטפלת במנהלה, בחשבוניות, בתיאומים ועוד, רק לשעות שאתם צריכים.", "p_s6": "הדרכת צוות וביצועים", "p_s6p": "תסריטי שיחה והדרכה מעשית שעוזרים לצוות שלכם לנהל שיחות עם לקוחות בצורה מקצועית, לצד מערכות למעקב אחר נוכחות וביצועים, במשרד או מרחוק.", "p_s4": "Google Ads ופרסום", "p_s4p": "קמפיינים ב־Google Ads, הקמת Google Guaranteed וניהול ביקורות, כדי שיותר לקוחות באזור שלכם ימצאו אתכם ויבחרו בכם.", "p_s5": "בקשות מול הממשל", "p_s5p": "אנחנו מכינים את הטפסים והמסמכים להארכת ויזת תייר, אזרחות, הגרלת הגרין קארד ודרכון אמריקאי, עם הסבר בשפה פשוטה.", "p_ph2": "תמונה: פגישה עם לקוח", "p_ap_h": "המשרד האחורי שלכם, בלי לגייס עובדים", "p_ap_p": "תחשבו עלינו כצוות שמאחורי העסק שלכם. אנחנו עושים את העבודה של עובד משרד, כך שאתם מקבלים עזרה אמינה בלי משכורות, הכשרות או עלויות של משרה מלאה.", "p_why_h": "למה לעבוד עם Sorted", "p_v1t": "איש קשר אחד וקבוע שמכיר את העסק שלכם", "p_v2t": "הקמה, הנהלת חשבונות, שכר, אדמיניסטרציה וגוגל במקום אחד", "p_v3t": "ליווי אישי בעברית, באנגלית או בספרדית", "p_v4t": "אתם יודעים מה כלול ומה המחיר לפני שמתחילים", "p_faq_h": "שאלות שבעלי עסקים שואלים לפני שמתחילים", "p_faq_all": "לכל השאלות", "p_q1": "אתם נותנים ייעוץ משפטי או ייעוץ מס?", "p_a1": "לא. אנחנו נותנים תמיכה מנהלית ועסקית, כמו הגשות, הקמה, סידור ועבודה שוטפת של משרד אחורי. כשמשהו דורש חוות דעת משפטית או מקצועית בענייני מס, נגיד לכם ונמליץ לפנות לעורך דין או ליועץ מס.", "p_q2": "צריך לגור בארה״ב כדי לפתוח שם עסק?", "p_a2": "לא בהכרח. בעלי עסקים רבים מקימים LLC בארה״ב בזמן שהם גרים בחו״ל. נסביר לכם מה רלוונטי למצב שלכם.", "p_q3": "האם אגרות המדינה כלולות במחיר?", "p_a3": "המחירים שלנו הם עבור השירות שלנו. אגרות ממשלתיות ואגרות מדינה משולמות בנפרד, ונגיד לכם מראש את העלות המדויקת, לפני שמגישים משהו.", "p_q4": "כמה זמן זה לוקח?", "p_a4": "בדרך כלל עד שבועיים, בהתאם למדינה, עם אפשרות לשירות מזורז בתוספת תשלום.", "p_call_h": "מתחילים בשיחה חינם של 30 דקות", "p_call_p": "שיחה נינוחה על העסק שלכם. בסופה תדעו בדיוק מה הצעד הבא.", "p_call_btn": "קבעו שיחה חינם", "p_st_h": "איך מתחילים", "p_st1": "שיחה חינם של 30 דקות", "p_st1p": "נבין איפה העסק שלכם עומד ומה אתם צריכים.", "p_st2": "תוכנית ומחיר ברורים", "p_st2p": "אתם יודעים מה כלול ומה העלות לפני שמתחילה עבודה כלשהי.", "p_st3": "ומשם אנחנו ממשיכים", "p_st3p": "איש הקשר שלכם מטפל בעבודה ומעדכן אתכם לאורך הדרך.", "f_home": "ראשי", "f_pricing": "מחירים", "f_about": "אודות", "f_faq": "שאלות נפוצות", "f_contact": "צרו קשר", "f_privacy": "מדיניות פרטיות", "f_terms": "תנאי שימוש", "f_access": "תפריט נגישות", "f_copy": "© 2026 מסודר · עוזרים לעסקים לצמוח מאז 2008", "doc_title": "הבירוקרטיה של העסק שלכם באמריקה, מסודרת"});Object.assign(t.es,{"sv1": "Constitución de LLC y empresas", "sv2": "Contabilidad, nómina y QuickBooks", "sv6": "Asistencia virtual", "sv3": "Capacitación y desempeño del equipo", "sv4": "Google Ads y publicidad", "sv7": "Trámites gubernamentales", "p_kicker": "Apoyo empresarial para negocios en EE. UU.", "p_h1": "<span>Su negocio en EE. UU.</span><span>Resuelto.</span>", "p_sub": "Desde la constitución de su empresa hasta la contabilidad, la nómina, Google Ads y la administración diaria, un solo equipo dedicado se encarga de la parte administrativa para que usted se enfoque en su negocio.", "p_cta": "Agende una consulta gratuita de 30 minutos", "p_call": "O llame al 347-806-5604", "p_note": "Sin costo ni compromiso. En español e inglés.", "p_cap": "Una sola persona de contacto, desde la primera llamada.", "p_statement": "Desde 2008 apoyamos a dueños de negocios en los 50 estados, con más de 25 años de experiencia empresarial en EE. UU. al servicio de cada cliente.", "p_svc_k": "Lo que hacemos", "p_svc_h": "El apoyo que necesita.<br><em>Sin los gastos fijos</em>", "p_svc_p": "Brindamos a los dueños de negocios estructura, apoyo y tranquilidad, con ayuda práctica que mantiene en orden y funcionando sin contratiempos el lado administrativo de su negocio.", "p_pricing": "Ver precios", "p_s1": "Constitución de LLC y empresas", "p_s1p": "Constituimos su negocio en EE. UU. correctamente desde el primer día, nos encargamos del papeleo y construimos una base a su medida.", "p_more": "Ver más", "p_s2": "Contabilidad, nómina y QuickBooks", "p_s2p": "Elija el apoyo financiero y administrativo que necesita, desde QuickBooks hasta nómina y reportes, para que su contabilidad sea precisa y su equipo reciba su pago a tiempo.", "p_s3": "Asistencia virtual", "p_s3p": "Un asistente ejecutivo dedicado, asignado especialmente a su negocio, que se encarga de su administración, facturas, agenda y más, solo por las horas que necesite.", "p_s6": "Capacitación y desempeño del equipo", "p_s6p": "Guiones de llamadas y capacitación práctica para que su equipo atienda a los clientes de manera profesional, además de sistemas para dar seguimiento a la asistencia y el desempeño, en sitio o a distancia.", "p_s4": "Google Ads y publicidad", "p_s4p": "Campañas de Google Ads, configuración de Google Guaranteed y gestión de reseñas para que más clientes locales lo encuentren y lo elijan.", "p_s5": "Trámites gubernamentales", "p_s5p": "Preparamos sus formularios y documentos para extensiones de visa de turista, ciudadanía, la Lotería de Visas y pasaportes estadounidenses, con explicaciones sencillas.", "p_ph2": "Foto: reunión con un cliente", "p_ap_h": "Su oficina administrativa, sin contratar personal", "p_ap_p": "Piense en nosotros como el equipo detrás de su negocio. Hacemos el trabajo que haría un empleado de oficina, para que tenga ayuda confiable sin sueldos, capacitación ni costos de tiempo completo.", "p_why_h": "Por qué trabajar con Sorted", "p_v1t": "Una persona de contacto que conoce su negocio", "p_v2t": "Constitución, contabilidad, nómina, administración y Google en un solo lugar", "p_v3t": "Atención personal en español o inglés", "p_v4t": "Conoce el alcance y el precio antes de empezar", "p_faq_h": "Preguntas que hacen los dueños antes de empezar", "p_faq_all": "Ver todas las preguntas", "p_q1": "¿Ofrecen asesoría legal o fiscal?", "p_a1": "No. Brindamos apoyo administrativo y empresarial, como trámites, configuración, organización y trabajo administrativo continuo. Cuando algo requiere una opinión legal o fiscal, se lo diremos y le recomendaremos hablar con un abogado o un profesional en impuestos.", "p_q2": "¿Necesito vivir en EE. UU. para abrir un negocio allí?", "p_a2": "No necesariamente. Muchos dueños forman una LLC en EE. UU. mientras viven en el extranjero. Le explicaremos lo que aplica a su caso.", "p_q3": "¿Sus precios incluyen las cuotas estatales?", "p_a3": "Nuestros precios son por nuestro servicio. Las tarifas del gobierno y del estado son aparte, y le diremos los costos exactos por adelantado, antes de presentar cualquier trámite.", "p_q4": "¿Cuánto tiempo toma?", "p_a4": "Normalmente hasta dos semanas, según el estado, con opciones urgentes más rápidas por un cargo adicional.", "p_call_h": "Empiece con una llamada gratuita de 30 minutos", "p_call_p": "Una conversación tranquila sobre su negocio. Terminará con un siguiente paso claro.", "p_call_btn": "Agende su llamada gratuita", "p_st_h": "Cómo empezar", "p_st1": "Llamada gratuita de 30 minutos", "p_st1p": "Conocemos la situación de su negocio y lo que necesita.", "p_st2": "Un plan y un precio claros", "p_st2p": "Conoce el alcance y el costo antes de empezar cualquier trabajo.", "p_st3": "Nosotros nos encargamos", "p_st3p": "Su persona de contacto se encarga del trabajo y lo mantiene al tanto.", "f_home": "Inicio", "f_pricing": "Precios", "f_about": "Nosotros", "f_faq": "Preguntas", "f_contact": "Contacto", "f_privacy": "Aviso de privacidad", "f_terms": "Términos y condiciones", "f_access": "Accesibilidad", "f_copy": "© 2026 Sorted · Ayudando a los negocios a crecer desde 2008", "doc_title": "Sorted | Su negocio en EE. UU. Resuelto."});/*TR*/applyLang(lang);
 </script>
 </body>
 </html>

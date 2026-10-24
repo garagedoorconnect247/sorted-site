@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl" id="root">
+<html lang="en" dir="ltr" id="root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
 <meta name="description" content="״מסודר״ מעניקה לבעלי עסקים ולמשפחות גישה ישירה לאנשי מקצוע מנוסים בניהול עסקי, בפיננסים ובניירת הגירה. אנחנו מביאים את הסדר, הדיוק והאחריות של צוות ניהול בכיר,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#0B1220; --ink-2:#3B4658; --muted:#7C8798;
@@ -352,10 +352,350 @@ footer .f-disclaimer b{color:#C9D3E3}
 .sec-head h2,.story h2{font-size:clamp(1.35rem,2.8vw,1.75rem)}
 .exp-in h2{font-size:clamp(1.3rem,2.6vw,1.65rem)}
 .notsure h2,.support-copy h2{font-size:clamp(1.35rem,2.8vw,1.75rem)}
-.brand-txt{display:flex;flex-direction:column;line-height:1.1}.brand-tag{font-size:.68rem;font-weight:500;color:var(--blue);letter-spacing:.01em;margin-top:2px}footer .brand-tag{color:#8FB0FF}@media(max-width:420px){.brand-tag{font-size:.6rem}}.lang-wrap{position:relative}.lang-chev{opacity:.6}.lang-menu{position:absolute;top:calc(100% + 6px);inset-inline-end:0;min-width:150px;background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 10px 30px rgba(14,35,64,.12);padding:6px;z-index:200;display:flex;flex-direction:column;gap:2px}.lang-menu[hidden]{display:none}.lang-menu button{display:flex;align-items:center;gap:8px;width:100%;text-align:start;padding:8px 10px;border-radius:7px;font-size:.85rem;font-weight:600;color:var(--ink-2);background:none;border:0;cursor:pointer;font-family:inherit}.lang-menu button:hover,.lang-menu button:focus-visible{background:var(--blue-l)}.lang-menu button[aria-current="true"]{color:var(--blue)}@media(max-width:480px){#lang-label{display:none}.lang-btn{gap:4px}}@media(max-width:380px){.brand-tag{font-size:.54rem;letter-spacing:0}}@media(max-width:340px){.brand-tag{display:none}}.nav-tel{white-space:nowrap}@media(max-width:1199px){html[lang="es-MX"] .nav-tel{display:none!important}}h1,h2,h3{text-wrap:balance}</style>
+.brand-txt{display:flex;flex-direction:column;line-height:1.1}.brand-tag{font-size:.68rem;font-weight:500;color:var(--blue);letter-spacing:.01em;margin-top:2px}footer .brand-tag{color:#8FB0FF}@media(max-width:420px){.brand-tag{font-size:.6rem}}.lang-wrap{position:relative}.lang-chev{opacity:.6}.lang-menu{position:absolute;top:calc(100% + 6px);inset-inline-end:0;min-width:150px;background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 10px 30px rgba(14,35,64,.12);padding:6px;z-index:200;display:flex;flex-direction:column;gap:2px}.lang-menu[hidden]{display:none}.lang-menu button{display:flex;align-items:center;gap:8px;width:100%;text-align:start;padding:8px 10px;border-radius:7px;font-size:.85rem;font-weight:600;color:var(--ink-2);background:none;border:0;cursor:pointer;font-family:inherit}.lang-menu button:hover,.lang-menu button:focus-visible{background:var(--blue-l)}.lang-menu button[aria-current="true"]{color:var(--blue)}@media(max-width:480px){#lang-label{display:none}.lang-btn{gap:4px}}@media(max-width:380px){.brand-tag{font-size:.54rem;letter-spacing:0}}@media(max-width:340px){.brand-tag{display:none}}.nav-tel{white-space:nowrap}@media(max-width:1199px){html[lang="es-MX"] .nav-tel{display:none!important}}h1,h2,h3{text-wrap:balance}
+.pr{--ink:#0F1E33;--blue:#1656E0;--blue-d:#0F3FAE;--mist:#EEF2F8;--slate:#566275;--line:#DCE2EB;--serif:"Frank Ruhl Libre",Georgia,serif;--sans:"Heebo","Rubik",system-ui,sans-serif;font-family:var(--sans);color:var(--ink)}
+.pr p{margin:0}
+.p-wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.p-h1,.p-h2,.p-row-t,.p-statement-t,.p-cover-h{font-family:var(--serif);font-weight:500;letter-spacing:-.015em;color:var(--ink)}
+.p-hero{padding:96px 0 112px;background:#fff}
+.p-hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:72px;align-items:center}
+.p-kicker{font-size:1rem;font-weight:500;color:var(--blue);margin-bottom:22px}
+.p-h1{font-size:clamp(3rem,6.2vw,5.4rem);line-height:.98;margin:0}
+.p-lead{font-size:1.2rem;line-height:1.65;color:var(--slate);max-width:36ch}
+.p-hero .p-lead{margin:30px 0 40px}
+.p-actions{display:flex;flex-wrap:wrap;align-items:center;gap:28px}
+.p-btn{display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:#fff;font-weight:500;font-size:1.02rem;padding:17px 28px;border-radius:999px;text-decoration:none;transition:background .2s}
+.p-btn svg{width:20px;height:20px}.p-btn:hover{background:var(--blue-d)}
+.p-textlink{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-weight:500;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:6px}
+.p-textlink:hover{color:var(--blue)}
+.p-note{margin-top:22px;font-size:.95rem;color:var(--slate)}
+.pr a:focus-visible{outline:3px solid #8FB0FF;outline-offset:4px;border-radius:6px}
+.p-hero-fig{margin:0}
+.p-photo{position:relative;border-radius:22px;background:var(--mist) var(--img) center/cover no-repeat;overflow:hidden;display:grid;place-items:center}
+.p-photo-hero{aspect-ratio:4/5;background-position:30% 62%}
+.p-ph{font-size:.9rem;color:#7C889A;padding:10px 16px;border:1.5px dashed #B9C5D8;border-radius:10px;background:rgba(255,255,255,.7)}
+.p-hero-fig figcaption{margin-top:16px;font-size:.95rem;color:var(--slate);padding-inline-start:16px;border-inline-start:2px solid var(--blue)}
+.p-hero-copy>*,.p-hero-fig{animation:pUp .8s cubic-bezier(.2,.8,.2,1) both}
+.p-hero-copy>*:nth-child(2){animation-delay:.08s}.p-hero-copy>*:nth-child(3){animation-delay:.16s}.p-hero-copy>*:nth-child(4){animation-delay:.24s}.p-hero-fig{animation-delay:.2s}
+@keyframes pUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.p-hero-copy>*,.p-hero-fig{animation:none}}
+html.ax-motion .p-hero-copy>*,html.ax-motion .p-hero-fig{animation:none}
+.p-statement{background:var(--mist);padding:112px 0}
+.p-statement-t{font-size:clamp(1.7rem,3.2vw,2.6rem);line-height:1.3;max-width:28ch}
+.p-svc{padding:128px 0;background:#fff}
+.p-svc-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:80px;align-items:start}
+.p-svc-intro{position:sticky;top:110px;display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+.p-h2{font-size:clamp(2.1rem,3.8vw,3.1rem);line-height:1.08;margin:0}
+.p-svc-intro p{color:var(--slate);line-height:1.6;max-width:30ch;font-size:1.05rem}
+.p-rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.p-row{border-bottom:1px solid var(--line)}
+.p-row-link{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:34px 8px;color:inherit;text-decoration:none;transition:background .25s,padding .25s}
+.p-row-link:hover{background:var(--mist);padding-inline:24px}
+.p-row-main{display:flex;flex-direction:column;gap:8px}
+.p-row-t{font-size:clamp(1.5rem,2.4vw,1.95rem);line-height:1.15;margin:0}
+.p-row p{color:var(--slate);line-height:1.6;max-width:48ch}
+.p-row-go{display:inline-flex;align-items:center;gap:8px;flex:none;font-weight:500;color:var(--blue);font-size:.98rem}
+.p-arr{width:18px;height:18px;flex:none;transition:transform .2s}
+.pr a:hover .p-arr{transform:translateX(4px)}
+html[dir="rtl"] .p-arr{transform:scaleX(-1)}html[dir="rtl"] .pr a:hover .p-arr{transform:scaleX(-1) translateX(4px)}
+li.p-row:not(:has(.p-row-link)){display:flex;align-items:center;justify-content:space-between;gap:32px;padding:34px 8px}
+.p-row-links{display:flex;gap:10px;flex-wrap:wrap;flex:none}
+.p-chip{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:1.5px solid var(--line);border-radius:999px;color:var(--ink);font-weight:500;font-size:.95rem;text-decoration:none;transition:border-color .2s,color .2s}
+.p-chip:hover{border-color:var(--blue);color:var(--blue)}
+.p-approach{background:var(--mist);padding:128px 0}
+.p-approach .p-photo{background-color:#DDE4EE}
+.p-why{position:relative;margin-top:8px;padding:32px 34px 30px;border-radius:24px;background:var(--ink);color:#fff;overflow:hidden;isolation:isolate;box-shadow:0 30px 60px -34px rgba(15,30,51,.55)}
+.p-why::before{content:"";position:absolute;right:-80px;top:-120px;width:320px;height:320px;border-radius:50%;background:radial-gradient(closest-side,rgba(22,86,224,.55),transparent);z-index:-1}
+.p-why-h{display:inline-flex;align-items:center;gap:10px;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8FB0FF;margin-bottom:22px!important}
+.p-why-h::before{content:"";width:24px;height:2px;border-radius:2px;background:#8FB0FF}
+.p-why ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.p-why li{display:flex;align-items:center;gap:16px;padding:15px 0;font-size:1.06rem;font-weight:500;line-height:1.45}
+.p-why li+li{border-top:1px solid rgba(255,255,255,.1)}
+.p-why-ic{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:10px;color:var(--ink)}
+.p-why-ic svg{width:17px;height:17px}
+.p-why li:nth-child(1) .p-why-ic{background:#6E9BFF}.p-why li:nth-child(2) .p-why-ic{background:#3FD0B4}.p-why li:nth-child(3) .p-why-ic{background:#A68BFF}.p-why li:nth-child(4) .p-why-ic{background:#FFB547}
+@media (max-width:640px){.p-why{padding:26px 22px 22px}.p-why li{font-size:1rem}}
+.p-adv{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.p-adv-i{--c:#1656E0;--cs:#E6EEFF;position:relative;background:#fff;border-radius:20px;padding:30px 26px 28px;display:flex;flex-direction:column;gap:8px;box-shadow:0 1px 0 rgba(15,30,51,.04),0 18px 36px -24px rgba(15,30,51,.22);transition:transform .3s,box-shadow .3s;overflow:hidden}
+.p-adv-i::before{content:"";position:absolute;left:24px;right:24px;top:0;height:3px;border-radius:0 0 3px 3px;background:var(--c)}
+.p-adv-i:hover{transform:translateY(-3px);box-shadow:0 1px 0 rgba(15,30,51,.04),0 24px 44px -24px rgba(15,30,51,.32)}
+.p-adv-teal{--c:#0E9F86;--cs:#E1F5F0}.p-adv-violet{--c:#6B4FE0;--cs:#EEEAFE}.p-adv-amber{--c:#C9780A;--cs:#FDF0DC}
+.p-adv-ic{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--cs);color:var(--c);margin-bottom:8px}
+.p-adv-ic svg{width:22px;height:22px}
+.pr .p-adv-t{font-family:var(--sans);font-weight:600;font-size:1.1rem;letter-spacing:-.01em;line-height:1.25;margin:0;color:var(--ink)}
+.p-adv-d{color:var(--slate);line-height:1.55;font-size:.97rem}
+@media (max-width:1000px){.p-adv{grid-template-columns:1fr 1fr;margin-top:48px}}@media (max-width:520px){.p-adv{grid-template-columns:1fr;gap:14px}}
+@media (prefers-reduced-motion:reduce){.p-adv-i{transition:none}.p-adv-i:hover{transform:none}}
+.p-ap-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:88px;align-items:center}
+.p-photo-ap{aspect-ratio:5/4}
+.p-ap-copy{display:flex;flex-direction:column;gap:28px}
+.p-values{margin:12px 0 0;display:grid;gap:0;border-top:1px solid #CFD8E5}
+.p-values div{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid #CFD8E5}
+.p-values dt{font-family:var(--serif);font-size:1.3rem;font-weight:500}
+.p-values dd{margin:0;color:var(--slate);line-height:1.55;align-self:center}
+.p-call{background:var(--ink);padding:128px 0;color:#fff}
+.p-call-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:88px;align-items:center}
+.p-call .p-h2{color:#fff}
+.p-call .p-lead{color:#B9C4D6;margin:24px 0 40px}
+.p-btn-light{background:#fff;color:var(--ink)}.p-btn-light:hover{background:#DCE6FF}.p-btn-light svg{color:#0B7A5E}
+.p-cover{border-inline-start:1px solid rgba(255,255,255,.18);padding-inline-start:56px}
+.p-cover-h{color:#fff;font-size:1.4rem;margin:0 0 24px}
+.p-cover ol{list-style:none;counter-reset:c;margin:0;padding:0;display:grid;gap:22px}
+.p-cover li{counter-increment:c;display:grid;grid-template-columns:44px 1fr;align-items:baseline;font-size:1.12rem;line-height:1.5;color:#E4EAF4}
+.p-cover li::before{content:counter(c);font-family:var(--serif);font-size:1.5rem;color:#8FB0FF}
+@media (max-width:1000px){
+ .p-hero-grid,.p-svc-grid,.p-ap-grid,.p-call-grid{grid-template-columns:1fr;gap:48px}
+ .p-svc-intro{position:static}
+ .p-hero{padding:56px 0 72px}.p-statement{padding:72px 0}.p-svc,.p-approach,.p-call{padding:80px 0}
+ .p-photo-hero{aspect-ratio:4/3}
+ .p-cover{border-inline-start:0;padding-inline-start:0;border-top:1px solid rgba(255,255,255,.18);padding-top:40px}
+}
+@media (max-width:640px){
+ .p-wrap{padding:0 20px}
+ .p-row-link,li.p-row:not(:has(.p-row-link)){flex-direction:column;align-items:flex-start;gap:16px;padding:28px 0}
+ .p-row-link:hover{padding-inline:0;background:none}
+ .p-values div{grid-template-columns:1fr;gap:4px}
+ .p-actions{gap:18px}
+}
+
+.p-h1{font-size:clamp(2.2rem,4.9vw,4.4rem)}.p-h1 span{display:block;white-space:nowrap}
+@media (min-width:961px){.p-hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}}
+.p-cmp{margin-top:8px;border-radius:18px;overflow:hidden;background:#fff;border:1px solid #CFD8E5}
+.p-cmp-row{display:grid;grid-template-columns:1fr 1fr}
+.p-cmp-row>span{padding:18px 22px;line-height:1.5;font-size:1rem}
+.p-cmp-row>span:first-child{color:var(--slate)}
+.p-cmp-row>span:last-child{background:var(--ink);color:#fff;font-weight:500}
+.p-cmp-row+.p-cmp-row>span{border-top:1px solid #E3E9F1}.p-cmp-row+.p-cmp-row>span:last-child{border-top-color:rgba(255,255,255,.1)}
+.p-cmp-head>span{font-size:.9rem;font-weight:600;text-decoration:none!important;color:var(--slate)!important;padding-block:14px}
+.p-cmp-head>span:last-child{color:#8FB0FF!important}
+.p-faq{padding:128px 0;background:#fff}
+.p-faq-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:56px}
+.p-faq-head .p-h2{max-width:16ch}
+.p-faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px 72px}
+.p-qa{display:flex;flex-direction:column;gap:12px;padding-top:24px;border-top:2px solid var(--ink)}
+.p-q{font-family:var(--serif);font-weight:500;font-size:1.4rem;line-height:1.25;margin:0;color:var(--ink)}
+.p-qa p{color:var(--slate);line-height:1.65;max-width:52ch}
+.p-call{background:var(--blue)}
+.p-call .p-lead{color:#DCE6FF}
+.p-cover{border-inline-start-color:rgba(255,255,255,.3)}
+.p-cover li{grid-template-columns:48px 1fr}
+.p-cover li::before{color:#fff;opacity:.7}
+.p-cover li b{display:block;font-weight:600;color:#fff;font-size:1.12rem}
+.p-cover li span{display:block;color:#DCE6FF;font-size:1rem;margin-top:4px}
+.p-btn-light:hover{background:#E8EFFF}
+@media (max-width:1000px){.p-faq{padding:80px 0}.p-faq-grid{grid-template-columns:1fr;gap:36px}}
+@media (max-width:640px){.p-cmp-row>span{padding:14px 14px;font-size:.92rem}}
+.p-svc2{position:relative;padding:128px 0;background:var(--ink);color:#fff;overflow:hidden;isolation:isolate}
+.p-svc2::before{content:"";position:absolute;inset:-30% -10% auto auto;width:60vw;height:60vw;max-width:820px;max-height:820px;border-radius:50%;background:radial-gradient(closest-side,rgba(22,86,224,.45),transparent);z-index:-1}
+.p-svc2-head{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:64px;align-items:end;margin-bottom:64px}
+.p-svc2-k{display:inline-flex;align-items:center;gap:10px;margin:0 0 22px;font-size:.82rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8FB0FF}
+.p-svc2-k::before{content:"";width:28px;height:2px;background:#8FB0FF;border-radius:2px}
+.p-svc2-h{font-family:var(--sans);font-weight:800;font-size:clamp(2.2rem,4.6vw,4rem);line-height:1.04;letter-spacing:-.035em;margin:0;color:#fff}
+.p-svc2-h em{font-style:normal;background:linear-gradient(90deg,#6E9BFF,#4FD1B8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.p-svc2-side{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+.p-svc2-side p{margin:0;color:#B9C4D6;line-height:1.65;font-size:1.08rem}
+.p-textlink-light{color:#fff;border-color:rgba(255,255,255,.5)}.p-textlink-light:hover{color:#8FB0FF;border-color:#8FB0FF}
+.p-sc-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
+.p-sc{grid-column:span 2;--c:#6E9BFF;--cs:rgba(110,155,255,.14);position:relative;border-radius:22px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);transition:transform .3s,background .3s,border-color .3s}
+.p-sc-wide{grid-column:span 3}
+.p-sc-blue{--c:#6E9BFF;--cs:rgba(110,155,255,.16)}.p-sc-teal{--c:#3FD0B4;--cs:rgba(63,208,180,.15)}.p-sc-amber{--c:#FFB547;--cs:rgba(255,181,71,.15)}.p-sc-violet{--c:#A68BFF;--cs:rgba(166,139,255,.16)}.p-sc-coral{--c:#FF8572;--cs:rgba(255,133,114,.15)}.p-sc-sky{--c:#5CC8FF;--cs:rgba(92,200,255,.15)}
+.p-sc::after{content:"";position:absolute;left:28px;right:28px;top:0;height:3px;border-radius:0 0 3px 3px;background:var(--c);opacity:.9}
+.p-sc:hover{transform:translateY(-4px);background:rgba(255,255,255,.07);border-color:color-mix(in srgb,var(--c) 45%,transparent)}
+.p-sc-link,li.p-sc:not(:has(.p-sc-link)){display:flex;flex-direction:column;gap:14px;padding:34px 30px 30px;color:inherit;text-decoration:none;height:100%;box-sizing:border-box}
+.p-sc-link{border-radius:22px}
+.p-sc-ic{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:var(--cs);color:var(--c);margin-bottom:8px}
+.p-sc-ic svg{width:26px;height:26px}
+.p-sc-t{font-family:var(--sans);font-weight:700;font-size:1.4rem;letter-spacing:-.015em;line-height:1.2;margin:0;color:#fff}
+.p-sc-p{margin:0;color:#B9C4D6;line-height:1.6;font-size:1rem}
+.p-sc-go{margin-top:auto;padding-top:10px;display:inline-flex;align-items:center;gap:8px;color:var(--c);font-weight:600;font-size:.97rem}
+.p-sc-go .p-arr,.p-sc-chip .p-arr{width:18px;height:18px;transition:transform .25s}
+.p-sc-link:hover .p-sc-go .p-arr,.p-sc-chip:hover .p-arr{transform:translateX(4px)}
+.p-sc-links{margin-top:auto;padding-top:10px;display:flex;flex-wrap:wrap;gap:10px}
+.p-sc-chip{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--cs);color:var(--c);font-weight:600;font-size:.95rem;text-decoration:none;transition:background .2s,color .2s}
+.p-sc-chip:hover{background:var(--c);color:var(--ink)}
+.p-sc a:focus-visible{outline:3px solid #8FB0FF;outline-offset:3px}
+@media (max-width:1000px){.p-svc2{padding:80px 0}.p-svc2-head{grid-template-columns:1fr;gap:24px;margin-bottom:44px}.p-sc-grid{grid-template-columns:1fr 1fr}.p-sc,.p-sc-wide{grid-column:span 1}}
+@media (max-width:640px){.p-sc-grid{grid-template-columns:1fr;gap:14px}.p-sc,.p-sc-wide{grid-column:auto}.p-sc-link,li.p-sc:not(:has(.p-sc-link)){padding:28px 24px 24px}}
+@media (prefers-reduced-motion:reduce){.p-sc,.p-sc-go .p-arr{transition:none}.p-sc:hover{transform:none}}
+
+.gp .g-h1,.gp .g-h2,.gp .g-svc-t,.gp .g-step-t{font-family:var(--sans);letter-spacing:-.03em;color:var(--ink);margin:0}
+.g-h1{font-weight:800;font-size:clamp(2.6rem,5.6vw,4.6rem);line-height:1.02}
+.g-h1 em,.g-h2 em{font-style:normal;background:linear-gradient(90deg,#1656E0,#14A58A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.g-h2{font-weight:800;font-size:clamp(2rem,3.6vw,3rem);line-height:1.06}
+.gp .g-h2-light{color:#fff}
+.g-hero{padding:72px 0 112px;background:#fff;position:relative;overflow:hidden}
+.g-hero::before{content:"";position:absolute;right:-12%;top:-20%;width:55vw;height:55vw;max-width:760px;max-height:760px;border-radius:50%;background:radial-gradient(closest-side,rgba(20,165,138,.12),transparent);pointer-events:none}
+.g-hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:72px;align-items:center;position:relative}
+.g-crumb{display:flex;gap:10px;font-size:.92rem;color:var(--slate);margin-bottom:36px}
+.g-crumb a{color:var(--slate);text-decoration:none}.g-crumb a:hover{color:var(--blue)}
+.g-hero .p-lead{margin:28px 0 40px;max-width:44ch}
+.g-mock{margin:0}
+.g-mock-card{background:linear-gradient(160deg,#F3F6FB,#E9EEF7);border:1px solid var(--line);border-radius:28px;padding:28px;display:flex;flex-direction:column;gap:14px;box-shadow:0 30px 60px -30px rgba(15,30,51,.25)}
+.g-search{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:14px 20px;color:var(--ink);font-size:1rem}
+.g-search svg{width:20px;height:20px;color:var(--slate)}
+.g-ad{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.g-ad-main{position:relative;border:1.5px solid #14A58A;box-shadow:0 14px 30px -18px rgba(20,165,138,.6);transform:translateX(-14px)}
+.g-ad-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+.g-ad-lbl{font-size:.78rem;font-weight:600;color:var(--slate)}
+.g-badge{display:inline-flex;align-items:center;gap:6px;background:#E3F6F1;color:#0B7A64;font-size:.8rem;font-weight:600;padding:6px 12px;border-radius:999px}
+.g-badge svg{width:15px;height:15px}
+.g-ad-name{font-weight:700;font-size:1.2rem;color:var(--ink);margin-bottom:6px}
+.g-ad-meta{display:flex;gap:8px;align-items:center;font-size:.92rem;color:var(--slate);margin-top:2px}
+.g-stars{color:#F2A93B;letter-spacing:1px}
+.g-ad-btn{position:absolute;right:22px;bottom:20px;background:var(--blue);color:#fff;font-weight:600;font-size:.9rem;padding:9px 18px;border-radius:999px}
+[dir=rtl] .g-ad-btn{right:auto;left:22px}[dir=rtl] .g-ad-main{transform:translateX(14px)}
+.g-ad-ghost{display:flex;flex-direction:column;gap:9px;opacity:.75}
+.g-ad-ghost i{display:block;height:10px;border-radius:6px;background:#E2E8F1}
+.g-ad-ghost i:nth-child(1){width:46%;height:13px}.g-ad-ghost i:nth-child(2){width:72%}.g-ad-ghost i:nth-child(3){width:58%}
+.g-mock figcaption{margin-top:14px;font-size:.85rem;color:#7C889A;text-align:center}
+.g-two{background:var(--ink);padding:120px 0;position:relative;overflow:hidden;isolation:isolate}
+.g-two::before{content:"";position:absolute;left:-15%;bottom:-40%;width:60vw;height:60vw;max-width:820px;max-height:820px;border-radius:50%;background:radial-gradient(closest-side,rgba(22,86,224,.4),transparent);z-index:-1}
+.g-two-head{margin-bottom:52px;max-width:760px}
+.g-two-head .p-kicker{margin-bottom:16px}
+.g-two-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.g-svc.g-svc-coral{--c:#FF8572;--cs:rgba(255,133,114,.15)}
+.g-svc-note{margin-top:auto!important;padding-top:24px;color:#8E9BB0;font-size:.92rem}
+@media (max-width:1180px) and (min-width:1001px){.g-svc{padding:34px 26px 30px}}
+.g-svc{--c:#6E9BFF;--cs:rgba(110,155,255,.16);position:relative;padding:40px 36px 36px;border-radius:24px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09)}
+.g-svc::after{content:"";position:absolute;left:32px;right:32px;top:0;height:3px;border-radius:0 0 3px 3px;background:var(--c)}
+.g-svc-teal{--c:#3FD0B4;--cs:rgba(63,208,180,.15)}
+.g-svc .p-sc-ic{background:var(--cs);color:var(--c);margin-bottom:22px}
+.gp .g-svc-t{color:#fff;font-weight:700;font-size:1.6rem;letter-spacing:-.02em}
+.g-svc-p{color:#B9C4D6;line-height:1.6;margin:12px 0 26px!important;font-size:1.02rem}
+.g-svc{display:flex;flex-direction:column}
+.g-price{margin-top:auto;padding-top:28px}
+.g-price-row{display:flex;align-items:baseline;gap:8px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);color:#B9C4D6;font-size:1rem}
+.g-price-row b{font-size:2.3rem;font-weight:800;letter-spacing:-.03em;color:#fff;line-height:1}
+.g-price p{margin-top:8px!important;color:#8E9BB0;font-size:.92rem;line-height:1.5}
+.g-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.g-list li{display:flex;gap:12px;align-items:flex-start;color:#E4EAF3;line-height:1.5;font-size:1rem}
+.g-chk{flex:none;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--cs,rgba(110,155,255,.16));color:var(--c,#6E9BFF);margin-top:1px}
+.g-chk svg{width:14px;height:14px}
+.g-rev{margin-top:22px;display:flex;align-items:center;gap:22px;padding:24px 30px;border-radius:20px;background:rgba(255,133,114,.1);border:1px solid rgba(255,133,114,.25);color:#fff;text-decoration:none;transition:background .25s}
+.g-rev:hover{background:rgba(255,133,114,.17)}
+.g-rev-ic{flex:none;display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:rgba(255,133,114,.18);color:#FF8572;font-size:1.3rem}
+.g-rev-txt{display:flex;flex-direction:column;gap:4px;flex:1}
+.g-rev-txt b{font-size:1.08rem}.g-rev-txt span{color:#B9C4D6;line-height:1.5;font-size:.97rem}
+.g-rev-go{flex:none;display:inline-flex;align-items:center;gap:8px;color:#FF8572;font-weight:600}
+.g-rev-go .p-arr{width:18px;height:18px}
+.g-fit{padding:120px 0;background:#fff}
+.g-fit-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:stretch}
+.g-fit-col{padding:12px 24px 12px 0;display:flex;flex-direction:column;gap:36px}
+.g-list-dark li{color:var(--ink);font-size:1.08rem}
+.g-list-dark .g-chk{--cs:#E8EFFF;--c:var(--blue)}
+.g-get{background:linear-gradient(150deg,#1656E0,#0F3FAE);border-radius:28px;padding:48px 44px;display:flex;flex-direction:column;gap:32px}
+.g-get .g-chk{--cs:rgba(255,255,255,.18);--c:#fff}
+.g-get .g-list li{color:#fff;font-size:1.05rem}
+.g-how{padding:120px 0;background:var(--mist)}
+.g-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.g-steps li{background:#fff;border-radius:22px;padding:30px 26px;display:flex;flex-direction:column;gap:12px;border:1px solid var(--line)}
+.g-n{font-weight:800;font-size:.95rem;color:var(--blue);letter-spacing:.06em}
+.gp .g-step-t{font-weight:700;font-size:1.25rem;letter-spacing:-.015em}
+.g-steps p{color:var(--slate);line-height:1.6}
+.g-call{padding:112px 0}
+.g-call-in{display:flex;flex-direction:column;align-items:center;text-align:center}
+.g-call .p-lead{margin:22px auto 36px;max-width:46ch}
+.g-call-actions{justify-content:center}
+.gp .p-faq .g-h2{max-width:none}
+@media (max-width:1000px){
+ .g-hero-grid,.g-two-grid,.g-fit-grid{grid-template-columns:1fr;gap:48px}
+ .g-hero,.g-two,.g-fit,.g-how,.g-call{padding:80px 0}
+ .g-hero{padding-top:40px}
+ .g-steps{grid-template-columns:1fr 1fr}
+ .g-fit-col{padding:0}
+ .g-ad-main{transform:none}
+}
+@media (max-width:640px){
+ .p-wrap{padding:0 20px}
+ .g-steps{grid-template-columns:1fr}
+ .g-svc{padding:34px 24px 28px}
+ .g-get{padding:36px 26px}
+ .g-mock-card{padding:18px;border-radius:22px}
+ .g-rev{flex-direction:column;align-items:flex-start;padding:24px}
+ .g-ad-btn{position:static;display:inline-block;margin-top:12px}
+}
+
+body.skin{--ink:#0F1E33;--blue:#1656E0;--blue-d:#0F3FAE;--mist:#EEF2F8;--slate:#566275;--line:#DCE2EB;--sans:"Heebo","Rubik",system-ui,sans-serif}
+body.skin main{font-family:var(--sans);color:var(--ink)}
+body.skin main h1,body.skin main h2,body.skin main h3{font-family:var(--sans);letter-spacing:-.02em}
+body.skin .hero.sm{background:#fff;padding:88px 0 76px;text-align:center}
+body.skin .hero.sm::before{top:-220px;inset-inline-end:-180px;width:640px;height:640px;background:radial-gradient(closest-side,rgba(20,165,138,.12),transparent)}
+body.skin .hero.sm::after{bottom:-260px;inset-inline-start:-200px;width:640px;height:640px;opacity:1;background:radial-gradient(closest-side,rgba(22,86,224,.10),transparent)}
+body.skin .hero.sm .hero-in{max-width:820px}
+body.skin .hero-sub-label{font-size:1rem;font-weight:500;color:var(--blue);letter-spacing:0;text-transform:none;background:none;padding:0;margin-bottom:16px}
+body.skin .hero.sm h1{font-weight:800;font-size:clamp(2.4rem,5.2vw,4.2rem);line-height:1.04;letter-spacing:-.035em;color:var(--ink);margin-bottom:22px}
+body.skin .hero-sub{font-size:1.15rem;line-height:1.7;color:var(--slate);max-width:62ch;margin-inline:auto}
+body.skin .label{display:inline-flex;align-items:center;gap:10px;font-size:.8rem;font-weight:600;letter-spacing:.14em;color:var(--blue);margin-bottom:16px}
+body.skin .label::before{content:"";width:24px;height:2px;border-radius:2px;background:currentColor}
+body.skin main section h2{font-weight:800;letter-spacing:-.03em;line-height:1.1}
+body.skin .btn-primary{border-radius:999px}
+/* about */
+body.skin .story h2{font-size:clamp(1.9rem,3.4vw,2.7rem)}
+body.skin .story p{color:var(--slate);line-height:1.75}
+body.skin .facts{position:relative;overflow:hidden;isolation:isolate;background:var(--ink);border-radius:24px;padding:34px 34px 26px;box-shadow:0 30px 60px -34px rgba(15,30,51,.55)}
+body.skin .facts::before{content:"";position:absolute;inset-inline-end:-90px;top:-120px;width:320px;height:320px;border-radius:50%;background:radial-gradient(closest-side,rgba(22,86,224,.55),transparent);z-index:-1}
+body.skin section.exp:has(.tags){position:relative;overflow:hidden;isolation:isolate;background:var(--ink);color:#fff}
+body.skin section.exp:has(.tags)::before{content:"";position:absolute;inset-inline-start:-15%;bottom:-50%;width:60vw;height:60vw;max-width:780px;max-height:780px;border-radius:50%;background:radial-gradient(closest-side,rgba(22,86,224,.4),transparent);z-index:-1}
+body.skin section.exp:has(.tags) h2{color:#fff}
+body.skin section.exp:has(.tags) p{color:#B9C4D6}
+body.skin section.exp:has(.tags) .label{color:#8FB0FF}
+body.skin .tag{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:#E4EAF3;border-radius:999px;padding:9px 18px;font-weight:500}
+body.skin .tag:nth-child(5n+1){color:#9DBBFF}body.skin .tag:nth-child(5n+2){color:#6FE0C8}body.skin .tag:nth-child(5n+3){color:#C3B1FF}body.skin .tag:nth-child(5n+4){color:#FFCB7D}body.skin .tag:nth-child(5n+5){color:#FFA597}
+body.skin .exp{background:var(--mist)}
+body.skin .tm-card,body.skin .val,body.skin .pr-card{position:relative;border:1px solid var(--line);border-radius:22px;box-shadow:0 1px 0 rgba(15,30,51,.04),0 18px 36px -26px rgba(15,30,51,.25);transition:transform .3s,box-shadow .3s;overflow:hidden}
+body.skin .tm-card::before,body.skin .val::before,body.skin .pr-card::before{content:"";position:absolute;inset-inline:24px;top:0;height:3px;border-radius:0 0 3px 3px;background:var(--c,#1656E0)}
+body.skin .tm-card:hover,body.skin .val:hover,body.skin .pr-card:hover{transform:translateY(-3px);box-shadow:0 1px 0 rgba(15,30,51,.04),0 26px 46px -26px rgba(15,30,51,.35)}
+body.skin :is(.tm-card,.val,.pr-card):nth-child(5n+1){--c:#1656E0;--cs:#E6EEFF}
+body.skin :is(.tm-card,.val,.pr-card):nth-child(5n+2){--c:#0E9F86;--cs:#E1F5F0}
+body.skin :is(.tm-card,.val,.pr-card):nth-child(5n+3){--c:#6B4FE0;--cs:#EEEAFE}
+body.skin :is(.tm-card,.val,.pr-card):nth-child(5n+4){--c:#C9780A;--cs:#FDF0DC}
+body.skin :is(.tm-card,.val,.pr-card):nth-child(5n+5){--c:#E0503A;--cs:#FDE7E3}
+body.skin .tm-ic,body.skin .why-ic{background:var(--cs)!important;color:var(--c)!important;border-radius:14px}
+body.skin .tm-card h3,body.skin .val h3{font-weight:700}
+body.skin .tm-card p,body.skin .val p{color:var(--slate)}
+/* closing band */
+body.skin .notsure{position:relative;overflow:hidden;isolation:isolate;background:linear-gradient(135deg,#1656E0,#0F3FAE);padding:104px 0}
+body.skin .notsure::before{content:"";position:absolute;inset-inline-end:-120px;top:-160px;width:480px;height:480px;border-radius:50%;background:radial-gradient(closest-side,rgba(63,208,180,.35),transparent);z-index:-1}
+body.skin .notsure h2{font-size:clamp(2rem,3.6vw,3rem);font-weight:800;letter-spacing:-.03em;margin-bottom:16px}
+body.skin .notsure p{font-size:1.12rem;color:#DCE6FF;max-width:560px;margin-bottom:32px}
+body.skin .notsure .btn-primary{background:#fff;color:var(--ink);padding:17px 30px;font-size:1.02rem}
+body.skin .notsure .btn-primary:hover{background:#E8EFFF}
+/* pricing */
+body.skin .pr-h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:28px}
+body.skin .pr-card{padding:30px 26px 24px;gap:12px}
+body.skin .pr-name{font-weight:700;font-size:1.12rem;color:var(--ink)}
+body.skin .pr-price{color:var(--slate)}
+body.skin .pr-price .amt{font-size:2rem;font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+body.skin .pr-link{color:var(--c);font-weight:600;margin-top:auto}
+body.skin .pr-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:1100px){body.skin .pr-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){body.skin .pr-grid{grid-template-columns:1fr}}
+body.skin .hero .btn-primary{background:var(--blue);color:#fff;padding:16px 28px}
+body.skin .hero .btn-primary:hover{background:var(--blue-d)}
+/* faq */
+body.skin .faq-sec{background:var(--mist)}
+body.skin .faq-list{gap:14px}
+body.skin .faq-item{border-radius:18px;border:1px solid var(--line);box-shadow:0 14px 30px -26px rgba(15,30,51,.3)}
+body.skin .faq-item[open]{border-color:rgba(22,86,224,.45);box-shadow:0 18px 36px -24px rgba(22,86,224,.35)}
+body.skin .faq-item summary{font-weight:600;font-size:1.1rem;padding:22px 26px}
+body.skin .faq-a{color:var(--slate);line-height:1.75;padding:0 26px 24px}
+/* contact */
+body.skin .ct{background:var(--mist)}
+body.skin .ct-form,body.skin .ct-side{border-radius:24px;border:1px solid var(--line);box-shadow:0 30px 60px -40px rgba(15,30,51,.35)}
+body.skin .ct-side{background:var(--ink);color:#fff;border-color:transparent;position:relative;overflow:hidden;isolation:isolate}
+body.skin .ct-side::before{content:"";position:absolute;inset-inline-end:-90px;top:-120px;width:320px;height:320px;border-radius:50%;background:radial-gradient(closest-side,rgba(22,86,224,.55),transparent);z-index:-1}
+body.skin .ct-side h2{color:#fff}
+body.skin .ct-side li,body.skin .ct-side a,body.skin .ct-side span{color:#E4EAF3}
+body.skin .ct-side svg{color:#8FB0FF}
+body.skin .ct-form input:not([type=radio]),body.skin .ct-form select{border-radius:12px;border:1.5px solid var(--line);min-height:50px}
+body.skin .ct-form input:not([type=radio]):focus,body.skin .ct-form select:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(22,86,224,.14);outline:none}
+body.skin .ct-send{border-radius:999px}
+@media (max-width:640px){body.skin .hero.sm{padding:56px 0 52px}body.skin .notsure{padding:72px 0}}
+@media (prefers-reduced-motion:reduce){body.skin .tm-card,body.skin .val,body.skin .pr-card{transition:none}body.skin :is(.tm-card,.val,.pr-card):hover{transform:none}}
+</style>
 <script>(function(){try{var s=JSON.parse(localStorage.getItem('sorted_a11y')||'{}'),h=document.documentElement;Object.keys(s).forEach(function(k){if(k==='size'){if(s.size)h.setAttribute('data-ax-size',s.size)}else if(s[k])h.classList.add('ax-'+k)})}catch(e){}})();</script>
 </head>
-<body>
+<body class="skin">
 <a class="skip" href="#main" data-i18n="skip">דלג לתוכן הראשי</a>
 
 <nav id="nav" aria-label="ניווט ראשי" data-i18n-aria="nav_label">
@@ -368,7 +708,7 @@ footer .f-disclaimer b{color:#C9D3E3}
       <a href="index.html" class="m-link" data-i18n="m_home">ראשי</a>
       <div class="m-drop" id="m-drop">
         <button type="button" class="m-link m-drop-btn" aria-haspopup="true" aria-expanded="false"><span data-i18n="m_services">שירותים</span><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="m-drop-panel"><a href="service-formation.html" class=""><span data-i18n="sv1">הקמת עסק</span></a><a href="service-financial.html" class=""><span data-i18n="sv2">הנהלת חשבונות ושכר</span></a><a href="service-team.html" class=""><span data-i18n="sv3">פרודוקטיביות עובדים ובקרת איכות</span></a><a href="service-google.html" class=""><span data-i18n="sv4">Google Guarantee</span></a><a href="service-assistant.html" class=""><span data-i18n="sv6">עוזרת וירטואלית</span></a><a href="service-reviews.html" class=""><span data-i18n="sv8">ניהול ביקורות לקוחות</span></a><a href="service-immigration.html" class=""><span data-i18n="sv7">ניירת הגירה</span></a></div>
+        <div class="m-drop-panel"><a href="service-formation.html" class=""><span data-i18n="sv1">LLC & Company Formation</span></a><a href="service-financial.html" class=""><span data-i18n="sv2">Bookkeeping, Payroll & QuickBooks</span></a><a href="service-assistant.html" class=""><span data-i18n="sv6">Virtual Assistance</span></a><a href="service-team.html" class=""><span data-i18n="sv3">Team Training & Performance</span></a><a href="service-google.html" class=""><span data-i18n="sv4">Google Ads & Advertising</span></a><a href="service-immigration.html" class=""><span data-i18n="sv7">Government Applications</span></a></div>
       </div>
       <a href="pricing.html" class="m-link" data-i18n="m_pricing">מחירים</a>
       <a href="about.html" class="m-link on" data-i18n="m_about">אודות</a>
@@ -458,7 +798,7 @@ footer .f-disclaimer b{color:#C9D3E3}
         <p class="f-tag" data-i18n="ft_tag">תמיכה אישית בצד העסקי והמנהלי של העסק שלכם בארה״ב, בעברית ובאנגלית.</p>
         <a class="f-wa" href="https://wa.me/13478065604" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="ft_wa">שלחו הודעה בוואטסאפ</span></a>
       </div>
-      <div class="f-col" role="navigation" aria-labelledby="ft-s"><h3 id="ft-s" data-i18n="ft_services">שירותים</h3><ul><li><a href="service-formation.html" data-i18n="sv1">הקמת עסק</a></li><li><a href="service-financial.html" data-i18n="sv2">הנהלת חשבונות ושכר</a></li><li><a href="service-team.html" data-i18n="sv3">פרודוקטיביות עובדים ובקרת איכות</a></li><li><a href="service-google.html" data-i18n="sv4">Google Guarantee</a></li><li><a href="service-assistant.html" data-i18n="sv6">עוזרת וירטואלית</a></li><li><a href="service-reviews.html" data-i18n="sv8">ניהול ביקורות לקוחות</a></li><li><a href="service-immigration.html" data-i18n="sv7">ניירת הגירה</a></li></ul></div>
+      <div class="f-col" role="navigation" aria-labelledby="ft-s"><h3 id="ft-s" data-i18n="ft_services">שירותים</h3><ul><li><a href="service-formation.html" data-i18n="sv1">LLC & Company Formation</a></li><li><a href="service-financial.html" data-i18n="sv2">Bookkeeping, Payroll & QuickBooks</a></li><li><a href="service-assistant.html" data-i18n="sv6">Virtual Assistance</a></li><li><a href="service-team.html" data-i18n="sv3">Team Training & Performance</a></li><li><a href="service-google.html" data-i18n="sv4">Google Ads & Advertising</a></li><li><a href="service-immigration.html" data-i18n="sv7">Government Applications</a></li></ul></div>
       <div class="f-col" role="navigation" aria-labelledby="ft-c"><h3 id="ft-c" data-i18n="ft_company">החברה</h3><ul><li><a href="index.html" data-i18n="f_home">ראשי</a></li><li><a href="pricing.html" data-i18n="f_pricing">מחירים</a></li><li><a href="about.html" data-i18n="f_about">אודות</a></li><li><a href="faq.html" data-i18n="f_faq">שאלות נפוצות</a></li><li><a href="contact.html" data-i18n="f_contact">צרו קשר</a></li><li><a href="privacy.html" data-i18n="f_privacy">מדיניות פרטיות</a></li><li><a href="terms.html" data-i18n="f_terms">תנאי שימוש</a></li><li><a href="accessibility.html" data-i18n="f_access">הצהרת נגישות</a></li></ul></div>
       <div class="f-col"><h3 data-i18n="ft_contact">צרו קשר</h3><ul class="f-contact">
         <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg><a href="tel:+13478065604" dir="ltr">347-806-5604</a></li>
@@ -502,7 +842,7 @@ Object.assign(t.he, {"ab_label": "אודות מסודר", "ab_h1": "הצוות �
 Object.assign(t.he, {"ab_story_h": "השותפים שלכם לעסק יעיל יותר", "ab_p1": "מסודר נוסדה עם מטרה ברורה: לעזור לבעלי עסקים לעבוד ביעילות רבה יותר ולקבל תמיכה מקצועית בדיוק במקום שבו הם צריכים אותה, בלי העלות של העסקת מנהל במשרה מלאה. עסקים רבים בצמיחה לא צריכים עוד משכורת קבועה. הם צריכים את המומחיות הנכונה בזמן הנכון.", "ab_p2": "הקמת חברה, ניהול שכר, עמידה בדרישות והגשות מול רשויות: לכל שלב יש טפסים, מועדים ואותיות קטנות משלו. לבעלי עסקים שחושבים ועובדים בעברית, פרט אחד שהתפספס יכול להוביל לדחיית בקשה, לקנסות או לחודשים של עיכוב.", "ab_p3": "זה התפקיד שלנו. אנחנו השותפים שלכם מאחורי הקלעים, ונכנסים לתמונה בכל מקום שבו העסק צריך תמיכה, מההקמה והכספים ועד כוח האדם והתפעול השוטף, כדי שתוכלו להתמקד בצמיחה. מאז 2008 אנחנו נותנים לבעלי עסקים ולמשפחות שותף אחד שאפשר לסמוך עליו, שמכיר גם את המערכת וגם את האנשים שמתמודדים איתה."}); Object.assign(t.en, {"ab_story_h": "Your Partner in Building a More Efficient Business", "ab_p1": "Sorted was founded with a clear purpose: to help business owners run more efficiently and get expert support exactly where they need it, without the cost of hiring a full-time manager. Many growing businesses don't need another full-time salary. They need the right expertise at the right time.", "ab_p2": "Forming a company, running payroll, staying compliant, filing with government agencies: each step comes with its own forms, deadlines, and fine print. For business owners who think and work in Hebrew, one missed detail can mean rejected filings, penalties, or months of delay.", "ab_p3": "That is the role we fill. We act as your partner behind the scenes, stepping in wherever your business needs support, from setup and finances to staffing and daily operations, so you can focus on growth. Since 2008, we have given business owners and families one trusted partner who understands both the system and the people navigating it."});
 Object.assign(t.he, {"ab_story_h": "תמיכה מקצועית בכל שלב, בדיוק איפה שאתם צריכים"}); Object.assign(t.en, {"ab_story_h": "Expert Support at Every Stage, Exactly Where You Need It"});
 Object.assign(t.he, {"f_copy": "© 2026 מסודר · עוזרים לעסקים לצמוח מאז 2008", "doc_title": "אודות | מסודר", "ab_label": "אודות ״מסודר״", "ab_sub": "״מסודר״ מעניקה לבעלי עסקים ולמשפחות גישה ישירה לאנשי מקצוע מנוסים בניהול עסקי, בפיננסים ובניירת הגירה. אנחנו מביאים את הסדר, הדיוק והאחריות של צוות ניהול בכיר, בלי העלות של בניית צוות כזה בתוך העסק.", "ab_p1": "״מסודר״ נוסדה עם מטרה ברורה: לעזור לבעלי עסקים לעבוד ביעילות רבה יותר ולקבל תמיכה מקצועית בדיוק במקום שבו הם צריכים אותה, בלי העלות של העסקת מנהל במשרה מלאה. עסקים רבים בצמיחה לא צריכים עוד משכורת קבועה. הם צריכים את המומחיות הנכונה בזמן הנכון.", "ab_role": "מייסדת, ״מסודר״", "ab_val_h": "למה בעלי עסקים בוחרים ב״מסודר״"});
-let lang = 'he';
+let lang = 'en';
 function applyLang(l){
   lang = l;
   const root = document.documentElement;
@@ -523,7 +863,7 @@ function applyLang(l){
 function switchLang(e){ if (e) e.stopPropagation(); const m = document.getElementById('lang-menu'); const b = document.getElementById('lang-btn'); m.hidden = !m.hidden; b.setAttribute('aria-expanded', String(!m.hidden)); }
 document.addEventListener('click', e => { const w = document.getElementById('lang-wrap'); if (w && !w.contains(e.target)) { document.getElementById('lang-menu').hidden = true; document.getElementById('lang-btn').setAttribute('aria-expanded','false'); } });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') { const m = document.getElementById('lang-menu'); if (m && !m.hidden) { m.hidden = true; document.getElementById('lang-btn').focus(); } } });
-(function(){ let s = null; try { s = localStorage.getItem('sorted_lang'); } catch(e){} if (s === 'en') applyLang('en'); else if (s === 'es') { t.es = Object.assign({}, t.en); applyLang('es'); } })();
+(function(){ let s = null; try { s = localStorage.getItem('sorted_lang'); } catch(e){} if (s === 'he') applyLang('he'); else if (s === 'en') applyLang('en'); else if (s === 'es') { t.es = Object.assign({}, t.en); applyLang('es'); } })();
 
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 10), {passive:true});
@@ -587,6 +927,7 @@ Object.assign(t.he, {"abn_how_h": "המומחיות הנכונה, בהתאמה �
 t.es = Object.assign({}, t.en, {"nav_wa": "WhatsApp", "f_copy": "© 2026 Sorted · Ayudando a los negocios a crecer desde 2008", "disc_t": "Aviso:", "disc_p": "Brindamos servicios de apoyo administrativo y empresarial, y no ofrecemos asesoría legal ni fiscal. Para asuntos legales o fiscales, le recomendamos consultar a un abogado o a un profesional fiscal calificado.", "m_home": "Inicio", "m_services": "Servicios", "m_about": "Nosotros", "m_faq": "Preguntas frecuentes", "sv1": "Constitución de empresas", "sv2": "Contabilidad y nómina", "sv3": "Productividad y control de calidad", "sv4": "Google Guarantee", "f_about": "Nosotros", "f_faq": "Preguntas frecuentes", "skip": "Ir al contenido principal", "ax_title": "Accesibilidad", "ax_text": "Tamaño del texto", "ax_contrast": "Alto contraste", "ax_gray": "Escala de grises", "ax_links": "Resaltar enlaces", "ax_font": "Fuente legible", "ax_spacing": "Espaciado del texto", "ax_motion": "Detener animaciones", "ax_cursor": "Cursor grande", "ax_reset": "Restablecer ajustes", "ax_stmt": "Declaración de accesibilidad", "ax_hint": "Atajo de teclado: Alt+A", "f_access": "Accesibilidad", "ck_p": "Usamos el almacenamiento local del navegador (similar a las cookies) para recordar su idioma y sus preferencias de accesibilidad, y el sitio carga fuentes desde Google Fonts. Al hacer clic en “Aceptar”, usted está de acuerdo con esto.", "ck_more": "Aviso de privacidad", "ck_ok": "Aceptar", "f_privacy": "Aviso de privacidad", "f_terms": "Términos y condiciones", "doc_title": "Nosotros | Sorted", "ab_label": "Acerca de Sorted", "ab_h1": "El equipo ejecutivo detrás de su negocio en EE. UU.", "ab_sub": "Sorted ofrece a dueños de negocios y a sus familias acceso directo a profesionales con amplia experiencia en administración de empresas, finanzas y trámites migratorios. Aportamos la estructura, la precisión y la responsabilidad de un equipo ejecutivo, sin el costo de formar uno propio.", "ab_story_label": "Por qué existimos", "ab_story_h": "Apoyo experto en cada etapa, justo donde lo necesita", "ab_p1": "Sorted nació con un propósito claro: ayudar a los dueños de negocios a operar con mayor eficiencia y a recibir apoyo experto justo donde lo necesitan, sin el costo de contratar a un gerente de tiempo completo. Muchos negocios en crecimiento no necesitan otro sueldo fijo. Necesitan la experiencia adecuada en el momento adecuado.", "ab_p2": "Constituir una empresa, procesar la nómina, cumplir con los requisitos, presentar trámites ante dependencias de gobierno: cada paso tiene sus propios formularios, plazos y letra chiquita. Estos requisitos son complejos incluso para dueños de negocios con experiencia, y hacerlo en un segundo idioma agrega otro nivel de dificultad. Un solo detalle pasado por alto puede significar trámites rechazados, multas o meses de retraso.", "ab_p3": "Ese es el papel que cumplimos. No tiene que enfrentar solo el sistema de Estados Unidos. Somos su socio de negocios tras bambalinas y entramos en acción donde su empresa necesite apoyo, desde la constitución y las finanzas hasta el personal y la operación diaria, para que usted se enfoque en crecer. Desde 2008, hemos sido para dueños de negocios y sus familias un socio de confianza que entiende tanto el sistema como a las personas que lo recorren. Su negocio en EE. UU. Resuelto.", "fk1": "Apoyando negocios desde", "fk2": "Experiencia", "fv2": "Más de 25 años", "fk3": "Idiomas", "fv3": "Español e inglés", "fk4": "Contáctenos", "fv4": "WhatsApp y teléfono", "ab_val_label": "Por qué Sorted", "ab_val_h": "Por qué los dueños de negocios eligen Sorted", "v1_t": "Experiencia de alto nivel", "v1_d": "Profesionales con experiencia, no personal principiante ni software automatizado.", "v2_t": "Un solo responsable", "v2_d": "Un experto dedicado que se hace cargo de su expediente de principio a fin.", "v3_t": "Le atendemos en su idioma", "v3_d": "Servicio completo en español e inglés, sin que nada se pierda en la traducción.", "v4_t": "Transparencia desde el inicio", "v4_d": "Alcance y precios claros desde el principio, y una respuesta honesta cuando necesite un abogado o un contador.", "ab_exp_label": "Quiénes somos", "ab_exp_h": "Experiencia de nivel ejecutivo, al servicio de su negocio", "ab_exp_p": "Nuestro equipo cuenta con más de 25 años de experiencia de alto nivel en operaciones, finanzas, nómina, recursos humanos y administración. Hemos creado departamentos, administrado presupuestos y dirigido equipos. Hoy, esa experiencia tiene un solo objetivo: mantener su negocio en orden, en cumplimiento y listo para crecer.", "tg1": "Operaciones", "tg2": "Administración", "tg3": "Finanzas", "tg4": "Nómina", "tg5": "Recursos humanos", "tg6": "Gestión de equipos", "tg7": "Capacitación de centros de atención", "tg8": "Equipos remotos", "sv6": "Asistente virtual", "sv7": "Trámites migratorios", "ft_tag": "Apoyo personalizado para el lado administrativo y operativo de su negocio en EE. UU., en español e inglés.", "ft_services": "Servicios", "ft_company": "Empresa", "ft_contact": "Contacto", "ft_area": "Atendemos a clientes en todo EE. UU.", "ft_lang": "Español e inglés", "ft_wa": "Escríbanos por WhatsApp", "f_home": "Inicio", "sv8": "Gestión de reseñas de clientes", "m_contact": "Contacto", "f_contact": "Contacto", "abn_btn": "Hable con nuestro equipo", "abn_how_label": "Cómo trabajamos", "abn_how_h": "La experiencia adecuada para sus necesidades", "abn_how_p": "Cada proyecto se asigna al especialista o equipo adecuado para el servicio que necesita. Ellos entienden sus requisitos, dan seguimiento a los plazos clave y a los pendientes, y lo mantienen informado, para que siempre sepa quién lleva su expediente y cuál es el siguiente paso.", "abn_tm_label": "Nuestros equipos", "abn_tm_h": "Dos equipos dedicados. Un mismo estándar.", "abn_tm1_t": "Servicios empresariales", "abn_tm1_d": "Constitución de empresas, contabilidad, nómina, gestión de personal, verificación de Google y asistencia ejecutiva, a cargo de profesionales con amplia experiencia operativa y financiera.", "abn_tm2_t": "Servicios migratorios", "abn_tm2_d": "Un equipo dedicado a extensiones de visa de turista, solicitudes de ciudadanía, la Lotería de Visas y pasaportes estadounidenses, basado en la precisión, el control estricto de plazos y una comunicación clara en cada etapa.", "abn_cta_h": "Su negocio en EE. UU. Resuelto.", "abn_cta_p": "Enfóquese en hacer crecer su negocio mientras nosotros nos encargamos de lo que hay detrás. Cuéntenos sus metas y le indicaremos los siguientes pasos adecuados.", "brand_tag": "Su negocio en EE. UU. Resuelto.", "nav_label": "Navegación principal", "ax_open": "Abrir el menú de accesibilidad (Alt+A)", "ax_close": "Cerrar el menú de accesibilidad", "ax_dec": "Texto más pequeño", "ax_inc": "Texto más grande", "ck_label": "Aviso de cookies", "rv_label": "Lo que dicen nuestros clientes", "ct_msg_title": "New inquiry from the website", "ct_msg_name": "Name", "ct_msg_phone": "Phone", "ct_msg_email": "Email", "ct_msg_service": "Service", "ct_msg_lang": "Preferred language"});
 if (lang === "es") applyLang("es");
 Object.assign(t.he, {"m_pricing": "מחירים", "f_pricing": "מחירים"}); Object.assign(t.en, {"m_pricing": "Pricing", "f_pricing": "Pricing"}); Object.assign(t.es, {"m_pricing": "Precios", "f_pricing": "Precios", "m_faq": "Preguntas"}); applyLang(lang);
+Object.assign(t.en, {"sv1": "LLC & Company Formation", "sv2": "Bookkeeping, Payroll & QuickBooks", "sv6": "Virtual Assistance", "sv3": "Team Training & Performance", "sv4": "Google Ads & Advertising", "sv7": "Government Applications"}); /*TR*/Object.assign(t.he,{"sv1": "הקמת LLC וחברות", "sv2": "הנהלת חשבונות, שכר ו־QuickBooks", "sv6": "עוזרת וירטואלית", "sv3": "הדרכת צוות וביצועים", "sv4": "Google Ads ופרסום", "sv7": "בקשות מול הממשל", "f_home": "ראשי", "f_pricing": "מחירים", "f_about": "אודות", "f_faq": "שאלות נפוצות", "f_contact": "צרו קשר", "f_privacy": "מדיניות פרטיות", "f_terms": "תנאי שימוש", "f_access": "תפריט נגישות", "f_copy": "© 2026 מסודר · עוזרים לעסקים לצמוח מאז 2008", "doc_title": "אודות | מסודר"});Object.assign(t.es,{"sv1": "Constitución de LLC y empresas", "sv2": "Contabilidad, nómina y QuickBooks", "sv6": "Asistencia virtual", "sv3": "Capacitación y desempeño del equipo", "sv4": "Google Ads y publicidad", "sv7": "Trámites gubernamentales", "f_home": "Inicio", "f_pricing": "Precios", "f_about": "Nosotros", "f_faq": "Preguntas", "f_contact": "Contacto", "f_privacy": "Aviso de privacidad", "f_terms": "Términos y condiciones", "f_access": "Accesibilidad", "f_copy": "© 2026 Sorted · Ayudando a los negocios a crecer desde 2008", "doc_title": "Nosotros | Sorted"});/*TR*/applyLang(lang);
 </script>
 </body>
 </html>
